@@ -71,7 +71,7 @@ function App() {
         <br/>
         <br/>
         <br/>
-        <h1>Top News</h1>
+        <h1></h1>
         <br/>
         <br/>
 
