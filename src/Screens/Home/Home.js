@@ -31,9 +31,45 @@ function Home() {
         <br/>
         <br/>
         <br/>
-        <h1></h1>
+        <h1>Top News </h1>
         <br/>
-        <br/>            
+        <br/>
+
+        <div className="row">
+          
+          <div className="card col-lg-3 col-md-6 col-sm-12 col-12" >
+            <img src={"https://images.unsplash.com/photo-1592985791547-d64ed6e40189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias perspiciatis labore quam rerum itaque iusto sint recusandae, eius consequatur.</p>
+            </div>
+          </div>
+
+          <div className="card col-lg-3 col-md-6 col-sm-12 col-12" >
+            <img src={"https://images.unsplash.com/photo-1592985791547-d64ed6e40189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias perspiciatis labore quam rerum itaque iusto sint recusandae, eius consequatur.</p>
+            </div>
+          </div>
+
+          
+          <div className="card col-lg-3 col-md-6 col-sm-12 col-12" style={{width: '18rem'}}>
+            <img src={"https://images.unsplash.com/photo-1592985791547-d64ed6e40189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab ut reiciendis nostrum labore voluptas deserunt.</p>
+            </div>
+          </div>
+
+          
+          
+          <div className="card col-lg-3 col-md-6 col-sm-12 col-12" style={{width: '18rem'}}>
+            <img src={"https://images.unsplash.com/photo-1592985791547-d64ed6e40189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <p className="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quibusdam maxime at voluptatem accusantium blanditiis!</p>
+            </div>
+          </div>
+          
+
+        </div>  
       </div>
     </div>
     </Main>
