@@ -41,7 +41,7 @@ const Main = ({
   }
   return (
     <div className="backcolor"> 
-      <Slideshow/>  
+      {Slideshow()}
       <div className="">
         <Menu />
       </div>     
