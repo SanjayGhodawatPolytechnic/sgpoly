@@ -3,6 +3,12 @@ import {BrowserRouter, Switch, Route} from "react-router-dom"
 import Home from './Screens/Home/Home';
 import Login from './Admin/login'
 import LocationMap from './Screens/Contact/Map';
+import aboutLogo from './Screens/About/logo';
+import aboutSGP from './Screens/About/sgp';
+import aboutPhilosophy from './Screens/About/philosophy';
+import aboutVision from './Screens/About/vision';
+
+
 import * as firebase from 'firebase'
 import Dashboard from './Admin/Dashboard';
 import AdminRoute from './Admin/auth/AdminRoutes';
@@ -26,6 +32,12 @@ const Routes = () => {
             <BrowserRouter>
                 <Switch>
                     <Route path="/" exact component={Home} />
+                    <Route path="/about/logo" exact component={aboutLogo}/>
+                    <Route path="/about/sgp" exact component={aboutSGP}/>
+                    <Route path="/about/philosophy" exact component={aboutPhilosophy}/>
+                    <Route path="/about/vision" exact component={aboutVision}/>
+
+
                     <Route path="/contact/map" exact component={LocationMap} />                    
                     <AdminRoute path="/admin" exact component={Dashboard} />
                     <Route path="/admin/signin" exact component={Login} />

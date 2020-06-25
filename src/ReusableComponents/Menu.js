@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const Menu = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" >        
-        <a  href="#" ></a>
+      <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor: "#e3f2fd"}} >        
+        
 
         <img className="navbar-brand logo" src={require('../assets/logo.png')}/>
         
@@ -17,6 +17,7 @@ const Menu = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link to="/"><a className="nav-item nav-link active effect">Home </a></Link>
+
 
             <a className="nav-item nav-link active effect" href="#">Management</a>
             <a className="nav-item nav-link active effect" href="#">Academics </a>
@@ -38,7 +39,29 @@ const Menu = () => {
 
             <a className="nav-item nav-link active effect" href="#">Admission</a>
             <a className="nav-item nav-link active effect" href="#">Facilities</a>
-            <a className="nav-item nav-link active effect" href="#">About Us </a>
+
+
+
+            <li className="nav-item dropdown ">
+              <a className="nav-link dropdown-toggle active effect" href="#" id="navbarDropdown"  data-toggle="dropdown">
+                About Us
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="/about/logo">About Our Logo </a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/sgp">About SG Polytechnic</a> <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/philosophy">Philosophy of SGP</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/vision">Vision,Mission & Goal</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Quality Policy</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Quality Objectives</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Affiliations & Certifications</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Differentiators</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Achievements</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Activities</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Social Responsibilities</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Why SGP?</a>
+                
+              </div>
+            </li>
             <Link to="contact/map"><a className="nav-item nav-link active effect">Contact Us </a></Link>
             
             
