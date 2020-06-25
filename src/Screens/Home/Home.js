@@ -1,6 +1,8 @@
 import React from 'react';
 import Main from '../../ReusableComponents/Main';
 import NewsCarousel from '../../ReusableComponents/Carousel';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 
 function Home() {
@@ -12,7 +14,13 @@ function Home() {
         
         <br/>
         
-        <h1>Top News </h1>
+        <ScrollAnimation animateIn='flipInY' animateOut='flipOutY'>
+          <h1>
+            Top News
+          </h1>
+        </ScrollAnimation>
+         
+        
         <br/>
         <br/>          
       </div>

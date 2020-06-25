@@ -1,5 +1,7 @@
 import React from 'react';
 import Main from '../../ReusableComponents/Main';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 function aboutPhilosophy(){
     return(
@@ -15,20 +17,21 @@ function aboutPhilosophy(){
             
             <br/>
             <br/>
-            
-            <div className="card ">
-                <div className="card-header text-center ">
-                    Philosophy of Sanjay Ghodawat Polytechnic
-                </div>
-                <div className="card-body">
-                    
-                    <p className="card-text">Sanjay Ghodawat Polytechnic stands for performance par excellence. In the world where it is commonplace to see mediocrity as the order of the day, SGI always stands as the guiding star of brilliance, quality and deliverance beyond expectations. Innovativeness and Creativity are the hallmarks of a genius enterprise and SGI stands to be a stage where these qualities would be nurtured, encouraged and blossomed. Inner re-engineering towards a proactive outlook, courage to convert challenges into opportunities and an unyielding spirit with never-say-die attitude is expected from students, staff and management who are present in the grand precincts of the Institution. The genius is incomplete without the sense of social responsibility and SGI's ultimate goal remains the development of an attitude of gratitude that freely gives back without expectations.</p>
-                    <div class="card-footer text-center text-bold">
-                    "For the true measure of giving is giving without measure."
+            <ScrollAnimation animateIn="fadeIn" >
+                <div className="card ">
+                    <div className="card-header text-center ">
+                        Philosophy of Sanjay Ghodawat Polytechnic
                     </div>
-                    
-                </div>
-          </div>       
+                    <div className="card-body">
+                        
+                        <p className="card-text">Sanjay Ghodawat Polytechnic stands for performance par excellence. In the world where it is commonplace to see mediocrity as the order of the day, SGI always stands as the guiding star of brilliance, quality and deliverance beyond expectations. Innovativeness and Creativity are the hallmarks of a genius enterprise and SGI stands to be a stage where these qualities would be nurtured, encouraged and blossomed. Inner re-engineering towards a proactive outlook, courage to convert challenges into opportunities and an unyielding spirit with never-say-die attitude is expected from students, staff and management who are present in the grand precincts of the Institution. The genius is incomplete without the sense of social responsibility and SGI's ultimate goal remains the development of an attitude of gratitude that freely gives back without expectations.</p>
+                        <div class="card-footer text-center text-bold">
+                        "For the true measure of giving is giving without measure."
+                        </div>
+                        
+                    </div>
+                </div>  
+          </ScrollAnimation>     
                 
             
 
