@@ -51,11 +51,10 @@ const Menu = () => {
                 <a className="dropdown-item" href="/about/sgp">About SG Polytechnic</a> <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/philosophy">Philosophy of SGP</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/vision">Vision,Mission & Goal</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Quality Policy</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Quality Objectives</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Affiliations & Certifications</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Differentiators</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Achievements</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/quality">Quality Policy & Objectives</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/Affiliation">Affiliations & Certifications</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/differentiator">Differentiators</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/achievements">Achievements</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Activities</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Social Responsibilities</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Why SGP?</a>

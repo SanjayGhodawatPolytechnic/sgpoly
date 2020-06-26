@@ -7,6 +7,10 @@ import aboutLogo from './Screens/About/logo';
 import aboutSGP from './Screens/About/sgp';
 import aboutPhilosophy from './Screens/About/philosophy';
 import aboutVision from './Screens/About/vision';
+import aboutQuality from './Screens/About/quality';
+import aboutAffCert from './Screens/About/affiliation';
+import aboutDifferentiator from './Screens/About/differentiator';
+import aboutAchievement from './Screens/About/achievement';
 
 
 import * as firebase from 'firebase'
@@ -36,6 +40,10 @@ const Routes = () => {
                     <Route path="/about/sgp" exact component={aboutSGP}/>
                     <Route path="/about/philosophy" exact component={aboutPhilosophy}/>
                     <Route path="/about/vision" exact component={aboutVision}/>
+                    <Route path="/about/quality" exact component={aboutQuality}/>
+                    <Route path="/about/Affiliation" exact component={aboutAffCert}/>
+                    <Route path="/about/differentiator" exact component={aboutDifferentiator}/>
+                    <Route path="/about/achievements" exact component={aboutAchievement}/>
 
 
                     <Route path="/contact/map" exact component={LocationMap} />                    

@@ -10,7 +10,7 @@ function aboutVision(){
             <div>
                 <br/><br/><br/><br/><br/>
                 <div className="card ">
-                    <div className="card-header  ">
+                    <div className="card-header text-center ">
                         Vision
                     </div>
                     <div className="card-body">  
@@ -20,7 +20,7 @@ function aboutVision(){
                 <br/><br/><br/>
                 <ScrollAnimation animateIn="fadeIn" >
                     <div className="card ">
-                        <div className="card-header ">
+                        <div className="card-header text-center ">
                             Mission
                         </div>
                         <div className="card-body">  
@@ -42,7 +42,7 @@ function aboutVision(){
                 <br/><br/><br/>
                 <ScrollAnimation animateIn="fadeIn" >
                     <div className="card ">
-                        <div className="card-header  ">
+                        <div className="card-header text-center  ">
                             Goal
                         </div>
                         <div className="card-body">  
