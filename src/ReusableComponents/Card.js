@@ -1,13 +1,25 @@
 import React from 'react';
 
-const Card = () => {
-    return (
-        <div className="card" >
-            <img src={"https://images.unsplash.com/photo-1592985791547-d64ed6e40189?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias perspiciatis labore quam rerum itaque iusto sint recusandae, eius consequatur.</p>
+const Card = ({
+  title='',
+  description='',
+  image=''
+}) => {
+    return (      
+      <div class="card float-left w-100">
+        <div class="row ">    
+          <div class="col-sm-7">
+            <div class="card-block">
+              <h3 class="card-title">{title}</h3>              
+              <p>{description}</p>              
             </div>
           </div>
+    
+          <div class="col-sm-5">
+            <img class="d-block w-100" src={image} alt="" />
+          </div>
+        </div>
+      </div>
     );
 }
 

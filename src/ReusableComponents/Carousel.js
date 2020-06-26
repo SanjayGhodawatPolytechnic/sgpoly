@@ -25,8 +25,14 @@ const NewsCarousel = () => {
         .ref()                
         dataRef.on("value",dataSnapshot => {
             if(dataSnapshot.val()){
-                var values = dataSnapshot.val()
-                console.log(values)
+                let result = Object.values(dataSnapshot.val())                
+                let contactKey = Object.keys(dataSnapshot.val())
+                contactKey.forEach((value,key) => {
+                result[key]["key"] = value;                       
+                })                
+                data.push(result)               
+                setData(data[0])
+                console.log(data)
             }
         })
     }
@@ -36,6 +42,9 @@ const NewsCarousel = () => {
     }, []);
 
     return (
+    <div className="row">
+        <div className="col-2"></div>
+        <div className="col-8">
         <Carousel
         additionalTransfrom={0}
         arrows
@@ -59,7 +68,7 @@ const NewsCarousel = () => {
                 max: 3000,
                 min: 1024
             },
-            items: 3,
+            items: 1,
             partialVisibilityGutter: 40
             },
             mobile: {
@@ -75,26 +84,22 @@ const NewsCarousel = () => {
                 max: 1024,
                 min: 464
             },
-            items: 2,
+            items: 1,
             partialVisibilityGutter: 30
             }
         }}
-        showDots={false}
+        showDots={true}
         sliderClass=""
-        slidesToSlide={2}
+        slidesToSlide={1}
         swipeable
         >
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {data.map((d,i) => (
+                <Card key={i} title={d.title} description={d.description} image={d.imageDownloadUrl} />
+            ))}
         </Carousel>
+        </div>
+
+        </div>
     );
 }
 

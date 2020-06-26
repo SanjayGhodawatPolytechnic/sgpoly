@@ -16,6 +16,7 @@ import aboutAchievement from './Screens/About/achievement';
 import * as firebase from 'firebase'
 import Dashboard from './Admin/Dashboard';
 import AdminRoute from './Admin/auth/AdminRoutes';
+import Activities from './Screens/About/Activities';
 
 var firebaseConfig = {
     apiKey: "AIzaSyDMh0eaOlYDXjLMsHI4GcgfQgvW3wi1dFk",
@@ -44,6 +45,7 @@ const Routes = () => {
                     <Route path="/about/Affiliation" exact component={aboutAffCert}/>
                     <Route path="/about/differentiator" exact component={aboutDifferentiator}/>
                     <Route path="/about/achievements" exact component={aboutAchievement}/>
+                    <Route path="/about/activities" exact component={Activities}/>
 
 
                     <Route path="/contact/map" exact component={LocationMap} />                    

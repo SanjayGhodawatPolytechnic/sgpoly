@@ -55,7 +55,7 @@ const Menu = () => {
                 <a className="dropdown-item" href="/about/Affiliation">Affiliations & Certifications</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/differentiator">Differentiators</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/achievements">Achievements</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Activities</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/activities">Activities</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Social Responsibilities</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Why SGP?</a>
                 
@@ -67,6 +67,7 @@ const Menu = () => {
           </div>
         </div>
       </nav> 
+      
             
     </div>
   );
