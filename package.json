@@ -13,6 +13,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-coverflow": "^0.2.20",
     "react-dom": "^16.13.1",
+    "react-loadingg": "^1.7.2",
     "react-mapbox-gl": "^4.8.6",
     "react-multi-carousel": "^2.5.5",
     "react-native-uuid": "^1.4.9",

@@ -1,6 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 
+//loader import
+import { CommonLoading } from 'react-loadingg';
+
 //uuid import
 import uuid from 'react-native-uuid';
 
@@ -9,6 +12,10 @@ import * as firebase from 'firebase'
 import { Redirect } from 'react-router-dom';
 import { useState } from 'react';
 import Main from '../ReusableComponents/Main';
+import UpdatesCard from './UpdatesCard';
+
+//loader import
+import { CircleToBlockLoading, WindMillLoading } from 'react-loadingg';
 
 const Dashboard = () => {
     const [didRedirect,setDidRedirect] = useState(false)    
@@ -16,11 +23,19 @@ const Dashboard = () => {
         isNewNews:false,
         isListAll:false
     })    
+    const [reload,setReload] = useState(false)
     const [value,setValue] = useState({
         title:"",
         description:"",
         image:""        
     });
+
+    const [updates,setUpdates] = useState([])
+    const [isListEmpty,setIsListEmpty] = useState(false)
+    const [isListLoading,setIsListLoading] = useState(false)
+    const [isImageLoading,setIsImageLoading] = useState(false)
+    const [isAdderLoading,setIsAdderLoading] = useState(false)
+    const [isSuccess, setIsSuccess] = useState(false)
 
 
     
@@ -33,18 +48,11 @@ const Dashboard = () => {
                 setDidRedirect(true)                
             }
         })        
+        firebase.database().ref().on("child_changed", snapshot => {
+            setReload(!reload)
+        })
     }, [])
-
-    const handleChange = name => event => {        
-        event.preventDefault()
-        setValue({...value,[name]:event.target.value})
-    }
-
-    const chooseFile = event => {        
-        event.preventDefault()
-        setValue({...value, image: event.target.value})
-        console.log(value.image)
-    }
+    
 
     const onSubmit = async () => {
         var title = document.getElementById('title').value;
@@ -56,7 +64,7 @@ const Dashboard = () => {
             title,
             description
         })        
-
+        setIsAdderLoading(true)
         const dbReference = firebase.database().ref()
         const storageRef = firebase.storage().ref()
         var url = "empty"
@@ -73,17 +81,19 @@ const Dashboard = () => {
           await dbReference.push(contact, err => {
             if(!err){
               console.log("SUCCESS")              
+              setIsAdderLoading(false)
+              setIsSuccess(true)
             }
           })
         
     }
 
 
+
     const uploadImageAsync = async (image, storageRef) => {
         const ref = storageRef.child('images').child(uuid.v4())
         const snapshot = await ref.put(image)
         return await snapshot.ref.getDownloadURL()
-
       };
 
     const PerformRedirect = () => {
@@ -96,9 +106,54 @@ const Dashboard = () => {
         .catch(err => console.log(err))
     }
 
+    const getAllUpdates = async () => {
+        setScreens({...screens,isListAll:true,isNewNews:false})
+        setIsListLoading(true)
+        setIsImageLoading(true)
+
+        const updatesRef = firebase.database().ref()        
+        await updatesRef.on("value",datasnapshot => {
+            if(datasnapshot.val()){
+                let result = Object.values(datasnapshot.val())                
+                let contactKey = Object.keys(datasnapshot.val())
+                contactKey.forEach((value,key) => {
+                result[key]["key"] = value;                       
+                })
+                updates.push(result)
+                setUpdates(updates[0])                
+                setIsListEmpty(false)
+            }else{
+                setIsListEmpty(true)
+            }
+            setIsImageLoading(false)
+            setIsListLoading(false)
+        })                
+                
+    }
+
+
+    
+    const ItemsLoader = () => {
+        return (
+            <div className="container mt-10">
+                <WindMillLoading />
+            </div>
+        )
+    }
+
+    const SuccessMessage = () => {
+        return (
+            <div className="alert alert-success text-center">    
+                <h4>Added Successfully</h4>
+            </div>
+        )
+    }
+
     const AddNews = () => {
         return(
             <div class="jumbotron">
+                {isSuccess && (<SuccessMessage />)}
+                <h1 class="display-4">Add Updates</h1>
                 <form>
                     <div class="row">
                         <div class="col">
@@ -111,7 +166,7 @@ const Dashboard = () => {
                     <div className="col-12">                    
                     <input type="file" class="form-control" id="file" />
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase" onClick={onSubmit}>Sign in</button>
+                    <button class="btn btn-lg btn-success btn-block text-uppercase" onClick={onSubmit}>Add</button>
                     </form>
             </div>
         )
@@ -119,12 +174,16 @@ const Dashboard = () => {
 
     const ListAllNews = () => {
         return (
+            <div>
             <div class="jumbotron">
-            <h1 class="display-4">List All</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4" />
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <h1 class="display-4">All Updates</h1>
+                <p class="lead">Here you get all list of updates you posted and can delete them.</p>
+                <hr class="my-4"></hr>                
+                {updates.map((data,index) => (
+                    <UpdatesCard title={data.title} description={data.description} image={data.imageDownloadUrl} key={index} loading={isImageLoading} k={data.key} />
+                ))}                
+            </div>
+            {isListLoading && ItemsLoader()}
             </div>
         )
     }
@@ -139,7 +198,7 @@ const Dashboard = () => {
                     <li className="btn btn-success rounded-pill m-2" onClick={() => setScreens({...screens,isListAll:false,isNewNews:true})}>
                         New News
                     </li>                    
-                    <li className="btn btn-success rounded-pill m-2" onClick={() => setScreens({...screens,isListAll:true,isNewNews:false})}>
+                    <li className="btn btn-success rounded-pill m-2" onClick={() => getAllUpdates()}>
                         List All News
                     </li>
                     <li className="btn btn-success rounded-pill m-2" onClick={e => SignOut()}>
@@ -175,6 +234,7 @@ const Dashboard = () => {
         <div>
             { didRedirect && PerformRedirect()}
             <AdminPanel />
+            {isAdderLoading && (<CommonLoading />)}
         </div>
         </Main>
     );
