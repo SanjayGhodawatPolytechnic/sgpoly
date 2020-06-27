@@ -17,6 +17,9 @@ import * as firebase from 'firebase'
 import Dashboard from './Admin/Dashboard';
 import AdminRoute from './Admin/auth/AdminRoutes';
 import Activities from './Screens/About/Activities';
+import SocialResponsiblities from './Screens/About/SocialResponsiblities';
+import ImageGallery from './Screens/About/components/ImageGallery';
+import ImageGal from './Screens/About/components/ImageGallery';
 
 var firebaseConfig = {
     apiKey: "AIzaSyDMh0eaOlYDXjLMsHI4GcgfQgvW3wi1dFk",
@@ -46,6 +49,8 @@ const Routes = () => {
                     <Route path="/about/differentiator" exact component={aboutDifferentiator}/>
                     <Route path="/about/achievements" exact component={aboutAchievement}/>
                     <Route path="/about/activities" exact component={Activities}/>
+                    <Route path="/about/socialresponsiblities" exact component={SocialResponsiblities}/>
+                    <Route path="/images" exact component={ImageGal}/>
 
 
                     <Route path="/contact/map" exact component={LocationMap} />                    

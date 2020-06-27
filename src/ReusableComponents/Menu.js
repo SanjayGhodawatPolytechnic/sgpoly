@@ -50,13 +50,13 @@ const Menu = () => {
                 <a className="dropdown-item" href="/about/logo">About Our Logo </a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/sgp">About SG Polytechnic</a> <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/philosophy">Philosophy of SGP</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="/about/vision">Vision,Mission & Goal</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="/about/quality">Quality Policy & Objectives</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="/about/Affiliation">Affiliations & Certifications</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/vision">Vision,Mission &amp; Goal</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/quality">Quality Policy &amp; Objectives</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/Affiliation">Affiliations &amp; Certifications</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/differentiator">Differentiators</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/achievements">Achievements</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/about/activities">Activities</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Social Responsibilities</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/about/socialresponsiblities">Social Responsibilities</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Why SGP?</a>
                 
               </div>
