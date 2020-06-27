@@ -1,0 +1,9 @@
+.btn-circle{
+    border-radius: 50px;
+    transition: 500ms;
+    float: right;
+}
+
+.btn-circle:hover{
+    transform: rotate(360);
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './CSS/Menu.css';
 import Menu from './Menu';
+import Footer from './Footer';
 
 
 const Main = ({
@@ -49,6 +50,7 @@ const Main = ({
      <div className={className} >
         {children}
       </div>
+      <Footer/>
     </div>
   );
 }
