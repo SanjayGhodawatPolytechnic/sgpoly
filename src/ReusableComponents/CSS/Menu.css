@@ -11,15 +11,21 @@
   
   .effect{
     transition: 500ms;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .effect:hover{
-    background-color: #DAE0E2;
+    background-color: #E84342;
     border-radius: 10px;
-    transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);        
   }
 
 
   .backcolor{
     background-color: #ffffff ;    
+  }
+
+  .menu-items:hover{    
+    color: #fff;
   }

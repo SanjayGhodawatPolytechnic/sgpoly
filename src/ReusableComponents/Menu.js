@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Menu = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor: "#e3f2fd"}} >        
+      <nav className="navbar navbar-expand-lg navbar-light" >        
         
 
         <img className="navbar-brand logo" src={require('../assets/logo.png')}/>
