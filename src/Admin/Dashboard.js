@@ -76,7 +76,8 @@ const Dashboard = () => {
         var contact = {
             title:title,
             description: description,
-            imageDownloadUrl:url
+            imageDownloadUrl:url,
+            postedOn:firebase.database.ServerValue.TIMESTAMP
           }
           await dbReference.push(contact, err => {
             if(!err){

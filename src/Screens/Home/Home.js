@@ -40,12 +40,14 @@ function Home() {
 
 
 
-        
-        <ScrollAnimation animateIn='flipInY' animateOut='flipOutY'>
-          <h1>
+        <div className="row mt-10 text-center">          
+          <ScrollAnimation animateIn='flipInY' animateOut='flipOutY'>
+          <h1 className="headingFont">
             Recents
           </h1>
-        </ScrollAnimation>
+        </ScrollAnimation>          
+        
+        </div>
          
         
         <br/>

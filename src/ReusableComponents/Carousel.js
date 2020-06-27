@@ -7,6 +7,9 @@ import 'react-multi-carousel/lib/styles.css';
 //importing card from reusable components
 import Card from './Card';
 
+import './CSS/carousel.css'
+import '../Screens/Home/Home.css'
+
 //importing firebase 
 import * as firebase from 'firebase'
 import { useState } from 'react';
@@ -29,10 +32,32 @@ const NewsCarousel = () => {
                 let contactKey = Object.keys(dataSnapshot.val())
                 contactKey.forEach((value,key) => {
                 result[key]["key"] = value;                       
+                })                                
+                result.forEach((v,i) => {
+                    let date = new Date(v.postedOn)
+                    let dateData = []
+                    dateData.push(date.getDate())
+                    dateData.push(date.getMonth())
+                    dateData.push(date.getFullYear())
+                    dateData.push(date.getHours())
+                    dateData.push(date.getMinutes())
+                    dateData.push(date.getSeconds())
+                    v.postedOn = dateData
+                })
+                result.sort((a,b) => {
+                    if(a.postedOn[0] < b.postedOn[0]){
+                        return -1
+                    }
+                    if(a.postedOn[0] > b.postedOn[0]){
+                        return 1
+                    }
+                    return 0
                 })                
+                result.reverse()
                 data.push(result)               
                 setData(data[0])
                 console.log(data)
+                console.log(result)
             }
         })
     }
@@ -42,65 +67,56 @@ const NewsCarousel = () => {
     }, []);
 
     return (
-    <div className="row">
-        <div className="col-2"></div>
-        <div className="col-8">
-        <Carousel
-        additionalTransfrom={0}
-        arrows
-        autoPlay
-        autoPlaySpeed={4000}
-        centerMode={false}
-        className=""
-        containerClass="container-with-dots"
-        dotListClass=""
-        draggable
-        focusOnSelect={false}
-        infinite
-        itemClass=""
-        keyBoardControl
-        minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        responsive={{
-            desktop: {
-            breakpoint: {
-                max: 3000,
-                min: 1024
-            },
-            items: 1,
-            partialVisibilityGutter: 40
-            },
-            mobile: {
-            breakpoint: {
-                max: 464,
-                min: 0
-            },
-            items: 1,
-            partialVisibilityGutter: 30
-            },
-            tablet: {
-            breakpoint: {
-                max: 1024,
-                min: 464
-            },
-            items: 1,
-            partialVisibilityGutter: 30
-            }
-        }}
-        showDots={true}
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
-        >
-            {data.map((d,i) => (
-                <Card key={i} title={d.title} description={d.description} image={d.imageDownloadUrl} />
-            ))}
-        </Carousel>
-        </div>
-
-        </div>
+    
+    <div class="container">
+        <div class="card-group vgr-cards">
+            {data.map((d,i) => {
+                if(i%2 === 0 && i <= 3){
+                    return(                             
+                    <div class="card rainbow " key={i}>
+                        <div class="view overlay">          
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-img-body">
+                        <img class="card-img" src={d.imageDownloadUrl} alt="Card image cap" />
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">{d.title}</h4>
+                            <p class="card-text">{d.description}</p>                            
+                            <span className="text-muted">Posted On: <span className="badge badge-dark">{d.postedOn[0]}-{d.postedOn[1]}-{d.postedOn[2]}</span></span>
+                        </div>
+                    </div>                                     
+                    )
+                }
+                else if(i%2 !== 0 && i <= 3){
+                    return(                        
+                    <div class="card rainbow" key={i}>
+                        <div class="view overlay">          
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">{d.title}</h4>
+                            <p class="card-text">{d.description}</p>
+                            <span className="text-muted">Posted On: <span className="badge badge-dark">{d.postedOn[0]}-{d.postedOn[1]}-{d.postedOn[2]}</span></span>
+                        </div>
+                        <div class="card-img-body">
+                            <img class="card-img" src={d.imageDownloadUrl} alt="Card image cap" />
+                        </div>
+                    </div>                    
+                    )
+                }
+            })}
+            </div>
+            </div>
     );
 }
 
 export default NewsCarousel;
+
+
+
+
