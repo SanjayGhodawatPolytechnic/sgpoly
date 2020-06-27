@@ -30,9 +30,9 @@ function Home() {
 
     <div className="row">
 
-    <div class="card-deck">
+    <div class="card-deck ">
     
-      <div class="card mb-4">
+      <div class="card mb-4 rainbow ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
@@ -46,7 +46,7 @@ function Home() {
     
           <h2 class="card-title">Sanjay Ghodawat</h2>
           <h4 className="card-title">Chairman</h4>
-          <br/><br/>
+          <br/>
          
           <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
     
@@ -54,7 +54,7 @@ function Home() {
     
       </div>
     
-      <div class="card mb-4">
+      <div class="card mb-4 rainbow">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
@@ -68,7 +68,7 @@ function Home() {
     
         <h2 class="card-title">Vinayak Bhosale</h2>
         <h4 className="card-title">Trustee</h4>
-        <br/><br/>
+        <br/>
         <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
          
     
@@ -76,7 +76,7 @@ function Home() {
     
       </div>
     
-      <div class="card mb-4">
+      <div class="card mb-4 rainbow ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
@@ -90,7 +90,7 @@ function Home() {
     
         <h2 class="card-title">Virat Giri</h2>
         <h4 className="card-title">Principal</h4>
-        <br/><br/>
+        <br/>
         <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
          
     
