@@ -58,7 +58,7 @@ const Dashboard = () => {
         var title = document.getElementById('title').value;
         var description = document.getElementById('description').value
         const image = document.getElementById('image').files[0];
-        const file = document.getElementById('file').files[0];
+        const file = document.getElementById('file').files[0] ? document.getElementById('file').files[0]: "" ;
         setValue({
             ...value,
             image,
@@ -70,10 +70,12 @@ const Dashboard = () => {
         const storageRef = firebase.storage().ref()
         var url = "empty"
         var url2 = "empty"
-        if(image !== "" && file !== ""){
-            const downloadUrl = await uploadImageAsync(image, storageRef)                        
+        if(image !== ""){
+            const downloadUrl = await uploadImageAsync(image, storageRef)                                    
+            url = downloadUrl            
+        }
+        if(file !== ""){
             const downloadFileUrl = await uploadFileAsync(file,storageRef)
-            url = downloadUrl
             url2 = downloadFileUrl
         }
 

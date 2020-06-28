@@ -96,7 +96,7 @@ const NewsCarousel = () => {
                             <h4 class="card-title">{d.title}</h4>
                             <p class="card-text">{d.description}</p>                            
                             <span className="text-muted">Posted On: <span className="badge badge-dark">{d.postedOn[0]}-{d.postedOn[1]}-{d.postedOn[2]}</span></span><br/>
-                            <a href={d.fileDownloadUrl} target="blank"><span className="badge badge-info">More Info</span></a>
+                            {d.fileDownloadUrl !== "empty" ? (<a href={d.fileDownloadUrl} target="blank"><span className="badge badge-info">More Info</span></a>) : ""}
                         </div>                        
                     </div>                                     
                     )
@@ -113,7 +113,8 @@ const NewsCarousel = () => {
                             <h4 class="card-title">{d.title}</h4>
                             <p class="card-text">{d.description}</p>
                             <span className="text-muted">Posted On: <span className="badge badge-dark">{d.postedOn[0]}-{d.postedOn[1]}-{d.postedOn[2]}</span></span><br/>
-                            <a href={d.fileDownloadUrl} target="blank"><span className="badge badge-info">More Info</span></a>
+                            
+                            {d.fileDownloadUrl !== "empty" ? (<a href={d.fileDownloadUrl} target="blank"><span className="badge badge-info">More Info</span></a>) : ""}
                         </div>
                         <div class="card-img-body">
                             <img class="card-img" src={d.imageDownloadUrl} alt="Card image cap" />
