@@ -3,6 +3,7 @@ import Main from '../../ReusableComponents/Main';
 import NewsCarousel from '../../ReusableComponents/Carousel';
 import ScrollAnimation from 'react-animate-on-scroll';
 import './Home.css'
+import PopUpFile from './PopUpFile';
 
 
 function Home() {
@@ -44,7 +45,7 @@ function Home() {
           <ScrollAnimation animateIn='flipInY' animateOut='flipOutY'>
           <h1 className="headingFont">
             Recents
-          </h1>
+          </h1>          
         </ScrollAnimation>          
         
         </div>
@@ -131,8 +132,7 @@ function Home() {
     
     
     </div>
-    <br/><br/><br/><br/>
-
+    <br/><br/><br/><br/>    
     </Main>
   );
 }

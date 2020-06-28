@@ -57,7 +57,8 @@ const Dashboard = () => {
     const onSubmit = async () => {
         var title = document.getElementById('title').value;
         var description = document.getElementById('description').value
-        const image = document.getElementById('file').files[0];
+        const image = document.getElementById('image').files[0];
+        const file = document.getElementById('file').files[0];
         setValue({
             ...value,
             image,
@@ -68,15 +69,19 @@ const Dashboard = () => {
         const dbReference = firebase.database().ref()
         const storageRef = firebase.storage().ref()
         var url = "empty"
-        if(image !== ""){
+        var url2 = "empty"
+        if(image !== "" && file !== ""){
             const downloadUrl = await uploadImageAsync(image, storageRef)                        
+            const downloadFileUrl = await uploadFileAsync(file,storageRef)
             url = downloadUrl
+            url2 = downloadFileUrl
         }
 
         var contact = {
             title:title,
             description: description,
             imageDownloadUrl:url,
+            fileDownloadUrl: url2,
             postedOn:firebase.database.ServerValue.TIMESTAMP
           }
           await dbReference.push(contact, err => {
@@ -94,6 +99,12 @@ const Dashboard = () => {
     const uploadImageAsync = async (image, storageRef) => {
         const ref = storageRef.child('images').child(uuid.v4())
         const snapshot = await ref.put(image)
+        return await snapshot.ref.getDownloadURL()
+      };
+
+    const uploadFileAsync = async (file, storageRef) => {
+        const ref = storageRef.child('files').child(uuid.v4())
+        const snapshot = await ref.put(file)
         return await snapshot.ref.getDownloadURL()
       };
 
@@ -165,7 +176,12 @@ const Dashboard = () => {
                         </div>                        
                     </div>
                     <div className="col-12">                    
-                    <input type="file" class="form-control" id="file" />
+                    <label>Select Image:</label>
+                    <input type="file" class="form-control" id="image" placeholder="Choose image" />
+                    </div>
+                    <div className="col-12">                    
+                    <label>Select File:</label>
+                    <input type="file" class="form-control" id="file" placeholder="Choose image" />
                     </div>
                     <button class="btn btn-lg btn-success btn-block text-uppercase" onClick={onSubmit}>Add</button>
                     </form>
