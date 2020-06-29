@@ -1,4 +1,16 @@
 
+body{
+  background: rgb(244,4,9);
+background: linear-gradient(0deg, rgba(244,4,9,0.5298494397759104) 0%, rgba(255,255,255,1) 15%);
+  /* background-image: url("https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; */
+
+}
+
+
 .logo{
     transition: 500ms;
   }
@@ -26,15 +38,6 @@
   }
 
 
-  .backcolor{
-    /* background: rgb(244,4,9); */
-/* background: linear-gradient(0deg, rgba(244,4,9,0.5298494397759104) 0%, rgba(255,255,255,1) 15%); */
-
-    background-attachment: fixed;
-  }
-
-  .menu-items:hover{    
-    color: #fff;
-  }
+  
 
   

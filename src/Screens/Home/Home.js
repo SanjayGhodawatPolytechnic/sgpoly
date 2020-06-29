@@ -58,7 +58,7 @@ function Home() {
 
     <div class="card-deck ">
     
-      <div class="card mb-4  ">
+      <div class="card mb-4 tv ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
@@ -74,13 +74,13 @@ function Home() {
           <h4 className="card-title">Chairman</h4>
           <br/>
          
-          <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
+          <a class=" btn btn-lg  btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
     
         </div>
     
       </div>
     
-      <div class="card mb-4 ">
+      <div class="card mb-4 tv ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
@@ -102,7 +102,7 @@ function Home() {
     
       </div>
     
-      <div class="card mb-4  ">
+      <div class="card mb-4 tv ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"

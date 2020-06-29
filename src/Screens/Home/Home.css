@@ -1,12 +1,12 @@
 .btn-circle{
-    border-radius: 50px;
+    border-radius: 10px;
     transition: 500ms;
     float: right;
+    
+    background-color: rgba(248, 22, 22, 0.897);
 }
 
-.btn-circle:hover{
-    transform: rotate(360);
-}
+
 
 
  @keyframes rotate {
@@ -32,12 +32,12 @@
     top: -50%;
     width: 200%;
     height: 200%;
-    background-color: #399953;
+    background-color: #EA7773;
     background-repeat: no-repeat;
     background-size: 50% 50%, 50% 50%;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#399953), to(#399953)), -webkit-gradient(linear, left top, left bottom, from(#fbb300), to(#fbb300)), -webkit-gradient(linear, left top, left bottom, from(#d53e33), to(#d53e33)), -webkit-gradient(linear, left top, left bottom, from(#377af5), to(#377af5));
-    background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#EA7773), to(#EA7773)), -webkit-gradient(linear, left top, left bottom, from(#2B2B52), to(#2B2B52)), -webkit-gradient(linear, left top, left bottom, from(#d53e33), to(#d53e33)), -webkit-gradient(linear, left top, left bottom, from(#377af5), to(#377af5));
+    background-image: linear-gradient(#EA7773, #EA7773), linear-gradient(#2B2B52, #2B2B52), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
     -webkit-animation: rotate 4s linear infinite;
             animation: rotate 4s linear infinite;
   }
@@ -63,5 +63,17 @@
   }
 
 
+
+  .tv {
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+  }
+  .tv:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+    border-left: 0.3rem solid #00ff99;
+  }
+  
 
  
