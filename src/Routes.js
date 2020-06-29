@@ -20,6 +20,7 @@ import Activities from './Screens/About/Activities';
 import SocialResponsiblities from './Screens/About/SocialResponsiblities';
 import ImageGallery from './Screens/About/components/ImageGallery';
 import ImageGal from './Screens/About/components/ImageGallery';
+import MoreUpdates from './ReusableComponents/MoreUpdates';
 
 var firebaseConfig = {
     apiKey: "AIzaSyDMh0eaOlYDXjLMsHI4GcgfQgvW3wi1dFk",
@@ -51,6 +52,7 @@ const Routes = () => {
                     <Route path="/about/activities" exact component={Activities}/>
                     <Route path="/about/socialresponsiblities" exact component={SocialResponsiblities}/>
                     <Route path="/images" exact component={ImageGal}/>
+                    <Route path="/updates/viewmore" exact component={MoreUpdates}/>
 
 
                     <Route path="/contact/map" exact component={LocationMap} />                    

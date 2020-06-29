@@ -3,7 +3,7 @@ import Main from '../../ReusableComponents/Main';
 import NewsCarousel from '../../ReusableComponents/Carousel';
 import ScrollAnimation from 'react-animate-on-scroll';
 import './Home.css'
-import PopUpFile from './PopUpFile';
+
 
 
 function Home() {
@@ -37,10 +37,6 @@ function Home() {
           </a>
         </div>
 
-
-
-
-
         <div className="row mt-10 text-center">          
           <ScrollAnimation animateIn='flipInY' animateOut='flipOutY'>
           <h1 className="headingFont">
@@ -55,7 +51,7 @@ function Home() {
         <br/>          
       </div>
     </div>
-    <NewsCarousel />
+    <NewsCarousel />    
     <br/><br/><br/>
 
     <div className="row">

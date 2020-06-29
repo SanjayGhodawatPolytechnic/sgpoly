@@ -16,17 +16,18 @@ const Main = ({
   const Slideshow=()=>{
     if(isSlideShow){
       return(
-        <div>
+        <div className="container">
           <img src="../img/banner2.jpg" alt=""/>
-
         </div>
       )
     }
   }
-  return (
-    <div className="backcolor"> 
-      {Slideshow()}
-      <div className="">
+  return (          
+    <div className="backcolor">       
+    <div className="container">
+          <img src={require("../img/banner.jpg")} alt="" className="img-fluid"/>
+        </div>
+      <div className="">      
         <Menu />
       </div>     
       
@@ -34,7 +35,7 @@ const Main = ({
         {children}
       </div>
       <Footer/>
-    </div>
+    </div>    
   );
 }
 

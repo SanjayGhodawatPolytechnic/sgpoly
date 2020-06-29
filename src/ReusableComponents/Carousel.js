@@ -14,7 +14,9 @@ import '../Screens/Home/Home.css'
 import * as firebase from 'firebase'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import PopUpFile from '../Screens/Home/PopUpFile';
+
+import { WindMillLoading } from 'react-loadingg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -22,9 +24,11 @@ const NewsCarousel = () => {
 
     const [data,setData] = useState([])
     const [isPopUp,setisPopUp] = useState(false)
+    const [isLoading,setIsLoading] = useState(false)
 
 
     const getNews = async () => {
+        setIsLoading(true)
         let dataRef = firebase
         .database()
         .ref()                
@@ -45,29 +49,13 @@ const NewsCarousel = () => {
                     dateData.push(date.getMinutes())
                     dateData.push(date.getSeconds())
                     v.postedOn = dateData
-                })
-                // result.sort((a,b) => {
-                //     if(a.postedOn[0] < b.postedOn[0]){
-                //         if(a.postedOn[1] <= b.postedOn[1]){
-                //             return -1
-                //         }else if(a.postedOn[1] > b.postedOn[1]){
-                //             return 1
-                //         }
-                //     }
-                //     if(a.postedOn[0] > b.postedOn[0]){
-                //         if(a.postedOn[1] >= b.postedOn[1]){
-                //             return 1
-                //         }else if(a.postedOn[1] < b.postedOn[1]){
-                //             return -1
-                //         }
-                //     }
-                //     return 0
-                // })                
+                })                                
                 result.reverse()
                 data.push(result)               
                 setData(data[0])
                 console.log(data)
                 console.log(result)
+                setIsLoading(false)
             }
         })
     }
@@ -77,7 +65,8 @@ const NewsCarousel = () => {
     }, []);
 
     return (
-    
+    <div className="row">
+        <div className="col-sm-12">
     <div class="container">
         <div class="card-group vgr-cards">        
             {data.map((d,i) => {
@@ -90,7 +79,7 @@ const NewsCarousel = () => {
                             </a>
                         </div>
                         <div class="card-img-body">
-                        <img class="card-img" src={d.imageDownloadUrl} alt="Card image cap" />
+                        <img class="img-fluid" src={d.imageDownloadUrl} alt="Card image cap" />
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">{d.title}</h4>
@@ -117,13 +106,17 @@ const NewsCarousel = () => {
                             {d.fileDownloadUrl !== "empty" ? (<a href={d.fileDownloadUrl} target="blank"><span className="badge badge-info">More Info</span></a>) : ""}
                         </div>
                         <div class="card-img-body">
-                            <img class="card-img" src={d.imageDownloadUrl} alt="Card image cap" />
+                            <img class="img-fluid" src={d.imageDownloadUrl} alt="Card image cap" />
                         </div>
                     </div>                    
                     )
                 }
             })}            
             </div>
+            </div>
+            </div>            
+            <div className="col-12">{isLoading && (<WindMillLoading />)}</div><br/><br/><br/><br/>
+                <div className="col-12"><Link to={{pathname:"/updates/viewmore", aboutProps:{data:data} }} params={data}><button type="button" class="btn btn-outline-success w-100">View More</button></Link></div>    
             </div>
     );
 }
