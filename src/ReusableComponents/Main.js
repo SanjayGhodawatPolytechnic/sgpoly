@@ -17,7 +17,7 @@ const Main = ({
     if(isSlideShow){
       return(
         <div className="container">
-          <img src="../img/banner2.jpg" alt=""/>
+          <img src="../img/banner.png" alt=""/>
         </div>
       )
     }
@@ -25,7 +25,7 @@ const Main = ({
   return (          
     <div className="backcolor">       
     <div >
-          <img src={require("../img/banner.jpg")} alt="" className="img-fluid"/>
+          <img src={require("../img/banner.png")} alt="" className="img-fluid"/>
         </div>
         <br/><br/>
       <div className="">      
