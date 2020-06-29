@@ -12,20 +12,29 @@
   .effect{
     transition: 500ms;
     color:#fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'B612', sans-serif;
+    border-radius: 10px;
+    transition: 500ms;
+
+    
   }
   
   .effect:hover{
-    background-color: #E84342;
     border-radius: 10px;
+    background-image: linear-gradient(to right,#E71C23,#EA7773);;
     transform: scale(1.1,1.1);        
   }
 
 
   .backcolor{
-    background-color: #ffffff ;    
+    /* background: rgb(244,4,9); */
+/* background: linear-gradient(0deg, rgba(244,4,9,0.5298494397759104) 0%, rgba(255,255,255,1) 15%); */
+
+    background-attachment: fixed;
   }
 
   .menu-items:hover{    
     color: #fff;
   }
+
+  

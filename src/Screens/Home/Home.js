@@ -11,11 +11,11 @@ function Home() {
       <Main isSlideShow={true}>
 
     <div>            
-      <div className="container">
+      <div >
         
         <br/>
 
-        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+        {/*<div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img className="d-block w-100" src={require('../../img/1.jpg')} alt="First slide"/>
@@ -35,14 +35,14 @@ function Home() {
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
-        </div>
-
+        </div>*/}
+        <br/><br/>
         <div className="row mt-10 text-center">          
           <ScrollAnimation animateIn='flipInY' animateOut='flipOutY'>
           <h1 className="headingFont">
             Recents
           </h1>          
-        </ScrollAnimation>          
+          </ScrollAnimation>         
         
         </div>
          
@@ -52,13 +52,13 @@ function Home() {
       </div>
     </div>
     <NewsCarousel />    
-    <br/><br/><br/>
+    <br/><br/><br/><br/><br/>
 
     <div className="row">
 
     <div class="card-deck ">
     
-      <div class="card mb-4 rainbow ">
+      <div class="card mb-4  ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
@@ -80,7 +80,7 @@ function Home() {
     
       </div>
     
-      <div class="card mb-4 rainbow">
+      <div class="card mb-4 ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
@@ -102,7 +102,7 @@ function Home() {
     
       </div>
     
-      <div class="card mb-4 rainbow ">
+      <div class="card mb-4  ">
     
         <div class="view overlay">
           <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"

@@ -24,12 +24,14 @@ const Main = ({
   }
   return (          
     <div className="backcolor">       
-    <div className="container">
+    <div >
           <img src={require("../img/banner.jpg")} alt="" className="img-fluid"/>
         </div>
+        <br/><br/>
       <div className="">      
         <Menu />
-      </div>     
+      </div>   
+      <br/><br/>  
       
      <div className={className} >
         {children}
