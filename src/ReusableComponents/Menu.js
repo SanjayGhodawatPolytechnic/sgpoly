@@ -19,7 +19,32 @@ const Menu = () => {
             <Link to="/"><a className="nav-item nav-link active effect">Home </a></Link>
 
 
-            <a className="nav-item nav-link active effect" href="#">Management</a>
+
+
+
+          <li className="nav-item dropdown ">
+              <a className="nav-link dropdown-toggle active effect" href="#" id="navbarDropdown"  data-toggle="dropdown">
+                Management
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="management/trust">About Trust</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Trust Board of Directions</a> <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Chairmans's Message</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">A word from Secretary</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Trustee's Thought</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Principal's Desk</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">SGI Board of Directors</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Governing Body</a>
+              </div>
+            </li>
+
+
+
+
+
+
+
+
             <a className="nav-item nav-link active effect" href="#">Academics </a>
             <a className="nav-item nav-link active effect" href="#">Infrastructure </a>
 
