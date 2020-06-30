@@ -12,6 +12,11 @@ import aboutAffCert from './Screens/About/affiliation';
 import aboutDifferentiator from './Screens/About/differentiator';
 import aboutAchievement from './Screens/About/achievement';
 
+import managementTrust  from './Screens/Management/trust';
+
+
+
+
 
 import * as firebase from 'firebase'
 import Dashboard from './Admin/Dashboard';
@@ -41,6 +46,8 @@ const Routes = () => {
             <BrowserRouter>
                 <Switch>
                     <Route path="/" exact component={Home} />
+
+    {/* --------------------About------------------------------------------------*/}
                     <Route path="/about/logo" exact component={aboutLogo}/>
                     <Route path="/about/sgp" exact component={aboutSGP}/>
                     <Route path="/about/philosophy" exact component={aboutPhilosophy}/>
@@ -51,8 +58,18 @@ const Routes = () => {
                     <Route path="/about/achievements" exact component={aboutAchievement}/>
                     <Route path="/about/activities" exact component={Activities}/>
                     <Route path="/about/socialresponsiblities" exact component={SocialResponsiblities}/>
+
+    {/* --------------------Management------------------------------------------------*/}
+
+                    <Route path="/management/trust" exact component={managementTrust}/>
+
+
+
+
+
                     <Route path="/images" exact component={ImageGal}/>
                     <Route path="/updates/viewmore" exact component={MoreUpdates}/>
+
 
 
                     <Route path="/contact/map" exact component={LocationMap} />                    
