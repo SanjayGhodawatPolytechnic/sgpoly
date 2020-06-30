@@ -27,9 +27,9 @@ const Menu = () => {
                 Management
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="management/trust">About Trust</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Trust Board of Directions</a> <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Chairmans's Message</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/management/trust">About Trust</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/management/board">Trust Board of Directions</a> <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/management/chairman">Chairmans's Message</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">A word from Secretary</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Trustee's Thought</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Principal's Desk</a><div className="dropdown-divider"></div>

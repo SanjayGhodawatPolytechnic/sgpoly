@@ -12,7 +12,11 @@ import aboutAffCert from './Screens/About/affiliation';
 import aboutDifferentiator from './Screens/About/differentiator';
 import aboutAchievement from './Screens/About/achievement';
 
+
+
 import managementTrust  from './Screens/Management/trust';
+import managementBoard  from './Screens/Management/board';
+import managementChairman  from './Screens/Management/chairman';
 
 
 
@@ -62,6 +66,8 @@ const Routes = () => {
     {/* --------------------Management------------------------------------------------*/}
 
                     <Route path="/management/trust" exact component={managementTrust}/>
+                    <Route path="/management/board" exact component={managementBoard}/>
+                    <Route path="/management/chairman" exact component={managementChairman}/>
 
 
 
