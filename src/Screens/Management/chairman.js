@@ -2,6 +2,7 @@ import React from 'react';
 import Main from '../../ReusableComponents/Main';
 import './CSS/management.css'
 
+
 function managementChairman(){
     return(
         <Main isSlideShow={true}>
@@ -33,7 +34,6 @@ function managementChairman(){
             <br/>
             <br/>
             </div>
-        
         </Main>
     )
 }
