@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 
 import { WindMillLoading } from 'react-loadingg';
 import { Link } from 'react-router-dom';
+import ReactLoading from 'react-loading';
 
 
 
@@ -31,7 +32,7 @@ const NewsCarousel = () => {
         setIsLoading(true)
         let dataRef = firebase
         .database()
-        .ref()                
+        .ref("updates")                
         dataRef.on("value",dataSnapshot => {
             if(dataSnapshot.val()){
                 let result = Object.values(dataSnapshot.val())                
@@ -115,7 +116,7 @@ const NewsCarousel = () => {
             </div>
             </div>
             </div>            
-            <div className="col-12">{isLoading && (<WindMillLoading />)}</div><br/><br/><br/><br/>
+            <div className="col-12">{isLoading && (<ReactLoading type={"bars"} color="#000" />)}</div><br/><br/><br/><br/>
                 <div className="col-12"><Link to={{pathname:"/updates/viewmore", aboutProps:{data:data} }} params={data}><button type="button" class="btn btn-outline-success w-100">View More</button></Link></div>    
             </div>
     );

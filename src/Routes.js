@@ -30,6 +30,9 @@ import SocialResponsiblities from './Screens/About/SocialResponsiblities';
 import ImageGallery from './Screens/About/components/ImageGallery';
 import ImageGal from './Screens/About/components/ImageGallery';
 import MoreUpdates from './ReusableComponents/MoreUpdates';
+import secretary from './Screens/Management/secretary';
+import trustee from './Screens/Management/trustee';
+import AddStaffMember from './Admin/screens/AddStaffMember';
 
 var firebaseConfig = {
     apiKey: "AIzaSyDMh0eaOlYDXjLMsHI4GcgfQgvW3wi1dFk",
@@ -68,6 +71,8 @@ const Routes = () => {
                     <Route path="/management/trust" exact component={managementTrust}/>
                     <Route path="/management/board" exact component={managementBoard}/>
                     <Route path="/management/chairman" exact component={managementChairman}/>
+                    <Route path="/management/secretary" exact component={secretary}/>
+                    <Route path="/management/trustee" exact component={trustee}/>
 
 
 
@@ -79,7 +84,10 @@ const Routes = () => {
 
 
                     <Route path="/contact/map" exact component={LocationMap} />                    
+
+                    {/* Admin Routes goes here */}
                     <AdminRoute path="/admin" exact component={Dashboard} />
+                    <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
                     <Route path="/admin/signin" exact component={Login} />
                 </Switch>
             </BrowserRouter>                    
