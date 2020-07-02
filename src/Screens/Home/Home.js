@@ -118,7 +118,7 @@ function Home() {
         <h4 className="card-title">Principal</h4>
         <br/>
         <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
-         {/*Chintan*/}
+         
     
         </div>
     

@@ -27,22 +27,14 @@ const Menu = () => {
                 Management
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-<<<<<<< HEAD
-                <a className="dropdown-item" href="management/trust">About Trust</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Trust Board of Directions</a> <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Chairmans's Message</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">A word from Secretary</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Trustee's Thought</a><div className="dropdown-divider"></div>
-=======
                 <a className="dropdown-item" href="/management/trust">About Trust</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/board">Trust Board of Directions</a> <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/chairman">Chairmans's Message</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/secretary">A word from Secretary</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/trustee">Trustee's Thought</a><div className="dropdown-divider"></div>
->>>>>>> 7785b26ba9c566a8e31e4c20de4feb891c3c736f
-                <a className="dropdown-item" href="#">Principal's Desk</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">SGI Board of Directors</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Governing Body</a>
+                <a className="dropdown-item" href="/management/principal">Principal's Desk</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/management/directors">SGI Board of Directors</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/management/govern">Governing Body</a>
               </div>
             </li>
 

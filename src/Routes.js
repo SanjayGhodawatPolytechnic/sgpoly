@@ -12,16 +12,14 @@ import aboutAffCert from './Screens/About/affiliation';
 import aboutDifferentiator from './Screens/About/differentiator';
 import aboutAchievement from './Screens/About/achievement';
 
-import managementTrust  from './Screens/Management/trust';
-
-
-
-
 
 
 import managementTrust  from './Screens/Management/trust';
+import managementPrincipal  from './Screens/Management/principal';
 import managementBoard  from './Screens/Management/board';
 import managementChairman  from './Screens/Management/chairman';
+import managementDirectors  from './Screens/Management/directors';
+import managementGovern  from './Screens/Management/govern';
 
 
 
@@ -74,13 +72,13 @@ const Routes = () => {
     {/* --------------------Management------------------------------------------------*/}
 
                     <Route path="/management/trust" exact component={managementTrust}/>
-<<<<<<< HEAD
-=======
                     <Route path="/management/board" exact component={managementBoard}/>
                     <Route path="/management/chairman" exact component={managementChairman}/>
                     <Route path="/management/secretary" exact component={secretary}/>
                     <Route path="/management/trustee" exact component={trustee}/>
->>>>>>> 7785b26ba9c566a8e31e4c20de4feb891c3c736f
+                    <Route path="/management/principal" exact component={managementPrincipal}/>
+                    <Route path="/management/directors" exact component={managementDirectors}/>
+                    <Route path="/management/govern" exact component={managementGovern}/>
 
 
 
