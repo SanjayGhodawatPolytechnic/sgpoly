@@ -18,6 +18,15 @@ import managementTrust  from './Screens/Management/trust';
 
 
 
+
+import managementTrust  from './Screens/Management/trust';
+import managementBoard  from './Screens/Management/board';
+import managementChairman  from './Screens/Management/chairman';
+
+
+
+
+
 import * as firebase from 'firebase'
 import Dashboard from './Admin/Dashboard';
 import AdminRoute from './Admin/auth/AdminRoutes';
@@ -26,6 +35,9 @@ import SocialResponsiblities from './Screens/About/SocialResponsiblities';
 import ImageGallery from './Screens/About/components/ImageGallery';
 import ImageGal from './Screens/About/components/ImageGallery';
 import MoreUpdates from './ReusableComponents/MoreUpdates';
+import secretary from './Screens/Management/secretary';
+import trustee from './Screens/Management/trustee';
+import AddStaffMember from './Admin/screens/AddStaffMember';
 
 var firebaseConfig = {
     apiKey: "AIzaSyDMh0eaOlYDXjLMsHI4GcgfQgvW3wi1dFk",
@@ -62,6 +74,13 @@ const Routes = () => {
     {/* --------------------Management------------------------------------------------*/}
 
                     <Route path="/management/trust" exact component={managementTrust}/>
+<<<<<<< HEAD
+=======
+                    <Route path="/management/board" exact component={managementBoard}/>
+                    <Route path="/management/chairman" exact component={managementChairman}/>
+                    <Route path="/management/secretary" exact component={secretary}/>
+                    <Route path="/management/trustee" exact component={trustee}/>
+>>>>>>> 7785b26ba9c566a8e31e4c20de4feb891c3c736f
 
 
 
@@ -73,7 +92,10 @@ const Routes = () => {
 
 
                     <Route path="/contact/map" exact component={LocationMap} />                    
+
+                    {/* Admin Routes goes here */}
                     <AdminRoute path="/admin" exact component={Dashboard} />
+                    <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
                     <Route path="/admin/signin" exact component={Login} />
                 </Switch>
             </BrowserRouter>                    

@@ -24,9 +24,7 @@ const Main = ({
   }
   return (          
     <div className="backcolor">       
-    <div >
-          <img src={require("../img/banner.png")} alt="" className="img-fluid"/>
-        </div>
+    <div><img src={require("../img/banner.png")} alt="" className="img-fluid"/></div>
         <br/><br/>
       <div className="">      
         <Menu />

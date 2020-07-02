@@ -9,7 +9,7 @@ import uuid from 'react-native-uuid';
 
 //import firebase
 import * as firebase from 'firebase'
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { useState } from 'react';
 import Main from '../ReusableComponents/Main';
 import UpdatesCard from './UpdatesCard';
@@ -66,7 +66,7 @@ const Dashboard = () => {
             description
         })        
         setIsAdderLoading(true)
-        const dbReference = firebase.database().ref()
+        const dbReference = firebase.database().ref("updates")
         const storageRef = firebase.storage().ref()
         var url = "empty"
         var url2 = "empty"
@@ -220,6 +220,9 @@ const Dashboard = () => {
                     <li className="btn btn-success rounded-pill m-2" onClick={() => getAllUpdates()}>
                         List All News
                     </li>
+                    <Link to="/admin/add/staff" className="btn btn-success rounded-pill m-2"><li>
+                        Add Staff Member
+                    </li></Link>
                     <li className="btn btn-success rounded-pill m-2" onClick={e => SignOut()}>
                     Sign out <i class="fa fa-sign-out" aria-hidden="true"></i>
                     </li>
