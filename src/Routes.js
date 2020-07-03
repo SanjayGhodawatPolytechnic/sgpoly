@@ -15,8 +15,11 @@ import aboutAchievement from './Screens/About/achievement';
 
 
 import managementTrust  from './Screens/Management/trust';
+import managementPrincipal  from './Screens/Management/principal';
 import managementBoard  from './Screens/Management/board';
 import managementChairman  from './Screens/Management/chairman';
+import managementDirectors  from './Screens/Management/directors';
+import managementGovern  from './Screens/Management/govern';
 
 
 
@@ -73,6 +76,9 @@ const Routes = () => {
                     <Route path="/management/chairman" exact component={managementChairman}/>
                     <Route path="/management/secretary" exact component={secretary}/>
                     <Route path="/management/trustee" exact component={trustee}/>
+                    <Route path="/management/principal" exact component={managementPrincipal}/>
+                    <Route path="/management/directors" exact component={managementDirectors}/>
+                    <Route path="/management/govern" exact component={managementGovern}/>
 
 
 

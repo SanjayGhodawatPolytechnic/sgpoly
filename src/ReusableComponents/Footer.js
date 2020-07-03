@@ -6,8 +6,9 @@ const Footer = () => {
     return (
         <div>
         <footer className="page-footer font-small mdb-color lighten-3 pt-4">
-        <hr/>
+        
         <div className="container text-center text-md-left">
+        <hr/>
           <div className="row">
             <div className="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
               <h5 className="font-weight-bold text-uppercase mb-4">Sanjay Ghodawat Polytechnic</h5>

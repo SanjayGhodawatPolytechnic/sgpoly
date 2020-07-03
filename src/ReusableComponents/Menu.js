@@ -32,9 +32,9 @@ const Menu = () => {
                 <a className="dropdown-item" href="/management/chairman">Chairmans's Message</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/secretary">A word from Secretary</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/trustee">Trustee's Thought</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Principal's Desk</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">SGI Board of Directors</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Governing Body</a>
+                <a className="dropdown-item" href="/management/principal">Principal's Desk</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/management/directors">SGI Board of Directors</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/management/govern">Governing Body</a>
               </div>
             </li>
 
