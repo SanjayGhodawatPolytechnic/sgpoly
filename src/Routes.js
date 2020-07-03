@@ -25,6 +25,15 @@ import managementGovern  from './Screens/Management/govern';
 
 
 
+
+import infrastructureAbout  from './Screens/Infrastructure/about';
+
+
+
+
+
+
+
 import * as firebase from 'firebase'
 import Dashboard from './Admin/Dashboard';
 import AdminRoute from './Admin/auth/AdminRoutes';
@@ -79,6 +88,13 @@ const Routes = () => {
                     <Route path="/management/principal" exact component={managementPrincipal}/>
                     <Route path="/management/directors" exact component={managementDirectors}/>
                     <Route path="/management/govern" exact component={managementGovern}/>
+                    
+                    
+                    
+    {/* --------------------Infrastructre------------------------------------------------*/}
+                    
+                    
+                    <Route path="/infrastructure/about" exact component={infrastructureAbout}/>
 
 
 

@@ -46,7 +46,30 @@ const Menu = () => {
 
 
             <a className="nav-item nav-link active effect" href="#">Academics </a>
-            <a className="nav-item nav-link active effect" href="#">Infrastructure </a>
+            
+
+
+
+            <li className="nav-item dropdown ">
+              <a className="nav-link dropdown-toggle active effect" href="#" id="navbarDropdown"  data-toggle="dropdown">
+                Infrastructure
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="/infrastructure/about">About Infrastructure</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Campus Overview</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Admin Building</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Classrooms</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Workshop</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Auditorium</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Food Court</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Conference Hall</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Amphi Theatre</a>
+               
+              </div>
+            </li>
+
+
+
 
 
             <li className="nav-item dropdown ">
