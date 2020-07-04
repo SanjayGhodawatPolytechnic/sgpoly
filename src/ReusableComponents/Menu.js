@@ -56,7 +56,7 @@ const Menu = () => {
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a className="dropdown-item" href="/infrastructure/about">About Infrastructure</a><div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Campus Overview</a><div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="/infrastructure/overview">Campus Overview</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Admin Building</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Classrooms</a><div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Workshop</a><div className="dropdown-divider"></div>

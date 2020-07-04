@@ -45,6 +45,7 @@ import MoreUpdates from './ReusableComponents/MoreUpdates';
 import secretary from './Screens/Management/secretary';
 import trustee from './Screens/Management/trustee';
 import AddStaffMember from './Admin/screens/AddStaffMember';
+import Overview from './Screens/Infrastructure/Overview';
 
 var firebaseConfig = {
     apiKey: "AIzaSyDMh0eaOlYDXjLMsHI4GcgfQgvW3wi1dFk",
@@ -95,6 +96,7 @@ const Routes = () => {
                     
                     
                     <Route path="/infrastructure/about" exact component={infrastructureAbout}/>
+                    <Route path="/infrastructure/overview" exact component={Overview}/>
 
 
 

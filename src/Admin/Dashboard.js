@@ -125,7 +125,7 @@ const Dashboard = () => {
         setIsListLoading(true)
         setIsImageLoading(true)
 
-        const updatesRef = firebase.database().ref()        
+        const updatesRef = firebase.database().ref("updates")        
         await updatesRef.on("value",datasnapshot => {
             if(datasnapshot.val()){
                 let result = Object.values(datasnapshot.val())                
@@ -184,6 +184,9 @@ const Dashboard = () => {
                     <div className="col-12">                    
                     <label>Select File:</label>
                     <input type="file" class="form-control" id="file" placeholder="Choose image" />
+                    </div>
+                    <div className="col-12">
+                        {isAdderLoading && (<CommonLoading />)}
                     </div>
                     <button class="btn btn-lg btn-success btn-block text-uppercase" onClick={onSubmit}>Add</button>
                     </form>
@@ -256,7 +259,7 @@ const Dashboard = () => {
         <div>
             { didRedirect && PerformRedirect()}
             <AdminPanel />
-            {isAdderLoading && (<CommonLoading />)}
+            
         </div>
         </Main>
     );
