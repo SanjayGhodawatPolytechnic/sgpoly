@@ -41,6 +41,18 @@ import amphi from "./Screens/Infrastructure/amphi";
 
 
 
+
+
+import hostel from "./Screens/Facilities/hostel";
+
+
+
+
+
+
+
+
+
 import * as firebase from 'firebase'
 import Dashboard from './Admin/Dashboard';
 import AdminRoute from './Admin/auth/AdminRoutes';
@@ -145,6 +157,16 @@ const Routes = () => {
             exact
             component={amphi}
           />
+
+          {/* --------------------FACILITIES------------------------------------------------*/}
+
+          <Route
+            path="/facilities/hostel"
+            exact
+            component={hostel}
+          />
+
+
 
           {/* --------------------cbbbdbtbc------------------------------------------------*/}
 

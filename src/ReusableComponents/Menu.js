@@ -45,7 +45,7 @@ const Menu = () => {
                 <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/board">
                   Trust Board of Directions
-                </a>{" "}
+                </a>
                 <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="/management/chairman">
                   Chairmans's Message
@@ -160,9 +160,98 @@ const Menu = () => {
             <a className="nav-item nav-link active effect" href="#">
               Admission
             </a>
-            <a className="nav-item nav-link active effect" href="#">
-              Facilities
-            </a>
+
+
+
+
+
+            <li className="nav-item dropdown ">
+              <a
+                className="nav-link dropdown-toggle active effect"
+                href="#"
+                id="navbarDropdown"
+                data-toggle="dropdown"
+              >
+                Facilities
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="/facilities/hostel">
+                  Hostel
+                </a>
+                <div className="dropdown-divider"></div>
+                
+                <a className="dropdown-item" href="#">
+                  Laboratories
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                    Computer Lab
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Drawing hall
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Reading Hall
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                    Transportation
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Gymnasium
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Swimming Pool
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Cafeteria
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Health Care
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  ATM
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Playing Ground
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Tennis Court
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                   Stationary
+                </a>
+                <div className="dropdown-divider"></div>
+
+                <a className="dropdown-item" href="/facilities/">
+                  Parking
+                </a>
+
+              </div>
+
+            </li>
 
             <li className="nav-item dropdown ">
               <a
