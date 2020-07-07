@@ -109,7 +109,7 @@ const AddStaffMember = () => {
                         <div class="row">
                             <div class="col-lg-12"><input type="text" class="form-control" name="full_name" placeholder="Full Name with title" required="required" onChange={e => {
                                 setFullName(e.target.value)
-                                //console.log(fullName)
+                                console.log(e.target.value)
                             }} /></div>                            
                         </div>        	
                     </div>                    

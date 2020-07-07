@@ -1,11 +1,10 @@
 import React from 'react';
 
 //imports for carousel
-import Carousel from 'react-multi-carousel';
+
 import 'react-multi-carousel/lib/styles.css';
 
-//importing card from reusable components
-import Card from './Card';
+
 
 import './CSS/carousel.css'
 import '../Screens/Home/Home.css'
@@ -15,7 +14,7 @@ import * as firebase from 'firebase'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-import { WindMillLoading } from 'react-loadingg';
+
 import { Link } from 'react-router-dom';
 import ReactLoading from 'react-loading';
 
@@ -36,7 +35,7 @@ const NewsCarousel = () => {
         dataRef.on("value",dataSnapshot => {
             if(dataSnapshot.val()){
                 let result = Object.values(dataSnapshot.val())                
-                let contactKey = Object.keys(dataSnapshot.val())
+                let contactKey = Object.keys(dataSnapshot.val())                
                 contactKey.forEach((value,key) => {
                 result[key]["key"] = value;                       
                 })                                
@@ -54,8 +53,8 @@ const NewsCarousel = () => {
                 result.reverse()
                 data.push(result)               
                 setData(data[0])
-                console.log(data)
-                console.log(result)
+                // console.log(data)
+                // console.log(result)
                 setIsLoading(false)
             }
         })
