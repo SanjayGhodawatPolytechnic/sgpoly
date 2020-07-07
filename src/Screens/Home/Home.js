@@ -20,7 +20,8 @@ function Home() {
       heading:"Test",
       subheading:'Posted 2h ago',
       profileImage:'https://picsum.photos/1000/1000'
-    }}
+    },    
+  }
   ]
 
   useEffect(() => {
@@ -40,10 +41,10 @@ function Home() {
                 }}                
                 >
               <Stories
-              stories={currentStory}
+              stories={currentStory}              
               defaultInterval={2000}
               width={window.outerWidth}
-              height={window.outerHeight}              
+              height={window.outerHeight}                            
             />
             </div>
             )}

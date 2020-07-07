@@ -18,6 +18,8 @@ import UpdatesCard from './UpdatesCard';
 import { CircleToBlockLoading, WindMillLoading } from 'react-loadingg';
 
 const Dashboard = () => {
+    var imageuid = ''
+    var fileuid = ''
     const [didRedirect,setDidRedirect] = useState(false)    
     const [screens,setScreens] = useState({
         isNewNews:false,
@@ -84,6 +86,8 @@ const Dashboard = () => {
             description: description,
             imageDownloadUrl:url,
             fileDownloadUrl: url2,
+            pdfname: fileuid,
+            imgname: imageuid,
             postedOn:firebase.database.ServerValue.TIMESTAMP
           }
           await dbReference.push(contact, err => {
@@ -99,14 +103,18 @@ const Dashboard = () => {
 
 
     const uploadImageAsync = async (image, storageRef) => {
-        const ref = storageRef.child('images').child(uuid.v4())
+        var imguuid = uuid.v4()
+        const ref = storageRef.child('images').child(imguuid)
         const snapshot = await ref.put(image)
+        imageuid = imguuid;
         return await snapshot.ref.getDownloadURL()
       };
 
     const uploadFileAsync = async (file, storageRef) => {
+        var fuuid = uuid.v4()
         const ref = storageRef.child('files').child(uuid.v4())
         const snapshot = await ref.put(file)
+        fileuid = fuuid;
         return await snapshot.ref.getDownloadURL()
       };
 
