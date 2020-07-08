@@ -1,32 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { BoxLoading } from 'react-loadingg';
 import * as firebase from 'firebase'
+import { Redirect } from 'react-router-dom';
 
 const UpdatesCard = ({
     title="",
     description = "",
     image = "",
     loading = true,
-    k="",   
-    getAllUpdates
+    k="",       
+    data={},    
 }) => {
-    
-    const [reload,setReload] = useState(false)
+        
+    const [didRedirect,setDidRedirect] = useState(false)
 
     useEffect(() => {
         
-    }, [reload])
+    }, [])
     
 
     const deleteUpdate = async (event,key) => {
         event.preventDefault()        
-        const dataRef = firebase.database().ref().child(key)
-        await dataRef.remove()
-        setReload(!reload)
+        console.log(data)
+        const dataRef = firebase.database().ref('updates').child(key)
+        const imgRef = firebase.storage().ref('images').child(data.imgname)
+        const fileRef = firebase.storage().ref('files').child(data.pdfname)        
+        await imgRef.delete()
+        await fileRef.delete()                        
+        await dataRef.remove()        
+        setDidRedirect(true)
     }
+
+    const PerformRedirect = () => (
+        <Redirect to="/admin" from="/admin" />
+    )
 
     return (
         <div className="card mb-3 " style={{borderRadius: 10}} >
+            {didRedirect && (<PerformRedirect />)}
                     <div className="row ">
                         <div className="col-lg-3">
                             <br/>

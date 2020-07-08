@@ -112,7 +112,7 @@ const Dashboard = () => {
 
     const uploadFileAsync = async (file, storageRef) => {
         var fuuid = uuid.v4()
-        const ref = storageRef.child('files').child(uuid.v4())
+        const ref = storageRef.child('files').child(fuuid)
         const snapshot = await ref.put(file)
         fileuid = fuuid;
         return await snapshot.ref.getDownloadURL()
@@ -210,7 +210,7 @@ const Dashboard = () => {
                 <p class="lead">Here you get all list of updates you posted and can delete them.</p>
                 <hr class="my-4"></hr>                
                 {updates.map((data,index) => (
-                    <UpdatesCard title={data.title} description={data.description} image={data.imageDownloadUrl} key={index} loading={isImageLoading} k={data.key} />
+                    <UpdatesCard reload={reload} setReload={setReload} getAllUpdates={getAllUpdates} data={data} title={data.title} description={data.description} image={data.imageDownloadUrl} key={index} loading={isImageLoading} k={data.key} />
                 ))}                
             </div>
             {isListLoading && ItemsLoader()}
