@@ -64,19 +64,20 @@ import MoreUpdates from './ReusableComponents/MoreUpdates';
 import secretary from './Screens/Management/secretary';
 import trustee from './Screens/Management/trustee';
 import AddStaffMember from './Admin/screens/AddStaffMember';
+
 var firebaseConfig = {
-    apiKey: "AIzaSyDMh0eaOlYDXjLMsHI4GcgfQgvW3wi1dFk",
-    authDomain: "sgpoly-ae692.firebaseapp.com",
-    databaseURL: "https://sgpoly-ae692.firebaseio.com",
-    projectId: "sgpoly-ae692",
-    storageBucket: "sgpoly-ae692.appspot.com",
-    messagingSenderId: "175399205250",
-    appId: "1:175399205250:web:e912ca123d98f0f884f79b",
-    measurementId: "G-8WEFFHEV1K"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
+  authDomain: "sgpoly-86d3b.firebaseapp.com",
+  databaseURL: "https://sgpoly-86d3b.firebaseio.com",
+  projectId: "sgpoly-86d3b",
+  storageBucket: "sgpoly-86d3b.appspot.com",
+  messagingSenderId: "458948463598",
+  appId: "1:458948463598:web:f208ec769aef51d6a01cff",
+  measurementId: "G-87WB112H7S"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 const Routes = () => {
     return (

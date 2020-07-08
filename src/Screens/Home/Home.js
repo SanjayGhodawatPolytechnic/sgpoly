@@ -8,6 +8,7 @@ import './Story.css'
 import Stories from 'react-insta-stories';
 import Fullscreen from "react-full-screen";
 import { useEffect } from 'react';
+import Highlights from './components/Highlights';
 
 
 
@@ -19,9 +20,10 @@ function Home() {
     {url:'https://picsum.photos/1000/1000', header:{
       heading:"Test",
       subheading:'Posted 2h ago',
-      profileImage:'https://picsum.photos/1000/1000'
-    },    
-  }
+      profileImage:'https://picsum.photos/1000/1000'      
+    }    
+  },
+  { url: 'https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/Whatsapp%20Status%20New%20Video%20Outer%20Space.mp4?alt=media&token=b46f69d7-83ce-491b-86ff-6ce34da8f2fa', type: 'video', duration: 1000 }
   ]
 
   useEffect(() => {
@@ -29,32 +31,8 @@ function Home() {
   }, [])
   return (
       <Main isSlideShow={true}>        
-          <Fullscreen enabled={isStoryVisible} onChange={f => setIsStoryVisible(f)}>
-            {isStoryVisible && (
-              <div onTouchMove={e => {
-                e.preventDefault()
-                  touches += 16;
-                  console.log(touches)
-                  if(touches > 500){
-                    setIsStoryVisible(false)                
-                  }
-                }}                
-                >
-              <Stories
-              stories={currentStory}              
-              defaultInterval={2000}
-              width={window.outerWidth}
-              height={window.outerHeight}                            
-            />
-            </div>
-            )}
-        </Fullscreen>        
-        <div class="scrolling-wrapper">          
-          <img src={storyData[0].url} className="rounded-circle" style={{width:50, height:50, margin:2}} onClick={() => {
-            currentStory.push(storyData[0])
-            setIsStoryVisible(true)
-            }} />
-        </div>
+          
+        <Highlights />                
 
     <div>            
       <div >
@@ -174,7 +152,7 @@ function Home() {
     
     
     </div>
-    <br/><br/><br/><br/>    
+    <br/><br/><br/><br/>          
     </Main>
   );
 }
