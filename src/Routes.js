@@ -44,6 +44,12 @@ import amphi from "./Screens/Infrastructure/amphi";
 
 
 import hostel from "./Screens/Facilities/hostel";
+import laboratories from "./Screens/Facilities/laboratories";
+import gymnasium from "./Screens/Facilities/gymnasium";
+import pool from "./Screens/Facilities/pool";
+import ground from "./Screens/Facilities/ground";
+import tennis from "./Screens/Facilities/tennis";
+import more from "./Screens/Facilities/more";
 
 
 
@@ -154,21 +160,23 @@ const Routes = () => {
             exact
             component={conference}
           />
-          <Route
-            path="/infrastructure/amphi"
-            exact
-            component={amphi}
-          />
+          <Route path="/infrastructure/amphi" exact component={amphi} />
 
           {/* --------------------FACILITIES------------------------------------------------*/}
 
+          <Route path="/facilities/hostel" exact component={hostel} />
+
+          <Route path="/facilities/hostel" exact component={hostel} />
+          <Route path="/facilities/gymnasium" exact component={gymnasium} />
+          <Route path="/facilities/pool" exact component={pool} />
+          <Route path="/facilities/ground" exact component={ground} />
+          <Route path="/facilities/tennis" exact component={tennis} />
+          <Route path="/facilities/more" exact component={more} />
           <Route
-            path="/facilities/hostel"
+            path="/facilities/laboratories"
             exact
-            component={hostel}
+            component={laboratories}
           />
-
-
 
           {/* --------------------cbbbdbtbc------------------------------------------------*/}
 
@@ -177,7 +185,6 @@ const Routes = () => {
 
           <Route path="/contact/map" exact component={LocationMap} />
 
-
           {/* Admin Routes goes here */}
           <AdminRoute path="/admin" exact component={Dashboard} />
           <AdminRoute
@@ -185,11 +192,7 @@ const Routes = () => {
             exact
             component={AddStaffMember}
           />
-          <AdminRoute
-            path="/admin/add/story"
-            exact
-            component={AddStory}
-          />
+          <AdminRoute path="/admin/add/story" exact component={AddStory} />
           <Route path="/admin/signin" exact component={Login} />
         </Switch>
       </BrowserRouter>

@@ -161,10 +161,6 @@ const Menu = () => {
               Admission
             </a>
 
-
-
-
-
             <li className="nav-item dropdown ">
               <a
                 className="nav-link dropdown-toggle active effect"
@@ -179,78 +175,40 @@ const Menu = () => {
                   Hostel
                 </a>
                 <div className="dropdown-divider"></div>
-                
-                <a className="dropdown-item" href="#">
+
+                <a className="dropdown-item" href="/facilities/laboratories">
                   Laboratories
                 </a>
                 <div className="dropdown-divider"></div>
 
-                <a className="dropdown-item" href="/facilities/">
-                    Computer Lab
-                </a>
-                <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
-                  Drawing hall
-                </a>
-                <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
-                  Reading Hall
-                </a>
-                <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
-                    Transportation
-                </a>
-                <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
+                <a className="dropdown-item" href="/facilities/gymnasium">
                   Gymnasium
                 </a>
                 <div className="dropdown-divider"></div>
 
-                <a className="dropdown-item" href="/facilities/">
+                <a className="dropdown-item" href="/facilities/pool">
                   Swimming Pool
                 </a>
                 <div className="dropdown-divider"></div>
 
-                <a className="dropdown-item" href="/facilities/">
+                <a className="dropdown-item" href="/infrastructure/foodcourt">
                   Cafeteria
                 </a>
                 <div className="dropdown-divider"></div>
 
-                <a className="dropdown-item" href="/facilities/">
-                  Health Care
-                </a>
-                <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
-                  ATM
-                </a>
-                <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
+                <a className="dropdown-item" href="/facilities/ground">
                   Playing Ground
                 </a>
                 <div className="dropdown-divider"></div>
 
-                <a className="dropdown-item" href="/facilities/">
+                <a className="dropdown-item" href="/facilities/tennis">
                   Tennis Court
                 </a>
                 <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
-                   Stationary
+                <a className="dropdown-item" href="/facilities/more">
+                  More...
                 </a>
-                <div className="dropdown-divider"></div>
-
-                <a className="dropdown-item" href="/facilities/">
-                  Parking
-                </a>
-
               </div>
-
             </li>
 
             <li className="nav-item dropdown ">
