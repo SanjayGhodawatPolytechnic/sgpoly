@@ -14,9 +14,9 @@ const AddContact = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        var name = document.querySelector('#contactName').textContent;
+        var name = document.querySelector('#contactName').value;
 
-        var phno = document.querySelector('#contactNumber').textContent;
+        var phno = document.querySelector('#contactNumber').value;
 
 
         const dbReference = firebase.database().ref("contact")
