@@ -6,8 +6,7 @@ import "./CSS/Contact.css";
 
 
 const AddContact = () => {
-    const [name, setName] = useState("")
-    const [num, setNum] = useState(number)
+    
 
 
 
@@ -76,7 +75,7 @@ const AddContact = () => {
                     <input
                       type="number"
                       className="form-control"
-                      id="#contactNumber"
+                      id="contactNumber"
                       placeholder="Phone Number"
                       name="fname"
                     />
@@ -84,7 +83,9 @@ const AddContact = () => {
                 </div>
                 <div className="form-group">
                   <div className="col-sm-offset-2 col-sm-10">
-                    <button type="submit" className="btn btn-default">
+                    <button type="submit" className="btn btn-default" onClick={e => {
+                      onSubmit(e)
+                    }}>
                       Submit
                     </button>
                   </div>

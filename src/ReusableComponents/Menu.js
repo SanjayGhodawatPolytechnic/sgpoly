@@ -269,7 +269,7 @@ const Menu = () => {
                 </a>
               </div>
             </li>
-            <Link to="contact/map">
+            <Link to="/contact">
               <a className="nav-item nav-link active effect">Contact Us </a>
             </Link>
           </div>

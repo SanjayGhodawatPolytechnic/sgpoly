@@ -71,6 +71,7 @@ import secretary from './Screens/Management/secretary';
 import trustee from './Screens/Management/trustee';
 import AddStaffMember from './Admin/screens/AddStaffMember';
 import AddStory from './Admin/screens/AddStory';
+import AddContact from './Admin/screens/contact';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -184,6 +185,9 @@ const Routes = () => {
           <Route path="/updates/viewmore" exact component={MoreUpdates} />
 
           <Route path="/contact/map" exact component={LocationMap} />
+
+
+          <Route path="/contact" exact component={AddContact} />
 
           {/* Admin Routes goes here */}
           <AdminRoute path="/admin" exact component={Dashboard} />
