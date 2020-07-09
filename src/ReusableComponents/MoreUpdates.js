@@ -5,14 +5,16 @@ import ReactLoading from 'react-loading';
 import Stories from 'react-insta-stories';
 import Fullscreen from "react-full-screen";
 import './CSS/test.css'
+import renderHTML from 'react-render-html';
 
 
 export default function MoreUpdates(props) {
     const [data,setData] = useState([])
     const [isLoading,setIsLoading] = useState(false)
     const [isFull,setIsFull] = useState(false)
-    const stories = [{ url: 'https://picsum.photos/1080/1920',seeMore: ({ close }) => (
-        <div onClick={close}>Hello</div>
+    const sampleHTML = (close) => (`<div className="container mt-5"><div onClick={${close}} className="text-center text-light" style={{fontSize:20,color:'#FFF'}}><i class="far fa-times-circle"></i></div><h4 className="text-center badge badge-light">This is sample</h4></div>`)
+    const stories = [{ url: 'https://picsum.photos/1080/1920',seeMore: ({ close }) => (        
+        renderHTML(sampleHTML(close))
     ), header: { 
     heading: 'Mohit Karekar', 
     subheading: 'Posted 5h ago', 
