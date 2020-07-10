@@ -80,8 +80,8 @@ export default function MoreUpdates(props) {
             ))}
             </div>
             {console.log(data)}
-            <button onClick={e => setIsFull(true)}>Full</button>
-            <Fullscreen enabled={isFull}>
+            {/* <button onClick={e => setIsFull(true)}>Full</button> */}
+            {/* <Fullscreen enabled={isFull}>
                 <div className="row">
                     <div className="col-6">
             <Stories 
@@ -108,7 +108,7 @@ export default function MoreUpdates(props) {
     <img src="https://picsum.photos/1000/1000" className="rounded-circle" style={{width:50, height:50, margin:2}} />
     <img src="https://picsum.photos/1000/1000" className="rounded-circle" style={{width:50, height:50, margin:2}} />
     <img src="https://picsum.photos/1000/1000" className="rounded-circle" style={{width:50, height:50, margin:2}} />    
-    </div>
+    </div> */}
         </Main>
     )
 }

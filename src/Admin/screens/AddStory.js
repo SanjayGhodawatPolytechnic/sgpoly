@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Main from '../../ReusableComponents/Main';
 import { Link } from 'react-router-dom';
 import './CSS/AddStaffMember.css'
@@ -6,19 +6,11 @@ var _ = require('lodash');
 
 const AddStory = () => {
 
-    const [inputCount,setInputCount] = useState(1)
-
-    // const [openedBoxes,setOpenedBoxes] = useState([])
-
-    var openedBoxes = []
+    const [inputCount,setInputCount] = useState(1)    
 
     const InputStory = () => {
-        return _.times(inputCount, (i) => {
-            let temp = openedBoxes
-            _.times(inputCount,(idx) => {
-                temp.push(false)
-            })
-            openedBoxes = temp
+         return _.times(inputCount, (i) => {
+            
             return(
             <div class="form-group">
             <div class="row">            
@@ -29,19 +21,8 @@ const AddStory = () => {
                     data-toggle="collapse" 
                     data-target={`#multiCollapseExample${i}`} 
                     aria-expanded="false" 
-                    aria-controls={`multiCollapseExample${i}`}
-                    onClick={e => {
-                        e.preventDefault()
-                        let list = openedBoxes
-                        if(list[i]){
-                            list[i] = false
-                        }else{
-                            list[i] = true
-                        }
-
-                        openedBoxes = list
-                    }}
-                    >Story Item {i + 1} {openedBoxes[i] ? (<i class="fas fa-arrow-down"></i>) : (<i class="fas fa-arrow-up"></i>)}</button>
+                    aria-controls={`multiCollapseExample${i}`}                    
+                    >Story Item {i + 1}</button>
                 </div>
             <div class="col-lg-12 collapse multi-collapse m-2" id={`multiCollapseExample${i}`}>                                                        
                     <div class="col-lg-12"><input type="text" class="form-control" name="full_name" placeholder="Enter Heading" required="required" /></div>                                                
