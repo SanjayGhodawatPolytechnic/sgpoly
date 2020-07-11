@@ -1,7 +1,8 @@
 import React from 'react';
-import './CSS/Menu.css';
-import Menu from './Menu';
+
+
 import Footer from './Footer';
+import MenuBar from './Menu';
 
 
 const Main = ({
@@ -24,14 +25,15 @@ const Main = ({
   }
   return (          
     <div className="backcolor">       
+    <MenuBar />
     <div><img src={require("../img/banner.png")} alt="" className="img-fluid"/></div>
         <br/><br/>
       <div className="">      
-        <Menu />
+        
       </div>   
       <br/><br/>  
       
-     <div className={className} >
+     <div className={className} id="page-wrap" >
         {children}
       </div>
       <Footer/>
