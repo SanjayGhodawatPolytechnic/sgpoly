@@ -21,17 +21,24 @@ const Highlights = () => {
   ]
 
   const getNews = async () => {
-    
+    setData([])
     let dataRef = firebase
     .database()
-    .ref('highlights')                
+    .ref('story')                
     dataRef.on("value",dataSnapshot => {
         if(dataSnapshot.val()){
             let result = Object.values(dataSnapshot.val())                
             let contactKey = Object.keys(dataSnapshot.val())
             contactKey.forEach((value,key) => {
-            result[key]["key"] = value;                       
-            })                                           
+            result[key]["key"] = value;                                   
+            })                                                
+            result.forEach((v,i) => {
+              let res = Object.values(v.storyData)
+              let resKey = Object.keys(v.storyData)
+              resKey.forEach((val,idx) => {
+                res[idx]['key'] = val
+              })
+            })       
             setData(result)                                       
         }
     })
@@ -42,33 +49,9 @@ const Highlights = () => {
   }, [])
 
   useEffect(() => {
-    if(data.length){
-      console.log(data)
-    }
+    
   }, [data])
 
-  const Story = () => (
-    <Fullscreen enabled={true} onChange={f => setIsStoryVisible(f)}>
-            {isStoryVisible && (
-              <div onTouchMove={e => {
-                e.preventDefault()
-                  touches += 16;
-                  console.log(touches)
-                  if(touches > 500){
-                    setIsStoryVisible(false)                
-                  }
-                }}                
-                >
-              <Stories
-              stories={currentStory}              
-              defaultInterval={2000}
-              width={window.outerWidth}
-              height={window.outerHeight}                            
-            />
-            </div>
-            )}
-        </Fullscreen>
-  )
 
     return (
         <div>
@@ -97,11 +80,30 @@ const Highlights = () => {
           {data.map((item,index) => (
             <div className="ml-3" key={index}>
               <img 
-              src={item.storydata.url} 
+              src={item.storyData[Object.keys(item.storyData)[0]].url} 
               className="rounded-circle" 
               style={{width:80, height:80}}
               onClick={() => {                
-                currentStory.push(item.storydata)
+                let story = []
+                let d = data[index]
+                let obj = Object.values(d.storyData)
+                obj.forEach((da,i) => {
+                  let temp = {
+                    url: da.url,
+                    type: da.type,
+                    header: {
+                      heading: da.heading,
+                      subheading: da.subHeading,
+                      profileImage: da.profileImage
+                    }
+                  }
+                  //console.log(temp)
+                  story.push(temp)                  
+                })
+                //console.log(story)                
+                //currentStory.push(item.storyData)
+                setCurrentStory(story)
+                //console.log(currentStory)
                 setIsStoryVisible(true)
               }}
               />

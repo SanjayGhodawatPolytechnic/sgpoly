@@ -24,6 +24,9 @@ const AddStory = () => {
         snippet: []
     })
 
+    var profileName;
+    var mediaName;
+
     const submit = async () => {
         const storyID = uuid.v4()
         const dbRef = firebase.database().ref('story')
@@ -34,9 +37,8 @@ const AddStory = () => {
             heading:storyData.title
         }
 
-        await dbRef.child(storyID).push(s,err => {
-            console.error('ERROR OCCURED: ',err.message)
-        }).then(async () => {
+        await dbRef.child(storyID).set(s)
+        .then(async () => {
             for(let index = 0; index < storyData.heading.length; index++){
                 let profileURL = 'empty'
                 let mediaURL = 'empty'
@@ -47,23 +49,41 @@ const AddStory = () => {
                 if(storyData.profile[index] !== 'empty'){
                     mediaURL = await uploadMediaAsync(storyData.media[index],storageRef)
                 }
-            }
 
-            const data = {
+                const data = {
+                    url: mediaURL,
+                    heading: storyData.heading[index],
+                    subHeading: storyData.subHeading[index],
+                    profileImage: profileURL,
+                    profileImgName: profileName,
+                    mediaName: mediaName,
+                    type: storyData.type[index],
+                    snippet: storyData.snippet[index],
+                    timestamp: firebase.database.ServerValue.TIMESTAMP
+                }
 
-            }
-
+                await dbRef.child(storyID).child('storyData').push(data,err => {
+                    if(err){
+                        console.error(err.message)
+                    }
+                    else{
+                        console.log('STORY ADDED')
+                    }
+                })
+            }            
         })    
     }
 
     const uploadProfileAsync = async (profile, storageRef) => {
-        const ref = storageRef.child('story').child('profile').child(uuid.v4())
+        profileName = uuid.v4()
+        const ref = storageRef.child('story').child('profile').child(profileName)
         const snapshot = await ref.put(profile)
         return await snapshot.ref.getDownloadURL()
       };
 
     const uploadMediaAsync = async (media, storageRef) => {
-        const ref = storageRef.child('story').child('media').child(uuid.v4())
+        mediaName = uuid.v4()
+        const ref = storageRef.child('story').child('media').child(mediaName)
         const snapshot = await ref.put(media)
         return await snapshot.ref.getDownloadURL()
       };
