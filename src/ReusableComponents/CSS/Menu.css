@@ -15,12 +15,17 @@
   text-align: center;
   position: relative;
 }
+.menu-container{
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  
+}
 
 .hamburger-icon {
   position: absolute;
-  z-index: 1;
-  
-  left: 5vw;
+  z-index: 1;  
+  left: 2vw;
   padding-bottom: 2vh;
 }
 

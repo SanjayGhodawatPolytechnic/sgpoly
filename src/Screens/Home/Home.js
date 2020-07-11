@@ -9,28 +9,19 @@ import Stories from 'react-insta-stories';
 import Fullscreen from "react-full-screen";
 import { useEffect } from 'react';
 import Highlights from './components/Highlights';
+import MenuBar from '../../ReusableComponents/Menu';
 
 
 
 function Home() {
-  const [currentStory,setCurrentStory] = useState([])
-  const [isStoryVisible,setIsStoryVisible] = useState(false)
-  var touches = 0
-  const storyData = [
-    {url:'https://picsum.photos/1000/1000', header:{
-      heading:"Test",
-      subheading:'Posted 2h ago',
-      profileImage:'https://picsum.photos/1000/1000'      
-    }    
-  },
-  { url: 'https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/Whatsapp%20Status%20New%20Video%20Outer%20Space.mp4?alt=media&token=b46f69d7-83ce-491b-86ff-6ce34da8f2fa', type: 'video', duration: 1000 }
-  ]
+  
 
   useEffect(() => {
     
   }, [])
   return (
       <Main isSlideShow={true}>        
+      
           
         <Highlights />                
 

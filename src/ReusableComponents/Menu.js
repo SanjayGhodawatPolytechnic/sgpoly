@@ -5,7 +5,7 @@ import './CSS/Menu.css';
 import { Link } from 'react-router-dom';
 
 
-const MenuBar = () => {
+const MenuBar = (props) => {
   return (
     <div>
        {/* <nav className="navbar navbar-expand-lg navbar-dark red">
@@ -329,12 +329,10 @@ const MenuBar = () => {
       </nav>
     </div>
   <div class="body-text">
-    <h1>Code Pen Challenge</h1>
-    <h2>January 2019</h2>
-    <p>Made with love (and pure CSS)</p>
+    
   </div>
-</div>
-    </div>
+    </div> 
+    </div> 
   );
 }
 export default MenuBar;
