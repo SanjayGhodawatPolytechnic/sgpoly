@@ -80,7 +80,7 @@ const Highlights = () => {
           {data.map((item,index) => (
             <div className="ml-3" key={index}>
               <img 
-              src={item.storyData[Object.keys(item.storyData)[0]].url} 
+              src={item.storyData[Object.keys(item.storyData)[0]].profileImage} 
               className="rounded-circle" 
               style={{width:80, height:80}}
               onClick={() => {                
