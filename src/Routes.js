@@ -11,6 +11,7 @@ import aboutQuality from './Screens/About/quality';
 import aboutAffCert from './Screens/About/affiliation';
 import aboutDifferentiator from './Screens/About/differentiator';
 import aboutAchievement from './Screens/About/achievement';
+import home from './Screens/Student/home';
 
 
 
@@ -92,6 +93,7 @@ const Routes = () => {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/students" exact component={home} />
 
           {/* --------------------About------------------------------------------------*/}
           <Route path="/about/logo" exact component={aboutLogo} />

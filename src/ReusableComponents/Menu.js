@@ -1,12 +1,14 @@
 import React from 'react';
 import './CSS/Menu.css';
+
+
 import { Link } from 'react-router-dom';
 
 
 const Menu = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light ">
+       <nav className="navbar navbar-expand-lg navbar-dark red">
         <img
           className="navbar-brand logo"
           src={require("../assets/logo.png")}
@@ -26,12 +28,12 @@ const Menu = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link to="/">
-              <a className="nav-item nav-link active effect">Home </a>
+              <a className="nav-item nav-link active ">Home </a>
             </Link>
 
             <li className="nav-item dropdown ">
               <a
-                className="nav-link dropdown-toggle active effect"
+                className="nav-link dropdown-toggle active "
                 href="#"
                 id="navbarDropdown"
                 data-toggle="dropdown"
@@ -73,13 +75,13 @@ const Menu = () => {
               </div>
             </li>
 
-            <a className="nav-item nav-link active effect" href="#">
+            <a className="nav-item nav-link active " href="#">
               Academics{" "}
             </a>
 
             <li className="nav-item dropdown ">
               <a
-                className="nav-link dropdown-toggle active effect"
+                className="nav-link dropdown-toggle active "
                 href="#"
                 id="navbarDropdown"
                 data-toggle="dropdown"
@@ -127,7 +129,7 @@ const Menu = () => {
 
             <li className="nav-item dropdown ">
               <a
-                className="nav-link dropdown-toggle active effect"
+                className="nav-link dropdown-toggle active "
                 href="#"
                 id="navbarDropdown"
                 data-toggle="dropdown"
@@ -157,13 +159,13 @@ const Menu = () => {
               </div>
             </li>
 
-            <a className="nav-item nav-link active effect" href="#">
+            <a className="nav-item nav-link active " href="#">
               Admission
             </a>
 
             <li className="nav-item dropdown ">
               <a
-                className="nav-link dropdown-toggle active effect"
+                className="nav-link dropdown-toggle active "
                 href="#"
                 id="navbarDropdown"
                 data-toggle="dropdown"
@@ -213,7 +215,7 @@ const Menu = () => {
 
             <li className="nav-item dropdown ">
               <a
-                className="nav-link dropdown-toggle active effect"
+                className="nav-link dropdown-toggle active "
                 href="#"
                 id="navbarDropdown"
                 data-toggle="dropdown"
@@ -269,14 +271,32 @@ const Menu = () => {
                 </a>
               </div>
             </li>
+
             <Link to="/contact">
-              <a className="nav-item nav-link active effect">Contact Us </a>
+              <a className="nav-item nav-link active ">Contact Us </a>
             </Link>
+            <a href="/students" className="nav-item nav-link active ">
+              <button className="btn btn-dark my-2 my-sm-0 nav-item nav-link active ">
+                Student
+              </button>
+            </a>
           </div>
         </div>
       </nav>
+
+
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
 export default Menu;
