@@ -1,14 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './CSS/Menu.css';
+import $ from "jquery"
 
 
 import { Link } from 'react-router-dom';
+import { render } from '@testing-library/react';
 
 
-const MenuBar = (props) => {
-  return (
-    <div>
-       {/* <nav className="navbar navbar-expand-lg navbar-dark red">
+class MenuBar extends Component {
+  componentDidMount() {
+    $('body').addClass('home_is_visible');
+
+    $('.button').on("click", function () {
+      $('body').toggleClass('nav_is_visible');
+    });
+
+    function removeClasses() {
+      $(".menu ul li").each(function () {
+        var link = $(this).find('a').attr('href');
+        $('body').removeClass(link);
+      });
+    }
+    $('.menu a').on("click", function (e) {
+      e.preventDefault();
+      removeClasses();
+      var link = $(this).attr('href');
+      $('body').addClass(link);
+      $('body').removeClass('nav_is_visible');
+    });
+  }
+  
+  render() {
+    
+    return (
+      <div>
+        {/* <nav className="navbar navbar-expand-lg navbar-dark red">
         <img
           className="navbar-brand logo"
           src={require("../assets/logo.png")}
@@ -282,57 +308,38 @@ const MenuBar = (props) => {
             </a>
           </div>
         </div>
-      </nav> */}      
-      <div class="menu-container">
-  
-  <input type="checkbox" id="openmenu" class="hamburger-checkbox"/>
-  
-  <div class="hamburger-icon">
-    <label for="openmenu" id="hamburger-label">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>    
-  </div>
+      </nav> */}
 
-    <div class="menu-pane">
+
+
+        <div>
+          <div className="button">
+            <div className="fa fa-bars" />
+          </div>
+          <div className="menu">
+            <nav>
+              <ul>
+                <li>
+                  <a href="home_is_visible">Home</a>
+                </li>
+                <li>
+                  <a href="aboutus_is_visible">About</a>
+                </li>
+                <li>
+                  <a href="clients_is_visible">Clients</a>
+                </li>
+                <li>
+                  <a href="contactus_is_visible">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        
+        </div>
       
-      <nav>
-        <ul class="menu-links">
-          <li><a href="###">Québec, QC</a><span id="QC-info">
-            <p>+1 418-640-3300</p>
-          </span>
-            
-          </li>
-          
-          <li><a href="###">déjeuner</a>
-           
-          </li>
-          <li><a href="###">boulangerie</a></li>
-          <li><a href="###">boissons</a></li>
-        </ul>
-         <ul class="menu-links">
-                     <li><a href="###">Washington, DC</a>
-                       <span id="DC-info">
-            <p>+1 202-472-3850</p>
-          </span></li>
-
-          <li><a href="###">breakfast</a></li>
-          <li><a href="###">
-            bakery            
-            </a></li>
-          <li><a href="###">bar</a></li>
-        </ul>
-        
-        
-      </nav>
-    </div>
-  <div class="body-text">
-    
-  </div>
-    </div> 
-    </div> 
-  );
+   
+      </div>
+    )
+  };
 }
 export default MenuBar;
