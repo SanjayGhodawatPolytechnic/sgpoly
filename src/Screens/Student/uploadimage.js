@@ -18,7 +18,7 @@ const uploadimage = () => {
     console.log(nm, dept, yr);
     const dbReference = firebase.database().ref("student_pics");
     const storageRef = firebase.storage().ref();
-    var imageUrl = "";
+    var imageUrl = "null";
     if (image !== "") {
       const downloadUrl = await uploadImageAsync(image, storageRef);
       imageUrl = downloadUrl;
@@ -37,7 +37,7 @@ const uploadimage = () => {
       }
     });
 
-    const uploadImageAsync = async (file, storageRef) => {
+    const uploadImageAsync = async (image, storageRef) => {
       const ref = storageRef.child("student-pics").child(uuid.v4());
       const snapshot = await ref.put(image);
       return await snapshot.ref.getDownloadURL();
