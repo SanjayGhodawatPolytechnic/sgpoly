@@ -5,6 +5,10 @@ import uuid from "react-native-uuid";
 import { Link } from "react-router-dom";
 
 const uploadimage = () => {
+
+  
+
+
   const onSubmit = async (e) => {
     e.preventDefault();
     var nm = document.getElementById("name").value;
@@ -16,6 +20,7 @@ const uploadimage = () => {
     ].text;
     var image = document.getElementById("imageSelector").files[0];
     console.log(nm, dept, yr);
+    console.log(image)
     const dbReference = firebase.database().ref("student_pics");
     const storageRef = firebase.storage().ref();
     var imageUrl = "null";
@@ -36,13 +41,14 @@ const uploadimage = () => {
         console.log("StudentAdded");
       }
     });
-
-    const uploadImageAsync = async (image, storageRef) => {
-      const ref = storageRef.child("student-pics").child(uuid.v4());
-      const snapshot = await ref.put(image);
-      return await snapshot.ref.getDownloadURL();
-    };
+  }
+  const uploadImageAsync = async (image, storageRef) => {
+    const ref = storageRef.child("student-pics").child(uuid.v4());
+    const snapshot = await ref.put(image);
+    return await snapshot.ref.getDownloadURL();
   };
+
+    
 
   return (
     <div>
