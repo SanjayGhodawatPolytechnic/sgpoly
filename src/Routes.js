@@ -1,33 +1,28 @@
-import React from 'react'
-import {BrowserRouter, Switch, Route} from "react-router-dom"
-import Home from './Screens/Home/Home';
-import Login from './Admin/login'
-import LocationMap from './Screens/Contact/Map';
-import aboutLogo from './Screens/About/logo';
-import aboutSGP from './Screens/About/sgp';
-import aboutPhilosophy from './Screens/About/philosophy';
-import aboutVision from './Screens/About/vision';
-import aboutQuality from './Screens/About/quality';
-import aboutAffCert from './Screens/About/affiliation';
-import aboutDifferentiator from './Screens/About/differentiator';
-import aboutAchievement from './Screens/About/achievement';
-import home from './Screens/Student/home';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./Screens/Home/Home";
+import Login from "./Admin/login";
+import LocationMap from "./Screens/Contact/Map";
+import aboutLogo from "./Screens/About/logo";
+import aboutSGP from "./Screens/About/sgp";
+import aboutPhilosophy from "./Screens/About/philosophy";
+import aboutVision from "./Screens/About/vision";
+import aboutQuality from "./Screens/About/quality";
+import aboutAffCert from "./Screens/About/affiliation";
+import aboutDifferentiator from "./Screens/About/differentiator";
+import aboutAchievement from "./Screens/About/achievement";
 
+import home from "./Screens/Student/home";
+import uploadimage from "./Screens/Student/uploadimage";
 
+import managementTrust from "./Screens/Management/trust";
+import managementPrincipal from "./Screens/Management/principal";
+import managementBoard from "./Screens/Management/board";
+import managementChairman from "./Screens/Management/chairman";
+import managementDirectors from "./Screens/Management/directors";
+import managementGovern from "./Screens/Management/govern";
 
-import managementTrust  from './Screens/Management/trust';
-import managementPrincipal  from './Screens/Management/principal';
-import managementBoard  from './Screens/Management/board';
-import managementChairman  from './Screens/Management/chairman';
-import managementDirectors  from './Screens/Management/directors';
-import managementGovern  from './Screens/Management/govern';
-
-
-
-
-
-
-import infrastructureAbout  from './Screens/Infrastructure/about';
+import infrastructureAbout from "./Screens/Infrastructure/about";
 import classroom from "./Screens/Infrastructure/classroom";
 import Overview from "./Screens/Infrastructure/Overview";
 import workshop from "./Screens/Infrastructure/workshop";
@@ -35,14 +30,6 @@ import auditorium from "./Screens/Infrastructure/auditorium";
 import foodcourt from "./Screens/Infrastructure/foodcourt";
 import conference from "./Screens/Infrastructure/conference";
 import amphi from "./Screens/Infrastructure/amphi";
-
-
-
-
-
-
-
-
 
 import hostel from "./Screens/Facilities/hostel";
 import laboratories from "./Screens/Facilities/laboratories";
@@ -52,27 +39,19 @@ import ground from "./Screens/Facilities/ground";
 import tennis from "./Screens/Facilities/tennis";
 import more from "./Screens/Facilities/more";
 
-
-
-
-
-
-
-
-
-import * as firebase from 'firebase'
-import Dashboard from './Admin/Dashboard';
-import AdminRoute from './Admin/auth/AdminRoutes';
-import Activities from './Screens/About/Activities';
-import SocialResponsiblities from './Screens/About/SocialResponsiblities';
-import ImageGallery from './Screens/About/components/ImageGallery';
-import ImageGal from './Screens/About/components/ImageGallery';
-import MoreUpdates from './ReusableComponents/MoreUpdates';
-import secretary from './Screens/Management/secretary';
-import trustee from './Screens/Management/trustee';
-import AddStaffMember from './Admin/screens/AddStaffMember';
-import AddStory from './Admin/screens/AddStory';
-import AddContact from './Admin/screens/contact';
+import * as firebase from "firebase";
+import Dashboard from "./Admin/Dashboard";
+import AdminRoute from "./Admin/auth/AdminRoutes";
+import Activities from "./Screens/About/Activities";
+import SocialResponsiblities from "./Screens/About/SocialResponsiblities";
+import ImageGallery from "./Screens/About/components/ImageGallery";
+import ImageGal from "./Screens/About/components/ImageGallery";
+import MoreUpdates from "./ReusableComponents/MoreUpdates";
+import secretary from "./Screens/Management/secretary";
+import trustee from "./Screens/Management/trustee";
+import AddStaffMember from "./Admin/screens/AddStaffMember";
+import AddStory from "./Admin/screens/AddStory";
+import AddContact from "./Admin/screens/contact";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -82,127 +61,107 @@ var firebaseConfig = {
   storageBucket: "sgpoly-86d3b.appspot.com",
   messagingSenderId: "458948463598",
   appId: "1:458948463598:web:f208ec769aef51d6a01cff",
-  measurementId: "G-87WB112H7S"
+  measurementId: "G-87WB112H7S",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const Routes = () => {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/students" exact component={home} />
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/students" exact component={home} />
+        <Route path="/students/uploadimage" exact component={uploadimage} />
 
-          {/* --------------------About------------------------------------------------*/}
-          <Route path="/about/logo" exact component={aboutLogo} />
-          <Route path="/about/sgp" exact component={aboutSGP} />
-          <Route path="/about/philosophy" exact component={aboutPhilosophy} />
-          <Route path="/about/vision" exact component={aboutVision} />
-          <Route path="/about/quality" exact component={aboutQuality} />
-          <Route path="/about/Affiliation" exact component={aboutAffCert} />
-          <Route
-            path="/about/differentiator"
-            exact
-            component={aboutDifferentiator}
-          />
-          <Route
-            path="/about/achievements"
-            exact
-            component={aboutAchievement}
-          />
-          <Route path="/about/activities" exact component={Activities} />
-          <Route
-            path="/about/socialresponsiblities"
-            exact
-            component={SocialResponsiblities}
-          />
+        {/* --------------------About------------------------------------------------*/}
+        <Route path="/about/logo" exact component={aboutLogo} />
+        <Route path="/about/sgp" exact component={aboutSGP} />
+        <Route path="/about/philosophy" exact component={aboutPhilosophy} />
+        <Route path="/about/vision" exact component={aboutVision} />
+        <Route path="/about/quality" exact component={aboutQuality} />
+        <Route path="/about/Affiliation" exact component={aboutAffCert} />
+        <Route
+          path="/about/differentiator"
+          exact
+          component={aboutDifferentiator}
+        />
+        <Route path="/about/achievements" exact component={aboutAchievement} />
+        <Route path="/about/activities" exact component={Activities} />
+        <Route
+          path="/about/socialresponsiblities"
+          exact
+          component={SocialResponsiblities}
+        />
 
-          {/* --------------------Management------------------------------------------------*/}
+        {/* --------------------Management------------------------------------------------*/}
 
-          <Route path="/management/trust" exact component={managementTrust} />
-          <Route path="/management/board" exact component={managementBoard} />
-          <Route
-            path="/management/chairman"
-            exact
-            component={managementChairman}
-          />
-          <Route path="/management/secretary" exact component={secretary} />
-          <Route path="/management/trustee" exact component={trustee} />
-          <Route
-            path="/management/principal"
-            exact
-            component={managementPrincipal}
-          />
-          <Route
-            path="/management/directors"
-            exact
-            component={managementDirectors}
-          />
-          <Route path="/management/govern" exact component={managementGovern} />
+        <Route path="/management/trust" exact component={managementTrust} />
+        <Route path="/management/board" exact component={managementBoard} />
+        <Route
+          path="/management/chairman"
+          exact
+          component={managementChairman}
+        />
+        <Route path="/management/secretary" exact component={secretary} />
+        <Route path="/management/trustee" exact component={trustee} />
+        <Route
+          path="/management/principal"
+          exact
+          component={managementPrincipal}
+        />
+        <Route
+          path="/management/directors"
+          exact
+          component={managementDirectors}
+        />
+        <Route path="/management/govern" exact component={managementGovern} />
 
-          {/* --------------------Infrastructre------------------------------------------------*/}
+        {/* --------------------Infrastructre------------------------------------------------*/}
 
-          <Route
-            path="/infrastructure/about"
-            exact
-            component={infrastructureAbout}
-          />
-          <Route path="/infrastructure/overview" exact component={Overview} />
-          <Route path="/infrastructure/classroom" exact component={classroom} />
-          <Route path="/infrastructure/workshop" exact component={workshop} />
-          <Route
-            path="/infrastructure/auditorium"
-            exact
-            component={auditorium}
-          />
-          <Route path="/infrastructure/foodcourt" exact component={foodcourt} />
-          <Route
-            path="/infrastructure/conference"
-            exact
-            component={conference}
-          />
-          <Route path="/infrastructure/amphi" exact component={amphi} />
+        <Route
+          path="/infrastructure/about"
+          exact
+          component={infrastructureAbout}
+        />
+        <Route path="/infrastructure/overview" exact component={Overview} />
+        <Route path="/infrastructure/classroom" exact component={classroom} />
+        <Route path="/infrastructure/workshop" exact component={workshop} />
+        <Route path="/infrastructure/auditorium" exact component={auditorium} />
+        <Route path="/infrastructure/foodcourt" exact component={foodcourt} />
+        <Route path="/infrastructure/conference" exact component={conference} />
+        <Route path="/infrastructure/amphi" exact component={amphi} />
 
-          {/* --------------------FACILITIES------------------------------------------------*/}
+        {/* --------------------FACILITIES------------------------------------------------*/}
 
-          <Route path="/facilities/hostel" exact component={hostel} />
+        <Route path="/facilities/hostel" exact component={hostel} />
 
-          <Route path="/facilities/hostel" exact component={hostel} />
-          <Route path="/facilities/gymnasium" exact component={gymnasium} />
-          <Route path="/facilities/pool" exact component={pool} />
-          <Route path="/facilities/ground" exact component={ground} />
-          <Route path="/facilities/tennis" exact component={tennis} />
-          <Route path="/facilities/more" exact component={more} />
-          <Route
-            path="/facilities/laboratories"
-            exact
-            component={laboratories}
-          />
+        <Route path="/facilities/hostel" exact component={hostel} />
+        <Route path="/facilities/gymnasium" exact component={gymnasium} />
+        <Route path="/facilities/pool" exact component={pool} />
+        <Route path="/facilities/ground" exact component={ground} />
+        <Route path="/facilities/tennis" exact component={tennis} />
+        <Route path="/facilities/more" exact component={more} />
+        <Route path="/facilities/laboratories" exact component={laboratories} />
 
-          {/* --------------------cbbbdbtbc------------------------------------------------*/}
+        {/* --------------------cbbbdbtbc------------------------------------------------*/}
 
-          <Route path="/images" exact component={ImageGal} />
-          <Route path="/updates/viewmore" exact component={MoreUpdates} />
+        <Route path="/images" exact component={ImageGal} />
+        <Route path="/updates/viewmore" exact component={MoreUpdates} />
 
-          <Route path="/contact/map" exact component={LocationMap} />
+        <Route path="/contact/map" exact component={LocationMap} />
 
+        <Route path="/contact" exact component={AddContact} />
 
-          <Route path="/contact" exact component={AddContact} />
-
-          {/* Admin Routes goes here */}
-          <AdminRoute path="/admin" exact component={Dashboard} />
-          <AdminRoute
-            path="/admin/add/staff"
-            exact
-            component={AddStaffMember}
-          />
-          <AdminRoute path="/admin/add/story" exact component={AddStory} />
-          <Route path="/admin/signin" exact component={Login} />
-        </Switch>
-      </BrowserRouter>
-    );
-}
+        {/* Admin Routes goes here */}
+        <AdminRoute path="/admin" exact component={Dashboard} />
+        <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
+        <AdminRoute path="/admin/add/story" exact component={AddStory} />
+        <Route path="/admin/signin" exact component={Login} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
 export default Routes;
