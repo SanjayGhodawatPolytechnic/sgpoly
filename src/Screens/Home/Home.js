@@ -96,7 +96,7 @@ function Home() {
           <h4 className="card-title">Chairman</h4>
           <br/>
          
-          <a class=" btn btn-lg  btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
+          <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect"><i class="fas fa-angle-right"></i></a>
     
         </div>
     

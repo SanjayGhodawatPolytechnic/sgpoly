@@ -1,40 +1,43 @@
 import React, { Component } from 'react';
-import './CSS/Menu.css';
-import $ from "jquery"
+// import './CSS/Menu.css';
+// import $ from "jquery"
 
 
 import { Link } from 'react-router-dom';
 import { render } from '@testing-library/react';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+import { PushMenu, usePushMenu } from 'react-push-menu';
 
 
 class MenuBar extends Component {
-  componentDidMount() {
-    $('body').addClass('home_is_visible');
+  // componentDidMount() {
+  //   $('body').addClass('home_is_visible');
 
-    $('.button').on("click", function () {
-      $('body').toggleClass('nav_is_visible');
-    });
+  //   $('.button').on("click", function () {
+  //     $('body').toggleClass('nav_is_visible');
+  //   });
 
-    function removeClasses() {
-      $(".menu ul li").each(function () {
-        var link = $(this).find('a').attr('href');
-        $('body').removeClass(link);
-      });
-    }
-    $('.menu a').on("click", function (e) {
-      e.preventDefault();
-      removeClasses();
-      var link = $(this).attr('href');
-      $('body').addClass(link);
-      $('body').removeClass('nav_is_visible');
-    });
-  }
+  //   function removeClasses() {
+  //     $(".menu ul li").each(function () {
+  //       var link = $(this).find('a').attr('href');
+  //       $('body').removeClass(link);
+  //     });
+  //   }
+  //   $('.menu a').on("click", function (e) {
+  //     e.preventDefault();
+  //     removeClasses();
+  //     var link = $(this).attr('href');
+  //     $('body').addClass(link);
+  //     $('body').removeClass('nav_is_visible');
+  //   });
+  // }
+
   
   render() {
     
     return (
       <div>
-        {/* <nav className="navbar navbar-expand-lg navbar-dark red">
+        <nav className="navbar navbar-expand-lg navbar-dark red">
         <img
           className="navbar-brand logo"
           src={require("../assets/logo.png")}
@@ -308,11 +311,11 @@ class MenuBar extends Component {
             </a>
           </div>
         </div>
-      </nav> */}
+      </nav>
 
 
 
-        <div>
+        {/* <div>
           <div className="button">
             <div className="fa fa-bars" />
           </div>
@@ -335,8 +338,7 @@ class MenuBar extends Component {
             </nav>
           </div>
         
-        </div>
-      
+        </div> */}
    
       </div>
     )

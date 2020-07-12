@@ -4,6 +4,7 @@ import Fullscreen from "react-full-screen";
 import '../Story.css'
 import { useEffect } from 'react';
 import * as firebase from 'firebase'
+import './Highlights.css'
 
 const Highlights = () => {
   const [data,setData] = useState([])
@@ -71,6 +72,7 @@ const Highlights = () => {
               defaultInterval={2000}
               width={window.outerWidth}
               height={window.outerHeight}                            
+              
             />
             </div>
             )}
@@ -78,11 +80,11 @@ const Highlights = () => {
         <div class="scrolling-wrapper">          
         <div className="row">
           {data.map((item,index) => (
-            <div className="ml-3" key={index}>
+            <div className="ml-3 story" key={index}>
               <img 
               src={item.storyData[Object.keys(item.storyData)[0]].profileImage} 
               className="rounded-circle" 
-              style={{width:80, height:80}}
+              style={{width:70, height:70}}
               onClick={() => {                
                 let story = []
                 let d = data[index]
@@ -108,7 +110,7 @@ const Highlights = () => {
               }}
               />
               <br/>
-              <p className="text-center">{ item.heading }</p>
+              <p className="text-center" style={{fontWeight:'bold',font:'times new roman'}}>{ item.heading }</p>
             </div>
           ))}          
         </div>
