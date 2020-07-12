@@ -5,6 +5,45 @@ import uuid from "react-native-uuid";
 import { Link } from "react-router-dom";
 
 const uploadimage = () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    var nm = document.getElementById("name").value;
+    var dept = document.getElementById("deptSelector").options[
+      document.getElementById("deptSelector").selectedIndex
+    ].text;
+    var yr = document.getElementById("yrSelector").options[
+      document.getElementById("yrSelector").selectedIndex
+    ].text;
+    var image = document.getElementById("imageSelector").files[0];
+    console.log(nm, dept, yr);
+    const dbReference = firebase.database().ref("student_pics");
+    const storageRef = firebase.storage().ref();
+    var imageUrl = "";
+    if (image !== "") {
+      const downloadUrl = await uploadImageAsync(image, storageRef);
+      imageUrl = downloadUrl;
+    }
+    var data = {
+      fullName: nm,
+      department: dept,
+      year: yr,
+      imageDownloadUrl: imageUrl,
+      postedOn: firebase.database.ServerValue.TIMESTAMP,
+    };
+
+    await dbReference.push(data, (err) => {
+      if (!err) {
+        console.log("StudentAdded");
+      }
+    });
+
+    const uploadImageAsync = async (file, storageRef) => {
+      const ref = storageRef.child("student-pics").child(uuid.v4());
+      const snapshot = await ref.put(image);
+      return await snapshot.ref.getDownloadURL();
+    };
+  };
+
   return (
     <div>
       <Main>
@@ -49,10 +88,14 @@ const uploadimage = () => {
               <option value="3">TY</option>
             </select>
 
-            <label for="imageSelector">Add Photo </label>
+            <label for="imageSelector">Add Photo &nbsp; </label>
             <br />
             <input type="file" className=" mb-4" id="imageSelector" />
-            <button className="btn btn-info btn-block" type="submit">
+            <button
+              className="btn btn-info btn-block"
+              type="submit"
+              onClick={(e) => onSubmit(e)}
+            >
               Add
             </button>
           </form>
