@@ -23,6 +23,8 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;      
+    display: flex;
+    flex-direction: row;
   }
   .card {
     display: inline-block;

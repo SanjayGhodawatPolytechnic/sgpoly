@@ -9,7 +9,9 @@ import './Highlights.css'
 const Highlights = () => {
   const [data,setData] = useState([])
     const [currentStory,setCurrentStory] = useState([])
+    const [currentStoryIndex, setCurrentStoryIndex] = useState(0)
   const [isStoryVisible,setIsStoryVisible] = useState(false)
+  var idx;
   var touches = 0
   const storyData = [
     {url:'https://picsum.photos/1000/1000', header:{
@@ -53,39 +55,12 @@ const Highlights = () => {
     
   }, [data])
 
+  const calculateMousePos = (e) => {
 
-    return (
-        <div>
-          <Fullscreen enabled={isStoryVisible} onChange={f => setIsStoryVisible(f)}>
-            {isStoryVisible && (
-              <div onTouchMove={e => {
-                e.preventDefault()
-                  touches += 16;
-                  console.log(touches)
-                  if(touches > 500){
-                    setIsStoryVisible(false)                
-                  }
-                }}                
-                >
-              <Stories
-              stories={currentStory}              
-              defaultInterval={2000}
-              width={window.outerWidth}
-              height={window.outerHeight}                            
-              
-            />
-            </div>
-            )}
-        </Fullscreen>
-        <div class="scrolling-wrapper">          
-        <div className="row">
-          {data.map((item,index) => (
-            <div className="ml-3 story" key={index}>
-              <img 
-              src={item.storyData[Object.keys(item.storyData)[0]].profileImage} 
-              className="rounded-circle" 
-              style={{width:70, height:70}}
-              onClick={() => {                
+  }
+
+  const setCurrentStoryData = (index) => {
+                
                 let story = []
                 let d = data[index]
                 let obj = Object.values(d.storyData)
@@ -103,9 +78,71 @@ const Highlights = () => {
                   story.push(temp)                  
                 })
                 //console.log(story)                
-                //currentStory.push(item.storyData)
-                setCurrentStory(story)
-                //console.log(currentStory)
+                //currentStory.push(item.storyData)                
+                setCurrentStoryIndex(index)
+                setCurrentStory(story)                
+                console.log(currentStoryIndex)
+  }
+
+
+    return (
+        <div>
+          <Fullscreen enabled={isStoryVisible} onChange={f => setIsStoryVisible(f)}>
+            {isStoryVisible && (
+              <div onTouchMove={e => {
+                e.preventDefault()
+                  touches += 16;
+                  console.log(touches)
+                  if(touches > 500){
+                    setIsStoryVisible(false)                
+                  }
+                }}                
+                onClick={e => calculateMousePos(e)}
+                >
+              <Stories
+              stories={currentStory}              
+              defaultInterval={2000}
+              width={window.outerWidth}
+              height={window.outerHeight}                            
+              onAllStoriesEnd = {() => {
+                if(currentStoryIndex === data.length){
+                  setIsStoryVisible(false)
+                }else{                                    
+                  setCurrentStoryData(currentStoryIndex + 1)
+                  // data.forEach((dat,ind) => {
+                  //   let obj = Object.values(dat.storyData)
+                  //   var t;
+                  //   obj.forEach((d1,i1) => {
+                  //     if(i1 === 0){
+                  //       t = d1
+                  //     }
+                  //   })
+                  //   if(t.url === currentStory[0].url){
+                  //     setCurrentStoryData(ind + 1)
+                  //     console.log('OPENING ',ind + 1)
+                      
+                  //   }
+                  // })
+                  
+                }
+              }}
+              
+              
+            />
+            </div>
+            )}
+        </Fullscreen>
+        <div class="scrolling-wrapper">          
+        
+          {data.map((item,index) => (
+            <div className="ml-3 story" key={index}>
+              <img 
+              src={item.storyData[Object.keys(item.storyData)[0]].profileImage} 
+              className="rounded-circle" 
+              style={{width:70, height:70}}
+              onClick={() => {                
+                setCurrentStoryData(index)                
+                //console.log(currentStory)                
                 setIsStoryVisible(true)
               }}
               />
@@ -113,7 +150,7 @@ const Highlights = () => {
               <p className="text-center" style={{fontWeight:'bold',font:'times new roman'}}>{ item.heading }</p>
             </div>
           ))}          
-        </div>
+        
         </div>
         </div>
     )
