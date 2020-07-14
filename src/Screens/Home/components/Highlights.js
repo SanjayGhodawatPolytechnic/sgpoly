@@ -5,6 +5,7 @@ import '../Story.css'
 import { useEffect } from 'react';
 import * as firebase from 'firebase'
 import './Highlights.css'
+import renderHTML from 'react-render-html';
 
 const Highlights = () => {
   const [data,setData] = useState([])
@@ -72,7 +73,18 @@ const Highlights = () => {
                       heading: da.heading,
                       subheading: da.subHeading,
                       profileImage: da.profileImage
-                    }
+                    },
+                    showMore: ({close}) => (
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-11"></div>
+                          <div className="col-1" onClick={close}>
+                            <i class="far fa-arrow-alt-circle-down"></i>
+                          </div>
+                        </div>
+                      {da.snippet ? renderHTML(da.snippet) : '<h1 className="badge badge-light">No Info Available</h1>'}
+                      </div>
+                    )
                   }
                   //console.log(temp)
                   story.push(temp)                  
@@ -99,16 +111,24 @@ const Highlights = () => {
                 }}                
                 onClick={e => calculateMousePos(e)}
                 >
+                  
+                  <div className="row">
+                    <div className="col-4"></div>
+                    <div className="col-4 text-center">
+                      <h4 className="text-light" onClick={e => setIsStoryVisible(false)}><i class="fas fa-times-circle"></i></h4>
+                    </div>
+                  </div>
               <Stories
               stories={currentStory}              
-              defaultInterval={2000}
+              defaultInterval={5000}
               width={window.outerWidth}
               height={window.outerHeight}                            
               onAllStoriesEnd = {() => {
                 if(currentStoryIndex === data.length){
                   setIsStoryVisible(false)
                 }else{                                    
-                  setCurrentStoryData(currentStoryIndex + 1)
+                  // setCurrentStoryData(currentStoryIndex + 1)
+                  setIsStoryVisible(false)
                   // data.forEach((dat,ind) => {
                   //   let obj = Object.values(dat.storyData)
                   //   var t;
