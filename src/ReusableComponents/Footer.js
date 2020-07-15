@@ -74,7 +74,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <p>
-                      <i className="fas fa-phone mr-3" /> 0230 - 2463800
+                      <a href="tel: +91 0230-2463800"><i className="fas fa-phone mr-3" /> 0230 - 2463800</a>
                     </p>
                   </li>
                 </ul>

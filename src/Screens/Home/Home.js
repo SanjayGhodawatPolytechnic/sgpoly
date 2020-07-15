@@ -68,13 +68,7 @@ function Home() {
     </div>
     <NewsCarousel />    
     <br/><br/><br/><br/><br/>
-
-    <iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/72516b63-a1de-4d6a-8c02-ae0514d59410">
-</iframe>
+    
 
     <div className="row">
 
