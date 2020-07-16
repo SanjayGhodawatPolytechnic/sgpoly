@@ -52,6 +52,7 @@ import trustee from "./Screens/Management/trustee";
 import AddStaffMember from "./Admin/screens/AddStaffMember";
 import AddStory from "./Admin/screens/AddStory";
 import AddContact from "./Admin/screens/contact";
+import StudentHome from "./Screens/Student/home";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -72,7 +73,7 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/students" exact component={home} />
+        <Route path="/students" exact component={StudentHome} />
         <Route path="/students/uploadimage" exact component={uploadimage} />
 
         {/* --------------------About------------------------------------------------*/}

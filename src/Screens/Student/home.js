@@ -1,26 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Main from "../../ReusableComponents/Main";
 
 import * as firebase from "firebase";
-import { useEffect } from "react";
 
-const home = () => {
-  let data;
+
+const StudentHome = () => {
+  const [data,setData] = useState([])
 
   const getPic = async () => {
+    setData([])
     let dataRef = firebase.database().ref("student_pics");
     dataRef.on("value", (dataSnapshot) => {
-      if (dataSnapshot.val()) {
-        let result = Object.values(dataSnapshot.val());
-        data.push(result);
+      if (dataSnapshot.val()) {        
+        let result = Object.values(dataSnapshot.val());        
+        console.log(result)
+        setData(result)        
+        
       }
     });
   };
+
+  useEffect(() => {
+    getPic()
+  }, [])
+
+  useEffect(() => {
+    console.log(data)
+  }, [data])
+  
   return (
     <div>
       <Main isSlideShow={true}>
-        <br /> <br />
-        {console.log(data)}
+        <br /> <br />        
         <a href="/students/uploadimage">
           <button className="btn btn-elegant">Add a photo</button>
         </a>
@@ -262,4 +273,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default StudentHome;
