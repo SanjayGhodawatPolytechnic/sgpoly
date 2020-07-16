@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Main from "../../ReusableComponents/Main";
 
-function home() {
+import * as firebase from "firebase";
+import { useEffect } from "react";
+
+const home = () => {
+  let data;
+
+  const getPic = async () => {
+    let dataRef = firebase.database().ref("student_pics");
+    dataRef.on("value", (dataSnapshot) => {
+      if (dataSnapshot.val()) {
+        let result = Object.values(dataSnapshot.val());
+        data.push(result);
+      }
+    });
+  };
   return (
     <div>
       <Main isSlideShow={true}>
         <br /> <br />
+        {console.log(data)}
         <a href="/students/uploadimage">
           <button className="btn btn-elegant">Add a photo</button>
         </a>
@@ -245,6 +260,6 @@ function home() {
       </Main>
     </div>
   );
-}
+};
 
 export default home;
