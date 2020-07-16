@@ -3,35 +3,78 @@ import Main from "../../ReusableComponents/Main";
 
 import * as firebase from "firebase";
 
-
 const StudentHome = () => {
-  const [data,setData] = useState([])
+  const [data, setData] = useState([]);
 
   const getPic = async () => {
-    setData([])
+    setData([]);
     let dataRef = firebase.database().ref("student_pics");
     dataRef.on("value", (dataSnapshot) => {
-      if (dataSnapshot.val()) {        
-        let result = Object.values(dataSnapshot.val());        
-        console.log(result)
-        setData(result)        
-        
+      if (dataSnapshot.val()) {
+        let result = Object.values(dataSnapshot.val());
+
+        setData(result);
       }
     });
   };
 
   useEffect(() => {
-    getPic()
-  }, [])
+    getPic();
+  }, []);
 
   useEffect(() => {
-    console.log(data)
-  }, [data])
-  
+    console.log(data);
+  }, [data]);
+
+  const chintan = () => {
+    var i = 0;
+    for (i = 0; i < data.length; i++) {
+      return (
+        <div>
+          <div className=" carousel-item  text-center">
+            <figure className="col-md-4 d-md-inline-block">
+              <a href={data[i].imageDownloadUrl} data-size="1600x1067">
+                <img src={data[i].imageDownloadUrl} className="img-fluid" />
+                <div className="carousel-caption">
+                  <h3 className="h3-responsive">data[i].fullName</h3>
+                  <p>{data[i].department}</p>
+                </div>
+              </a>
+            </figure>
+          </div>
+          {i++}
+          <div className=" carousel-item  text-center">
+            <figure className="col-md-4 d-md-inline-block">
+              <a href={data[i].imageDownloadUrl} data-size="1600x1067">
+                <img src={data[i].imageDownloadUrl} className="img-fluid" />
+                <div className="carousel-caption">
+                  <h3 className="h3-responsive">data[i].fullName</h3>
+                  <p>{data[i].department}</p>
+                </div>
+              </a>
+            </figure>
+          </div>
+          {i++}
+          <div className=" carousel-item  text-center">
+            <figure className="col-md-4 d-md-inline-block">
+              <a href={data[i].imageDownloadUrl} data-size="1600x1067">
+                <img src={data[i].imageDownloadUrl} className="img-fluid" />
+                <div className="carousel-caption">
+                  <h3 className="h3-responsive">data[i].fullName</h3>
+                  <p>{data[i].department}</p>
+                </div>
+              </a>
+            </figure>
+          </div>
+        </div>
+      );
+    }
+  };
+
   return (
     <div>
       <Main isSlideShow={true}>
-        <br /> <br />        
+        <br /> <br />
         <a href="/students/uploadimage">
           <button className="btn btn-elegant">Add a photo</button>
         </a>
@@ -62,7 +105,7 @@ const StudentHome = () => {
           {/*/.Indicators*/}
           {/*Slides*/}
           <div className="carousel-inner" role="listbox">
-            <div className="carousel-item active">
+            <div className="carousel-item ">
               <div className="view">
                 <img
                   className="d-block w-100"
@@ -150,120 +193,8 @@ const StudentHome = () => {
           <div className="carousel-inner mdb-lightbox" role="listbox">
             <div id="mdb-lightbox-ui" />
             {/*First slide*/}
-            <div className=" carousel-item active text-center">
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(10).jpg"
-                    className="img-fluid"
-                  />
-                  <div className="carousel-caption">
-                    <h3 className="h3-responsive">Light mask</h3>
-                    <p>First text</p>
-                  </div>
-                </a>
-              </figure>
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(12).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(14).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-            </div>
+            {chintan()}
             {/*/.First slide*/}
-            {/*Second slide*/}
-            <div className="carousel-item text-center">
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(31).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(31).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(32).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(32).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(33).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(33).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-            </div>
-            {/*/.Second slide*/}
-            {/*Third slide*/}
-            <div className="carousel-item text-center">
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(53).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(53).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(56).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(56).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-              <figure className="col-md-4 d-md-inline-block">
-                <a
-                  href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(77).jpg"
-                  data-size="1600x1067"
-                >
-                  <img
-                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(77).jpg"
-                    className="img-fluid"
-                  />
-                </a>
-              </figure>
-            </div>
-            {/*/.Third slide*/}
           </div>
           {/*/.Slides*/}
         </div>
