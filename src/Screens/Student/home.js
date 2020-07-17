@@ -29,44 +29,60 @@ const StudentHome = () => {
   const chintan = () => {
     var i = 0;
     for (i = 0; i < data.length; i++) {
-      return (
-        <div>
-          <div className=" carousel-item  text-center">
+      return (        
+          
+            <div id="mdb-lightbox-ui">
+          <div className=" carousel-item  text-center active">
             <figure className="col-md-4 d-md-inline-block">
               <a href={data[i].imageDownloadUrl} data-size="1600x1067">
                 <img src={data[i].imageDownloadUrl} className="img-fluid" />
                 <div className="carousel-caption">
-                  <h3 className="h3-responsive">data[i].fullName</h3>
+                  <h3 className="h3-responsive">{data[i].fullName}</h3>
                   <p>{data[i].department}</p>
                 </div>
               </a>
             </figure>
           </div>
           {i++}
-          <div className=" carousel-item  text-center">
+          <div className=" carousel-item  text-center ">
             <figure className="col-md-4 d-md-inline-block">
               <a href={data[i].imageDownloadUrl} data-size="1600x1067">
                 <img src={data[i].imageDownloadUrl} className="img-fluid" />
                 <div className="carousel-caption">
-                  <h3 className="h3-responsive">data[i].fullName</h3>
+                  <h3 className="h3-responsive">{data[i].fullName}</h3>
                   <p>{data[i].department}</p>
                 </div>
               </a>
             </figure>
           </div>
           {i++}
-          <div className=" carousel-item  text-center">
+          <div className=" carousel-item  text-center ">
             <figure className="col-md-4 d-md-inline-block">
               <a href={data[i].imageDownloadUrl} data-size="1600x1067">
                 <img src={data[i].imageDownloadUrl} className="img-fluid" />
                 <div className="carousel-caption">
-                  <h3 className="h3-responsive">data[i].fullName</h3>
+                  <h3 className="h3-responsive">{data[i].fullName}</h3>
                   <p>{data[i].department}</p>
                 </div>
               </a>
             </figure>
+          </div>
+          <div class="carousel-item">
+      <div class="col-12 col-md-4">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/img (30).jpg"
+            alt="Card image cap"/>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary btn-md btn-rounded">Button</a>
           </div>
         </div>
+      </div>            
+    </div>
+          </div>
+        
       );
     }
   };
@@ -167,7 +183,7 @@ const StudentHome = () => {
         {/*Carousel Wrapper*/}
         <div
           id="carousel-with-lb"
-          className="carousel slide carousel-multi-item"
+          className="carousel slide carousel-multi-item v-2"
           data-ride="carousel"
         >
           <center>
@@ -189,13 +205,23 @@ const StudentHome = () => {
             </div>
           </center>
 
+          <ol class="carousel-indicators">
+    <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="2"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="3"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="4"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="5"></li>
+  </ol>
+
           {/*Slides and lightbox*/}
-          <div className="carousel-inner mdb-lightbox" role="listbox">
-            <div id="mdb-lightbox-ui" />
+          
             {/*First slide*/}
+            <div className="carousel-inner mdb-lightbox v-2" role="listbox">
             {chintan()}
-            {/*/.First slide*/}
-          </div>
+            </div>
+            {/*/.First slide*/}            
+          
           {/*/.Slides*/}
         </div>
         {/*/.Carousel Wrapper*/}

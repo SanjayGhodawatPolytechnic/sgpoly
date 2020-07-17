@@ -53,6 +53,7 @@ import AddStaffMember from "./Admin/screens/AddStaffMember";
 import AddStory from "./Admin/screens/AddStory";
 import AddContact from "./Admin/screens/contact";
 import StudentHome from "./Screens/Student/home";
+import ManageHighlights from "./Admin/screens/ManageHighlights";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -155,10 +156,11 @@ const Routes = () => {
 
         <Route path="/contact" exact component={AddContact} />
 
-        {/* Admin Routes goes here */}
+        {/*============================ Admin Routes goes here =====================*/}
         <AdminRoute path="/admin" exact component={Dashboard} />
         <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
         <AdminRoute path="/admin/add/story" exact component={AddStory} />
+        <AdminRoute path="/admin/manage/highlights" exact component={ManageHighlights} />
         <Route path="/admin/signin" exact component={Login} />
       </Switch>
     </BrowserRouter>

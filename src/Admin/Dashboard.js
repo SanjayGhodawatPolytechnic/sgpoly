@@ -237,6 +237,9 @@ const Dashboard = () => {
                     <Link to="/admin/add/story" className="btn btn-success rounded-pill m-2"><li>
                         Add New Story
                     </li></Link>
+                    <Link to="/admin/manage/highlights" className="btn btn-success rounded-pill m-2"><li>
+                        Manage Highlights
+                    </li></Link>
                     <li className="btn btn-success rounded-pill m-2" onClick={e => SignOut()}>
                     Sign out <i class="fa fa-sign-out" aria-hidden="true"></i>
                     </li>

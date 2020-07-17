@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Main from "../../ReusableComponents/Main";
-import "./CSS/AddStaffMember.css";
+import "./CSS/Form.css";
 import * as firebse from "firebase";
 import uuid from "react-native-uuid";
 import ReactLoading from "react-loading";
