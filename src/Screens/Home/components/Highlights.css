@@ -23,3 +23,22 @@
     rgba(237, 29, 255, 1) 61%
   );
 }
+
+.seeMore{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(224, 16, 16, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  opacity: 0.9;
+}
+
+.seeMore-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -68,23 +68,25 @@ const Highlights = () => {
                 obj.forEach((da,i) => {
                   let temp = {
                     url: da.url,
+                    seeMore: ({close}) => (
+                      <div className="container seeMore h-100 w-100">
+                        <div className="row">
+                          <div className="col-11"></div>
+                          <div className="col-1 text-light" style={{fontSize:30}} onClick={close}>
+                            <i class="far fa-arrow-alt-circle-down"></i>
+                          </div>
+                        </div>
+                        <div className="container seeMore-container">
+                          {da.snippet ? renderHTML(da.snippet) : '<h1 className="badge badge-light">No Info Available</h1>'}
+                        </div>
+                      </div>
+                    ),
                     type: da.type,
                     header: {
                       heading: da.heading,
                       subheading: da.subHeading,
                       profileImage: da.profileImage
-                    },
-                    showMore: ({close}) => (
-                      <div className="container">
-                        <div className="row">
-                          <div className="col-11"></div>
-                          <div className="col-1" onClick={close}>
-                            <i class="far fa-arrow-alt-circle-down"></i>
-                          </div>
-                        </div>
-                      {da.snippet ? renderHTML(da.snippet) : '<h1 className="badge badge-light">No Info Available</h1>'}
-                      </div>
-                    )
+                    }
                   }
                   //console.log(temp)
                   story.push(temp)                  
@@ -123,6 +125,7 @@ const Highlights = () => {
               defaultInterval={5000}
               width={window.outerWidth}
               height={window.outerHeight}                            
+
               onAllStoriesEnd = {() => {
                 if(currentStoryIndex === data.length){
                   setIsStoryVisible(false)
