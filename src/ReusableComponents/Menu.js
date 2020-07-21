@@ -166,9 +166,9 @@ class MenuBar extends Component {
                 Department
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">
+                  <Link to="/department/cse" className="dropdown-item">
                   Computer Science &amp; Engineering{" "}
-                </a>
+                  </Link>
                 <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">
                   Mechanical Engineering

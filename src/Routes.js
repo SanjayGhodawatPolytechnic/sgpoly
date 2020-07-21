@@ -54,6 +54,8 @@ import AddStory from "./Admin/screens/AddStory";
 import AddContact from "./Admin/screens/contact";
 import StudentHome from "./Screens/Student/home";
 import ManageHighlights from "./Admin/screens/ManageHighlights";
+import ComputerScience from "./Screens/Departments/CSE/ComputerScience";
+import HODDesk from "./Screens/Departments/CSE/HODDesk";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -119,6 +121,19 @@ const Routes = () => {
           component={managementDirectors}
         />
         <Route path="/management/govern" exact component={managementGovern} />
+
+        {/* --------------------Departments------------------------------------------------*/}
+          {/* --------------------CSE------------------------------------------------*/}
+
+            <Route path="/department/cse" exact component={ComputerScience} />
+            <Route path="/department/cse/hoddesk" exact component={HODDesk} />
+
+
+          {/* --------------------MECH------------------------------------------------*/}
+          {/* --------------------E & TC------------------------------------------------*/}
+          {/* --------------------CIVIL------------------------------------------------*/}
+          {/* --------------------ELECTRICAL------------------------------------------------*/}
+
 
         {/* --------------------Infrastructre------------------------------------------------*/}
 
