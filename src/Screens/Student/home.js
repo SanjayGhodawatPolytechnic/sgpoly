@@ -27,44 +27,13 @@ const StudentHome = () => {
   }, [data]);
 
   const chintan = () => {
-    var i = 0;
-    for (i = 0; i < data.length; i++) {
-      return (
-        <div className=" carousel-item  text-center active">
-          <figure className="col-md-4 d-md-inline-block">
-            <a href={data[i].imageDownloadUrl} data-size="1600x1067">
-              <img src={data[i].imageDownloadUrl} className="img-fluid" />
-              <div className="carousel-caption">
-                <h3 className="h3-responsive">{data[i].fullName}</h3>
-                <p>{data[i].department}</p>
-              </div>
-            </a>
-          </figure>
-
-          {i++}
-          <figure className="col-md-4 d-md-inline-block">
-            <a href={data[i].imageDownloadUrl} data-size="1600x1067">
-              <img src={data[i].imageDownloadUrl} className="img-fluid" />
-              <div className="carousel-caption">
-                <h3 className="h3-responsive">{data[i].fullName}</h3>
-                <p>{data[i].department}</p>
-              </div>
-            </a>
-          </figure>
-
-          {i++}
-          <figure className="col-md-4 d-md-inline-block">
-            <a href={data[i].imageDownloadUrl} data-size="1600x1067">
-              <img src={data[i].imageDownloadUrl} className="img-fluid" />
-              <div className="carousel-caption">
-                <h3 className="h3-responsive">{data[i].fullName}</h3>
-                <p>{data[i].department}</p>
-              </div>
-            </a>
-          </figure>
-        </div>
-      );
-    }
+    return data.map((c, i) => {
+      <figure className="col-md-4">
+        <a href={c.imageDownloadUrl} data-size="1600x1067">
+          <img src={c.imageDownloadUrl} className="img-fluid" />
+        </a>
+      </figure>;
+    });
   };
 
   return (
@@ -97,10 +66,57 @@ const StudentHome = () => {
             <li data-target="#carousel-example-2" data-slide-to={5} />
             <li data-target="#carousel-example-2" data-slide-to={6} />
             <li data-target="#carousel-example-2" data-slide-to={7} />
+            <li data-target="#carousel-example-2" data-slide-to={8} />
+            <li data-target="#carousel-example-2" data-slide-to={9} />
+            <li data-target="#carousel-example-2" data-slide-to={10} />
           </ol>
           {/*/.Indicators*/}
           {/*Slides*/}
           <div className="carousel-inner" role="listbox">
+            <div className="carousel-item active">
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                  alt="First slide"
+                />
+                <div className="mask rgba-black-light" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Light mask</h3>
+                <p>First text</p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              {/*Mask color*/}
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                  alt="Second slide"
+                />
+                <div className="mask rgba-black-strong" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Strong mask</h3>
+                <p>Secondary text</p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              {/*Mask color*/}
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                  alt="Third slide"
+                />
+                <div className="mask rgba-black-slight" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Slight mask</h3>
+                <p>Third text</p>
+              </div>
+            </div>
             <div className="carousel-item ">
               <div className="view">
                 <img
@@ -127,7 +143,80 @@ const StudentHome = () => {
               </div>
               <div className="carousel-caption">
                 <h3 className="h3-responsive">Strong mask</h3>
-                <p>chintan</p>
+                <p>Secondary text</p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              {/*Mask color*/}
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                  alt="Third slide"
+                />
+                <div className="mask rgba-black-slight" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Slight mask</h3>
+                <p>Third text</p>
+              </div>
+            </div>
+            <div className="carousel-item ">
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                  alt="First slide"
+                />
+                <div className="mask rgba-black-light" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Light mask</h3>
+                <p>First text</p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              {/*Mask color*/}
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                  alt="Second slide"
+                />
+                <div className="mask rgba-black-strong" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Strong mask</h3>
+                <p>Secondary text</p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              {/*Mask color*/}
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                  alt="Third slide"
+                />
+                <div className="mask rgba-black-slight" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Slight mask</h3>
+                <p>Third text</p>
+              </div>
+            </div>
+            <div className="carousel-item ">
+              <div className="view">
+                <img
+                  className="d-block w-100"
+                  src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                  alt="First slide"
+                />
+                <div className="mask rgba-black-light" />
+              </div>
+              <div className="carousel-caption">
+                <h3 className="h3-responsive">Light mask</h3>
+                <p>First text</p>
               </div>
             </div>
           </div>
@@ -160,53 +249,13 @@ const StudentHome = () => {
         <br />
         <br />
         <h4 class="text-monospace">Clicks By Students</h4>
-        {/*Carousel Wrapper*/}
-        <div
-          id="carousel-with-lb"
-          className="carousel slide carousel-multi-item v-2"
-          data-ride="carousel"
-        >
-          <center>
-            <div class="controls-top">
-              <a
-                class=" btn btn-floating btn-secondary"
-                href="#carousel-with-lb"
-                data-slide="prev"
-              >
-                <i class="fas fa-chevron-left"></i>
-              </a>
-              <a
-                class="btn btn-floating btn-secondary"
-                href="#carousel-with-lb"
-                data-slide="next"
-              >
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </div>
-          </center>
-
-          <ol class="carousel-indicators">
-            <li
-              data-target="#carousel-example-multi"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#carousel-example-multi" data-slide-to="1"></li>
-            <li data-target="#carousel-example-multi" data-slide-to="2"></li>
-            <li data-target="#carousel-example-multi" data-slide-to="3"></li>
-            <li data-target="#carousel-example-multi" data-slide-to="4"></li>
-            <li data-target="#carousel-example-multi" data-slide-to="5"></li>
-          </ol>
-
-          {/*Slides and lightbox*/}
-
-          {/*First slide*/}
-          <div className="carousel-inner mdb-lightbox v-2" role="listbox">
-            {chintan()}
+        {/* First row */}
+        <div className="row">
+          <div className="col-md-12">
+            <div id="mdb-lightbox-ui" />
+            <div className="mdb-lightbox">{chintan()}</div>
           </div>
-          {/*/.First slide*/}
         </div>
-        {/*/.Carousel Wrapper*/}
       </Main>
     </div>
   );
