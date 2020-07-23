@@ -29,14 +29,19 @@ const StudentHome = () => {
   const chintan = () => {
     return data.map((c, i) => (
       <div className="col-md-4">
-            <div id="mdb-lightbox-ui" />
-            <div className="mdb-lightbox">
-      <figure className="col-md-12" key={i}>
-        <a href={c.imageDownloadUrl} data-size="1600x1067">
-          <img src={c.imageDownloadUrl} className="img-fluid" />
-        </a>
-      </figure>
-      </div>
+        <div id="mdb-lightbox-ui" />
+        <div className="mdb-lightbox">
+          <figure className="col-md-12" key={i}>
+            <img src={c.imageDownloadUrl} className="img-fluid" />
+            <div class="mask flex-center waves-effect waves-light rgba-teal">
+              <h4 class="white-text">{c.fullName}</h4>
+            </div>
+            <br />
+            <div class="mask align-content-stretch waves-effect waves-light rgba-teal">
+              <p class="white-text ">&nbsp;&nbsp;&nbsp;&nbsp;{c.department}</p>
+            </div>
+          </figure>
+        </div>
       </div>
     ));
   };
@@ -255,8 +260,8 @@ const StudentHome = () => {
         <br />
         <h4 class="text-monospace">Clicks By Students</h4>
         {/* First row */}
-        <div className="row">
-          {chintan()}
+        <div className="view">
+          <div className="row">{chintan()}</div>
         </div>
       </Main>
     </div>
