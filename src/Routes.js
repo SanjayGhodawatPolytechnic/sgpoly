@@ -56,6 +56,7 @@ import StudentHome from "./Screens/Student/home";
 import ManageHighlights from "./Admin/screens/ManageHighlights";
 import ComputerScience from "./Screens/Departments/CSE/ComputerScience";
 import HODDesk from "./Screens/Departments/CSE/HODDesk";
+import VisionMission from "./Screens/Departments/CSE/VisionMission";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -127,6 +128,7 @@ const Routes = () => {
 
             <Route path="/department/cse" exact component={ComputerScience} />
             <Route path="/department/cse/hoddesk" exact component={HODDesk} />
+            <Route path="/department/cse/vision-mission" exact component={VisionMission} />
 
 
           {/* --------------------MECH------------------------------------------------*/}

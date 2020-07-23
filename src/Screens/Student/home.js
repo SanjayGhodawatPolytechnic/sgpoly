@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Main from "../../ReusableComponents/Main";
 
 import * as firebase from "firebase";
+import './CSS/Home.css'
 
 const StudentHome = () => {
   const [data, setData] = useState([]);
@@ -28,11 +29,11 @@ const StudentHome = () => {
 
   const chintan = () => {
     return data.map((c, i) => (
-      <div className="col-md-4">
+      <div className="col-md-4 uploaded-img">
         <div id="mdb-lightbox-ui" />
         <div className="mdb-lightbox">
           <figure className="col-md-12" key={i}>
-            <img src={c.imageDownloadUrl} className="img-fluid" />
+            <img src={c.imageDownloadUrl} className="img-fluid rounded" />
             <div class="mask flex-center waves-effect waves-light rgba-teal">
               <h4 class="white-text">{c.fullName}</h4>
             </div>
