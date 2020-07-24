@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
+
 const DeptMenu = ({
     dept = '',
     subMenu = [{title: '', path: ''}]
