@@ -23,8 +23,15 @@ p{
 	border-radius: 3px;
 	font-size: 14px;
 	font-weight: bold;
-	padding: 3px 7px;
-	
+	padding: 3px 7px;	
+}
+.card-container .des {
+	color: #231E39;
+	background-color: #28f100;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 7px;	
 }
 
 .card-container .round {
@@ -34,7 +41,7 @@ p{
 }
 
 .card-container .round:hover {
-	transform: scale(1.2);
+	transform: scale(1.01);
 	transition: 1s all ease-in-out;
 }
 

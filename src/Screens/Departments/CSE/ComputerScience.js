@@ -33,16 +33,16 @@ const ComputerScience = () => {
                              <div className="col-4"><h4>Check Us out on..</h4></div>
                          </div>
                          <div className="row">
-                             <div className="col-4"></div>
-                             <div className="col-4">
+                             <div className="col-6">
                                  <a href='http://www.dtemaharashtra.gov.in/StaticPages/frmSearchInstitute.aspx' target="blank" className='btn btn-danger rounded-pill w-100'>DTE</a>
+                             </div>
+                             <div className="col-6">
+                                 <a href='https://www.facilities.aicte-india.org/dashboard/pages/dashboardaicte.php' target="blank" className='btn btn-danger rounded-pill w-100'>AICTE</a>
                              </div>
                          </div>
                          <div className="row">
-                             <div className="col-4"></div>
-                             <div className="col-4">
-                                 <a href='https://www.facilities.aicte-india.org/dashboard/pages/dashboardaicte.php' target="blank" className='btn btn-danger rounded-pill w-100'>AICTE</a>
-                             </div>
+                             
+                             
                          </div>
                 </div>
             </div>

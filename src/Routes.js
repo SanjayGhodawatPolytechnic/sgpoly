@@ -59,7 +59,7 @@ import HODDesk from "./Screens/Departments/CSE/HODDesk";
 import VisionMission from "./Screens/Departments/CSE/VisionMission";
 import Outcomes from "./Screens/Departments/CSE/Outcomes";
 import StaffProfile from "./Screens/Departments/CSE/StaffProfile";
-import Suggest from "./Screens/Extra/Suggest";
+import TechnicalStaff from "./Screens/Departments/CSE/TechnicalStaff";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -143,6 +143,16 @@ const Routes = () => {
           exact
           component={StaffProfile}
         />
+        <Route
+          path="/department/cse/technical-staff"
+          exact
+          component={TechnicalStaff}
+        />
+
+        {/* --------------------MECH------------------------------------------------*/}
+        {/* --------------------E & TC------------------------------------------------*/}
+        {/* --------------------CIVIL------------------------------------------------*/}
+        {/* --------------------ELECTRICAL------------------------------------------------*/}
 
         {/* --------------------MECH------------------------------------------------*/}
         {/* --------------------E & TC------------------------------------------------*/}
