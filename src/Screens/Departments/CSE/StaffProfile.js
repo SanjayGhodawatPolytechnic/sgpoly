@@ -33,7 +33,7 @@ const StaffProfile = () => {
                     if(v.department === "Computer Science"){
                         if(v.designation === 'HOD'){
                             hod = v
-                        }else{
+                        }else if(v.designation !== 'Lab Assistant'){
                             allStaff.push(v)
                         }
                     }

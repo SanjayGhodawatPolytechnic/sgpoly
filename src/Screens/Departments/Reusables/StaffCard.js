@@ -19,7 +19,7 @@ const StaffCard = ({
                     </div>
                     <div className="col-sm-8">
                     <h3>{name}</h3>
-                    <h6>{designation}</h6>
+                    <h6 className="des">{designation}</h6>
                     <p><span class="pro">Qualification</span> {qualification}</p>
                     <p><span class="pro">Area of Expertise</span> {areaOfEpertise}</p>
                     <p><span class="pro">Experience</span> {experience}</p>
