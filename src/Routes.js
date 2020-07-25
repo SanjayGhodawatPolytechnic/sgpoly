@@ -60,6 +60,7 @@ import VisionMission from "./Screens/Departments/CSE/VisionMission";
 import Outcomes from "./Screens/Departments/CSE/Outcomes";
 import StaffProfile from "./Screens/Departments/CSE/StaffProfile";
 import TechnicalStaff from "./Screens/Departments/CSE/TechnicalStaff";
+import Suggest from "./Screens/Extra/Suggest";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",

@@ -17,9 +17,10 @@ const Suggest = () => {
       subject: subject,
       message: message,
     };
+
     await dbReference.push(data, (err) => {
       if (!err) {
-        console.log("fsdffgbr");
+        console.log('SUCCESS')
       }
     });
   };
