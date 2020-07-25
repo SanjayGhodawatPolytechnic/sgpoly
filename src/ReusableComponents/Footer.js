@@ -1,6 +1,7 @@
 import React from "react";
 import "./CSS/Menu.css";
 import Menu from "./Menu";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,7 +18,9 @@ const Footer = () => {
                 order of the day, SGI always stands as the guiding star of
                 brilliance, quality and deliverance beyond expectations.
               </p>
-              <button className="btn btn-light">Any Suggestion</button>
+              <Link to="/suggest">
+                <button className="btn btn-light">Any Suggestion</button>
+              </Link>
               {/*<p>Innovativeness and Creativity are the hallmarks of a genius enterprise and SGI stands to be a stage where these qualities would be nurtured, encouraged and blossomed.</p>*/}
             </div>
             <hr className="clearfix w-100 d-md-none" />

@@ -59,6 +59,7 @@ import HODDesk from "./Screens/Departments/CSE/HODDesk";
 import VisionMission from "./Screens/Departments/CSE/VisionMission";
 import Outcomes from "./Screens/Departments/CSE/Outcomes";
 import StaffProfile from "./Screens/Departments/CSE/StaffProfile";
+import Suggest from "./Screens/Extra/Suggest";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -81,6 +82,7 @@ const Routes = () => {
         <Route path="/" exact component={Home} />
         <Route path="/students" exact component={StudentHome} />
         <Route path="/students/uploadimage" exact component={uploadimage} />
+        <Route path="/suggest" exact component={Suggest} />
 
         {/* --------------------About------------------------------------------------*/}
         <Route path="/about/logo" exact component={aboutLogo} />
@@ -126,20 +128,26 @@ const Routes = () => {
         <Route path="/management/govern" exact component={managementGovern} />
 
         {/* --------------------Departments------------------------------------------------*/}
-          {/* --------------------CSE------------------------------------------------*/}
+        {/* --------------------CSE------------------------------------------------*/}
 
-            <Route path="/department/cse" exact component={ComputerScience} />
-            <Route path="/department/cse/hoddesk" exact component={HODDesk} />
-            <Route path="/department/cse/vision-mission" exact component={VisionMission} />
-            <Route path="/department/cse/outcomes" exact component={Outcomes} />
-            <Route path="/department/cse/teaching-staff" exact component={StaffProfile} />
+        <Route path="/department/cse" exact component={ComputerScience} />
+        <Route path="/department/cse/hoddesk" exact component={HODDesk} />
+        <Route
+          path="/department/cse/vision-mission"
+          exact
+          component={VisionMission}
+        />
+        <Route path="/department/cse/outcomes" exact component={Outcomes} />
+        <Route
+          path="/department/cse/teaching-staff"
+          exact
+          component={StaffProfile}
+        />
 
-
-          {/* --------------------MECH------------------------------------------------*/}
-          {/* --------------------E & TC------------------------------------------------*/}
-          {/* --------------------CIVIL------------------------------------------------*/}
-          {/* --------------------ELECTRICAL------------------------------------------------*/}
-
+        {/* --------------------MECH------------------------------------------------*/}
+        {/* --------------------E & TC------------------------------------------------*/}
+        {/* --------------------CIVIL------------------------------------------------*/}
+        {/* --------------------ELECTRICAL------------------------------------------------*/}
 
         {/* --------------------Infrastructre------------------------------------------------*/}
 
@@ -181,7 +189,11 @@ const Routes = () => {
         <AdminRoute path="/admin" exact component={Dashboard} />
         <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
         <AdminRoute path="/admin/add/story" exact component={AddStory} />
-        <AdminRoute path="/admin/manage/highlights" exact component={ManageHighlights} />
+        <AdminRoute
+          path="/admin/manage/highlights"
+          exact
+          component={ManageHighlights}
+        />
         <Route path="/admin/signin" exact component={Login} />
       </Switch>
     </BrowserRouter>
