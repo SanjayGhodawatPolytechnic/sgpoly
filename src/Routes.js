@@ -61,6 +61,7 @@ import Outcomes from "./Screens/Departments/CSE/Outcomes";
 import StaffProfile from "./Screens/Departments/CSE/StaffProfile";
 import TechnicalStaff from "./Screens/Departments/CSE/TechnicalStaff";
 import Suggest from "./Screens/Extra/Suggest";
+import Laboratories from "./Screens/Departments/CSE/Laboratories";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -148,6 +149,11 @@ const Routes = () => {
           path="/department/cse/technical-staff"
           exact
           component={TechnicalStaff}
+        />
+        <Route
+          path="/department/cse/labs"
+          exact
+          component={Laboratories}
         />
 
         {/* --------------------MECH------------------------------------------------*/}

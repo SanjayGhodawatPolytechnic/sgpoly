@@ -5,6 +5,7 @@ const NavLinks = [
     {title: 'PEO PO PSO', path: '/department/cse/outcomes'},
     {title: 'Faculty Profile', path: '/department/cse/teaching-staff'},
     {title: 'Technical Staff', path: '/department/cse/technical-staff'},
+    {title: 'Laboratories', path: '/department/cse/labs'},
 ]
 
 export default NavLinks;
