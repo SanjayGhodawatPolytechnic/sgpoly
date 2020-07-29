@@ -1,11 +1,6 @@
 <h1 align="center">Welcome to Sanjay Ghodawat Polytechnic project 👋</h1>
 <p>
-    <img alt="Twitter: yashkalavadiya1" src="https://img.shields.io/twitter/follow/yashkalavadiya1.svg?style=social" />
-    
-    
-</p>
-<p>
-    <img src="https://sdk.bitmoji.com/render/panel/e7be203e-0f71-445a-a230-8191338a5642-5643b4fe-4c51-499a-8cf4-a84c5e00785b-v1.png?transparent=1&palette=1" />
+    <img align="center src="https://sdk.bitmoji.com/render/panel/e7be203e-0f71-445a-a230-8191338a5642-5643b4fe-4c51-499a-8cf4-a84c5e00785b-v1.png?transparent=1&palette=1" />
 </p>
 
 
