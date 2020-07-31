@@ -1,3 +1,9 @@
+<h1 align="center">Welcome to Sanjay Ghodawat Polytechnic project 👋</h1>
+<p>
+    <img align="center" src="https://sdk.bitmoji.com/render/panel/e7be203e-0f71-445a-a230-8191338a5642-5643b4fe-4c51-499a-8cf4-a84c5e00785b-v1.png?transparent=1&palette=1" />
+</p>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -67,3 +73,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 "# sgpoly" 
+
+
+
+
