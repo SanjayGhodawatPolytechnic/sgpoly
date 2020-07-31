@@ -173,30 +173,30 @@ const Dashboard = () => {
 
     const AddNews = () => {
         return(
-            <div class="jumbotron">
+            <div className="jumbotron">
                 {isSuccess && (<SuccessMessage />)}
-                <h1 class="display-4">Add Updates</h1>
+                <h1 className="display-4">Add Updates</h1>
                 <form>
-                    <div class="row">
-                        <div class="col">
+                    <div className="row">
+                        <div className="col">
                         <input type="text" className="form-control"  placeholder="Title" id="title" />
                         </div>
-                        <div class="col">
+                        <div className="col">
                         <textarea type="text" className="form-control" placeholder="Description" id="description" />
                         </div>                        
                     </div>
                     <div className="col-12">                    
                     <label>Select Image:</label>
-                    <input type="file" class="form-control" id="image" placeholder="Choose image" />
+                    <input type="file" className="form-control" id="image" placeholder="Choose image" />
                     </div>
                     <div className="col-12">                    
                     <label>Select File:</label>
-                    <input type="file" class="form-control" id="file" placeholder="Choose image" />
+                    <input type="file" className="form-control" id="file" placeholder="Choose image" />
                     </div>
                     <div className="col-12">
                         {isAdderLoading && (<CommonLoading />)}
                     </div>
-                    <button class="btn btn-lg btn-success btn-block text-uppercase" onClick={onSubmit}>Add</button>
+                    <button className="btn btn-lg btn-success btn-block text-uppercase" onClick={onSubmit}>Add</button>
                     </form>
             </div>
         )
@@ -205,10 +205,10 @@ const Dashboard = () => {
     const ListAllNews = () => {
         return (
             <div>
-            <div class="jumbotron">
-                <h1 class="display-4">All Updates</h1>
-                <p class="lead">Here you get all list of updates you posted and can delete them.</p>
-                <hr class="my-4"></hr>                
+            <div className="jumbotron">
+                <h1 className="display-4">All Updates</h1>
+                <p className="lead">Here you get all list of updates you posted and can delete them.</p>
+                <hr className="my-4"></hr>                
                 {updates.map((data,index) => (
                     <UpdatesCard reload={reload} setReload={setReload} getAllUpdates={getAllUpdates} data={data} title={data.title} description={data.description} image={data.imageDownloadUrl} key={index} loading={isImageLoading} k={data.key} />
                 ))}                
@@ -220,39 +220,52 @@ const Dashboard = () => {
 
     const LeftAdminPanel = () => {
         return ( 
-            <div className="card">
+            <div className="card w-100">
                 <h4 className="card-header bg-dark text-white">
                     Admin Panel
                 </h4>
-                <ul className="list-group">
-                    <li className="btn btn-success rounded-pill m-2" onClick={() => setScreens({...screens,isListAll:false,isNewNews:true})}>
+                <ul className="list-group w-100">
+                    <li className="btn btn-success rounded-pill" onClick={() => setScreens({...screens,isListAll:false,isNewNews:true})}>
                         New News
                     </li>                    
-                    <li className="btn btn-success rounded-pill m-2" onClick={() => getAllUpdates()}>
+                    <li className="btn btn-success rounded-pill" onClick={() => getAllUpdates()}>
                         List All News
                     </li>
-                    <Link to="/admin/add/staff" className="btn btn-success rounded-pill m-2"><li>
+                    <Link to="/admin/add/staff" className="btn btn-success rounded-pill"><li>
                         Add Staff Member
                     </li></Link>
-                    <Link to="/admin/add/story" className="btn btn-success rounded-pill m-2"><li>
+                    <Link to="/admin/add/story" className="btn btn-success rounded-pill"><li>
                         Add New Story
                     </li></Link>
-                    <Link to="/admin/manage/highlights" className="btn btn-success rounded-pill m-2"><li>
-                        Manage Highlights
+                    <Link to="/admin/manage/highlights" className="btn btn-success rounded-pill"><li>
+                        Manage Story
                     </li></Link>
-                    <li className="btn btn-success rounded-pill m-2" onClick={e => SignOut()}>
-                    Sign out <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <Link to="/admin/manage/achivements" className="btn btn-success rounded-pill"><li>
+                        Manage Achivements
+                    </li></Link>
+                    <li className="btn btn-success rounded-pill" onClick={e => SignOut()}>
+                    Sign out <i className="fa fa-sign-out" aria-hidden="true"></i>
                     </li>
                 </ul>
             </div>
          )
     }
 
+    const Placeholder = () => (
+        <div className="container" style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+            <div className="text-center" style={{fontSize:80}}>
+                <i class="fas fa-house-user"></i>
+            </div>
+            <div className="text-center" style={{fontSize: 30}}>Admin Dashboard</div>
+        </div>
+    )
+
     const RightAdminPanel = () => {
         return(
             <div>
                 {screens.isNewNews && AddNews()}
                 {screens.isListAll && ListAllNews()}
+                {!screens.isListAll && !screens.isNewNews && Placeholder()}
             </div>
         )
     }

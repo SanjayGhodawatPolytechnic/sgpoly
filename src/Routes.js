@@ -12,7 +12,7 @@ import aboutAffCert from "./Screens/About/affiliation";
 import aboutDifferentiator from "./Screens/About/differentiator";
 import aboutAchievement from "./Screens/About/achievement";
 
-import home from "./Screens/Student/home";
+
 import uploadimage from "./Screens/Student/uploadimage";
 
 import managementTrust from "./Screens/Management/trust";
@@ -62,6 +62,7 @@ import StaffProfile from "./Screens/Departments/CSE/StaffProfile";
 import TechnicalStaff from "./Screens/Departments/CSE/TechnicalStaff";
 import Suggest from "./Screens/Extra/Suggest";
 import Laboratories from "./Screens/Departments/CSE/Laboratories";
+import ManageAchivements from "./Admin/screens/ManageAchivements";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -202,6 +203,8 @@ const Routes = () => {
 
         <Route path="/contact" exact component={AddContact} />
 
+
+
         {/*============================ Admin Routes goes here =====================*/}
         <AdminRoute path="/admin" exact component={Dashboard} />
         <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
@@ -210,6 +213,12 @@ const Routes = () => {
           path="/admin/manage/highlights"
           exact
           component={ManageHighlights}
+        />
+        <AdminRoute
+          path="/admin/manage/achivements"
+          
+          component={ManageAchivements}
+          
         />
         <Route path="/admin/signin" exact component={Login} />
       </Switch>

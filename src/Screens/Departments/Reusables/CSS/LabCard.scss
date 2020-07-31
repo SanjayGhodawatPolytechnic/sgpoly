@@ -19,13 +19,13 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
   transition: all 0.2s ease;
 }
 
-.heading2{
-  pointer-events:none;
+.heading2 {
+  pointer-events: none;
 }
 
 
 
-.container {
+.container2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -40,7 +40,7 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
     background-color: #fff;
     overflow: hidden;
     margin-bottom: 4px;
-    
+
 
     &:before {
       content: "";
@@ -54,6 +54,7 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
       border-radius: 16px;
       background-color: $bg-color;
     }
+
     &:after {
       content: "";
       z-index: 99;
@@ -66,12 +67,14 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
       border-radius: 16px;
       background-color: $bg-color;
     }
+
     .unlist {
       z-index: 99;
       position: absolute;
       left: 39px;
       top: 5px;
       list-style-type: none;
+
       .listi {
         width: 2px;
         height: 2px;
@@ -80,12 +83,13 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
         background-color: $bg-color;
       }
     }
+
     .heading2 {
       z-index: 99;
       font-family: "Poppins", sans-serif;
       position: absolute;
       bottom: 0;
-      
+
       font-size: 50px;
       font-weight: 700;
       color: #fff;
@@ -99,6 +103,7 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
       font-size: 40px;
       cursor: pointer;
     }
+
     .pic {
       z-index: 100;
       width: 100%;
@@ -162,7 +167,7 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      outline:none;
+      outline: none;
       transition: all 0.3s ease;
       mix-blend-mode: hard-light;
 
@@ -178,13 +183,13 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
     &:hover p {
       color: #fff;
     }
-    
+
     &:hover .pic {
       filter: grayscale(0);
-      
+
     }
   }
-  
+
   .card2 {
     .butn {
       background-color: $blue;
@@ -193,9 +198,8 @@ $img-url: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb
 }
 
 .dr {
-position: absolute;
-  bottom: 16px; 
+  position: absolute;
+  bottom: 16px;
   right: 16px;
-  width:100px;
+  width: 100px;
 }
- 

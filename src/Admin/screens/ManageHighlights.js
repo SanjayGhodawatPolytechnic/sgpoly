@@ -3,7 +3,7 @@ import './CSS/Form.css';
 import { Link } from 'react-router-dom';
 import Main from '../../ReusableComponents/Main';
 import * as firebase from 'firebase';
-import './CSS/ManageHighlights.css'
+import './CSS/ManageHighlights.css';
 
 
 
@@ -97,7 +97,7 @@ const ManageHighlights = () => {
                                         type="button"
                                         onClick={e => deleteStory(e,value,index)}
                                         >
-                                            <i class="far fa-trash-alt"></i>
+                                            <i class="fas fa-trash trash-icon"></i>
                                         </button>
                                         </div>
                                         </div>
@@ -136,7 +136,14 @@ const ManageHighlights = () => {
                                                     <p class="card-text">{d.snippet}</p>
 
                                                     
-                                                    <a class="px-2 fa-lg li-ic trash-icon"><i class="fas fa-trash trash-icon"></i></a>
+                                                    {/* -------------------------------this feature will be added in future updates--------------------- */}
+                                                    {/* <button 
+                                                    class="btn btn-link btn-block text-left trash-icon text-center" 
+                                                    type="button"
+                                                    onClick={e => deleteStory(e,value,index)}
+                                                    >
+                                                        <i class="fas fa-trash trash-icon"></i>
+                                                    </button> */}
                                                     {/* <div class="card-footer text-muted text-center mt-4">
                                                         {toString(new Date(d.timestamp).getDate())}
                                                     </div> */}

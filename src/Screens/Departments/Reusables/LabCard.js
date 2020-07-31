@@ -12,7 +12,7 @@ const LabCard = ({
 }) => {
     return (
         <div>
-        <div class="container" data-toggle="collapse" href={`#collapseExample${itemno}`} role="button" aria-expanded="false" aria-controls={`collapseExample${itemno}`}>
+        <div class="container2" data-toggle="collapse" href={`#collapseExample${itemno}`} role="button" aria-expanded="false" aria-controls={`collapseExample${itemno}`}>
             <div class="card3">
                 <h2 className="heading2">{labName}</h2>
                 <i class="fas fa-arrow-right rotate-icon itag"></i>
