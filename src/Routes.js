@@ -12,7 +12,6 @@ import aboutAffCert from "./Screens/About/affiliation";
 import aboutDifferentiator from "./Screens/About/differentiator";
 import aboutAchievement from "./Screens/About/achievement";
 
-
 import uploadimage from "./Screens/Student/uploadimage";
 
 import managementTrust from "./Screens/Management/trust";
@@ -63,6 +62,8 @@ import TechnicalStaff from "./Screens/Departments/CSE/TechnicalStaff";
 import Suggest from "./Screens/Extra/Suggest";
 import Laboratories from "./Screens/Departments/CSE/Laboratories";
 import ManageAchivements from "./Admin/screens/ManageAchivements";
+import SuggestAdmin from "./Admin/screens/suggest";
+import ContactNumber from "./Admin/screens/contactnum";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -151,11 +152,7 @@ const Routes = () => {
           exact
           component={TechnicalStaff}
         />
-        <Route
-          path="/department/cse/labs"
-          exact
-          component={Laboratories}
-        />
+        <Route path="/department/cse/labs" exact component={Laboratories} />
 
         {/* --------------------MECH------------------------------------------------*/}
         {/* --------------------E & TC------------------------------------------------*/}
@@ -203,8 +200,6 @@ const Routes = () => {
 
         <Route path="/contact" exact component={AddContact} />
 
-
-
         {/*============================ Admin Routes goes here =====================*/}
         <AdminRoute path="/admin" exact component={Dashboard} />
         <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
@@ -216,11 +211,11 @@ const Routes = () => {
         />
         <AdminRoute
           path="/admin/manage/achivements"
-          
           component={ManageAchivements}
-          
         />
         <Route path="/admin/signin" exact component={Login} />
+        <Route path="/admin/suggest" exact component={SuggestAdmin} />
+        <Route path="/admin/contact" exact component={ContactNumber} />
       </Switch>
     </BrowserRouter>
   );

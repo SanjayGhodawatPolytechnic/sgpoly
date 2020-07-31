@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Main from "../../ReusableComponents/Main";
 
 import * as firebase from "firebase";
-import './CSS/Home.css'
+import "./CSS/Home.css";
 
 const StudentHome = () => {
   const [data, setData] = useState([]);
@@ -27,7 +27,7 @@ const StudentHome = () => {
     console.log(data);
   }, [data]);
 
-  const chintan = () => {
+  const xyz = () => {
     return data.map((c, i) => (
       <div className="col-md-4 uploaded-img">
         <div id="mdb-lightbox-ui" />
@@ -262,7 +262,7 @@ const StudentHome = () => {
         <h4 class="text-monospace">Clicks By Students</h4>
         {/* First row */}
         <div className="view">
-          <div className="row">{chintan()}</div>
+          <div className="row">{xyz()}</div>
         </div>
       </Main>
     </div>
