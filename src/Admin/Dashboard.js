@@ -294,6 +294,10 @@ const Dashboard = () => {
           <Link to="/admin/contact" className="btn btn-success rounded-pill">
             <li>Contact details</li>
           </Link>
+
+          <Link to="/admin/studpics" className="btn btn-success rounded-pill">
+            <li>Manage student pics</li>
+          </Link>
           <li
             className="btn btn-success rounded-pill"
             onClick={(e) => SignOut()}

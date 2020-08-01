@@ -64,6 +64,7 @@ import Laboratories from "./Screens/Departments/CSE/Laboratories";
 import ManageAchivements from "./Admin/screens/ManageAchivements";
 import SuggestAdmin from "./Admin/screens/suggest";
 import ContactNumber from "./Admin/screens/contactnum";
+import Studpics from "./Admin/screens/Studpics";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -216,6 +217,7 @@ const Routes = () => {
         <Route path="/admin/signin" exact component={Login} />
         <Route path="/admin/suggest" exact component={SuggestAdmin} />
         <Route path="/admin/contact" exact component={ContactNumber} />
+        <Route path="/admin/studpics" exact component={Studpics} />
       </Switch>
     </BrowserRouter>
   );
