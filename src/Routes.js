@@ -11,16 +11,12 @@ import aboutQuality from "./Screens/About/quality";
 import aboutAffCert from "./Screens/About/affiliation";
 import aboutDifferentiator from "./Screens/About/differentiator";
 import aboutAchievement from "./Screens/About/achievement";
-
-import uploadimage from "./Screens/Student/uploadimage";
-
 import managementTrust from "./Screens/Management/trust";
 import managementPrincipal from "./Screens/Management/principal";
 import managementBoard from "./Screens/Management/board";
 import managementChairman from "./Screens/Management/chairman";
 import managementDirectors from "./Screens/Management/directors";
 import managementGovern from "./Screens/Management/govern";
-
 import infrastructureAbout from "./Screens/Infrastructure/about";
 import classroom from "./Screens/Infrastructure/classroom";
 import Overview from "./Screens/Infrastructure/Overview";
@@ -29,7 +25,6 @@ import auditorium from "./Screens/Infrastructure/auditorium";
 import foodcourt from "./Screens/Infrastructure/foodcourt";
 import conference from "./Screens/Infrastructure/conference";
 import amphi from "./Screens/Infrastructure/amphi";
-
 import hostel from "./Screens/Facilities/hostel";
 import laboratories from "./Screens/Facilities/laboratories";
 import gymnasium from "./Screens/Facilities/gymnasium";
@@ -37,13 +32,11 @@ import pool from "./Screens/Facilities/pool";
 import ground from "./Screens/Facilities/ground";
 import tennis from "./Screens/Facilities/tennis";
 import more from "./Screens/Facilities/more";
-
 import * as firebase from "firebase";
 import Dashboard from "./Admin/Dashboard";
 import AdminRoute from "./Admin/auth/AdminRoutes";
 import Activities from "./Screens/About/Activities";
 import SocialResponsiblities from "./Screens/About/SocialResponsiblities";
-import ImageGallery from "./Screens/About/components/ImageGallery";
 import ImageGal from "./Screens/About/components/ImageGallery";
 import MoreUpdates from "./ReusableComponents/MoreUpdates";
 import secretary from "./Screens/Management/secretary";
@@ -65,6 +58,9 @@ import ManageAchivements from "./Admin/screens/ManageAchivements";
 import SuggestAdmin from "./Admin/screens/suggest";
 import ContactNumber from "./Admin/screens/contactnum";
 import Studpics from "./Admin/screens/Studpics";
+import Uploadimage from "./Screens/Student/uploadimage";
+
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -85,8 +81,11 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
+
+
+        {/* =================================Student routes=============================== */}
         <Route path="/students" exact component={StudentHome} />
-        <Route path="/students/uploadimage" exact component={uploadimage} />
+        <Route path="/students/uploadimage" exact component={Uploadimage} />
         <Route path="/suggest" exact component={Suggest} />
 
         {/* --------------------About------------------------------------------------*/}

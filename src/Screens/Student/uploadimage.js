@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import Main from "../../ReusableComponents/Main";
 import * as firebase from "firebase";
 import uuid from "react-native-uuid";
-import { Link } from "react-router-dom";
+import ReactLoading from "react-loading";
 
-const uploadimage = () => {
+const Uploadimage = () => {
+
+  const [isLoading, setIsLoading] = useState(false);
   let mediaName;
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     var nm = document.getElementById("name").value;
     var dept = document.getElementById("deptSelector").options[
       document.getElementById("deptSelector").selectedIndex
@@ -37,7 +40,13 @@ const uploadimage = () => {
 
     await dbReference.push(data, (err) => {
       if (!err) {
-        console.log("StudentAdded");
+        //console.log("StudentAdded");
+        setIsLoading(false);
+        document.getElementById("name").value = "";
+        document.getElementById("deptSelector").selectedIndex = 0;
+        document.getElementById("yrSelector").selectedIndex = 0;
+        document.getElementById("imageSelector").value = null;
+
       }
     });
   };
@@ -52,7 +61,7 @@ const uploadimage = () => {
     <div>
       <Main>
         <div>
-          <form className="text-center border border-light p-5" action="#!">
+          <form className="text-center border border-light p-5">
             <p className="h4 mb-4">Add Photo</p>
             <p>Be a part of SGP community by adding your Pics</p>
 
@@ -96,11 +105,12 @@ const uploadimage = () => {
             <br />
             <input type="file" className=" mb-4" id="imageSelector" />
             <button
-              className="btn btn-info btn-block"
+              className="btn btn-info btn-block text-center"
               type="submit"
               onClick={(e) => onSubmit(e)}
+              style={{display:'flex', justifyContent:'center', alignItems:'center'}}
             >
-              Add
+              {isLoading ? (<ReactLoading className="text-center" type="balls" color="#FFF" />) : "Add"}
             </button>
           </form>
         </div>
@@ -109,4 +119,4 @@ const uploadimage = () => {
   );
 };
 
-export default uploadimage;
+export default Uploadimage;

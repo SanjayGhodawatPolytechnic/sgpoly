@@ -12,7 +12,11 @@ const Studpics = () => {
     dataref.on("value", (dataSnapshot) => {
       if (dataSnapshot.val()) {
         let result = Object.values(dataSnapshot.val());
-
+        let keys = Object.keys(dataSnapshot.val());
+        keys.forEach((d,i) => {
+          result[i]['key'] = d;
+        })
+        //console.log(result);
         setData(result);
       }
     });
@@ -23,10 +27,15 @@ const Studpics = () => {
     const dbRef = firebase.database().ref("student_pics");
     const storageRefToMedia = firebase.storage().ref("studentpics");
 
-    await storageRefToMedia.child(c.mediaName).delete();
+    await storageRefToMedia.child(c.mediaName).delete().then(async () => {
+      await dbRef.child(c.key).remove().then(() => {
+        getstudpics();
+      })
+    })
 
-    await dbRef.child(c.key).remove();
+    
   };
+
 
   useEffect(() => {
     getstudpics();
@@ -36,7 +45,7 @@ const Studpics = () => {
 
   const card = () => {
     return data.map((c, i) => (
-      <div>
+      <div key={i}>
         <div class="card mb-3" style={{ maxwidth: "540px" }}>
           <div class="row no-gutters">
             <div class="col-md-4">
