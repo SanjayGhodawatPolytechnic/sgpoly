@@ -19,6 +19,23 @@ const ManageAchivements = () => {
     })
     const [isLoading, setIsLoading] = useState(false);
 
+    const loadAllData = async () => {
+        const dbRef = firebase.database().ref('achivements');
+        await dbRef.on("value", snapshot => {
+            let result = Object.values(snapshot.val());
+            let keys = Object.keys(snapshot.val());
+            keys.forEach((v,i) => {
+                result[i]["key"] = v;
+            })
+
+            console.log(result);
+        })
+    }
+
+    useEffect(() => {
+        loadAllData();
+    }, []);
+
     const onSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
@@ -26,12 +43,14 @@ const ManageAchivements = () => {
         const storageref = firebase.storage().ref('achivements')
         var imageURL = 'empty'
         var fileURL = 'empty'
+        var imageName = uuid.v4();
+        var fileName = uuid.v4();
 
         if(newData.image !== '') {
-            imageURL = await UploadImage(storageref, newData.image);
+            imageURL = await UploadImage(storageref, newData.image, imageName);
         }
         if(newData.file !== "") {
-            fileURL = await UploadFile(storageref, newData.file);
+            fileURL = await UploadFile(storageref, newData.file, fileName);
         }
 
         const data = {
@@ -41,7 +60,9 @@ const ManageAchivements = () => {
             dept: newData.dept,
             dateAchived: newData.dateAchived,
             imageURL: imageURL,
-            fileURL: fileURL
+            fileURL: fileURL,
+            fileName: fileName,
+            imageName: imageName
         }
 
         await dbRef.push(data, (err) => {
@@ -61,13 +82,13 @@ const ManageAchivements = () => {
         })
     }
 
-    const UploadImage = async (storageref, image) => {
-        const ref = storageref.child('images').child(uuid.v4())
+    const UploadImage = async (storageref, image, name) => {
+        const ref = storageref.child('images').child(name)
         const snapshot = await ref.put(image);
         return snapshot.ref.getDownloadURL();
     }
-    const UploadFile = async (storageref, file) => {
-        const ref = storageref.child('files').child(uuid.v4())
+    const UploadFile = async (storageref, file, name) => {
+        const ref = storageref.child('files').child(name)
         const snapshot = await ref.put(file);
         return snapshot.ref.getDownloadURL();
     }
