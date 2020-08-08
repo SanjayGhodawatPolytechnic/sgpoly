@@ -4,6 +4,7 @@ import { useState } from 'react';
 import * as firebase from 'firebase';
 import uuid from "react-native-uuid";
 import ReactLoading from "react-loading";
+import AchivementsCard from './reusables/AchivementsCard';
 
 const ManageAchivements = () => {
 
@@ -29,6 +30,7 @@ const ManageAchivements = () => {
             })
 
             console.log(result);
+            setData(result)
         })
     }
 
@@ -46,10 +48,10 @@ const ManageAchivements = () => {
         var imageName = uuid.v4();
         var fileName = uuid.v4();
 
-        if(newData.image !== '') {
+        if(newData.image.length !== 0) {
             imageURL = await UploadImage(storageref, newData.image, imageName);
         }
-        if(newData.file !== "") {
+        if(newData.file.length !== 0) {
             fileURL = await UploadFile(storageref, newData.file, fileName);
         }
 
@@ -78,6 +80,7 @@ const ManageAchivements = () => {
                     dept: ''
                 })
                 setIsLoading(false)
+                
             }
         })
     }
@@ -96,43 +99,37 @@ const ManageAchivements = () => {
     const LeftPanel = () => (
         <div className="container">
             <div className="row">
-                <div className="col-6">
-                    <div class="card" style={{width: '18rem'}}>
-                        <img src="..." class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-
+                {data.map((d,i) => (
+                    <div className="col-6" key={i}>
+                        <AchivementsCard  
+                        category={d.category}
+                        dateAchived={d.dateAchived}
+                        dept={d.dept}
+                        description={d.description}
+                        fileName={d.fileName}
+                        fileURL={d.fileURL}
+                        imageName={d.imageName}
+                        imageURL={d.imageURL}
+                        ukey={d.key}
+                        title={d.title}
+                        />
+                    </div>  
+                ))}
             </div>
         </div>
     )
 
     const RightPanel = () => (
         <div className="container">
-            <form className="md-form">
-                {isLoading && (
-                    <div className="md-form">
-                        <ReactLoading type="spinningBubbles" color="#FFF" />
-                    </div>
-                )}
+            <form className="md-form" name="form">
+                
                 <div class="md-form">
                     <input 
                     type="text" 
                     id="form1" 
                     className="form-control"
                     value={newData.title}
+                    required
                     onChange={(e) => {
                         
                     setNewData({...newData, title: e.target.value})}} />
@@ -143,6 +140,7 @@ const ManageAchivements = () => {
                     type="text" 
                     id="form2" 
                     className="form-control" 
+                    required
                     value={newData.description}
                     onChange={(e) => setNewData({...newData, description: e.target.value})} />
                     <label for="form2">Description</label>
@@ -150,6 +148,7 @@ const ManageAchivements = () => {
                 <div class="md-form">
                 <select 
                 className="browser-default custom-select bg-transparent" 
+                required
                 value={newData.category}                
                 onChange={(e) => setNewData({...newData, category:e.target.options[e.target.selectedIndex].value})}>
                     <option value="" disabled selected>Achived By</option>
@@ -159,7 +158,7 @@ const ManageAchivements = () => {
                 </div>
                 
                 <div className="md-form">
-                    <select class="browser-default custom-select bg-transparent" onChange={(e) => setNewData({...newData, dept:e.target.options[e.target.selectedIndex].value})}>
+                    <select required class="browser-default custom-select bg-transparent" onChange={(e) => setNewData({...newData, dept:e.target.options[e.target.selectedIndex].value})}>
                         <option value="" disabled selected>Department</option>
                         <option value="CSE">Computer Science</option>
                         <option value="MECH">Mechanical</option>
@@ -169,7 +168,7 @@ const ManageAchivements = () => {
                     </select>
                 </div>
                 <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
-                    <input placeholder="Select date" type="date" id="example" class="form-control" onChange={(e) => setNewData({...newData, dateAchived: e.target.value})} />
+                    <input required placeholder="Select date" type="date" id="example" class="form-control" onChange={(e) => setNewData({...newData, dateAchived: e.target.value})} />
                     <label for="example">Achived on...</label>
                 </div>
                 
@@ -178,7 +177,7 @@ const ManageAchivements = () => {
                 <div class="file-field">
                     <div className="row m-2">
                         <span className="text-muted m-2">Input Image:</span>
-                        <input type="file" id="imagepick" className="purple-gradient" onChange={(e) => setNewData({...newData, image: e.target.files[0]})} />
+                        <input required type="file" id="imagepick" className="purple-gradient" onChange={(e) => setNewData({...newData, image: e.target.files[0]})} />
                     </div>
                 </div>
                 </div>
@@ -186,10 +185,20 @@ const ManageAchivements = () => {
                 <div class="file-field">
                     <div className="row m-2">
                         <span className="text-muted m-2">Input File:</span>
-                        <input type="file" id="filepick" className="purple-gradient" onChange={(e) => setNewData({...newData, file: e.target.files[0]})} />
+                        <input required type="file" id="filepick" className="purple-gradient" onChange={(e) => setNewData({...newData, file: e.target.files[0]})} />
                     </div>
                 </div>
                 </div>
+                {isLoading && (
+                    <div className="md-form text-center w-100">
+                        <div className="row">
+                            <div className="col-4"></div>
+                            <div className="col-4">
+                                <ReactLoading type="spinningBubbles" color="#FFF" className="ml-4" />
+                            </div>
+                        </div>
+                    </div>
+                )}
                 <div class="md-form">
                 <button class="btn purple-gradient w-100" onClick={e => onSubmit(e)}>Upload Activity</button>
                 </div>
