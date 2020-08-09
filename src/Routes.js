@@ -59,6 +59,7 @@ import SuggestAdmin from "./Admin/screens/suggest";
 import ContactNumber from "./Admin/screens/contactnum";
 import Studpics from "./Admin/screens/Studpics";
 import Uploadimage from "./Screens/Student/uploadimage";
+import Achivements from "./Screens/Departments/CSE/Achivements";
 
 
 
@@ -153,6 +154,7 @@ const Routes = () => {
           component={TechnicalStaff}
         />
         <Route path="/department/cse/labs" exact component={Laboratories} />
+        <Route path="/department/cse/achivements" exact component={Achivements} />
 
         {/* --------------------MECH------------------------------------------------*/}
         {/* --------------------E & TC------------------------------------------------*/}
