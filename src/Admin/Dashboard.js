@@ -288,6 +288,12 @@ const Dashboard = () => {
           >
             <li>Manage Achivements</li>
           </Link>
+          <Link
+            to="/admin/manage/activities"
+            className="btn btn-success rounded-pill"
+          >
+            <li>Manage Activities</li>
+          </Link>
           <Link to="/admin/suggest" className="btn btn-success rounded-pill">
             <li>Suggestions</li>
           </Link>

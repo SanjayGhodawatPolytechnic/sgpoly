@@ -60,6 +60,7 @@ import ContactNumber from "./Admin/screens/contactnum";
 import Studpics from "./Admin/screens/Studpics";
 import Uploadimage from "./Screens/Student/uploadimage";
 import Achivements from "./Screens/Departments/CSE/Achivements";
+import ManageActivities from "./Admin/screens/ManageActivities";
 
 
 
@@ -215,10 +216,14 @@ const Routes = () => {
           path="/admin/manage/achivements"
           component={ManageAchivements}
         />
-        <Route path="/admin/signin" exact component={Login} />
-        <Route path="/admin/suggest" exact component={SuggestAdmin} />
-        <Route path="/admin/contact" exact component={ContactNumber} />
-        <Route path="/admin/studpics" exact component={Studpics} />
+        <AdminRoute
+          path="/admin/manage/activities"
+          component={ManageActivities}
+        />
+        <AdminRoute path="/admin/signin" exact component={Login} />
+        <AdminRoute path="/admin/suggest" exact component={SuggestAdmin} />
+        <AdminRoute path="/admin/contact" exact component={ContactNumber} />
+        <AdminRoute path="/admin/studpics" exact component={Studpics} />
       </Switch>
     </BrowserRouter>
   );

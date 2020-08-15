@@ -123,7 +123,7 @@ const ManageAchivements = () => {
         <div className="container">
             <form className="md-form" name="form">
                 
-                <div class="md-form">
+                <div className="md-form">
                     <input 
                     type="text" 
                     id="form1" 
@@ -135,7 +135,7 @@ const ManageAchivements = () => {
                     setNewData({...newData, title: e.target.value})}} />
                     <label for="form1">Title</label>
                 </div>
-                <div class="md-form">
+                <div className="md-form">
                     <input 
                     type="text" 
                     id="form2" 
@@ -145,7 +145,7 @@ const ManageAchivements = () => {
                     onChange={(e) => setNewData({...newData, description: e.target.value})} />
                     <label for="form2">Description</label>
                 </div>
-                <div class="md-form">
+                <div className="md-form">
                 <select 
                 className="browser-default custom-select bg-transparent" 
                 required
@@ -158,7 +158,7 @@ const ManageAchivements = () => {
                 </div>
                 
                 <div className="md-form">
-                    <select required class="browser-default custom-select bg-transparent" onChange={(e) => setNewData({...newData, dept:e.target.options[e.target.selectedIndex].value})}>
+                    <select required className="browser-default custom-select bg-transparent" onChange={(e) => setNewData({...newData, dept:e.target.options[e.target.selectedIndex].value})}>
                         <option value="" disabled selected>Department</option>
                         <option value="CSE">Computer Science</option>
                         <option value="MECH">Mechanical</option>
@@ -167,22 +167,22 @@ const ManageAchivements = () => {
                         <option value="EE">Electrical</option>
                     </select>
                 </div>
-                <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
-                    <input required placeholder="Select date" type="date" id="example" class="form-control" onChange={(e) => setNewData({...newData, dateAchived: e.target.value})} />
+                <div id="date-picker-example" className="md-form md-outline input-with-post-icon datepicker">
+                    <input required placeholder="Select date" type="date" id="example" className="form-control" onChange={(e) => setNewData({...newData, dateAchived: e.target.value})} />
                     <label for="example">Achived on...</label>
                 </div>
                 
                 
-                <div class="md-form">
-                <div class="file-field">
+                <div className="md-form">
+                <div className="file-field">
                     <div className="row m-2">
                         <span className="text-muted m-2">Input Image:</span>
                         <input required type="file" id="imagepick" className="purple-gradient" onChange={(e) => setNewData({...newData, image: e.target.files[0]})} />
                     </div>
                 </div>
                 </div>
-                <div class="md-form">
-                <div class="file-field">
+                <div className="md-form">
+                <div className="file-field">
                     <div className="row m-2">
                         <span className="text-muted m-2">Input File:</span>
                         <input required type="file" id="filepick" className="purple-gradient" onChange={(e) => setNewData({...newData, file: e.target.files[0]})} />
@@ -199,8 +199,8 @@ const ManageAchivements = () => {
                         </div>
                     </div>
                 )}
-                <div class="md-form">
-                <button class="btn purple-gradient w-100" onClick={e => onSubmit(e)}>Upload Activity</button>
+                <div className="md-form">
+                <button className="btn purple-gradient w-100" onClick={e => onSubmit(e)}>Upload Activity</button>
                 </div>
             </form>
         </div>

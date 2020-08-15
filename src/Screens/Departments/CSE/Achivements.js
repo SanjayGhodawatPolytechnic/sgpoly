@@ -43,34 +43,34 @@ const Achivements = () => {
         <Main className="container-lg">
             <div className="row">
                 <DeptMenu dept="Computer Science" subMenu={NavLinks} />
-                <div class="col-sm-8 col-lg-9 text-light">
-                    <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3"
+                <div className="col-sm-8 col-lg-9 text-light">
+                    <div data-spy="scroll" className="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3"
                     data-offset="0">
                         <div className="row">
                         <h4 className="col-12 text-center text-dark"><b>College Achivements</b></h4>
                             {collegeData.map((d,i) => (
                                 <div className="col-lg-4 m-2" key={i}>
-                                    <div class="card card-cascade wider">
+                                    <div className="card card-cascade wider">
 
-                                    <div class="view view-cascade overlay">
-                                    <img class="card-img-top" src={d.imageURL} alt="Card image cap" />
+                                    <div className="view view-cascade overlay">
+                                    <img className="card-img-top" src={d.imageURL} alt="Card image cap" />
                                     <a href="#!">
-                                        <div class="mask rgba-white-slight"></div>
+                                        <div className="mask rgba-white-slight"></div>
                                     </a>
                                     </div>
                                 
-                                    <div class="card-body card-body-cascade text-center">
+                                    <div className="card-body card-body-cascade text-center">
                                 
-                                    <h5 class="blue-text pb-2"><strong>{d.title}</strong></h5>
-                                    <p class="card-text">{d.description} </p>
-                                    <ul class="list-group list-group-flush m-1" style={{fontSize:13}}>
-                                        <li class="list-group-item purple-gradient">Department: {d.dept}</li>
-                                        <li class="list-group-item purple-gradient">Achived By: {d.category}</li>
-                                        <li class="list-group-item purple-gradient">Achived on: {d.dateAchived}</li>
+                                    <h5 className="blue-text pb-2"><strong>{d.title}</strong></h5>
+                                    <p className="card-text">{d.description} </p>
+                                    <ul className="list-group list-group-flush m-1" style={{fontSize:13}}>
+                                        <li className="list-group-item purple-gradient">Department: {d.dept}</li>
+                                        <li className="list-group-item purple-gradient">Achived By: {d.category}</li>
+                                        <li className="list-group-item purple-gradient">Achived on: {d.dateAchived}</li>
                                     </ul>
                                 
                                     
-                                    <a class="px-2 fa-lg tw-ic text-success mt-1" href={d.fileURL} target="blank"><i class="fas fa-file"></i></a>
+                                    <a className="px-2 fa-lg tw-ic text-success mt-1" href={d.fileURL} target="blank"><i className="fas fa-file"></i></a>
                                     
                                 
                                     </div>
@@ -83,27 +83,27 @@ const Achivements = () => {
                         <h4 className="col-12 text-center text-dark"><b>Student Achivements</b></h4>
                             {studentData.map((d,i) => (
                                 <div className="col-lg-4 m-2" key={i}>
-                                    <div class="card card-cascade wider">
+                                    <div className="card card-cascade wider">
 
-                                    <div class="view view-cascade overlay">
-                                    <img class="card-img-top" src={d.imageURL} alt="Card image cap" />
+                                    <div className="view view-cascade overlay">
+                                    <img className="card-img-top" src={d.imageURL} alt="Card image cap" />
                                     <a href="#!">
-                                        <div class="mask rgba-white-slight"></div>
+                                        <div className="mask rgba-white-slight"></div>
                                     </a>
                                     </div>
                                 
-                                    <div class="card-body card-body-cascade text-center">
+                                    <div className="card-body card-body-cascade text-center">
                                 
-                                    <h5 class="blue-text pb-2"><strong>{d.title}</strong></h5>
-                                    <p class="card-text">{d.description} </p>
-                                    <ul class="list-group list-group-flush m-1" style={{fontSize:13}}>
-                                        <li class="list-group-item purple-gradient">Department: {d.dept}</li>
-                                        <li class="list-group-item purple-gradient">Achived By: {d.category}</li>
-                                        <li class="list-group-item purple-gradient">Achived on: {d.dateAchived}</li>
+                                    <h5 className="blue-text pb-2"><strong>{d.title}</strong></h5>
+                                    <p className="card-text">{d.description} </p>
+                                    <ul className="list-group list-group-flush m-1" style={{fontSize:13}}>
+                                        <li className="list-group-item purple-gradient">Department: {d.dept}</li>
+                                        <li className="list-group-item purple-gradient">Achived By: {d.category}</li>
+                                        <li className="list-group-item purple-gradient">Achived on: {d.dateAchived}</li>
                                     </ul>
                                 
                                     
-                                    <a class="px-2 fa-lg tw-ic text-success mt-1" href={d.fileURL} target="blank"><i class="fas fa-file"></i></a>
+                                    <a className="px-2 fa-lg tw-ic text-success mt-1" href={d.fileURL} target="blank"><i className="fas fa-file"></i></a>
                                     
                                 
                                     </div>
