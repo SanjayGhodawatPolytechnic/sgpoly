@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Main from '../../ReusableComponents/Main';
+import * as firebase from 'firebase';
+import uuid from "react-native-uuid";
+import { useEffect } from 'react';
 var _ = require('lodash');
 
 const ManageActivities = () => {
@@ -19,6 +22,110 @@ const ManageActivities = () => {
     const [inputCount,setInputCount] = useState({
         count:1
     })
+    const [dataWithoutFiles, setDataWithoutFiles] = useState([]);
+    const [dataWithFiles, setDataWithFiles] = useState([]);
+    var imagesNames = []
+    var imagesURLs = []
+
+
+    const getAllActivities = () => {
+        const dbRef = firebase.database().ref('activities')
+
+
+        //vanila data
+        dbRef.child('withoutfiles').on('value', snapshot => {
+            let resultWithoutFiles = Object.values(snapshot.val())
+            let keys = Object.keys(snapshot.val())
+            keys.forEach((v,i) => {
+                resultWithoutFiles[i]['key'] = v;
+            })
+            console.log(resultWithoutFiles)
+            setDataWithoutFiles(resultWithoutFiles)
+        })
+
+        //complex data
+        dbRef.child('withFiles').on('value',  snapshot => {
+            let resultWithFiles = Object.values(snapshot.val())
+            let keys = Object.keys(snapshot.val())
+            keys.forEach((v,i) => {
+                resultWithFiles[i]['key'] = v;
+            })
+            console.log(resultWithFiles)
+            setDataWithFiles(resultWithFiles);
+        })
+    }
+
+    useEffect(() => {
+        getAllActivities();
+    }, [])
+
+    const onSubmit = () => {
+        const dbRef = firebase.database().ref('activities');
+        const storageRef = firebase.storage().ref('activities');
+        if(!newData.isFiles) {
+            const dataWithoutFiles = {
+                title: newData.title,
+                description: newData.description,
+                category: newData.category,
+                duration: newData.duration,
+                dept: newData.dept,
+                date: newData.date,
+                type: newData.type
+            }
+            dbRef.child('withoutfiles').push(dataWithoutFiles, (err) => {
+                if(!err) {
+                    console.log('Activity added successfully')
+                }
+            })
+        }
+        else {
+            var FileName = uuid.v4()
+            var fileURL;
+            uploadFile(newData.file, storageRef, FileName, 'file')
+            .then(fileurl => {
+                fileURL = fileurl
+                uploadImages(storageRef)
+                .then(() => {
+                    const dataWithFiles = {
+                        title: newData.title,
+                        description: newData.description,
+                        category: newData.category,
+                        duration: newData.duration,
+                        dept: newData.dept,
+                        date: newData.date,
+                        type: newData.type,
+                        fileName: FileName,
+                        fileURL,
+                        imagesNames,
+                        imagesURLs
+                    }
+        
+                    dbRef.child('withFiles').push(dataWithFiles, (err) => {
+                        if(!err) {
+                            console.log('SUCCESS')
+                        }
+                    })
+                })
+            })
+        }
+    }
+
+    const uploadImages = async (storage) => {
+        for(let i = 0; i < newData.images.length; i++){
+            let name = uuid.v4()
+            await uploadFile(newData.images[i], storage, name, 'image')
+            .then(url => {
+                imagesNames.push(name)
+                imagesURLs.push(url)
+            })
+        }
+    }
+
+    const uploadFile = async (file, reference, name, type) => {
+        const ref = reference.child(type).child(name)
+        const snapshot = await ref.put(file)
+        return snapshot.ref.getDownloadURL();
+    }
 
     const RightPanel = () => (
         <div className="container">
@@ -52,8 +159,8 @@ const ManageActivities = () => {
                     id="duration" 
                     className="form-control" 
                     required
-                    value={newData.description}
-                    onChange={(e) => setNewData({...newData, description: e.target.value})} />
+                    value={newData.duration}
+                    onChange={(e) => setNewData({...newData, duration: e.target.value})} />
                     <label for="duration">Duration</label>
                 </div>
                 <div className="md-form">
@@ -89,7 +196,7 @@ const ManageActivities = () => {
                     </select>
                 </div>
                 <div id="date-picker-example" className="md-form md-outline input-with-post-icon datepicker">
-                    <input required placeholder="Select date" type="date" id="example" className="form-control" onChange={(e) => setNewData({...newData, dateAchived: e.target.value})} />
+                    <input required placeholder="Select date" type="date" id="example" className="form-control" onChange={(e) => setNewData({...newData, date: e.target.value})} />
                     <label for="example">Date of Activity...</label>
                 </div>
 
@@ -115,7 +222,7 @@ const ManageActivities = () => {
                     <div className="file-field">
                         <div className="row m-2">
                             <span className="text-muted m-2">Input File:</span>
-                            <input required type="file" id="imagepick" className="purple-gradient" onChange={(e) => setNewData({...newData, image: e.target.files[0]})} />
+                            <input required type="file" id="imagepick" className="purple-gradient" onChange={(e) => setNewData({...newData, file: e.target.files[0]})} />
                         </div>
                     </div>
                     </div>
@@ -169,7 +276,10 @@ const ManageActivities = () => {
                 )}
                 
                 <div className="md-form">
-                <button className="btn purple-gradient w-100">Upload Activity</button>
+                <button className="btn purple-gradient w-100" onClick={ e => {
+                    e.preventDefault();
+                    onSubmit();
+                }}>Upload Activity</button>
                 </div>
             </form>
         </div>
@@ -177,7 +287,16 @@ const ManageActivities = () => {
 
     const LeftPanel = () => (
         <div className="container">
-            HELLO, this is left panel
+            <div className="container border border-light m-3">
+                <h4 className="text-center text-light">College Achivements</h4>
+                <div className="row">
+                    <div className="col-lg-12 border border-light text-light purple-gradient">
+                        <h3 className="text-center">Title</h3>
+                        <h5 className="text-center text-muted">Description</h5>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     )
     return (

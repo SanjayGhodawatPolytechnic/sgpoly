@@ -305,7 +305,7 @@ const Dashboard = () => {
             <li>Manage student pics</li>
           </Link>
           <li
-            className="btn btn-success rounded-pill"
+            className="btn btn-danger rounded-pill"
             onClick={(e) => SignOut()}
           >
             Sign out <i className="fa fa-sign-out" aria-hidden="true"></i>
@@ -326,6 +326,7 @@ const Dashboard = () => {
       <div className="text-center" style={{ fontSize: 30 }}>
         Admin Dashboard
       </div>
+      <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjci9kgKQS1IIWMxkswpuv4uoMLGxHjYN-_ptgrDhjed4nSkQ3QHXGEuW-tWJ61e3bFhVAfQPrhS-6/pubchart?oid=629096135&amp;format=interactive"></iframe>
     </div>
   );
 
