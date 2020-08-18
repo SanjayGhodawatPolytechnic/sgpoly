@@ -326,7 +326,14 @@ const Dashboard = () => {
       <div className="text-center" style={{ fontSize: 30 }}>
         Admin Dashboard
       </div>
-      <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSjci9kgKQS1IIWMxkswpuv4uoMLGxHjYN-_ptgrDhjed4nSkQ3QHXGEuW-tWJ61e3bFhVAfQPrhS-6/pubchart?oid=629096135&amp;format=interactive"></iframe>
+      <div className="row">
+        <div className="col-12 text-center">
+        <iframe width="668" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKhFE-OE7aZ5MoZK_RIgFXm8NSJj7UABB0fX6dYFS103YxWZo59EVUvzStXsOuYMy3QaB1zUtsX76N/pubchart?oid=692234957&amp;format=interactive"></iframe>
+        </div>
+        <div className="col-12 text-center">
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQKhFE-OE7aZ5MoZK_RIgFXm8NSJj7UABB0fX6dYFS103YxWZo59EVUvzStXsOuYMy3QaB1zUtsX76N/pubchart?oid=2104302883&amp;format=interactive"></iframe>
+        </div>
+      </div>
     </div>
   );
 
