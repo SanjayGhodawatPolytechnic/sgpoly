@@ -285,16 +285,136 @@ const ManageActivities = () => {
         </div>
     )
 
+    const DisplayImages = ({
+        images = []
+    }) => {
+        return images.map((d,i) => (
+            <div className="col-4">
+                <img className="img img-fluid" src={d} />
+            </div>
+        ))
+    }
+
+    const DisplayActivityCard = ({
+        title = '',
+        description = '',
+        date = '',
+        duration = '',
+        dept = '',
+        type = '',
+        eventFor = '',
+        images = undefined
+    }) => (
+        
+                    <div className="col-lg-12 border border-light text-light purple-gradient">
+                        <div className="row">
+                        <div className="col-11">
+                            <h3 className="text-center">{title}</h3>
+                            <h5 className="text-center text-muted">{description}</h5>
+                        </div>
+                        <div className="col-1" style={{fontSize: 30, justifyContent:'center', alignItems: 'center', display: 'flex'}}><i class="fas fa-trash"></i></div>
+                        </div>
+                        <div className="row border border-light text-center">
+                            <div className="col-6 border border-light">
+                                <b>Date</b><br/>
+                                <span className="badge">{date}</span>
+                            </div>
+                            <div className="col-6 border border-light">
+                                <b>Duration</b><br/>
+                                <span className="badge">{duration}</span>
+                            </div>
+                            <div className="col-6 border border-light">
+                                <b>Department</b><br/>
+                                <span className="badge">{dept}</span>
+                            </div>
+                            <div className="col-6 border border-light">
+                                <b>TYPE</b><br/>
+                                <span className="badge">{type}</span>
+                            </div>
+                            <div className="col-12 border border-light">
+                                <b>Organized for</b><br/>
+                                <span className="badge">{eventFor}</span>
+                            </div>
+                            <div className="col-12 border border-light">
+                                <div className="row">
+                                    {images ? (<DisplayImages images={images} />) : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+    )
+
     const LeftPanel = () => (
         <div className="container">
-            <div className="container border border-light m-3">
-                <h4 className="text-center text-light">College Achivements</h4>
+            <div className="container border border-light mt-2">
+                <h4 className="text-center text-light">College Activities</h4>
                 <div className="row">
-                    <div className="col-lg-12 border border-light text-light purple-gradient">
-                        <h3 className="text-center">Title</h3>
-                        <h5 className="text-center text-muted">Description</h5>
-                        
-                    </div>
+                    {dataWithoutFiles.map((d, i) => {
+                        if(d.category === 'college') {
+                            return(
+                            <DisplayActivityCard 
+                            title={d.title} 
+                            description={d.description} 
+                            date={d.date}
+                            duration={d.duration}
+                            dept={d.dept}
+                            eventFor={d.category}
+                            type={d.type}
+                            />
+                            )
+                        }
+                    })}
+                    {dataWithFiles.map((d, i) => {
+                        if(d.category === 'college') {
+                            return(
+                            <DisplayActivityCard 
+                            title={d.title} 
+                            description={d.description} 
+                            images={d.imagesURLs}
+                            date={d.date}
+                            duration={d.duration}
+                            dept={d.dept}
+                            eventFor={d.category}
+                            type={d.type}
+                            />
+                            )
+                        }
+                    })}
+                </div>
+                <h4 className="text-center text-light">Student's Activities</h4>
+                <div className="row">
+                    {dataWithoutFiles.map((d, i) => {
+                        if(d.category === 'student') {
+                            return(
+                            <DisplayActivityCard 
+                            title={d.title} 
+                            description={d.description} 
+                            date={d.date}
+                            duration={d.duration}
+                            dept={d.dept}
+                            eventFor={d.category}
+                            type={d.type}
+                            />
+                            )
+                        }
+                    })}
+                    {dataWithFiles.map((d, i) => {
+                        if(d.category === 'student') {
+                            return(
+                            <DisplayActivityCard 
+                            title={d.title} 
+                            description={d.description} 
+                            images={d.imagesURLs}
+                            date={d.date}
+                            duration={d.duration}
+                            dept={d.dept}
+                            eventFor={d.category}
+                            type={d.type}
+                            />
+                            )
+                        }
+                    })}
                 </div>
             </div>
         </div>
