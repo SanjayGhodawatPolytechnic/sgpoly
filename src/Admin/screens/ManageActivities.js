@@ -3,6 +3,7 @@ import Main from '../../ReusableComponents/Main';
 import * as firebase from 'firebase';
 import uuid from "react-native-uuid";
 import { useEffect } from 'react';
+import ReactLoading from "react-loading";
 var _ = require('lodash');
 
 const ManageActivities = () => {
@@ -24,13 +25,13 @@ const ManageActivities = () => {
     })
     const [dataWithoutFiles, setDataWithoutFiles] = useState([]);
     const [dataWithFiles, setDataWithFiles] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
     var imagesNames = []
     var imagesURLs = []
 
 
     const getAllActivities = () => {
-        const dbRef = firebase.database().ref('activities')
-
+        const dbRef = firebase.database().ref('activities');
 
         //vanila data
         dbRef.child('withoutfiles').on('value', snapshot => {
@@ -62,6 +63,7 @@ const ManageActivities = () => {
     const onSubmit = () => {
         const dbRef = firebase.database().ref('activities');
         const storageRef = firebase.storage().ref('activities');
+        setIsLoading(true);
         if(!newData.isFiles) {
             const dataWithoutFiles = {
                 title: newData.title,
@@ -74,7 +76,8 @@ const ManageActivities = () => {
             }
             dbRef.child('withoutfiles').push(dataWithoutFiles, (err) => {
                 if(!err) {
-                    console.log('Activity added successfully')
+                    //console.log('Activity added successfully')
+                    setIsLoading(false)
                 }
             })
         }
@@ -102,7 +105,8 @@ const ManageActivities = () => {
         
                     dbRef.child('withFiles').push(dataWithFiles, (err) => {
                         if(!err) {
-                            console.log('SUCCESS')
+                            //console.log('SUCCESS')
+                            setIsLoading(false)
                         }
                     })
                 })
@@ -126,6 +130,29 @@ const ManageActivities = () => {
         const snapshot = await ref.put(file)
         return snapshot.ref.getDownloadURL();
     }
+
+    const deleteDataWithFiles = (key, fileName, imageNames) => {
+        const dbRef = firebase.database().ref('activities').child('withFiles')
+        const storageRef = firebase.storage().ref('activities')
+        storageRef.child('file').child(fileName).delete()
+        .then(() => {
+            imageNames.forEach((d,i) => {
+                storageRef.child('image').child(d).delete()
+            })
+        })
+        .then(() => {
+            dbRef.child(key).remove()
+            .then(() => console.log('DELETED SUCCESSFULLY'))
+        })
+    }
+
+    const deleteDataWithoutFiles = (key) => {
+        const dataRef = firebase.database().ref('activities').child('withoutfiles')
+        dataRef.child(key).remove().then(() => {
+            console.log('DELETED')
+        })
+    }
+
 
     const RightPanel = () => (
         <div className="container">
@@ -279,7 +306,7 @@ const ManageActivities = () => {
                 <button className="btn purple-gradient w-100" onClick={ e => {
                     e.preventDefault();
                     onSubmit();
-                }}>Upload Activity</button>
+                }}>{isLoading ? (<ReactLoading type='bars' color="#000" />) : 'Upload Activity' }</button>
                 </div>
             </form>
         </div>
@@ -303,7 +330,12 @@ const ManageActivities = () => {
         dept = '',
         type = '',
         eventFor = '',
-        images = undefined
+        images = undefined,
+        imagesName = undefined,
+        fileName = '',
+        fileURL = '',
+        isFile = false,
+        uKey=''
     }) => (
         
                     <div className="col-lg-12 border border-light text-light purple-gradient">
@@ -312,7 +344,20 @@ const ManageActivities = () => {
                             <h3 className="text-center">{title}</h3>
                             <h5 className="text-center text-muted">{description}</h5>
                         </div>
-                        <div className="col-1" style={{fontSize: 30, justifyContent:'center', alignItems: 'center', display: 'flex'}}><i class="fas fa-trash"></i></div>
+                        <div 
+                        className="col-1" 
+                        style={{fontSize: 30, justifyContent:'center', alignItems: 'center', display: 'flex'}}
+                        onClick={e => {
+                            if(isFile) {
+                                deleteDataWithFiles(uKey, fileName, imagesName)
+                            }
+                            else {
+                                deleteDataWithoutFiles(uKey)
+                            }
+                        }}
+                        >
+                            <i class="fas fa-trash"></i>
+                        </div>
                         </div>
                         <div className="row border border-light text-center">
                             <div className="col-6 border border-light">
@@ -331,9 +376,17 @@ const ManageActivities = () => {
                                 <b>TYPE</b><br/>
                                 <span className="badge">{type}</span>
                             </div>
-                            <div className="col-12 border border-light">
+                            <div className="col-6 border border-light">
                                 <b>Organized for</b><br/>
                                 <span className="badge">{eventFor}</span>
+                            </div>
+                            <div className="col-6 border border-light">
+                                <b>File</b><br/>
+                                {
+                                fileURL 
+                                ? (<a href={fileURL} target="_blank"><span className="badge">Click Here</span></a>) :
+                                (<span className="badge">No File Available</span>)
+                            }
                             </div>
                             <div className="col-12 border border-light">
                                 <div className="row">
@@ -361,6 +414,7 @@ const ManageActivities = () => {
                             dept={d.dept}
                             eventFor={d.category}
                             type={d.type}
+                            uKey={d.key}
                             />
                             )
                         }
@@ -377,6 +431,11 @@ const ManageActivities = () => {
                             dept={d.dept}
                             eventFor={d.category}
                             type={d.type}
+                            fileName={d.fileName}
+                            fileURL={d.fileURL}
+                            imagesName={d.imagesNames}
+                            uKey={d.key}
+                            isFile={true}
                             />
                             )
                         }
@@ -395,6 +454,7 @@ const ManageActivities = () => {
                             dept={d.dept}
                             eventFor={d.category}
                             type={d.type}
+                            uKey={d.key}
                             />
                             )
                         }
@@ -411,6 +471,11 @@ const ManageActivities = () => {
                             dept={d.dept}
                             eventFor={d.category}
                             type={d.type}
+                            fileName={d.fileName}
+                            fileURL={d.fileURL}
+                            imagesName={d.imagesNames}
+                            uKey={d.key}
+                            isFile={true}
                             />
                             )
                         }
