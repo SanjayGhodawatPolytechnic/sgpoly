@@ -97,7 +97,7 @@ const AddStaffMember = () => {
 
   return (
     <Main className="container-lg bg-dark roundedd border border-light">
-      <div class="signup-form">
+      <div className="signup-form">
         <form action="/examples/actions/confirmation.php" method="post">
           <Link to="/admin">
             <button className="btn btn-outline-info">
@@ -105,7 +105,7 @@ const AddStaffMember = () => {
                 width="1em"
                 height="1em"
                 viewBox="0 0 16 16"
-                class="bi bi-house-door-fill"
+                className="bi bi-house-door-fill"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -118,7 +118,7 @@ const AddStaffMember = () => {
             </button>
           </Link>
           <h2>Add Staff</h2>
-          <p class="hint-text">
+          <p className="hint-text">
             Add a staff member and following details are compulsory
           </p>
           <div className="form-group">
@@ -126,12 +126,12 @@ const AddStaffMember = () => {
               <div className="col-lg-12">{isSuccess && <SuccessMessage />}</div>
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-lg-12">
+          <div className="form-group">
+            <div className="row">
+              <div className="col-lg-12">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="full_name"
                   placeholder="Full Name with title"
                   required="required"
@@ -143,16 +143,16 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">
+          <div className="form-group">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="input-group mb-3">
+                  <div className="input-group-prepend">
+                    <label className="input-group-text" for="inputGroupSelect01">
                       Designation
                     </label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
+                  <select className="custom-select" id="inputGroupSelect01">
                     <option value="0">Choose...</option>
                     <option value="1">HOD</option>
                     <option value="2">Lecturer</option>
@@ -174,16 +174,16 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">
+          <div className="form-group">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="input-group mb-3">
+                  <div className="input-group-prepend">
+                    <label className="input-group-text" for="inputGroupSelect01">
                       Department
                     </label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect02">
+                  <select className="custom-select" id="inputGroupSelect02">
                     <option value="0">Choose...</option>
                     <option value="1">Computer Science</option>
                     <option value="2">Mechanical</option>
@@ -198,12 +198,12 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div className="row">
               <div className="col-lg-12">
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   name="email"
                   placeholder="Email"
                   required="required"
@@ -212,12 +212,12 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div className="row">
               <div className="col-lg-12">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="qualification"
                   placeholder="Qualification"
                   required="required"
@@ -226,12 +226,12 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div className="row">
               <div className="col-lg-12">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="areaofexpertise"
                   placeholder="Area of Expertise"
                   required="required"
@@ -240,12 +240,12 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div className="row">
               <div className="col-lg-12">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="experience"
                   placeholder="Experience"
                   required="required"
@@ -254,12 +254,12 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div className="row">
               <div className="col-lg-12">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">
+                <div className="input-group mb-3">
+                  <div className="input-group-prepend">
+                    <label className="input-group-text" for="inputGroupSelect01">
                       Resume
                     </label>
                   </div>
@@ -272,12 +272,12 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div className="row">
               <div className="col-lg-12">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">
+                <div className="input-group mb-3">
+                  <div className="input-group-prepend">
+                    <label className="input-group-text" for="inputGroupSelect01">
                       Image
                     </label>
                   </div>
@@ -290,12 +290,12 @@ const AddStaffMember = () => {
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div className="row">
               <div className="col-lg-12">
                 <button
                   type="submit"
-                  class="btn btn-success btn-lg btn-block"
+                  className="btn btn-success btn-lg btn-block"
                   onClick={(e) => onSubmit(e)}
                 >
                   {isLoading ? (

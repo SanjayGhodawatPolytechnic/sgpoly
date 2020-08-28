@@ -44,8 +44,8 @@
     -webkit-gradient(linear, left top, left bottom, from(#ea7773), to(#ea7773)),
     -webkit-gradient(linear, left top, left bottom, from(#ea7773), to(#ea7773));
   background-image: linear-gradient(#ea7773, #ea7773),
-    linear-gradient(#ea7773, #ea7773), linear-gradient(#ea7773, #ea7773),
-    linear-gradient(#ea7773, #ea7773);
+    linear-gradient(#ea7773, #1ce3f1), linear-gradient(#ea7773, #1ce3f1),
+    linear-gradient(#ea7773, #1ce3f1);
   -webkit-animation: rotate 4s linear infinite;
   animation: rotate 4s linear infinite;
 }

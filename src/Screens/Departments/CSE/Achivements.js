@@ -47,7 +47,7 @@ const Achivements = () => {
                     <div data-spy="scroll" className="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3"
                     data-offset="0">
                         <div className="row">
-                        <h4 className="col-12 text-center text-dark"><b>College Achivements</b></h4>
+                        <h4 className="col-12 text-center text-dark"><b>Achived By College</b></h4>
                             {collegeData.map((d,i) => (
                                 <div className="col-lg-4 m-2" key={i}>
                                     <div className="card card-cascade wider">
@@ -80,7 +80,7 @@ const Achivements = () => {
                             ))}
                         </div>
                         <div className="row">
-                        <h4 className="col-12 text-center text-dark"><b>Student Achivements</b></h4>
+                        <h4 className="col-12 text-center text-dark"><b>Achived By Students</b></h4>
                             {studentData.map((d,i) => (
                                 <div className="col-lg-4 m-2" key={i}>
                                     <div className="card card-cascade wider">

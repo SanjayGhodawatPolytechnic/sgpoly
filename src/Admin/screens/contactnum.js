@@ -25,10 +25,10 @@ const ContactNumber = () => {
   const card = () => {
     return data.map((c, i) => (
       <div>
-        <div class="card col-12">
-          <div class="card-body">
-            <h5 class="card-title">{c.phno}</h5>
-            <p class="card-text">{c.name}</p>
+        <div className="card col-12">
+          <div className="card-body">
+            <h5 className="card-title">{c.phno}</h5>
+            <p className="card-text">{c.name}</p>
           </div>
         </div>
         <br />

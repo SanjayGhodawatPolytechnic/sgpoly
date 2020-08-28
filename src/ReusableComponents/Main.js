@@ -44,12 +44,7 @@ const Main = ({
       </iframe>
       </div> */}
     <div className="backcolor">
-      <br />
-      <div>
-        <img src={require("../img/banner.png")} alt="" className="img-fluid" />
-      </div>
-      <br />
-      <br />
+      
       <div className="">
         <MenuBar />
       </div>

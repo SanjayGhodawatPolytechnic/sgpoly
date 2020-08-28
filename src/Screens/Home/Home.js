@@ -1,15 +1,13 @@
 import React from "react";
 import Main from "../../ReusableComponents/Main";
-import NewsCarousel from "../../ReusableComponents/Carousel";
+
 import ScrollAnimation from "react-animate-on-scroll";
 import "./Home.css";
-import { useState } from "react";
 import "./Story.css";
-import Stories from "react-insta-stories";
-import Fullscreen from "react-full-screen";
 import { useEffect } from "react";
 import Highlights from "./components/Highlights";
 import MenuBar from "../../ReusableComponents/Menu";
+import NewsCarousel from "./components/Carousel";
 
 function Home() {
   useEffect(() => {}, []);

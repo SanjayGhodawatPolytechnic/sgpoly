@@ -321,7 +321,7 @@ const Dashboard = () => {
       style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
     >
       <div className="text-center" style={{ fontSize: 80 }}>
-        <i class="fas fa-house-user"></i>
+        <i className="fas fa-house-user"></i>
       </div>
       <div className="text-center" style={{ fontSize: 30 }}>
         Admin Dashboard

@@ -109,16 +109,16 @@ const AddStory = () => {
 
     return (
         <Main className="container-lg bg-dark roundedd border border-light"> 
-            <div class="signup-form">
+            <div className="signup-form">
                 <form>
                     <Link to="/admin"><button className="btn btn-outline-info w-100">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
                         <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
                     </svg>
                     </button></Link>
                     <h2>Add Story</h2>
-                    <p class="hint-text">Story added here will be displayed on home page</p>
+                    <p className="hint-text">Story added here will be displayed on home page</p>
                     <div className="form-group">
                         <div className="row">
                             <div className="col-lg-12">
@@ -126,11 +126,11 @@ const AddStory = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-lg-12"><input 
+                    <div className="form-group">
+                        <div className="row">
+                            <div className="col-lg-12"><input 
                             type="text" 
-                            class="form-control"                             
+                            className="form-control"                             
                             placeholder="Enter Main title" 
                             required="required" 
                             value={storyData.title}
@@ -151,11 +151,11 @@ const AddStory = () => {
 
                     {_.times(inputCount.count,(i) => (
 
-                            <div class="form-group" key={i}>
-                            <div class="row">            
+                            <div className="form-group" key={i}>
+                            <div className="row">            
                                 <div className="col-lg-12 m-2">
                                     <button 
-                                    class="btn btn-primary w-100" 
+                                    className="btn btn-primary w-100" 
                                     type="button" 
                                     // data-toggle="collapse" 
                                     // data-target={`#multiCollapseExample${i}`} 
@@ -171,10 +171,10 @@ const AddStory = () => {
                                     }}
                                     >Story Item {i + 1}</button>
                                 </div>
-                            <div class="col-lg-12 multi-collapse m-2" class={`col-lg-12 multi-collapse m-2 ${inputCount.currentOpen === i ? '' : 'collapse'}`} id={`multiCollapseExample${i}`}>                                                        
-                                    <div class="col-lg-12"><input 
+                            <div className="col-lg-12 multi-collapse m-2" className={`col-lg-12 multi-collapse m-2 ${inputCount.currentOpen === i ? '' : 'collapse'}`} id={`multiCollapseExample${i}`}>                                                        
+                                    <div className="col-lg-12"><input 
                                     type="text" 
-                                    class="form-control"                     
+                                    className="form-control"                     
                                     placeholder="Enter Heading"                     
                                     value={storyData.heading[i] || ''}
                                     onChange={e => {
@@ -186,9 +186,9 @@ const AddStory = () => {
                                     }}
                                     />
                                     </div>                                                
-                                    <div class="col-lg-12"><input 
+                                    <div className="col-lg-12"><input 
                                     type="text" 
-                                    class="form-control"                     
+                                    className="form-control"                     
                                     placeholder="Enter Sub Heading"                     
                                     value={storyData.subHeading[i] || ''}
                                     onChange={e => {
@@ -202,9 +202,9 @@ const AddStory = () => {
                                         //console.log(storyData.subHeading)                                        
                                     }}
                                     /></div>                                                
-                                    <div class="col-lg-12"><input 
+                                    <div className="col-lg-12"><input 
                                     type="text" 
-                                    class="form-control"                     
+                                    className="form-control"                     
                                     placeholder="Type EG: video or image"                     
                                     value = {storyData.type[i] || ''}
                                     onChange = {e => {                        
@@ -218,9 +218,9 @@ const AddStory = () => {
                                     }}                    
                                     /></div>
                                     <div className="col-lg-12">
-                                    <div class="input-group mb-3 m-2">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" for="inputGroupSelect01">Profile Image</label>
+                                    <div className="input-group mb-3 m-2">
+                                                <div className="input-group-prepend">
+                                                    <label className="input-group-text" for="inputGroupSelect01">Profile Image</label>
                                                 </div>
                                                 <input 
                                                 className="form-control" 
@@ -240,9 +240,9 @@ const AddStory = () => {
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
-                                    <div class="input-group mb-3 m-2">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text" for="inputGroupSelect01">Select Media</label>
+                                    <div className="input-group mb-3 m-2">
+                                                <div className="input-group-prepend">
+                                                    <label className="input-group-text" for="inputGroupSelect01">Select Media</label>
                                                 </div>
                                                 <input 
                                                 className="form-control" 
@@ -259,11 +259,11 @@ const AddStory = () => {
                                                 }}
                                                 />
                                         </div>
-                                        <div class="col-lg-12"><textarea 
+                                        <div className="col-lg-12"><textarea 
                                         rows="4" 
                                         type="text" 
-                                        class="form-control"                         
-                                        placeholder="Enter JSX snippet with bootstrap classes only. *note: this snippet will be displayed with story" 
+                                        className="form-control"                         
+                                        placeholder="Enter JSX snippet with bootstrap classNamees only. *note: this snippet will be displayed with story" 
                                         value={storyData.snippet[i] || ''}
                                         onChange={e => {
                                             let snippet = storyData.snippet
@@ -292,17 +292,17 @@ const AddStory = () => {
                                     setInputCount({...inputCount, count: inputCount.count + 1})}
                                 }
                                     >
-                                    <i class="fas fa-plus"></i>
+                                    <i className="fas fa-plus"></i>
                                 </button>
                             </div>
                         </div>
                     </div>                                                                                                
-                    <div class="form-group">
+                    <div className="form-group">
                         <div className="row">
                             <div className="col-lg-12">
                                 <button 
                                 type="submit" 
-                                class="btn btn-success btn-lg btn-block"                                                        
+                                className="btn btn-success btn-lg btn-block"                                                        
                                 onClick={e => {
                                     e.preventDefault()
                                     submit()

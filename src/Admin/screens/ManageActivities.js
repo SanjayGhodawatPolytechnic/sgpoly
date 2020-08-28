@@ -267,7 +267,7 @@ const ManageActivities = () => {
                                     setNewData({...newData, images: list})
                                     console.log(newData.images)
                                 }}>
-                                    <i class="fas fa-minus-circle"></i>
+                                    <i className="fas fa-minus-circle"></i>
                                 </div>
                         </div>
                         {_.times(inputCount.count, (i) => (
@@ -296,7 +296,7 @@ const ManageActivities = () => {
                         <button className="btn aqua-gradient w-100" onClick={e => {
                             e.preventDefault()
                             setInputCount({...inputCount, count: inputCount.count + 1})
-                        }}><i class="fas fa-plus-circle"></i></button>
+                        }}><i className="fas fa-plus-circle"></i></button>
                     </div>
                     </div>
                     </div>
@@ -356,7 +356,7 @@ const ManageActivities = () => {
                             }
                         }}
                         >
-                            <i class="fas fa-trash"></i>
+                            <i className="fas fa-trash"></i>
                         </div>
                         </div>
                         <div className="row border border-light text-center">

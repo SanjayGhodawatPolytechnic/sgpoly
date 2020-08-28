@@ -4,8 +4,8 @@ import React from "react";
 
 import "react-multi-carousel/lib/styles.css";
 
-import "./CSS/carousel.css";
-import "../Screens/Home/Home.css";
+import "./carousel.css";
+import "../Home.css";
 
 //importing firebase
 import * as firebase from "firebase";
@@ -71,7 +71,8 @@ const NewsCarousel = () => {
                     </div>
                     <div class="card-img-body">
                       <img
-                        class="img-fluid"
+                        style={{height: 200}}
+                        className="img-fluid"
                         src={d.imageDownloadUrl}
                         alt="Card image cap"
                       />
@@ -127,6 +128,7 @@ const NewsCarousel = () => {
                       <img
                         class="img-fluid"
                         src={d.imageDownloadUrl}
+                        style={{height: 200}}
                         alt="Card image cap"
                       />
                     </div>

@@ -42,19 +42,19 @@ const Login = () => {
 
     const LoginForm = () => {
         return (
-            <div class="container w-100">            
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
+            <div className="container w-100">            
+    <div className="row">
+      <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div className="card card-signin my-5">
+          <div className="card-body">
               {error && ErrorMEssage()}
-            <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin">
-              <div class="form-label-group">
+            <h5 className="card-title text-center">Sign In</h5>
+            <form className="form-signin">
+              <div className="form-label-group">
                 <input 
                 type="email" 
                 id="inputEmail" 
-                class="form-control" 
+                className="form-control" 
                 placeholder="Email address" 
                 required 
                 autoFocus
@@ -63,19 +63,19 @@ const Login = () => {
                 <label for="inputEmail">Email address</label>
               </div>
 
-              <div class="form-label-group">
+              <div className="form-label-group">
                 <input 
                 type="password" 
                 id="inputPassword" 
-                class="form-control" 
+                className="form-control" 
                 placeholder="Password" 
                 required 
                 onChange={e => setData({...data,password:e.target.value})}
                 />
                 <label for="inputPassword">Password</label>
               </div>              
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" onClick={onSubmit}>Sign in</button>
-              <hr class="my-4" />              
+              <button className="btn btn-lg btn-primary btn-block text-uppercase" onClick={onSubmit}>Sign in</button>
+              <hr className="my-4" />              
             </form>
           </div>
         </div>
