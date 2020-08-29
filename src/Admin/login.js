@@ -22,7 +22,8 @@ const Login = () => {
         event.preventDefault();
         firebase.auth()
         .signInWithEmailAndPassword(data.email,data.password)
-        .then(() => {                            
+        .then((user) => {                            
+            localStorage.setItem('user', user.user.uid)
             setRedirect(true)
         })
         .catch(err => setError(true))

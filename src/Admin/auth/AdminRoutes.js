@@ -1,34 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Redirect } from "react-router-dom";
 import * as firebase from 'firebase'
+import { useEffect } from "react";
 
 
 const AdminRoute = ({ component: Component, ...rest }) => {
 
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
     const authenticate = () => {
-        firebase.auth().onAuthStateChanged(authenticated => {
-            if(authenticated){
-                console.log("AUTHENTICATED")                
-                true ? console.log('true') : console.log('false')
-                return true
-            }
-            return false
-        })
+        
+        return localStorage.getItem('user')
     }
+    useEffect(() => {
+      authenticate();
+    }, [])
+
   return (
     <Route
       {...rest}
       render={props =>    
-        authenticate() ? (
-            <Redirect
-            to={{
-              pathname: "/admin/signin",
-              state: { from: props.location }
-            }}
-          />
-        ) : (          
+        authenticate() ? (          
           <Component {...props} />
-        )
+        ) : (
+          <Redirect
+          to="/admin/signin"
+        />
+      )
       }
     />
   );

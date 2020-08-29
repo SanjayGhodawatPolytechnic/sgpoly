@@ -220,7 +220,7 @@ const Routes = () => {
           path="/admin/manage/activities"
           component={ManageActivities}
         />
-        <AdminRoute path="/admin/signin" exact component={Login} />
+        <Route path="/admin/signin" exact component={Login} />
         <AdminRoute path="/admin/suggest" exact component={SuggestAdmin} />
         <AdminRoute path="/admin/contact" exact component={ContactNumber} />
         <AdminRoute path="/admin/studpics" exact component={Studpics} />

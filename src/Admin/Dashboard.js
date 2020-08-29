@@ -40,13 +40,6 @@ const Dashboard = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((authenticated) => {
-      if (authenticated) {
-        setDidRedirect(false);
-      } else {
-        setDidRedirect(true);
-      }
-    });
     firebase
       .database()
       .ref()
@@ -126,6 +119,7 @@ const Dashboard = () => {
       .signOut()
       .then(() => setDidRedirect(true))
       .catch((err) => console.log(err));
+    localStorage.removeItem('user')
   };
 
   const getAllUpdates = async () => {
