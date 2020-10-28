@@ -35,7 +35,7 @@ import more from "./Screens/Facilities/more";
 import * as firebase from "firebase";
 import Dashboard from "./Admin/Dashboard";
 import AdminRoute from "./Admin/auth/AdminRoutes";
-import Activities from "./Screens/About/Activities";
+import Activities from "./Screens/Departments/CSE/Activities";
 import SocialResponsiblities from "./Screens/About/SocialResponsiblities";
 import ImageGal from "./Screens/About/components/ImageGallery";
 import MoreUpdates from "./ReusableComponents/MoreUpdates";
@@ -156,6 +156,7 @@ const Routes = () => {
         />
         <Route path="/department/cse/labs" exact component={Laboratories} />
         <Route path="/department/cse/achivements" exact component={Achivements} />
+        <Route path="/department/cse/activities" exact component={Activities} />
 
         {/* --------------------MECH------------------------------------------------*/}
         {/* --------------------E & TC------------------------------------------------*/}
