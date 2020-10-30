@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './CSS/Activity.css'
 
 const ActivityCard = ({
@@ -20,38 +20,55 @@ const ActivityCard = ({
     const Carousell = () => (
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                    {/* <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    {/* <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> */}
+                                    {/* <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
-                                    {imageURLS.map((val, idx) => (
-                                        <li 
+                                    {imageURLS.map((val, idx) => {
+                                        return(
+                                            <li 
                                         data-target="#carouselExampleIndicators" 
-                                        data-slide-to={idx.toString()} 
-                                        class={idx === carouselData.CurrentIndex ? ("active") : ('')}
+                                        data-slide-to={idx.toString()}
                                         key={idx}
+                                        class={`${carouselData.CurrentIndex === idx ? 'active' : ''}`}
                                         ></li>
-                                    ))}
+                                        )
+                                    })}
                                 </ol>
                                 <div class="carousel-inner">
-                                    {imageURLS.map((val,idx) => (
-                                        <div class={`carousel-item ${idx === carouselData.CurrentIndex ? ("active") : ('')}`} key={idx}>
+                                        {/* <div class={`carousel-item active`}>
+                                            <img class="d-block w-100 img-responsive cr-img" src={imageURLS[0]} />
+                                        </div> */}
+                                    {imageURLS.map((val,idx) => {
+                                        return(
+                                            <div class={`carousel-item ${carouselData.CurrentIndex === idx ? 'active' : ''}`} key={idx}>
                                             <img class="d-block w-100 img-responsive cr-img" src={val} />
                                         </div>
-                                    ))}
+                                        )
+                                    })}
                                 </div>
-                                <a onClick={() => {
-                                    if(carouselData.CurrentIndex > 0){
-                                        setCarouselData({...carouselData, CurrentIndex: carouselData.CurrentIndex -1})
+                                <a 
+                                class="carousel-control-prev" 
+                                href="#carouselExampleIndicators" 
+                                role="button" 
+                                onClick={() => {
+                                    if(carouselData.CurrentIndex >= 1) {
+                                        setCarouselData({...carouselData, CurrentIndex: carouselData.CurrentIndex - 1})
                                     }
-                                }} class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                }}
+                                data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a onClick={() => {
-                                    if(carouselData.CurrentIndex < imageURLS.length - 1){
-                                        setCarouselData({...carouselData, CurrentIndex: carouselData.CurrentIndex +1})
+                                <a 
+                                class="carousel-control-next" 
+                                href="#carouselExampleIndicators" 
+                                role="button" 
+                                onClick={() => {
+                                    if(carouselData.CurrentIndex < (imageURLS.length - 1)){
+                                        setCarouselData({...carouselData, CurrentIndex: carouselData.CurrentIndex + 1})
                                     }
-                                }} class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                }}
+                                data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>

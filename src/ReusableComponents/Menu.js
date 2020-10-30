@@ -184,9 +184,9 @@ class MenuBar extends Component {
                     Electrical Engineering
                   </a>
                   <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/department/entc">
                     Elotronics &amp; telecomunication Engineering
-                  </a>
+                  </Link>
                 </div>
               </li>
 

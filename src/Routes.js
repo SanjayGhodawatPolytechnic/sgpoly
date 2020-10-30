@@ -61,6 +61,7 @@ import Studpics from "./Admin/screens/Studpics";
 import Uploadimage from "./Screens/Student/uploadimage";
 import Achivements from "./Screens/Departments/CSE/Achivements";
 import ManageActivities from "./Admin/screens/ManageActivities";
+import ElectronicsNTC from "./Screens/Departments/ETC/ElectronicsNTC"
 
 
 
@@ -160,6 +161,8 @@ const Routes = () => {
 
         {/* --------------------MECH------------------------------------------------*/}
         {/* --------------------E & TC------------------------------------------------*/}
+        <Route path="/department/entc" exact component={ElectronicsNTC} />
+
         {/* --------------------CIVIL------------------------------------------------*/}
         {/* --------------------ELECTRICAL------------------------------------------------*/}
 

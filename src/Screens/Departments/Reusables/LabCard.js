@@ -1,5 +1,5 @@
 import React from 'react';
-import './CSS/LabCard.scss';
+import './CSS/LabCard.css';
 
 const LabCard = ({
     imageurl = '',

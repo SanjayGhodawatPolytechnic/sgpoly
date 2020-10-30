@@ -3,14 +3,14 @@ import Main from '../../../ReusableComponents/Main';
 import DeptMenu from '../Reusables/DeptMenu';
 import NavLinks from './NavLinks';
 import '../Reusables/CSS/DeptHome.css'
-const ComputerScience = () => {
+const ElectronicsNTC = () => {
 
     
     return (
         <Main className="container-lg cse">
             <div class="row">
             
-            <DeptMenu dept='Computer Science' subMenu={NavLinks} />
+            <DeptMenu dept='E &amp; TC' subMenu={NavLinks} />
             <div class="col-sm-8 col-lg-9 text-light">
                 <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3"
                 data-offset="0">
@@ -21,13 +21,11 @@ const ComputerScience = () => {
                         </div>
                     </div>
                     <p className="m-1">
-                        The Computer Science and Engineering (CSE) program was started in the year 2012. 
-                        The main focus of the department is to deliver the professionals with strong fundamentals in Computer Science and Engineering domain. 
-                        The department has well qualified and experienced teaching faculty members with various specializations. 
-                        The department has maintained a student staff ratio of 15:1,
-                         has excellent infrastructure with state of the art equipment and software tools. 
-                         Department regularly organizes a series of lectures by experts &amp; professional of good repute, 
-                         helping the students to be aware of the Global Scenario.</p>
+                    Greetings!!. The department E&amp;TC is established in the year 2012 with the intake of 60 students and currently it is having 100+ undergraduates' students admitted.The department is having highly qualified; devoted & dedicated staff. The department is having well equipped laboratories and facilities for supporting our teaching.The department aims at inculcating quality education to bring engineers with a solid foundation in basic engineering principles and concepts.We strive to prepare our students to become technically competent engineers who will continue learning in an ever-changing and diverse world.
+
+As the engineering field is extremely demanding, future engineering students must be able to adapt to a new dynamic environment and react positively to new challenges and opportunities. Students are taught to be independent thinkers, create independent types of work, write technical reports and present their work before classmates and faculty members.
+
+Workshops &amp; seminars are regularly takento bridge the gap between curriculum &amp; industries.</p>
                          <div className="row">
                              <div className="col-4"></div>
                              <div className="col-4"><h4>Check Us out on..</h4></div>
@@ -51,4 +49,4 @@ const ComputerScience = () => {
     );
 }
 
-export default ComputerScience;
+export default ElectronicsNTC;
