@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer className="page-footer font-small red pt-4">
+      <footer className="page-footer font-small  pt-4 aaa">
         <div className="container text-center text-md-left">
           <div className="row">
-            <div className="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+            <div className="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1 txt-color">
               <h5 className="font-weight-bold text-uppercase mb-4">
                 Sanjay Ghodawat Polytechnic
               </h5>
@@ -24,41 +24,43 @@ const Footer = () => {
               {/*<p>Innovativeness and Creativity are the hallmarks of a genius enterprise and SGI stands to be a stage where these qualities would be nurtured, encouraged and blossomed.</p>*/}
             </div>
             <hr className="clearfix w-100 d-md-none" />
-            <div className="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <div className="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1 txt-color">
               <h5 className="font-weight-bold text-uppercase mb-4">About</h5>
               <ul className="list-unstyled">
                 <li>
                   <p>
-                    <a href="#!" className="text-dark">
-                      SGP
+                    <a href="#!" >
+                      <p className="txt-color">SGP</p>
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href="#!" className="text-dark">
-                      Staff
+                    <a href="#!" >
+                      <p className="txt-color">Staff</p>
+                      
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href="#!" className="text-dark">
-                      Facilities
+                    <a href="#!" >
+                      <p className="txt-color">Facilities</p> 
                     </a>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href="#!" className="text-dark">
-                      AWARDS
+                    <a href="#!" >
+                      <p className="txt-color">AWARDS</p>
+                      
                     </a>
                   </p>
                 </li>
               </ul>
             </div>
             <hr className="clearfix w-100 d-md-none" />
-            <div className="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <div className="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1 txt-color">
               <h5 className="font-weight-bold text-uppercase mb-4">Address</h5>
               <ul className="list-unstyled">
                 <li>
@@ -74,15 +76,13 @@ const Footer = () => {
                 </li>
                 <li>
                   <p>
-                    <a href="tel: +91 0230-2463800">
-                      <i className="fas fa-phone mr-3" /> 0230 - 2463800
-                    </a>
+                    <i className="fas fa-phone mr-3 txt-color" /> 0230 - 2463800
                   </p>
                 </li>
               </ul>
             </div>
             <hr className="clearfix w-100 d-md-none" />
-            <div className="col-md-2 col-lg-2 text-center mx-auto my-4">
+            <div className="col-md-2 col-lg-2 text-center mx-auto my-4 txt-color">
               <h5 className="font-weight-bold text-uppercase mb-4">
                 Follow Us
               </h5>
