@@ -3,7 +3,7 @@ import Main from '../../../ReusableComponents/Main';
 
 import DeptMenu from '../Reusables/DeptMenu';
 import NavLinks from './NavLinks';
-import './CSS/HOD.css';
+import '../Reusables/CSS/HOD.css';
 
 
 const HODDesk = () => {
@@ -11,7 +11,7 @@ const HODDesk = () => {
         <Main className="container-lg hod">
         <div class="row">
         
-        <DeptMenu dept='Computer Science' subMenu={NavLinks} />
+        <DeptMenu dept='E &amp; TC' subMenu={NavLinks} />
         <div class="col-sm-8 col-lg-9 text-light">
             <div data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3"
             data-offset="0">

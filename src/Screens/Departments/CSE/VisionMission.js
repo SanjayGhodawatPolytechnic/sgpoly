@@ -2,7 +2,7 @@ import React from 'react';
 import Main from '../../../ReusableComponents/Main';
 import DeptMenu from '../Reusables/DeptMenu';
 import NavLinks from './NavLinks';
-import './CSS/VisionMission.css'
+import '../Reusables/CSS/VisionMission.css'
 
 const VisionMission = () => {
     return (
