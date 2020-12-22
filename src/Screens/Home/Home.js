@@ -63,72 +63,37 @@ function Home() {
       <br />
       <br />
 
-      <div className="row">
-        <div class="card-deck ">
-          <div class="card mb-4 tv ">
-            <div class="view overlay">
-              <img
-                class="card-img-top"
-                src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-                alt=""
-              />
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <div class="card-body">
-              <h2 class="card-title">Sanjay Ghodawat</h2>
-              <h4 className="card-title">Chairman</h4>
-              <br />
-
-              <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect">
-                <i class="fas fa-angle-right"></i>
-              </a>
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="col">
+          <div className="card">
+            <img src="https://mdbootstrap.com/img/new/standard/city/041.jpg" className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">Mr. Sanjay D. Ghodawat</h5>
+              <p className="card-text">
+                Chairman
+              </p>
             </div>
           </div>
-
-          <div class="card mb-4 tv ">
-            <div class="view overlay">
-              <img
-                class="card-img-top"
-                src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
-                alt=""
-              />
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <div class="card-body">
-              <h2 class="card-title">Vinayak Bhosale</h2>
-              <h4 className="card-title">Trustee</h4>
-              <br />
-              <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect">
-                <i class="fas fa-angle-right"></i>
-              </a>
+        </div>
+        <div className="col">
+          <div className="card">
+            <img src="https://mdbootstrap.com/img/new/standard/city/042.jpg" className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">Mr. Vinayak V. Bhosale</h5>
+              <p className="card-text">
+                Trustee
+              </p>
             </div>
           </div>
-
-          <div class="card mb-4 tv ">
-            <div class="view overlay">
-              <img
-                class="card-img-top"
-                src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
-                alt="Card image cap"
-              />
-              <a href="#!">
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-
-            <div class="card-body">
-              <h2 class="card-title">Virat Giri</h2>
-              <h4 className="card-title">Principal</h4>
-              <br />
-              <a class=" btn btn-lg btn-outline-danger btn-circle waves-effect">
-                <i class="fas fa-angle-right"></i>
-              </a>
+        </div>
+        <div className="col">
+          <div className="card">
+            <img src="https://mdbootstrap.com/img/new/standard/city/042.jpg" className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">Mr. Virat V. Giri</h5>
+              <p className="card-text">
+                Principal
+              </p>
             </div>
           </div>
         </div>
@@ -137,6 +102,58 @@ function Home() {
       <br />
       <br />
       <br />
+      <div className="row mt-10 text-center">
+        <ScrollAnimation animateIn="flipInY" animateOut="flipOutY">
+          <h1 className="headingFont">Courses</h1>
+        </ScrollAnimation>
+      </div>
+        
+      {/* /
+      /
+      /
+      /
+      /
+      /
+       */}
+      
+      <div className="container">
+        <div className="row text-center">
+          {/* Team item */}
+          <div className="col-xl-3 col-sm-6 mb-5">
+            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="./website.png" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+              <h5 className="mb-0">Computer Science</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+              
+            </div>
+          </div>{/* End */}
+          {/* Team item */}
+          <div className="col-xl-3 col-sm-6 mb-5">
+            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-2.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+              <h5 className="mb-0">Samuel Hardy</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+              
+            </div>
+          </div>{/* End */}
+          {/* Team item */}
+          <div className="col-xl-3 col-sm-6 mb-5">
+            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-1.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+              <h5 className="mb-0">Tom Sunderland</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+              
+            </div>
+          </div>{/* End */}
+          {/* Team item */}
+          <div className="col-xl-3 col-sm-6 mb-5">
+            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-7.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+              <h5 className="mb-0">John Tarly</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+              
+            </div>
+          </div>{/* End */}
+          <div className="col-xl-3 col-sm-6 mb-5">
+            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+              <h5 className="mb-0">Manuella Nevoresky</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </Main>
   );
 }

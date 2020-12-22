@@ -33,7 +33,7 @@ class MenuBar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark red">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <img
             className="navbar-brand logo"
             src={require("../assets/logo.png")}
@@ -306,11 +306,11 @@ class MenuBar extends Component {
               <Link to="/contact">
                 <a className="nav-item nav-link active ">Contact Us </a>
               </Link>
-              <a href="/students" className="nav-item nav-link active ">
+              {/* <a href="/students" className="nav-item nav-link active ">
                 <button className="btn btn-light my-2 my-sm-0 nav-item nav-link active ">
                   Student
                 </button>
-              </a>
+              </a> */}
             </div>
           </div>
         </nav>
