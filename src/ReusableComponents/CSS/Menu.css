@@ -19,3 +19,51 @@
 .txt-color{
   color: #FFF1D0;
 }
+
+.headerr{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+  url("./sguni.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-text-box {
+  margin-left: 10px;
+  position: relative;
+  max-width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.hero-text-box h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 400%;
+  word-spacing: 10px;
+  letter-spacing: 4px;
+  line-height: 100px;
+  
+}
+
+@media only screen and (max-width: 767px) {
+
+  .hero-text-box {
+    /* width: 400px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  .hero-text-box h1{
+    margin-bottom: 0px;
+    font-size: 200%;
+    word-spacing: 6px;
+    letter-spacing: 3px;
+    line-height: 50px;
+  }
+
+}

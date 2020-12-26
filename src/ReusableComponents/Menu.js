@@ -34,10 +34,10 @@ class MenuBar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <img
+          {/* <img
             className="navbar-brand logo"
             src={require("../assets/logo.png")}
-          />
+          /> */}
 
           <button
             className="navbar-toggler"
@@ -339,6 +339,12 @@ class MenuBar extends Component {
           </div>
         
         </div> */}
+
+        <div className="headerr">
+          <div class="hero-text-box">
+            <h1>SANJAY GHODAWAT<br />POLYTECHNIC</h1>
+          </div>
+        </div>
       </div>
     );
   }
