@@ -8,26 +8,18 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { PushMenu, usePushMenu } from "react-push-menu";
 
 class MenuBar extends Component {
-  // componentDidMount() {
-  //   $('body').addClass('home_is_visible');
 
-  //   $('.button').on("click", function () {
-  //     $('body').toggleClass('nav_is_visible');
-  //   });
+  // expandNav() {
+  //   let ele = document.querySelector('.navbar')
+  //   ele.style.height = "100vh";
+  //   ele.style.width = "100vh";
 
-  //   function removeClasses() {
-  //     $(".menu ul li").each(function () {
-  //       var link = $(this).find('a').attr('href');
-  //       $('body').removeClass(link);
-  //     });
-  //   }
-  //   $('.menu a').on("click", function (e) {
-  //     e.preventDefault();
-  //     removeClasses();
-  //     var link = $(this).attr('href');
-  //     $('body').addClass(link);
-  //     $('body').removeClass('nav_is_visible');
-  //   });
+  // }
+
+  // closeNav() {
+  //   let ele = document.querySelector('.navbar')
+  //   ele.style.height = "0%";
+  //   ele.style.width = "0%"
   // }
 
   closeMenu(){
@@ -40,11 +32,43 @@ class MenuBar extends Component {
 
     return (
       <div>
+<<<<<<< HEAD
         {/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
            <img
             className="navbar-brand logo"
             src={require("../assets/logo.png")}
           /> 
+=======
+        {/* <div class="">
+        <ul>
+            <li class="item" onclick={this.expandNav}><i class="fas fa-bars"></i></li>
+            <div class="nav-circle"></div>
+        </ul>
+        </div>
+        <div class="navbar">
+            <div class="close-btn" onclick={this.closeNav}>
+            </div>
+            <div class="nav-item">
+                <span class="item-text">HOME</span>
+            </div>
+            <div class="nav-item">
+                <span class="item-text">PROJECTS</span>
+            </div>
+            <div class="nav-item">
+                <span class="item-text">SKILL SET</span>
+            </div>
+            <div class="nav-item">
+                <span class="item-text">BLOGS</span>
+            </div>
+        </div> */}
+
+        {/* Logo */}
+          {/* <img
+            className="navbar-brand logo"
+            src={require("../assets/logo.png")}
+          /> */}
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+>>>>>>> c1a6ea6e3ca1f326349e20024067ec0b8d4de225
 
           <button
             className="navbar-toggler"
@@ -313,15 +337,24 @@ class MenuBar extends Component {
               <Link to="/contact">
                 <a className="nav-item nav-link active ">Contact Us </a>
               </Link>
+<<<<<<< HEAD
               <a href="/students" className="nav-item nav-link active ">
                 <button className="btn btn-light my-2 my-sm-0 nav-item nav-link active ">
                   Student
                 </button>
               </a> 
+=======
+>>>>>>> c1a6ea6e3ca1f326349e20024067ec0b8d4de225
             </div>
           </div>
         </nav> */}
 
+          {/* Student section */}
+        {/* <a href="/students" className="nav-item nav-link active ">
+          <button className="btn btn-light my-2 my-sm-0 nav-item nav-link active ">
+            Student
+          </button>
+        </a> */}
         {/* <div>
           <div className="button">
             <div className="fa fa-bars" />

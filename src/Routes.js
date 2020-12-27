@@ -62,6 +62,9 @@ import Uploadimage from "./Screens/Student/uploadimage";
 import Achivements from "./Screens/Departments/CSE/Achivements";
 import ManageActivities from "./Admin/screens/ManageActivities";
 import ElectronicsNTC from "./Screens/Departments/ETC/ElectronicsNTC"
+import ETCHODDesk from "./Screens/Departments/ETC/ETCHODDesk";
+import ETCVisionMission from "./Screens/Departments/ETC/ETCVisionMission";
+import ETCOutcomes from "./Screens/Departments/ETC/ETCOutcomes";
 
 
 
@@ -162,6 +165,9 @@ const Routes = () => {
         {/* --------------------MECH------------------------------------------------*/}
         {/* --------------------E & TC------------------------------------------------*/}
         <Route path="/department/entc" exact component={ElectronicsNTC} />
+        <Route path="/department/entc/hoddesk" exact component={ETCHODDesk} />
+        <Route path="/department/entc/vision-mission" exact component={ETCVisionMission} />
+        <Route path="/department/entc/outcomes" exact component={ETCOutcomes} />
 
         {/* --------------------CIVIL------------------------------------------------*/}
         {/* --------------------ELECTRICAL------------------------------------------------*/}
