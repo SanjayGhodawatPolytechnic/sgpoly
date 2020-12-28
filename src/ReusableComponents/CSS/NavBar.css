@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Lato&family=Montserrat&family=Open+Sans&family=Roboto&display=swap');
 
+body{
+    background-color: #F5EFFF;
+}
 .item {
     display: flex;
     float: right;
     padding: 8px;
     margin: 3px;
-    font-size: 20px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
+    font-size: 30px;
+    /* border: 2px solid rgb(0, 0, 0); */
+    /* border-radius: 10px; */
     position: relative;
-    background: #fff;
     z-index: 2;
 }
 
@@ -55,7 +57,7 @@
     width: 0; /* Full width */
     height: 0; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background: #000;
+    background: #F5EFFF;
     /* opacity: 0.9; */
     transition: all 0.5s ease-in-out;
     justify-content: center;
@@ -74,11 +76,11 @@
     flex: -1;
     margin: 10px;
     font-size: 30px;
-    color: #fff;
+    color: #282B28;
     cursor: pointer;
-    transition: 0.6s linear;
+    transition: 0.2s linear;
     z-index: 4000;
-    width: 50%;
+    width: 20%;
     justify-content: center;
 }
 
@@ -87,10 +89,10 @@
     left: 50%;
     height: 2px;
     width: 0%;
-    background-color: rgb(16, 238, 16);
+    /* background-color: rgb(16, 238, 16); */
     display: block;
     content: '';
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .nav-item:hover::after {
@@ -99,17 +101,17 @@
 }
 .nav-item:hover{
     
-    background: #fff;
-    color: #000;
+    background: #282B28;
+    color: #FFF1D0;
     /* width: 50%; */
 }
 
 .close-btn {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 30px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .close-btn::before{
@@ -117,7 +119,7 @@
     content: '';
     height: 3px;
     width: 100%;
-    background: rgb(243, 9, 9);
+    background:#282B28;
     transition: 0.7s;
     transform: rotate(45deg);
 }
@@ -127,15 +129,25 @@
     content: '';
     height: 3px;
     width: 100%;
-    background: rgb(69, 243, 16);
+    background: #282B28;
     transition: 0.7s;
     transform: rotate(-45deg);
 }
 
-.close-btn:hover::after{
+/* .close-btn:hover::after{
     transform: rotate(45deg);
 }
 
 .close-btn:hover::before{
     transform: rotate(-45deg);
-}
+} */
+
+
+
+
+
+
+
+
+
+

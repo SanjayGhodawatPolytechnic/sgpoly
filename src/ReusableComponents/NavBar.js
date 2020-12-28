@@ -35,6 +35,7 @@ const NavBar = () => {
                 <div className="nav-item">
                     <span className="item-text">HOME</span>
                 </div>
+                
                 <div className="nav-item">
                     <span className="item-text">PROJECTS</span>
                 </div>

@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import Highlights from "./components/Highlights";
 import MenuBar from "../../ReusableComponents/Menu";
 import NewsCarousel from "./components/Carousel";
-import { TimelineMax } from "gsap";
+// import { TimelineMax } from "gsap";
 
 function Home() {
   useEffect(() => {

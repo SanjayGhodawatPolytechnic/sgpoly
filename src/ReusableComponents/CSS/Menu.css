@@ -79,7 +79,7 @@
 
 .container .menu-icon {
   position: absolute;
-  color: white;
+  color: #282B28;
   font-size: 30px;
   left: 42px;
   top: 24px;
@@ -94,7 +94,7 @@
   top: 0px;
   left: 0px;
   z-index: 1000;
-  background: rgba(0, 0, 0, .8);
+  background: #FFF1D0;
   overflow: hidden;
   transition: 1s ease-in-out;
 }
@@ -111,7 +111,7 @@
   padding: 16px;
   text-decoration: none;
   font-size: 18px;
-  color: white;
+  color: #282B28;
   display: block;
   font-family: sans-serif;
   transition: .3s ease-in-out;
@@ -126,7 +126,7 @@
   top: 36px;
   right: 48px;
   font-size: 30px;
-  color: white;
+  color: #FFF1D0;
   z-index: 1;
   cursor: pointer;
 }
