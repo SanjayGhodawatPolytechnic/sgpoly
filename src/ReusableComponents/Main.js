@@ -3,6 +3,7 @@ import React from "react";
 import Footer from "./Footer";
 import MenuBar from "./Menu";
 import './CSS/main.css'
+import NavBar from "./NavBar";
 
 const Main = ({
   title = "My Title",
@@ -30,9 +31,9 @@ const Main = ({
     ></df-messenger>
     <div className="backcolor">
       
-        <MenuBar />
-      <div className="">
-      </div>
+        {/* <MenuBar /> */}
+        <NavBar />
+
       <br />
       <br />
 
