@@ -8,19 +8,10 @@ import NavBar from "./NavBar";
 const Main = ({
   title = "My Title",
   description = "My description",
-  className = "container-lg",
+  className = "",
   children,
   isSlideShow = false,
 }) => {
-  const Slideshow = () => {
-    if (isSlideShow) {
-      return (
-        <div className="container">
-          <img src="../img/banner.png" alt="" />
-        </div>
-      );
-    }
-  };
   return (
     <div>
       <df-messenger
