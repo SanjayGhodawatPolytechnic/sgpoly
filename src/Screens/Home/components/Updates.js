@@ -26,7 +26,7 @@ const Updates = () => {
                     <span>KNOW MORE</span>
                 </div>
             </div> */}
-            <div className="">
+            <div className="updates">
                 <div className="update-card ">
                 <div className="img-cont">
                     <img className="update-img" src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/images%2F32085ed0-fe21-4303-b02f-645d32a9e30c?alt=media&token=185cdd54-293f-44fc-8c53-2ca7a3a32a6d" />

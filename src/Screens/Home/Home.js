@@ -6,9 +6,14 @@ import "./Home.css";
 import "./Story.css";
 import { useEffect } from "react";
 import Highlights from "./components/Highlights";
-import MenuBar from "../../ReusableComponents/Menu";
 import NewsCarousel from "./components/Carousel";
 import Updates from "./components/Updates";
+import CSELogo from "./icons/CSE"
+import MechLogo from "./icons/Mech";
+import CivilLogo from "./icons/Civil";
+import ENTCLogo from "./icons/ENTC";
+import ElectLogo from "./icons/Elect";
+import "./CSS/DeptCard.css"
 // import { TimelineMax } from "gsap";
 
 function Home() {
@@ -87,48 +92,44 @@ function Home() {
           <h1 className="headingFont">Courses</h1>
         </ScrollAnimation>
       </div>
-        
-      {/* /
-      /
-      /
-      /
-      /
-      /
-       */}
       
-      <div className="container">
-        <div className="row text-center">
-          {/* Team item */}
-          <div className="col-xl-3 col-sm-6 mb-5">
-            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="./website.png" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-              <h5 className="mb-0">Computer Science</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+      <div className="container-lg text-center">
+          <h1 className="text-dark">COURSES</h1>
+        <div className="row text-center d-flex justify-content-center">
+          
+          <div className="col-xl-3 col-sm-6 mb-5 cse-card shadow-sm mr-2">
+            <div className="rounded py-5 px-4 bg-transparent">
+              <CSELogo className="mb-3 cse-logo" width="100px"/>
+              <h5 className="mb-0">Computer Science</h5>
               
             </div>
-          </div>{/* End */}
-          {/* Team item */}
-          <div className="col-xl-3 col-sm-6 mb-5">
-            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-2.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-              <h5 className="mb-0">Samuel Hardy</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+          </div>
+          <div className="col-xl-3 col-sm-6 mb-5 mech-card shadow-sm mr-2 ml-2">
+            <div className="rounded py-5 px-4 bg-transparent">
+              <MechLogo className="mb-3 mech-logo" width="100px" height="80px" />
+              <h5 className="mb-0">Mechanical</h5>
+              {/* <span className="small text-uppercase text-muted">CEO - Founder</span> */}
               
             </div>
-          </div>{/* End */}
-          {/* Team item */}
-          <div className="col-xl-3 col-sm-6 mb-5">
-            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-1.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-              <h5 className="mb-0">Tom Sunderland</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+          </div>
+          <div className="col-xl-3 col-sm-6 mb-5 civil-card shadow-sm mr-2 ml-2">
+            <div className="rounded py-5 px-4 bg-transparent">
+              <CivilLogo className="mb-3 civil-logo" width="100px" height="80px" />
+              <h5 className="mb-0">Civil</h5>
               
             </div>
-          </div>{/* End */}
-          {/* Team item */}
-          <div className="col-xl-3 col-sm-6 mb-5">
-            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-7.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-              <h5 className="mb-0">John Tarly</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+          </div>
+          <div className="col-xl-3 col-sm-6 mb-5 etc-card shadow-sm mr-2 ml-2">
+            <div className="rounded py-5 px-4 bg-transparent">
+              <ENTCLogo className="mb-3 etc-logo" width="100px" height="80px" />
+              <h5 className="mb-0">E &amp; TC</h5>
               
             </div>
-          </div>{/* End */}
-          <div className="col-xl-3 col-sm-6 mb-5">
-            <div className="bg-white rounded shadow-sm py-5 px-4"><img src="https://d19m59y37dris4.cloudfront.net/university/1-1-1/img/teacher-4.jpg" alt="" width={100} className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
-              <h5 className="mb-0">Manuella Nevoresky</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
+          </div>
+          <div className="col-xl-3 col-sm-6 mb-5 ele-card shadow-sm mr-2 ml-2">
+            <div className="rounded py-5 px-4 bg-transparent">
+              <ElectLogo className="mb-3 ele-logo" width="100px" height="80px" />
+              <h5 className="mb-0">Electrical</h5>
               
             </div>
           </div>

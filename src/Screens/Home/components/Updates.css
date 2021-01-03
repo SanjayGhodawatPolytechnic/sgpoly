@@ -1,13 +1,12 @@
 
 
 .update-card {
-    width: 600px;
-    height: 350px;
+    width: 45%;
+    /* height: 350px; */
+    height: 100%;
     display: flex;
     flex-direction: row;
     background: #F0DCCA;
-
-;
     border: none;
     border-radius: 0px 46px 0px 46px;
     overflow: hidden;
@@ -15,7 +14,7 @@
 }
 .img-cont{
     padding: 0;
-    width: 40%;
+    width: 40vw;
     height: 100%;
 
 }
@@ -95,3 +94,28 @@
 
       color: #E2E8CE;
 }
+
+.updates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+    @media screen and (min-width: 731px) {
+        .update-card {
+            width: 45%;
+            height: 50vh;
+        }
+
+    }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 730px) {
+    .update-card {
+        width: 100vw;
+        height: 40vh;
+        flex-direction: column;
+    }
+  }
