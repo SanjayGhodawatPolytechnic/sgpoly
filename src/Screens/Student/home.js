@@ -33,7 +33,7 @@ const StudentHome = () => {
         <div id="mdb-lightbox-ui" />
         <div className="mdb-lightbox">
           <figure className="col-md-12" key={i}>
-            <img src={c.imageDownloadUrl} className="img-fluid rounded" />
+            <img src={c.imageDownloadUrl} className="img-fluid rounded" alt="abc" />
             <div class="mask flex-center waves-effect waves-light rgba-teal">
               <h4 class="white-text">{c.fullName}</h4>
             </div>

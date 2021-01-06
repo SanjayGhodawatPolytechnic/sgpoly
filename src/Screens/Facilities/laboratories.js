@@ -33,10 +33,10 @@ const laboratories = () => {
   return (
     <Main>
         <div className="main">
-            <div class="grid-container">
+            <div className="grid-container">
                 {Items.map((d, i) => (
                     <div>
-                        <img class={`grid-item grid-item-${i}`} src={d.image} />
+                        <img className={`grid-item grid-item-${i}`} src={d.image} alt="lab" />
                     </div>
                 ))}
             </div>

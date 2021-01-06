@@ -1,7 +1,5 @@
 import React from "react";
-
 import Footer from "./Footer";
-import MenuBar from "./Menu";
 import './CSS/main.css'
 import NavBar from "./NavBar";
 

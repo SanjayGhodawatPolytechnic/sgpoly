@@ -119,7 +119,7 @@ const ManageHighlights = () => {
                                                 <div className="card card-body">
                                                 <div className="card card-cascade wider">
                                                     <div className="view view-cascade overlay">
-                                                    <img className="card-img-top" src={d.profileImage} alt="Card image cap" />
+                                                    <img className="card-img-top" src={d.profileImage} alt="Card cap" />
                                                     <a href="#!">
                                                         <div className="mask rgba-white-slight"></div>
                                                     </a>

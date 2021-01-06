@@ -31,7 +31,7 @@ const tennis = () => {
         <div class="grid-container">
           {Items.map((d, i) => (
             <div>
-              <img class={`grid-item grid-item-${i}`} src={d.image} />
+              <img class={`grid-item grid-item-${i}`} src={d.image} alt="tennis" />
             </div>
           ))}
         </div>
