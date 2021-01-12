@@ -1,33 +1,68 @@
 import React from 'react';
+import { useState } from 'react';
+import * as firebase from "firebase";
 import "./Updates.css"
+import { useEffect } from 'react';
 const Updates = () => {
+
+  const [data, setData] = useState([]);
+
+  const getNews = async () => {
+    let dataRef = firebase.database().ref("updates");
+    dataRef.on("value", (dataSnapshot) => {
+      if (dataSnapshot.val()) {
+        let result = Object.values(dataSnapshot.val());
+        let contactKey = Object.keys(dataSnapshot.val());
+        contactKey.forEach((value, key) => {
+          result[key]["key"] = value;
+        });
+        result.forEach((v, i) => {
+          let date = new Date(v.postedOn);
+          let dateData = [];
+          dateData.push(date.getDate());
+          dateData.push(date.getMonth());
+          dateData.push(date.getFullYear());
+          dateData.push(date.getHours());
+          dateData.push(date.getMinutes());
+          dateData.push(date.getSeconds());
+          v.postedOn = dateData;
+        });
+        result.reverse();
+        setData(result);
+        // console.log(result)
+      }
+    });
+  };
+
+  useEffect(() => {
+    getNews();
+  }, [])
+
     return (
         <div class="updates">
             <div class="site__wrapper">
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/608?image=123" alt="" />
-
-              <div class="card__overlay card__overlay--indigo">
-                <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> Html5/Css3</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 min ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>
+              {data[0] && (
+                <div class="grid">
+                <div class="card">
+                  <div class="card__image">
+                    <img src={data[0].imageDownloadUrl} alt="" />
+      
+                    <div class="card__overlay card__overlay--indigo">
+                      <div class="card__overlay-content">
+                        <a href="#0" class="card__title">{data[0].title}</a>
+                        <div className="container p-0 m-0 card__description">
+                          {data[0].description}
+                        </div>
+                        <ul class="card__meta card__meta--last">
+                          <li><i class="fa fa-user"></i> Posted On: {data[0].postedOn}</li><br />
+                          <li><a href={data[0].fileDownloadUr}><i class="fa fa-facebook-square"></i> More Info</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-      </div>
-
+              )}
       <div class="grid">
           <div class="card">
             <div class="card__image">
@@ -35,16 +70,14 @@ const Updates = () => {
 
               <div class="card__overlay card__overlay--blue">
                 <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
+                <a href="#0" class="card__title">It will be title of an update</a>
+                  <div className="container p-0 m-0 card__description">
+                    Hey This is container for Description. 
+                    Is it okay?
+                  </div>
                   <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
+                    <li><a href="#0"><i class="fa fa-user"></i> Posted On: 10/10/2002</a></li><br />
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> More Info</a></li>
                   </ul>
                 </div>
               </div>
@@ -59,17 +92,15 @@ const Updates = () => {
 
               <div class="card__overlay card__overlay--indigo">
                 <div class="card__overlay-content">
-                <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> UI/UX</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
+                  <a href="#0" class="card__title">It will be title of an update</a>
+                  <div className="container p-0 m-0 card__description">
+                    Hey This is container for Description. 
+                    Is it okay?
+                  </div>
                   <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>    
+                    <li><a href="#0"><i class="fa fa-user"></i> Posted On: 10/10/2002</a></li><br />
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> More Info</a></li>
+                  </ul>   
                 </div>
               </div>
             </div>
@@ -83,17 +114,15 @@ const Updates = () => {
 
               <div class="card__overlay card__overlay--indigo">
                 <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
+                <a href="#0" class="card__title">It will be title of an update</a>
+                  <div className="container p-0 m-0 card__description">
+                    Hey This is container for Description. 
+                    Is it okay?
+                  </div>
                   <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>   
+                    <li><a href="#0"><i class="fa fa-user"></i> Posted On: 10/10/2002</a></li><br />
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> More Info</a></li>
+                  </ul>  
                 </div>
               </div>
             </div>
@@ -107,17 +136,15 @@ const Updates = () => {
 
               <div class="card__overlay card__overlay--blue">
                 <div class="card__overlay-content">
-                  <ul class="card__meta">
-                    <li><a href="#0"><i class="fa fa-tag"></i> Tutorials</a></li>
-                    <li><a href="#0"><i class="fa fa-clock-o"></i> 2 days ago</a></li>
-                  </ul>
-
-                  <a href="#0" class="card__title">How to create a card based article with HTML5 &amp; CSS3</a>
-
+                <a href="#0" class="card__title">It will be title of an update</a>
+                  <div className="container p-0 m-0 card__description">
+                    Hey This is container for Description. 
+                    Is it okay?
+                  </div>
                   <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Mithicher</a></li>
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> Share</a></li>
-                  </ul>   
+                    <li><a href="#0"><i class="fa fa-user"></i> Posted On: 10/10/2002</a></li><br />
+                    <li><a href="#0"><i class="fa fa-facebook-square"></i> More Info</a></li>
+                  </ul>  
                 </div>
               </div>
             </div>
