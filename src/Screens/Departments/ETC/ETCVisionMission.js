@@ -49,10 +49,10 @@ const ETCVisionMission = () => {
                     <div className="col-12 text-center">
                         <h4>Mission</h4>
                         <div class="list-group">
-                            <a class="list-group-item list-group-item-action list-group-item-primary">	To impart professional and technical skills to make students employable</a>
-                            <a class="list-group-item list-group-item-action list-group-item-secondary">To inculcate ethical values to make responsible engineers with concern for societal and environmental issues</a>
-                            <a class="list-group-item list-group-item-action list-group-item-success">To help students to identify and solve industry related problems</a>
-                            <a class="list-group-item list-group-item-action list-group-item-danger">To develop a spirit of lifelong learning for their personal and career enhancement</a>
+                            <span class="list-group-item list-group-item-action list-group-item-primary">	To impart professional and technical skills to make students employable</span>
+                            <span class="list-group-item list-group-item-action list-group-item-secondary">To inculcate ethical values to make responsible engineers with concern for societal and environmental issues</span>
+                            <span class="list-group-item list-group-item-action list-group-item-success">To help students to identify and solve industry related problems</span>
+                            <span class="list-group-item list-group-item-action list-group-item-danger">To develop a spirit of lifelong learning for their personal and career enhancement</span>
                         </div>
                     </div>
                 </div>

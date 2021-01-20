@@ -8,7 +8,6 @@ const Studpics = () => {
   let dataref = firebase.database().ref("student_pics");
 
   const getstudpics = () => {
-    setData([]);
     dataref.on("value", (dataSnapshot) => {
       if (dataSnapshot.val()) {
         let result = Object.values(dataSnapshot.val());
@@ -16,7 +15,6 @@ const Studpics = () => {
         keys.forEach((d,i) => {
           result[i]['key'] = d;
         })
-        //console.log(result);
         setData(result);
       }
     });
@@ -32,8 +30,6 @@ const Studpics = () => {
         getstudpics();
       })
     })
-
-    
   };
 
 

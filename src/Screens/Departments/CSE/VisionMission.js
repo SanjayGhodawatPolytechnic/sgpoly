@@ -60,19 +60,19 @@ const VisionMission = () => {
                     <div className="col-12 text-center">
                         <h4>Mission</h4>
                         <div class="list-group">
-                            <a class="list-group-item list-group-item-action list-group-item-primary">To impart necessary technical and professional skills among students to make them employable</a>
-                            <a class="list-group-item list-group-item-action list-group-item-secondary">To produce competent technocrats to meet industrial challenges with societal and environmental concerns</a>
-                            <a class="list-group-item list-group-item-action list-group-item-success">To establish effective institute-industry interaction</a>
-                            <a class="list-group-item list-group-item-action list-group-item-danger">To motivate students for lifelong learning that will enable them to choose better career opportunities</a>
+                            <span class="list-group-item list-group-item-action list-group-item-primary">To impart necessary technical and professional skills among students to make them employable</span>
+                            <span class="list-group-item list-group-item-action list-group-item-secondary">To produce competent technocrats to meet industrial challenges with societal and environmental concerns</span>
+                            <span class="list-group-item list-group-item-action list-group-item-success">To establish effective institute-industry interaction</span>
+                            <span class="list-group-item list-group-item-action list-group-item-danger">To motivate students for lifelong learning that will enable them to choose better career opportunities</span>
                         </div>
                     </div>
                     <div className="col-12 text-center">
                         <h5>Mission Objectives</h5>
                         <div class="list-group">
-                            <a class="list-group-item list-group-item-action list-group-item-primary">M-1 : Make Students industry ready by imparting necessary technical and professional skills</a>
-                            <a class="list-group-item list-group-item-action list-group-item-secondary">M-2 : Create awareness among students for societal and environmental concerns</a>
-                            <a class="list-group-item list-group-item-action list-group-item-success">M-3 : Establish institute-industry interaction</a>
-                            <a class="list-group-item list-group-item-action list-group-item-danger">M-4 : Inculcate the spirit of lifelong learning among students for career enhancement</a>
+                            <span class="list-group-item list-group-item-action list-group-item-primary">M-1 : Make Students industry ready by imparting necessary technical and professional skills</span>
+                            <span class="list-group-item list-group-item-action list-group-item-secondary">M-2 : Create awareness among students for societal and environmental concerns</span>
+                            <span class="list-group-item list-group-item-action list-group-item-success">M-3 : Establish institute-industry interaction</span>
+                            <span class="list-group-item list-group-item-action list-group-item-danger">M-4 : Inculcate the spirit of lifelong learning among students for career enhancement</span>
                         </div>
                     </div>
                 </div>
@@ -85,19 +85,19 @@ const VisionMission = () => {
                     <div className="col-12 text-center">
                         <h4>Mission</h4>
                         <div class="list-group">
-                            <a class="list-group-item list-group-item-action list-group-item-primary">To impart technical knowledge and skills by using modern engineering tools with supportive facilities.</a>
-                            <a class="list-group-item list-group-item-action list-group-item-secondary">To facilitate industry-institute interaction to expose students to current industrial practices that will help them to solve industrial challenges.</a>
-                            <a class="list-group-item list-group-item-action list-group-item-success">To inculcate ethical and professional values among students that will make them socially and environmentally responsible.</a>
-                            <a class="list-group-item list-group-item-action list-group-item-danger">To motivate students towards lifelong learning and helping them to find right career opportunities.</a>
+                            <span class="list-group-item list-group-item-action list-group-item-primary">To impart technical knowledge and skills by using modern engineering tools with supportive facilities.</span>
+                            <span class="list-group-item list-group-item-action list-group-item-secondary">To facilitate industry-institute interaction to expose students to current industrial practices that will help them to solve industrial challenges.</span>
+                            <span class="list-group-item list-group-item-action list-group-item-success">To inculcate ethical and professional values among students that will make them socially and environmentally responsible.</span>
+                            <span class="list-group-item list-group-item-action list-group-item-danger">To motivate students towards lifelong learning and helping them to find right career opportunities.</span>
                         </div>
                     </div>
                     <div className="col-12 text-center">
                         <h5>Mission Objectives</h5>
                         <div class="list-group">
-                            <a class="list-group-item list-group-item-action list-group-item-primary">M-1 : Impart technical knowledge and skills by using modern engineering tools</a>
-                            <a class="list-group-item list-group-item-action list-group-item-secondary">M-2 : Facilitate industry-institute interaction</a>
-                            <a class="list-group-item list-group-item-action list-group-item-success">	M-3 : Inculcate ethical and professional values</a>
-                            <a class="list-group-item list-group-item-action list-group-item-danger">M-4 : Motivate students towards lifelong learning and helping them to find right career opportunities.</a>
+                            <span class="list-group-item list-group-item-action list-group-item-primary">M-1 : Impart technical knowledge and skills by using modern engineering tools</span>
+                            <span class="list-group-item list-group-item-action list-group-item-secondary">M-2 : Facilitate industry-institute interaction</span>
+                            <span class="list-group-item list-group-item-action list-group-item-success">	M-3 : Inculcate ethical and professional values</span>
+                            <span class="list-group-item list-group-item-action list-group-item-danger">M-4 : Motivate students towards lifelong learning and helping them to find right career opportunities.</span>
                         </div>
                     </div>
                 </div>

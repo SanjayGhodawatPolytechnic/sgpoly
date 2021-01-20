@@ -7,8 +7,6 @@ import * as firebase from 'firebase'
 import { useEffect } from 'react';
 
 const Achivements = () => {
-
-    const [data, setData] = useState([]);
     const [studentData, setStudentData] = useState([]);
     const [collegeData, setCollegeData] = useState([]);
 
@@ -53,7 +51,7 @@ const Achivements = () => {
                                     <div className="card card-cascade wider">
 
                                     <div className="view view-cascade overlay">
-                                    <img className="card-img-top" src={d.imageURL} alt="Card image cap" />
+                                    <img className="card-img-top" src={d.imageURL} alt="Card cap" />
                                     <a href="#!">
                                         <div className="mask rgba-white-slight"></div>
                                     </a>
@@ -86,7 +84,7 @@ const Achivements = () => {
                                     <div className="card card-cascade wider">
 
                                     <div className="view view-cascade overlay">
-                                    <img className="card-img-top" src={d.imageURL} alt="Card image cap" />
+                                    <img className="card-img-top" src={d.imageURL} alt="Card i" />
                                     <a href="#!">
                                         <div className="mask rgba-white-slight"></div>
                                     </a>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./CSS/Menu.css";
-import Menu from "./Menu";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -29,32 +28,32 @@ const Footer = () => {
               <ul className="list-unstyled">
                 <li>
                   <p>
-                    <a href="#!" >
+                    <span href="#!" >
                       <p className="txt-color">SGP</p>
-                    </a>
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href="#!" >
+                    <span href="#!" >
                       <p className="txt-color">Staff</p>
                       
-                    </a>
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href="#!" >
+                    <span href="#!" >
                       <p className="txt-color">Facilities</p> 
-                    </a>
+                    </span>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <a href="#!" >
+                    <span href="#!" >
                       <p className="txt-color">AWARDS</p>
                       
-                    </a>
+                    </span>
                   </p>
                 </li>
               </ul>
@@ -86,15 +85,15 @@ const Footer = () => {
               <h5 className="font-weight-bold text-uppercase mb-4">
                 Follow Us
               </h5>
-              <a type="button" className="btn-floating btn-fb">
+              <span className="btn-floating btn-fb">
                 <i className="fab fa-facebook-f" />
-              </a>
+              </span>
 
               <br />
               <br />
-              <a type="button" className="btn-floating btn-tw">
+              <span className="btn-floating btn-tw">
                 <i className="fab fa-twitter" />
-              </a>
+              </span>
             </div>
           </div>
         </div>
