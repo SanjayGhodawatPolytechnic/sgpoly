@@ -45,7 +45,7 @@ const Updates = () => {
                 <div class="grid">
                 <div class="card">
                   <div class="card__image">
-                    <img src={data[0].imageDownloadUrl} alt="" />
+                    <img src={data[0].imageDownloadUrl} alt="first" />
       
                     <div class="card__overlay card__overlay--indigo">
                       <div class="card__overlay-content">
@@ -55,7 +55,7 @@ const Updates = () => {
                         </div>
                         <ul class="card__meta card__meta--last">
                           <li><i class="fa fa-user"></i> Posted On: {data[0].postedOn}</li><br />
-                          <li><a href={data[0].fileDownloadUr}><i class="fa fa-facebook-square"></i> More Info</a></li>
+                          <li><a href={data[0].fileDownloadUrl}> More Info</a></li>
                         </ul>
                       </div>
                     </div>
@@ -63,28 +63,29 @@ const Updates = () => {
                 </div>
             </div>
               )}
-      <div class="grid">
-          <div class="card">
-            <div class="card__image">
-              <img src="https://unsplash.it/400/300?image=100" alt="" />
 
-              <div class="card__overlay card__overlay--blue">
-                <div class="card__overlay-content">
-                <a href="#0" class="card__title">It will be title of an update</a>
-                  <div className="container p-0 m-0 card__description">
-                    Hey This is container for Description. 
-                    Is it okay?
+              {data[1] && (
+                <div class="grid">
+                <div class="card">
+                  <div class="card__image">
+                    <img src={data[1].imageDownloadUrl} alt="second" />
+      
+                    <div class="card__overlay card__overlay--blue">
+                      <div class="card__overlay-content">
+                      <a href="#0" class="card__title">{data[1].title}</a>
+                        <div className="container p-0 m-0 card__description">
+                          {data[1].description}
+                        </div>
+                        <ul class="card__meta card__meta--last">
+                          <li><i class="fa fa-user"></i> Posted On: {data[1].postedOn}</li><br />
+                          <li><a href={data[1].fileDownloadUrl}> More Info</a></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <ul class="card__meta card__meta--last">
-                    <li><a href="#0"><i class="fa fa-user"></i> Posted On: 10/10/2002</a></li><br />
-                    <li><a href="#0"><i class="fa fa-facebook-square"></i> More Info</a></li>
-                  </ul>
                 </div>
-              </div>
             </div>
-          </div>
-      </div>
-
+              )}
       <div class="grid">
           <div class="card">
             <div class="card__image">
