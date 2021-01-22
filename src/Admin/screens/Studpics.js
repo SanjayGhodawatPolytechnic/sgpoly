@@ -33,11 +33,7 @@ const Studpics = () => {
   };
 
 
-  useEffect(() => {
-    getstudpics();
-  }, []);
-
-  useEffect(() => {}, [data]);
+  useEffect(getstudpics(), []);
 
   const card = () => {
     return data.map((c, i) => (

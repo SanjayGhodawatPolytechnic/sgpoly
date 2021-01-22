@@ -154,6 +154,7 @@ header
 	width: 100%;
     box-sizing: border-box;
     z-index: 10000;
+    margin: 0;
 }
 header .logo
 {

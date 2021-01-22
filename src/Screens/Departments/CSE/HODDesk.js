@@ -17,7 +17,7 @@ const HODDesk = () => {
             data-offset="0">
                 <div className="row">
                     <div className="col text-center">
-                        <img className="img-fluid rounded" src='http://sgipolytechnic.in/Images/HOD_CSE2.jpg' />
+                        <img alt="cse hod" className="img-fluid rounded" src='http://sgipolytechnic.in/Images/HOD_CSE2.jpg' />
                     </div>
                     <div className="col-12 text-center"><b>Mr. Chavan Sagar Vilasrao</b></div>
                     <div className="col-12 text-center"><b>Head of Department</b></div>

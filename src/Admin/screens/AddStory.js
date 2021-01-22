@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Main from '../../ReusableComponents/Main';
 import { Link } from 'react-router-dom';
 import './CSS/AddStaffMember.css'
@@ -171,7 +171,7 @@ const AddStory = () => {
                                     }}
                                     >Story Item {i + 1}</button>
                                 </div>
-                            <div className="col-lg-12 multi-collapse m-2" className={`col-lg-12 multi-collapse m-2 ${inputCount.currentOpen === i ? '' : 'collapse'}`} id={`multiCollapseExample${i}`}>                                                        
+                            <div className={`col-lg-12 multi-collapse m-2 ${inputCount.currentOpen === i ? '' : 'collapse'}`} id={`multiCollapseExample${i}`}>                                                        
                                     <div className="col-lg-12"><input 
                                     type="text" 
                                     className="form-control"                     

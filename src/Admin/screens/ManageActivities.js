@@ -317,7 +317,7 @@ const ManageActivities = () => {
     }) => {
         return images.map((d,i) => (
             <div className="col-4">
-                <img className="img img-fluid" src={d} />
+                <img className="img img-fluid" src={d} alt="display" />
             </div>
         ))
     }
@@ -384,7 +384,7 @@ const ManageActivities = () => {
                                 <b>File</b><br/>
                                 {
                                 fileURL 
-                                ? (<a href={fileURL} target="_blank"><span className="badge">Click Here</span></a>) :
+                                ? (<a href={fileURL} target="blank"><span className="badge">Click Here</span></a>) :
                                 (<span className="badge">No File Available</span>)
                             }
                             </div>
@@ -418,6 +418,7 @@ const ManageActivities = () => {
                             />
                             )
                         }
+                        return("")
                     })}
                     {dataWithFiles.map((d, i) => {
                         if(d.category === 'college') {
@@ -439,6 +440,7 @@ const ManageActivities = () => {
                             />
                             )
                         }
+                        return ("")
                     })}
                 </div>
                 <h4 className="text-center text-light">Student's Activities</h4>
@@ -458,6 +460,7 @@ const ManageActivities = () => {
                             />
                             )
                         }
+                        return ("")
                     })}
                     {dataWithFiles.map((d, i) => {
                         if(d.category === 'student') {
@@ -479,6 +482,7 @@ const ManageActivities = () => {
                             />
                             )
                         }
+                        return ("")
                     })}
                 </div>
             </div>

@@ -11,7 +11,7 @@ const Main = ({
   isSlideShow = false,
 }) => {
   return (
-    <div>
+    <div className="">
       <df-messenger
       intent="WELCOME"
       chat-title="SGPbot"
@@ -19,10 +19,7 @@ const Main = ({
       language-code="en"
     ></df-messenger>
     <div className="backcolor">
-      
-        {/* <MenuBar /> */}
         <NavBar />
-
       <br />
       <br />
 

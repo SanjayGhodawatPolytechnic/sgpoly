@@ -17,7 +17,7 @@ const ElectronicsNTC = () => {
                     <div className="row">
                         <div className="col-2"></div>
                         <div className="col-lg-6">
-                            <img className="img-fluid rounded" src='https://wallpaperplay.com/walls/full/e/3/c/28158.jpg' />
+                            <img alt="etc" className="img-fluid rounded" src='https://wallpaperplay.com/walls/full/e/3/c/28158.jpg' />
                         </div>
                     </div>
                     <p className="m-1">

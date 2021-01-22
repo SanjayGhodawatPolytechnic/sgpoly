@@ -12,7 +12,7 @@ const NavBar = () => {
         <div className="logo">LOGO</div>
         <nav className={isOpen ? "active" : ""}>
             <ul>
-                <li><a href="#">HOME</a></li>
+                <li><a href="path">HOME</a></li>
                 <li 
                 className={openSubmenuIndex === 1 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
@@ -25,26 +25,25 @@ const NavBar = () => {
                     }
                 }}
                 >
-                    <a href="#">ABOUT US</a>
+                    <a href="path">ABOUT US</a>
                     <ul>
-                        <li><a href="#">About Our Logo</a></li>
-                        <li><a href="#">About SG Polytechnic</a></li>
-                        <li><a href="#">Philosophy Of SGP</a></li>
-                        <li><a href="#">Vision, Mission, Goal</a></li>
-                        <li><a href="#">Quality Policy</a></li>
-                        <li><a href="#">Quality Objectives</a></li>
-                        <li><a href="#">Affiliations & Certifications</a></li>
-                        <li><a href="#">Differentiators</a></li>
-                        <li><a href="#">Achievements</a></li>
-                        <li><a href="#">Activitie</a></li>
-                        <li><a href="#">Social Responsibilities</a></li>
-                        <li><a href="#">Why SGP ?</a></li>
+                        <li><a href="path">About Our Logo</a></li>
+                        <li><a href="path">About SG Polytechnic</a></li>
+                        <li><a href="path">Philosophy Of SGP</a></li>
+                        <li><a href="path">Vision, Mission, Goal</a></li>
+                        <li><a href="path">Quality Policy</a></li>
+                        <li><a href="path">Quality Objectives</a></li>
+                        <li><a href="path">Affiliations & Certifications</a></li>
+                        <li><a href="path">Differentiators</a></li>
+                        <li><a href="path">Achievements</a></li>
+                        <li><a href="path">Activitie</a></li>
+                        <li><a href="path">Social Responsibilities</a></li>
+                        <li><a href="path">Why SGP ?</a></li>
                     </ul>
     
                 </li>
     
-                <li 
-                className="sub-menu"
+                <li
                 className={openSubmenuIndex === 2 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
                     e.preventDefault()
@@ -55,22 +54,21 @@ const NavBar = () => {
                         setOpenSubmenuIndex(2);
                     }
                 }}
-                ><a href="#">MANAGEMENT</a>
+                ><a href="path">MANAGEMENT</a>
                     <ul>
-                        <li><a href="#">About Trust</a></li>
-                        <li><a href="#">Trust Board Of Directors</a></li>
-                        <li><a href="#">Chairman’s Message</a></li>
-                        <li><a href="#">A Word From Secretory</a></li>
-                        <li><a href="#">Trustees Thoughts</a></li>
-                        <li><a href="#">Principals Desk</a></li>
-                        <li><a href="#">SGI Board Of Directors</a></li>
-                        <li><a href="#">Governing Body</a></li>
+                        <li><a href="path">About Trust</a></li>
+                        <li><a href="path">Trust Board Of Directors</a></li>
+                        <li><a href="path">Chairman’s Message</a></li>
+                        <li><a href="path">A Word From Secretory</a></li>
+                        <li><a href="path">Trustees Thoughts</a></li>
+                        <li><a href="path">Principals Desk</a></li>
+                        <li><a href="path">SGI Board Of Directors</a></li>
+                        <li><a href="path">Governing Body</a></li>
                     </ul>
     
                 </li>
     
                 <li 
-                className="sub-menu"
                 className={openSubmenuIndex === 3 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
                     e.preventDefault()
@@ -81,20 +79,19 @@ const NavBar = () => {
                         setOpenSubmenuIndex(3);
                     }
                 }}
-                ><a href="#">ACADEMICS</a>
+                ><a href="path">ACADEMICS</a>
                     <ul>
-                        <li><a href="#">Academic Calendar</a></li>
-                        <li><a href="#">Result</a></li>
-                        <li><a href="#">Committees</a></li>
-                        <li><a href="#">Ragging Act 1999</a></li>
-                        <li><a href="#">Capitation Fee Act 1987</a></li>
-                        <li><a href="#">Audit Reports</a></li>
-                        <li><a href="#">Institute News Letters</a></li>
+                        <li><a href="path">Academic Calendar</a></li>
+                        <li><a href="path">Result</a></li>
+                        <li><a href="path">Committees</a></li>
+                        <li><a href="path">Ragging Act 1999</a></li>
+                        <li><a href="path">Capitation Fee Act 1987</a></li>
+                        <li><a href="path">Audit Reports</a></li>
+                        <li><a href="path">Institute News Letters</a></li>
                     </ul>
                 </li>
     
                 <li 
-                className="sub-menu"
                 className={openSubmenuIndex === 4 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
                     e.preventDefault()
@@ -105,22 +102,21 @@ const NavBar = () => {
                         setOpenSubmenuIndex(4);
                     }
                 }}
-                ><a href="#">INFRASTRUCTURE</a>
+                ><a href="path">INFRASTRUCTURE</a>
                     <ul>
-                        <li><a href="#">About Infrastructure</a></li>
-                        <li><a href="#">Campus Overview</a></li>
-                        <li><a href="#">Admin Building</a></li>
-                        <li><a href="#">classNamerooms</a></li>
-                        <li><a href="#">Workshop</a></li>
-                        <li><a href="#">Auditorium</a></li>
-                        <li><a href="#">Foodcourt</a></li>
-                        <li><a href="#">Conference Hall</a></li>
-                        <li><a href="#">Amphi Theatre</a></li>
+                        <li><a href="path">About Infrastructure</a></li>
+                        <li><a href="path">Campus Overview</a></li>
+                        <li><a href="path">Admin Building</a></li>
+                        <li><a href="path">classNamerooms</a></li>
+                        <li><a href="path">Workshop</a></li>
+                        <li><a href="path">Auditorium</a></li>
+                        <li><a href="path">Foodcourt</a></li>
+                        <li><a href="path">Conference Hall</a></li>
+                        <li><a href="path">Amphi Theatre</a></li>
                     </ul>
                 </li>
                 
                 <li 
-                className="sub-menu"
                 className={openSubmenuIndex === 5 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
                     e.preventDefault()
@@ -131,29 +127,28 @@ const NavBar = () => {
                         setOpenSubmenuIndex(5);
                     }
                 }}
-                ><a href="#">DEPARTMENTS</a>
+                ><a href="path">DEPARTMENTS</a>
                     <ul>
-                        <li><a href="#">Department Information</a></li>
-                        <li><a href="#">HOD Desk</a></li>
-                        <li><a href="#">Vision and Mission</a></li>
-                        <li><a href="#">PEO PO PSO</a></li>
-                        <li><a href="#">Faculty Profile</a></li>
-                        <li><a href="#">Technical Staff</a></li>
-                        <li><a href="#">Infrastructure & Laboratories</a></li>
-                        <li><a href="#">Academic Calender</a></li>
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="#">Achievement</a></li>
-                        <li><a href="#">Syllabus</a></li>
-                        <li><a href="#">MoU</a></li>
-                        <li><a href="#">Consultancy</a></li>
-                        <li><a href="#">Newsletter</a></li>
-                        <li><a href="#">Alumni</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <li><a href="path">Department Information</a></li>
+                        <li><a href="path">HOD Desk</a></li>
+                        <li><a href="path">Vision and Mission</a></li>
+                        <li><a href="path">PEO PO PSO</a></li>
+                        <li><a href="path">Faculty Profile</a></li>
+                        <li><a href="path">Technical Staff</a></li>
+                        <li><a href="path">Infrastructure & Laboratories</a></li>
+                        <li><a href="path">Academic Calender</a></li>
+                        <li><a href="path">Activities</a></li>
+                        <li><a href="path">Achievement</a></li>
+                        <li><a href="path">Syllabus</a></li>
+                        <li><a href="path">MoU</a></li>
+                        <li><a href="path">Consultancy</a></li>
+                        <li><a href="path">Newsletter</a></li>
+                        <li><a href="path">Alumni</a></li>
+                        <li><a href="path">Downloads</a></li>
                     </ul>
                 </li>
     
                 <li 
-                className="sub-menu"
                 className={openSubmenuIndex === 6 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
                     e.preventDefault()
@@ -164,23 +159,22 @@ const NavBar = () => {
                         setOpenSubmenuIndex(6);
                     }
                 }}
-                ><a href="#">ADMISSIONS</a>
+                ><a href="path">ADMISSIONS</a>
                     <ul>
-                        <li><a href="#">Courses Offered</a></li>
-                        <li><a href="#">Admission Process</a></li>
-                        <li><a href="#">Eligibility Criteria</a></li>
-                        <li><a href="#">Fee Structure</a></li>
-                        <li><a href="#">Education Loan</a></li>
-                        <li><a href="#">Admission Cell</a></li>
-                        <li><a href="#">Scholorship</a></li>
-                        <li><a href="#">Cut Off List</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Education Fairs</a></li>
+                        <li><a href="path">Courses Offered</a></li>
+                        <li><a href="path">Admission Process</a></li>
+                        <li><a href="path">Eligibility Criteria</a></li>
+                        <li><a href="path">Fee Structure</a></li>
+                        <li><a href="path">Education Loan</a></li>
+                        <li><a href="path">Admission Cell</a></li>
+                        <li><a href="path">Scholorship</a></li>
+                        <li><a href="path">Cut Off List</a></li>
+                        <li><a href="path">FAQ</a></li>
+                        <li><a href="path">Education Fairs</a></li>
                     </ul>
                 </li>
     
                 <li 
-                className="sub-menu"
                 className={openSubmenuIndex === 7 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
                     e.preventDefault()
@@ -191,28 +185,27 @@ const NavBar = () => {
                         setOpenSubmenuIndex(7);
                     }
                 }}
-                ><a href="#">FACILITIES</a>
+                ><a href="path">FACILITIES</a>
                     <ul>
-                        <li><a href="#">Hostel</a></li>
-                        <li><a href="#">Laboratories</a></li>
-                        <li><a href="#">Computer Lab</a></li>
-                        <li><a href="#">Drawing Hall</a></li>
-                        <li><a href="#">Reading Hall</a></li>
-                        <li><a href="#">Transportation</a></li>
-                        <li><a href="#">Gymnasium</a></li>
-                        <li><a href="#">Swimming Pool</a></li>
-                        <li><a href="#">Cafeteria</a></li>
-                        <li><a href="#">Health Care</a></li>
-                        <li><a href="#">ATM</a></li>
-                        <li><a href="#">Playing Ground</a></li>
-                        <li><a href="#">Tennis Court</a></li>
-                        <li><a href="#">Photocopy & Stationary</a></li>
-                        <li><a href="#">Parking</a></li>
+                        <li><a href="path">Hostel</a></li>
+                        <li><a href="path">Laboratories</a></li>
+                        <li><a href="path">Computer Lab</a></li>
+                        <li><a href="path">Drawing Hall</a></li>
+                        <li><a href="path">Reading Hall</a></li>
+                        <li><a href="path">Transportation</a></li>
+                        <li><a href="path">Gymnasium</a></li>
+                        <li><a href="path">Swimming Pool</a></li>
+                        <li><a href="path">Cafeteria</a></li>
+                        <li><a href="path">Health Care</a></li>
+                        <li><a href="path">ATM</a></li>
+                        <li><a href="path">Playing Ground</a></li>
+                        <li><a href="path">Tennis Court</a></li>
+                        <li><a href="path">Photocopy & Stationary</a></li>
+                        <li><a href="path">Parking</a></li>
                     </ul>
                 </li>
     
                 <li 
-                className="sub-menu"
                 className={openSubmenuIndex === 8 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
                     e.preventDefault()
@@ -223,20 +216,20 @@ const NavBar = () => {
                         setOpenSubmenuIndex(8);
                     }
                 }}
-                ><a href="#">CONTACT</a>
+                ><a href="path">CONTACT</a>
                     <ul>
-                        <li><a href="#">Location Map</a></li>
-                        <li><a href="#">Principal</a></li>
-                        <li><a href="#">Administrative Department</a></li>
-                        <li><a href="#">Admission Cell</a></li>
-                        <li><a href="#">Head of Departments</a></li>
-                        <li><a href="#">IT Cell</a></li>
-                        <li><a href="#">Transport Department</a></li>
-                        <li><a href="#">Contact Form</a></li>
+                        <li><a href="path">Location Map</a></li>
+                        <li><a href="path">Principal</a></li>
+                        <li><a href="path">Administrative Department</a></li>
+                        <li><a href="path">Admission Cell</a></li>
+                        <li><a href="path">Head of Departments</a></li>
+                        <li><a href="path">IT Cell</a></li>
+                        <li><a href="path">Transport Department</a></li>
+                        <li><a href="path">Contact Form</a></li>
                     </ul>
                 </li>
     
-                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="path">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
     
                 
             </ul>
@@ -249,34 +242,3 @@ const NavBar = () => {
 }
 
 export default NavBar;
-
-
-{/* <div className="main-nav">
-            <div onClick={() => {
-                expandNav()
-            }}>
-                <ul className="ul">
-                    <li className="item" ><i className="fas fa-bars"></i></li>
-                    <div className="nav-circle"></div>
-                </ul>
-            </div>
-            <div id="navbar" className={isOpen ? " open" : ""}>
-                <div className="close-btn" onClick={(e) => {
-                    closeNav(e)
-                }}>
-                </div>
-                <div className="nav-item">
-                    <span className="item-text">HOME</span>
-                </div>
-                
-                <div className="nav-item">
-                    <span className="item-text">PROJECTS</span>
-                </div>
-                <div className="nav-item">
-                    <span className="item-text">SKILL SET</span>
-                </div>
-                <div className="nav-item">
-                    <span className="item-text">BLOGS</span>
-                </div>
-            </div>
-        </div> */}

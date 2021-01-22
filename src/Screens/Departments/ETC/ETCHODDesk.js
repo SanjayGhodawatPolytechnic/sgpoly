@@ -17,7 +17,7 @@ const ETCHODDesk = () => {
             data-offset="0">
                 <div className="row">
                     <div className="col text-center">
-                        <img className="img-fluid rounded" src='http://sgipolytechnic.in/Images/HOD_ETC.jpg' />
+                        <img alt="etc hod" className="img-fluid rounded" src='http://sgipolytechnic.in/Images/HOD_ETC.jpg' />
                     </div>
                     <div className="col-12 text-center"><b>Mr. Dhongadi Ravindra Purushottam</b></div>
                     <div className="col-12 text-center"><b>Head of Department</b></div>

@@ -23,7 +23,6 @@ const TechnicalStaff = () => {
                 })
 
                 //console.log(staff)
-                let hod = {}
                 let allStaff = []
                 staff.forEach((v,i) => {
                     if(v.department === "Computer Science"){

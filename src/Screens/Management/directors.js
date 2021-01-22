@@ -15,7 +15,7 @@ function managementDirectors(){
        
                         </div>
                         <div class="card-img-body">
-                            <img class="img-fluid" src="http://www.sgipolytechnic.in/pics/Sanjay-ghodawat.jpg" alt="Card image cap" />
+                            <img alt="chairman" class="img-fluid" src="http://www.sgipolytechnic.in/pics/Sanjay-ghodawat.jpg" />
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Mr. Sanjay Ghodawat</h3><br/>
@@ -25,13 +25,6 @@ function managementDirectors(){
                             
                         </div>                        
                     </div>
-
-
-
-
-
-
-
                         <br/>
                         <div class="card rainbow">
                             <div class="view overlay">          
@@ -39,7 +32,7 @@ function managementDirectors(){
                                     
                             </div>
                             <div class="card-img-body">
-                                <img class="img-fluid" src="http://www.sgipolytechnic.in/pics/Shrenik-Ghodawat1.jpg" alt="Card image cap" />
+                                <img class="img-fluid" src="http://www.sgipolytechnic.in/pics/Shrenik-Ghodawat1.jpg" alt="shrenik" />
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title">Mr. Shrenik Ghodawat</h3><br/>
@@ -58,7 +51,7 @@ function managementDirectors(){
                                     
                             </div>
                             <div class="card-img-body">
-                                <img class="img-fluid" src="http://www.sgipolytechnic.in/pics/Vinayak-Bhosale.jpg" alt="Card image cap" />
+                                <img class="img-fluid" src="http://www.sgipolytechnic.in/pics/Vinayak-Bhosale.jpg" alt="vinayak bhosle" />
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title">Mr.  Vinayak Bhosale</h3><br/>
@@ -77,7 +70,7 @@ function managementDirectors(){
                                     
                             </div>
                             <div class="card-img-body">
-                                <img class="img-fluid" src="http://www.sgipolytechnic.in/pics/Virat-Giri.jpg" alt="Card image cap" />
+                                <img class="img-fluid" src="http://www.sgipolytechnic.in/pics/Virat-Giri.jpg" alt="Virat giri" />
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title">Mr.Virat Giri</h3><br/>

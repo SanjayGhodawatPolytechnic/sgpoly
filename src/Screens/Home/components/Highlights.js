@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Stories from 'react-insta-stories';
 import Fullscreen from "react-full-screen";
-import '../Story.css'
 import { useEffect } from 'react';
 import * as firebase from 'firebase'
 import './Highlights.css'

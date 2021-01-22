@@ -15,7 +15,6 @@ function LocationMap() {
   return (
       <Main className="">          
             <Map
-            style="mapbox://styles/mapbox/streets-v9"
             containerStyle={{
                 height: DeviceHeight-2,
                 width: DeviceWidth-2,
