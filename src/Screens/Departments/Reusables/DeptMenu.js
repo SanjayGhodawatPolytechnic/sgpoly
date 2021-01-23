@@ -11,7 +11,7 @@ const DeptMenu = ({
     return (
         <div class="col-sm-4 col-lg-3">
                 <nav id="navbar-example3" className="navbar navbar-light bg-light flex-column mt-4">
-                <a className="navbar-brand" href="#">{dept}</a>
+                <span className="navbar-brand">{dept}</span>
                 <nav className="nav nav-pills flex-column">
                     {subMenu.map((v,i) => (
                         <Link className={`nav-link ${loc.pathname === v.path ? "active" : ''}`} to={v.path}>{v.title}</Link>

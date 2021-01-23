@@ -142,7 +142,7 @@ const Overview = () => {
                 <div class="grid-container">
                     {Items.map((d,i) => (
                         <div>
-                            <img class={`grid-item grid-item-${i}`} src={d.image} />
+                            <img alt="overview" class={`grid-item grid-item-${i}`} src={d.image} />
                             <span className="badge badge-danger">{d.caption}</span>
                         </div>
                     ))}                

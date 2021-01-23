@@ -18,7 +18,7 @@ const classroom = () => {
         <div class="grid-container">
           {Items.map((d, i) => (
             <div>
-              <img class={`grid-item grid-item-${i}`} src={d.image} />
+              <img alt="class" class={`grid-item grid-item-${i}`} src={d.image} />
             </div>
           ))}
         </div>

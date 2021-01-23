@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Main from './Main'
 import * as firebase from 'firebase'
 import ReactLoading from 'react-loading';
-import './CSS/test.css'
 
 
 export default function MoreUpdates(props) {

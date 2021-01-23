@@ -23,7 +23,7 @@ const Outcomes = ({
                             <div className="col-12 text-center">
                                 <div class="list-group peos">
                                     {PEO.map((val,idx) => (
-                                        <a class="list-group-item list-group-item-action peos">{val}</a>    
+                                        <span class="list-group-item list-group-item-action peos">{val}</span>    
                                     ))}
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ const Outcomes = ({
                             <div className="col-12 text-center">
                                 <div class="list-group peos">
                                     {PO.map((val,idx) => (
-                                        <a class="list-group-item list-group-item-action peos"><b>{val.heading + ':'}</b>{val.desc}</a>
+                                        <span class="list-group-item list-group-item-action peos"><b>{val.heading + ':'}</b>{val.desc}</span>
                                     ))}
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ const Outcomes = ({
                             <div className="col-12 text-center">
                                 <div class="list-group peos">
                                     {PSO.map((val,idx) => (
-                                        <a class="list-group-item list-group-item-action peos">{val}</a>
+                                        <span class="list-group-item list-group-item-action peos">{val}</span>
                                     ))}
                                 </div>
                             </div>

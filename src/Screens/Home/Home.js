@@ -1,13 +1,7 @@
 import React from "react";
 import Main from "../../ReusableComponents/Main";
-
-import ScrollAnimation from "react-animate-on-scroll";
 import "./Home.css";
-import "./Story.css";
 import { useEffect } from "react";
-import Highlights from "./components/Highlights";
-import NewsCarousel from "./components/Carousel";
-import Updates from "./components/Updates";
 import CSELogo from "./icons/CSE"
 import MechLogo from "./icons/Mech";
 import CivilLogo from "./icons/Civil";
@@ -15,7 +9,6 @@ import ENTCLogo from "./icons/ENTC";
 import ElectLogo from "./icons/Elect";
 import "./CSS/DeptCard.css"
 import Counter from "./components/Counter";
-// import { TimelineMax } from "gsap";
 
 function Home() {
   useEffect(() => {
@@ -25,36 +18,13 @@ function Home() {
     <Main isSlideShow={true}>
       
       {/* <Highlights /> */}
-
-      
-
-      <div>
-        <div>
-          <br />
-          <br />
-          <br />
-          <div className="row mt-10 text-center">
-            <ScrollAnimation animateIn="flipInY" animateOut="flipOutY" >
-              <h1 className="headingFont">Recents</h1>
-            </ScrollAnimation>
-          </div>
-
-          <br />
-          <br />
-        </div>
-      </div>
-      <NewsCarousel />
-      <Updates />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      {/* <NewsCarousel /> */}
+      {/* <Updates /> */}
 
       <Counter />
 
-      <div className="row row-cols-1 row-cols-md-3 g-4">
-        <div className="col">
+      <div className="row">
+        <div className="col-4">
           <div className="card">
             <img src="https://mdbootstrap.com/img/new/standard/city/041.jpg" className="card-img-top" alt="..." />
             <div className="card-body">
@@ -65,7 +35,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="col">
+        <div className="col-4">
           <div className="card">
             <img src="https://mdbootstrap.com/img/new/standard/city/042.jpg" className="card-img-top" alt="..." />
             <div className="card-body">
@@ -76,7 +46,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="col">
+        <div className="col-4">
           <div className="card">
             <img src="https://mdbootstrap.com/img/new/standard/city/042.jpg" className="card-img-top" alt="..." />
             <div className="card-body">
@@ -92,13 +62,7 @@ function Home() {
       <br />
       <br />
       <br />
-      <div className="row mt-10 text-center">
-        <ScrollAnimation animateIn="flipInY" animateOut="flipOutY">
-          <h1 className="headingFont">Courses</h1>
-        </ScrollAnimation>
-      </div>
-      
-      <div className="container-lg text-center">
+      <div className="container-sm text-center">
           <h1 className="text-dark">COURSES</h1>
         <div className="row text-center d-flex justify-content-center">
           

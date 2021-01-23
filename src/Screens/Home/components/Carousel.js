@@ -146,7 +146,7 @@ const NewsCarousel = () => {
       <br />
       <br />
       <br />
-      <div className="col-12">
+      {/* <div className="col-12">
         <Link
           to={{ pathname: "/updates/viewmore", aboutProps: { data: data } }}
           params={data}
@@ -155,7 +155,7 @@ const NewsCarousel = () => {
             View More
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

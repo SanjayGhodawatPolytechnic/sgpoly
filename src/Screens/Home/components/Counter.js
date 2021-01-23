@@ -2,6 +2,9 @@ import React from 'react';
 import CountUp from 'react-countup';
 import ReactVisibilitySensor from 'react-visibility-sensor';
 import "./Counter.css"
+import PassedIcon from './icons/PassedIcon';
+import TeacherIcon from './icons/TeacherIcon';
+import ThisYear from './icons/ThisYear';
 
 const Counter = () => {
     return (
@@ -12,7 +15,7 @@ const Counter = () => {
                     <div className="col-md-10 col-md-offset-1">
                         <div className="row">
                             <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
-                                <span className="icon"><i className="icon-world"></i></span>
+                                <span className="icon"><ThisYear /></span>
                                 <CountUp className="fh5co-counter js-counter" end={100} redraw={true}>
                                     {({ countUpRef, start }) => (
                                         <ReactVisibilitySensor onChange={start} delayedCall>
@@ -23,7 +26,7 @@ const Counter = () => {
                                 <span className="fh5co-counter-label">Students This Year</span>
                             </div>
                             <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
-                                <span className="icon"><i className="icon-study"></i></span>
+                                <span className="icon"><PassedIcon /></span>
                                 <CountUp className="fh5co-counter js-counter" end={100} redraw={true}>
                                     {({ countUpRef, start }) => (
                                         <ReactVisibilitySensor onChange={start} delayedCall>
@@ -34,7 +37,7 @@ const Counter = () => {
                                 <span className="fh5co-counter-label">Passed Students</span>
                             </div>
                             <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
-                                <span className="icon"><i className="icon-head"></i></span>
+                                <span className="icon"><TeacherIcon /></span>
                                 <CountUp className="fh5co-counter js-counter" end={100} redraw={true}>
                                     {({ countUpRef, start }) => (
                                         <ReactVisibilitySensor onChange={start} delayedCall>

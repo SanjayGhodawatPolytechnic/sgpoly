@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Main from "../../ReusableComponents/Main";
 import * as firebase from "firebase";
-import { Link } from "react-router-dom";
 import "./CSS/Contact.css";
 
 const AddContact = () => {
@@ -35,7 +34,7 @@ const AddContact = () => {
               <div className="contact-info">
                 <img
                   src="https://image.ibb.co/kUASdV/contact-image.png"
-                  alt="image"
+                  alt="contact"
                 />
                 <h2>Contact Us</h2>
                 <h4>We will reach you as soon as possible</h4>

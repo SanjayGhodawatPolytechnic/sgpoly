@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './CSS/Activity.css'
 
 const ActivityCard = ({
@@ -20,9 +20,6 @@ const ActivityCard = ({
     const Carousell = () => (
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                    {/* <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> */}
-                                    {/* <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
                                     {imageURLS.map((val, idx) => {
                                         return(
                                             <li 
@@ -41,7 +38,7 @@ const ActivityCard = ({
                                     {imageURLS.map((val,idx) => {
                                         return(
                                             <div class={`carousel-item ${carouselData.CurrentIndex === idx ? 'active' : ''}`} key={idx}>
-                                            <img class="d-block w-100 img-responsive cr-img" src={val} />
+                                            <img alt="activity" class="d-block w-100 img-responsive cr-img" src={val} />
                                         </div>
                                         )
                                     })}
@@ -110,7 +107,7 @@ const ActivityCard = ({
                                 <b>File</b><br/>
                                 {
                                 fileURL 
-                                ? (<a href={fileURL} target="_blank"><span className="badge badge-info">Click Here</span></a>) :
+                                ? (<a href={fileURL} target="blank"><span className="badge badge-info">Click Here</span></a>) :
                                 (<span className="badge badge-info">No File Available</span>)
                             }
                             </div>
