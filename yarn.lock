@@ -3946,6 +3946,11 @@
     "path-type" "^4.0.0"
     "yaml" "^1.7.2"
 
+"countup.js@^1.9.3":
+  "integrity" "sha1-zj5QzXFgRB5HjwfaMYle3MDxyd0="
+  "resolved" "https://registry.npmjs.org/countup.js/-/countup.js-1.9.3.tgz"
+  "version" "1.9.3"
+
 "create-ecdh@^4.0.0":
   "integrity" "sha512-GbEHQPMOswGpKXM9kCWVrremUcBmjteUaQ01T9rkKCPDXfUHX0IoP9LpHYo2NPFampa4e+/pFDc3jQdxrxQLaw=="
   "resolved" "https://registry.npmjs.org/create-ecdh/-/create-ecdh-4.0.3.tgz"
@@ -6502,9 +6507,9 @@
   "version" "2.0.3"
 
 "ini@^1.3.5":
-  "integrity" "sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw=="
-  "resolved" "https://registry.npmjs.org/ini/-/ini-1.3.5.tgz"
-  "version" "1.3.5"
+  "integrity" "sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew=="
+  "resolved" "https://registry.npmjs.org/ini/-/ini-1.3.8.tgz"
+  "version" "1.3.8"
 
 "inline-style-prefix-all@^2.0.2":
   "integrity" "sha1-ROI8ANNSGjYEHgfJsegb82dwsIw="
@@ -10395,6 +10400,15 @@
     "lodash" "^4.17.4"
     "prop-types" "^15.5.8"
 
+"react-countup@^4.3.3":
+  "integrity" "sha512-pWnxpwdPNRyJFha/YKKbyc4RLAw8PzmULdgCziGIgw6vxhT1VdccrvQgj38HBSoM2qF/MoLmn4M2klvDWVIdaw=="
+  "resolved" "https://registry.npmjs.org/react-countup/-/react-countup-4.3.3.tgz"
+  "version" "4.3.3"
+  dependencies:
+    "countup.js" "^1.9.3"
+    "prop-types" "^15.7.2"
+    "warning" "^4.0.3"
+
 "react-coverflow@^0.2.20":
   "integrity" "sha512-4VnzgoIVnJt7Azt5Vc1zTXpB3ZWA+4YHAuIh2RWXgFOoUiodYaVCYyDAWdYcZxDHPeXg4dliQPUjJCdr3M7Fug=="
   "resolved" "https://registry.npmjs.org/react-coverflow/-/react-coverflow-0.2.20.tgz"
@@ -10432,7 +10446,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^16.0.0", "react-dom@^16.12.0", "react-dom@^16.13.1", "react-dom@>=16.6":
+"react-dom@^16.0.0", "react-dom@^16.12.0", "react-dom@^16.13.1", "react-dom@>=16.0.0", "react-dom@>=16.6":
   "integrity" "sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.13.1.tgz"
   "version" "16.13.1"
@@ -10761,7 +10775,14 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^16.0.0", "react@^16.12.0", "react@^16.13.1", "react@>=16.6":
+"react-visibility-sensor@^5.1.1":
+  "integrity" "sha512-cTUHqIK+zDYpeK19rzW6zF9YfT4486TIgizZW53wEZ+/GPBbK7cNS0EHyJVyHYacwFEvvHLEKfgJndbemWhB/w=="
+  "resolved" "https://registry.npmjs.org/react-visibility-sensor/-/react-visibility-sensor-5.1.1.tgz"
+  "version" "5.1.1"
+  dependencies:
+    "prop-types" "^15.7.2"
+
+"react@^16.0.0", "react@^16.12.0", "react@^16.13.1", "react@>= 16.3.0", "react@>=16.0.0", "react@>=16.6":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"

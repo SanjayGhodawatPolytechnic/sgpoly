@@ -14,6 +14,7 @@ import CivilLogo from "./icons/Civil";
 import ENTCLogo from "./icons/ENTC";
 import ElectLogo from "./icons/Elect";
 import "./CSS/DeptCard.css"
+import Counter from "./components/Counter";
 // import { TimelineMax } from "gsap";
 
 function Home() {
@@ -23,7 +24,9 @@ function Home() {
   return (
     <Main isSlideShow={true}>
       
-      <Highlights />
+      {/* <Highlights /> */}
+
+      
 
       <div>
         <div>
@@ -31,7 +34,7 @@ function Home() {
           <br />
           <br />
           <div className="row mt-10 text-center">
-            <ScrollAnimation animateIn="flipInY" animateOut="flipOutY">
+            <ScrollAnimation animateIn="flipInY" animateOut="flipOutY" >
               <h1 className="headingFont">Recents</h1>
             </ScrollAnimation>
           </div>
@@ -47,6 +50,8 @@ function Home() {
       <br />
       <br />
       <br />
+
+      <Counter />
 
       <div className="row row-cols-1 row-cols-md-3 g-4">
         <div className="col">
