@@ -18,8 +18,43 @@ function Home() {
     <Main isSlideShow={true}>
       
       {/* <Highlights /> */}
-      {/* <NewsCarousel /> */}
+       
       {/* <Updates /> */}
+      <div className="container">
+        <br/>
+        <br/>
+        <br/>
+        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+        <ol className="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
+          <li data-target="#carouselExampleIndicators" data-slide-to={1} />
+          <li data-target="#carouselExampleIndicators" data-slide-to={2} />
+        </ol>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img  height="600px" className="d-block w-100" src="https://images.unsplash.com/photo-1611338687497-5a9a59910971?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="First slide" />
+          </div>
+          <div className="carousel-item">
+            <img  height="600px" className="d-block w-100" src="https://images.unsplash.com/photo-1611332744415-7c20ecb34c11?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="Second slide" />
+          </div>
+          <div className="carousel-item">
+            <img  height="600px" className="d-block w-100" src="https://images.unsplash.com/photo-1611324679967-a7c2bae60638?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="Third slide" />
+          </div>
+        </div>
+        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="sr-only">Next</span>
+        </a>
+        </div>
+        <br/>
+    </div>
+
+
+
 
       <Counter />
 

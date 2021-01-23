@@ -8,8 +8,11 @@ const NavBar = () => {
 
     
     return (
+        <div>
         <header>
-        <div className="logo">LOGO</div>
+            <div className="banner"></div>
+                <div className="contains">
+                 <div className="logo">LOGO</div>
         <nav className={isOpen ? "active" : ""}>
             <ul>
                 <li><a href="path">HOME</a></li>
@@ -236,8 +239,12 @@ const NavBar = () => {
         </nav>
         <div className="menu-toggle" onClick={() => {
             setIsOpen(!isOpen);
-        }}><i className="fa fa-bars" aria-hidden="true"></i></div>
-        </header>
+        }}><i className="fa fa-bars" aria-hidden="true"></i></div>   
+                </div>
+        
+            </header>
+        </div>
+        
     );
 }
 

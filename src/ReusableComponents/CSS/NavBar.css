@@ -141,15 +141,25 @@ body{
 } */
 
 
+.banner{
+    top: 0;
+    width: 100%;
+    background-color: #a40606;
+    height: 30vh;
+    padding: 0;
+    margin: 0;
+}
 
+.contains{
+	 padding: 0 25px; 
 
+}
 
 header
 {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 0 25px;
 	background: #DCE1DE;/*header colour*/
 	width: 100%;
     box-sizing: border-box;
