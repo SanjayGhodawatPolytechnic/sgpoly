@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/gsap": "^1.20.2",
     "animate.css": "^4.1.0",
     "firebase": "^7.24.0",
     "gsap": "^3.5.1",
@@ -22,7 +23,6 @@
     "react-coverflow": "^0.2.20",
     "react-dom": "^16.13.1",
     "react-full-screen": "^0.2.4",
-    "react-gsap": "^2.2.1",
     "react-icons": "^3.10.0",
     "react-image-gallery": "^1.0.7",
     "react-insta-stories": "^2.0.2",
@@ -36,8 +36,8 @@
     "react-render-html": "^0.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-scrollmagic": "^2.2.0",
     "react-visibility-sensor": "^5.1.1",
+    "scrollmagic": "^2.0.8",
     "styled-components": "^5.1.1"
   },
   "scripts": {
@@ -60,5 +60,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/scrollmagic": "^2.0.1"
   }
 }
