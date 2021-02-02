@@ -61,14 +61,14 @@ const NavBar = () => {
                 }}
                 ><Link to="" className="a">MANAGEMENT</Link>
                     <ul>
-                        <li><Link to="" className="a">About Trust</Link></li>
-                        <li><Link to="" className="a">Trust Board Of Directors</Link></li>
-                        <li><Link to="" className="a">Chairman’s Message</Link></li>
-                        <li><Link to="" className="a">A Word From Secretory</Link></li>
-                        <li><Link to="" className="a">Trustees Thoughts</Link></li>
-                        <li><Link to="" className="a">Principals Desk</Link></li>
-                        <li><Link to="" className="a">SGI Board Of Directors</Link></li>
-                        <li><Link to="" className="a">Governing Body</Link></li>
+                        <li><Link to="/management/trust" className="a">About Trust</Link></li>
+                        <li><Link to="/management/board" className="a">Trust Board Of Directors</Link></li>
+                        <li><Link to="/management/chairman" className="a">Chairman’s Message</Link></li>
+                        <li><Link to="/management/secretary" className="a">A Word From Secretory</Link></li>
+                        <li><Link to="/management/trustee" className="a">Trustees Thoughts</Link></li>
+                        <li><Link to="/management/principal" className="a">Principals Desk</Link></li>
+                        <li><Link to="/management/directors" className="a">SGI Board Of Directors</Link></li>
+                        <li><Link to="/management/govern" className="a">Governing Body</Link></li>
                     </ul>
     
                 </li>
@@ -110,15 +110,15 @@ const NavBar = () => {
                 ><Link to="" className="a">INFRASTRUCTURE</Link>
                     <ul>
 
-                        <li><Link to="" className="a">About Infrastructure</Link></li>
+                        <li><Link to="/infrastructure/about" className="a">About Infrastructure</Link></li>
                         <li><Link to="" className="a">Campus Overview</Link></li>
-                        <li><Link to="" className="a">Admin Building</Link></li>
-                        <li><Link to="" className="a">classNamerooms</Link></li>
-                        <li><Link to="" className="a">Workshop</Link></li>
-                        <li><Link to="" className="a">Auditorium</Link></li>
-                        <li><Link to="" className="a">Foodcourt</Link></li>
-                        <li><Link to="" className="a">Conference Hall</Link></li>
-                        <li><Link to="" className="a">Amphi Theatre</Link></li>
+                        <li><Link to="/infrastructure/overview" className="a">Admin Building</Link></li>
+                        <li><Link to="/infrastructure/classroom" className="a">classNamerooms</Link></li>
+                        <li><Link to="/infrastructure/workshop" className="a">Workshop</Link></li>
+                        <li><Link to="/infrastructure/auditorium" className="a">Auditorium</Link></li>
+                        <li><Link to="/infrastructure/foodcourt" className="a">Foodcourt</Link></li>
+                        <li><Link to="/infrastructure/conference" className="a">Conference Hall</Link></li>
+                        <li><Link to="/amphi" className="a">Amphi Theatre</Link></li>
                     </ul>
                 </li>
                 
@@ -193,21 +193,17 @@ const NavBar = () => {
                 }}
                 ><Link to="" className="a">FACILITIES</Link>
                     <ul>
-                        <li><Link to="" className="a">Hostel</Link></li>
-                        <li><Link to="" className="a">Laboratories</Link></li>
-                        <li><Link to="" className="a">Computer Lab</Link></li>
-                        <li><Link to="" className="a">Drawing Hall</Link></li>
-                        <li><Link to="" className="a">Reading Hall</Link></li>
-                        <li><Link to="" className="a">Transportation</Link></li>
-                        <li><Link to="" className="a">Gymnasium</Link></li>
-                        <li><Link to="" className="a">Swimming Pool</Link></li>
-                        <li><Link to="" className="a">Cafeteria</Link></li>
+                        <li><Link to="/facilities/hostel" className="a">Hostel</Link></li>
+                        <li><Link to="/facilities/laboratories" className="a">Laboratories</Link></li>
+                        <li><Link to="/facilities/gymnasium" className="a">Gymnasium</Link></li>
+                        <li><Link to="/facilities/pool" className="a">Swimming Pool</Link></li>
+                        <li><Link to="/infrastructure/foodcourt" className="a">Cafeteria</Link></li>
                         <li><Link to="" className="a">Health Care</Link></li>
                         <li><Link to="" className="a">ATM</Link></li>
-                        <li><Link to="" className="a">Playing Ground</Link></li>
-                        <li><Link to="" className="a">Tennis Court</Link></li>
-                        <li><Link to="" className="a">Photocopy & Stationary</Link></li>
-                        <li><Link to="" className="a">Parking</Link></li>
+                        <li><Link to="/facilities/ground" className="a">Playing Ground</Link></li>
+                        <li><Link to="/facilities/tennis" className="a">Tennis Court</Link></li>
+                        <li><Link to="/facilities/more" className="a">More...</Link></li>
+                        
                     </ul>
                 </li>
     
