@@ -23,7 +23,16 @@ function Home() {
       <div className="container">
         <br/>
         <br/>
+        <br />
         <br/>
+        <br/>
+        <br />
+        <br/>
+        <br/>
+        <br />
+        
+       
+
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
