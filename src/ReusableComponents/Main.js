@@ -17,6 +17,7 @@ const Main = ({
       chat-title="SGPbot"
       agent-id="72516b63-a1de-4d6a-8c02-ae0514d59410"
       language-code="en"
+      
     ></df-messenger>
     <div className="backcolor">
         <NavBar />

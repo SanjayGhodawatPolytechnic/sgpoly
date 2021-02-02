@@ -62,6 +62,33 @@ function Home() {
         <br/>
     </div>
 
+{/* <div className="container">
+<div className="carousel-container">
+<ul class="slider">
+    <li>
+        <input type="radio" id="slide1" name="slide" checked />
+        <label for="slide1"></label>
+        <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/872485/coldchase.jpg" alt="Panel 1" />
+    </li>
+    <li>
+        <input type="radio" id="slide2" name="slide" />
+        <label for="slide2"></label>
+       <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/980517/icehut_sm.jpg" alt="Panel 2" />
+    </li>
+    <li>
+        <input type="radio" id="slide3" name="slide" />
+        <label for="slide3"></label>
+        <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/943660/hq_sm.jpg" alt="Panel 3" />
+    </li>
+    <li><a href="http://cssslider.com/">
+        <input type="radio" id="slide4" name="slide" />
+        <label for="slide4"></label>
+        <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/599584/home.jpg" alt="Panel 4" /></a>
+    </li>
+</ul>
+</div> */}
+
+
 
 
 
@@ -110,14 +137,14 @@ function Home() {
           <h1 className="text-dark">COURSES</h1>
         <div className="row text-center d-flex justify-content-center">
           
-          <div className="col-xl-3 col-sm-6 mb-5 cse-card shadow-sm mr-2">
+          <div className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2 rounded">
             <div className="rounded py-5 px-4 bg-transparent">
               <CSELogo className="mb-3 cse-logo" width="100px"/>
               <h5 className="mb-0">Computer Science</h5>
               
             </div>
           </div>
-          <div className="col-xl-3 col-sm-6 mb-5 mech-card shadow-sm mr-2 ml-2">
+          <div className="col-xl-3 col-sm-6 mb-5 mech-card shadow-lg m-2">
             <div className="rounded py-5 px-4 bg-transparent">
               <MechLogo className="mb-3 mech-logo" width="100px" height="80px" />
               <h5 className="mb-0">Mechanical</h5>
@@ -125,21 +152,21 @@ function Home() {
               
             </div>
           </div>
-          <div className="col-xl-3 col-sm-6 mb-5 civil-card shadow-sm mr-2 ml-2">
+          <div className="col-xl-3 col-sm-6 mb-5 civil-card shadow-lg m-2">
             <div className="rounded py-5 px-4 bg-transparent">
               <CivilLogo className="mb-3 civil-logo" width="100px" height="80px" />
               <h5 className="mb-0">Civil</h5>
               
             </div>
           </div>
-          <div className="col-xl-3 col-sm-6 mb-5 etc-card shadow-sm mr-2 ml-2">
+          <div className="col-xl-3 col-sm-6 mb-5 etc-card shadow-lg m-2">
             <div className="rounded py-5 px-4 bg-transparent">
               <ENTCLogo className="mb-3 etc-logo" width="100px" height="80px" />
               <h5 className="mb-0">E &amp; TC</h5>
               
             </div>
           </div>
-          <div className="col-xl-3 col-sm-6 mb-5 ele-card shadow-sm mr-2 ml-2">
+          <div className="col-xl-3 col-sm-6 mb-5 ele-card shadow-lg m-2">
             <div className="rounded py-5 px-4 bg-transparent">
               <ElectLogo className="mb-3 ele-logo" width="100px" height="80px" />
               <h5 className="mb-0">Electrical</h5>

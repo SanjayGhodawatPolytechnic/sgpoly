@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./CSS/NavBar.css"
+
 const NavBar = () => {
 
     const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +17,7 @@ const NavBar = () => {
                  <div className="logo">LOGO</div>
         <nav className={isOpen ? "active" : ""}>
             <ul>
-                <li><a href="path">HOME</a></li>
+                <li><Link to="" className="a">HOME</Link></li>
                 <li 
                 className={openSubmenuIndex === 1 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
@@ -28,20 +30,20 @@ const NavBar = () => {
                     }
                 }}
                 >
-                    <a href="path">ABOUT US</a>
+                    <Link to="" className="a">ABOUT US</Link>
                     <ul>
-                        <li><a href="path">About Our Logo</a></li>
-                        <li><a href="path">About SG Polytechnic</a></li>
-                        <li><a href="path">Philosophy Of SGP</a></li>
-                        <li><a href="path">Vision, Mission, Goal</a></li>
-                        <li><a href="path">Quality Policy</a></li>
-                        <li><a href="path">Quality Objectives</a></li>
-                        <li><a href="path">Affiliations & Certifications</a></li>
-                        <li><a href="path">Differentiators</a></li>
-                        <li><a href="path">Achievements</a></li>
-                        <li><a href="path">Activitie</a></li>
-                        <li><a href="path">Social Responsibilities</a></li>
-                        <li><a href="path">Why SGP ?</a></li>
+                        <li><Link to="" className="a">About Our Logo</Link></li>
+                        <li><Link to="" className="a">About SG Polytechnic</Link></li>
+                        <li><Link to="" className="a">Philosophy Of SGP</Link></li>
+                        <li><Link to="" className="a">Vision, Mission, Goal</Link></li>
+                        <li><Link to="" className="a">Quality Policy</Link></li>
+                        <li><Link to="" className="a">Quality Objectives</Link></li>
+                        <li><Link to="" className="a">Affiliations & Certifications</Link></li>
+                        <li><Link to="" className="a">Differentiators</Link></li>
+                        <li><Link to="" className="a">Achievements</Link></li>
+                        <li><Link to="" className="a">Activitie</Link></li>
+                        <li><Link to="" className="a">Social Responsibilities</Link></li>
+                        <li><Link to="" className="a">Why SGP ?</Link></li>
                     </ul>
     
                 </li>
@@ -57,16 +59,16 @@ const NavBar = () => {
                         setOpenSubmenuIndex(2);
                     }
                 }}
-                ><a href="path">MANAGEMENT</a>
+                ><Link to="" className="a">MANAGEMENT</Link>
                     <ul>
-                        <li><a href="path">About Trust</a></li>
-                        <li><a href="path">Trust Board Of Directors</a></li>
-                        <li><a href="path">Chairman’s Message</a></li>
-                        <li><a href="path">A Word From Secretory</a></li>
-                        <li><a href="path">Trustees Thoughts</a></li>
-                        <li><a href="path">Principals Desk</a></li>
-                        <li><a href="path">SGI Board Of Directors</a></li>
-                        <li><a href="path">Governing Body</a></li>
+                        <li><Link to="" className="a">About Trust</Link></li>
+                        <li><Link to="" className="a">Trust Board Of Directors</Link></li>
+                        <li><Link to="" className="a">Chairman’s Message</Link></li>
+                        <li><Link to="" className="a">A Word From Secretory</Link></li>
+                        <li><Link to="" className="a">Trustees Thoughts</Link></li>
+                        <li><Link to="" className="a">Principals Desk</Link></li>
+                        <li><Link to="" className="a">SGI Board Of Directors</Link></li>
+                        <li><Link to="" className="a">Governing Body</Link></li>
                     </ul>
     
                 </li>
@@ -82,15 +84,15 @@ const NavBar = () => {
                         setOpenSubmenuIndex(3);
                     }
                 }}
-                ><a href="path">ACADEMICS</a>
+                ><Link to="" className="a">ACADEMICS</Link>
                     <ul>
-                        <li><a href="path">Academic Calendar</a></li>
-                        <li><a href="path">Result</a></li>
-                        <li><a href="path">Committees</a></li>
-                        <li><a href="path">Ragging Act 1999</a></li>
-                        <li><a href="path">Capitation Fee Act 1987</a></li>
-                        <li><a href="path">Audit Reports</a></li>
-                        <li><a href="path">Institute News Letters</a></li>
+                        <li><Link to="" className="a">Academic Calendar</Link></li>
+                        <li><Link to="" className="a">Result</Link></li>
+                        <li><Link to="" className="a">Committees</Link></li>
+                        <li><Link to="" className="a">Ragging Act 1999</Link></li>
+                        <li><Link to="" className="a">Capitation Fee Act 1987</Link></li>
+                        <li><Link to="" className="a">Audit Reports</Link></li>
+                        <li><Link to="" className="a">Institute News Letters</Link></li>
                     </ul>
                 </li>
     
@@ -105,17 +107,18 @@ const NavBar = () => {
                         setOpenSubmenuIndex(4);
                     }
                 }}
-                ><a href="path">INFRASTRUCTURE</a>
+                ><Link to="" className="a">INFRASTRUCTURE</Link>
                     <ul>
-                        <li><a href="path">About Infrastructure</a></li>
-                        <li><a href="path">Campus Overview</a></li>
-                        <li><a href="path">Admin Building</a></li>
-                        <li><a href="path">classNamerooms</a></li>
-                        <li><a href="path">Workshop</a></li>
-                        <li><a href="path">Auditorium</a></li>
-                        <li><a href="path">Foodcourt</a></li>
-                        <li><a href="path">Conference Hall</a></li>
-                        <li><a href="path">Amphi Theatre</a></li>
+
+                        <li><Link to="" className="a">About Infrastructure</Link></li>
+                        <li><Link to="" className="a">Campus Overview</Link></li>
+                        <li><Link to="" className="a">Admin Building</Link></li>
+                        <li><Link to="" className="a">classNamerooms</Link></li>
+                        <li><Link to="" className="a">Workshop</Link></li>
+                        <li><Link to="" className="a">Auditorium</Link></li>
+                        <li><Link to="" className="a">Foodcourt</Link></li>
+                        <li><Link to="" className="a">Conference Hall</Link></li>
+                        <li><Link to="" className="a">Amphi Theatre</Link></li>
                     </ul>
                 </li>
                 
@@ -130,24 +133,24 @@ const NavBar = () => {
                         setOpenSubmenuIndex(5);
                     }
                 }}
-                ><a href="path">DEPARTMENTS</a>
+                ><Link to="" className="a">DEPARTMENTS</Link>
                     <ul>
-                        <li><a href="path">Department Information</a></li>
-                        <li><a href="path">HOD Desk</a></li>
-                        <li><a href="path">Vision and Mission</a></li>
-                        <li><a href="path">PEO PO PSO</a></li>
-                        <li><a href="path">Faculty Profile</a></li>
-                        <li><a href="path">Technical Staff</a></li>
-                        <li><a href="path">Infrastructure & Laboratories</a></li>
-                        <li><a href="path">Academic Calender</a></li>
-                        <li><a href="path">Activities</a></li>
-                        <li><a href="path">Achievement</a></li>
-                        <li><a href="path">Syllabus</a></li>
-                        <li><a href="path">MoU</a></li>
-                        <li><a href="path">Consultancy</a></li>
-                        <li><a href="path">Newsletter</a></li>
-                        <li><a href="path">Alumni</a></li>
-                        <li><a href="path">Downloads</a></li>
+                        <li><Link to="" className="a">Department Information</Link></li>
+                        <li><Link to="" className="a">HOD Desk</Link></li>
+                        <li><Link to="" className="a">Vision and Mission</Link></li>
+                        <li><Link to="" className="a">PEO PO PSO</Link></li>
+                        <li><Link to="" className="a">Faculty Profile</Link></li>
+                        <li><Link to="" className="a">Technical Staff</Link></li>
+                        <li><Link to="" className="a">Infrastructure & Laboratories</Link></li>
+                        <li><Link to="" className="a">Academic Calender</Link></li>
+                        <li><Link to="" className="a">Activities</Link></li>
+                        <li><Link to="" className="a">Achievement</Link></li>
+                        <li><Link to="" className="a">Syllabus</Link></li>
+                        <li><Link to="" className="a">MoU</Link></li>
+                        <li><Link to="" className="a">Consultancy</Link></li>
+                        <li><Link to="" className="a">Newsletter</Link></li>
+                        <li><Link to="" className="a">Alumni</Link></li>
+                        <li><Link to="" className="a">Downloads</Link></li>
                     </ul>
                 </li>
     
@@ -162,18 +165,18 @@ const NavBar = () => {
                         setOpenSubmenuIndex(6);
                     }
                 }}
-                ><a href="path">ADMISSIONS</a>
+                ><Link to="" className="a">ADMISSIONS</Link>
                     <ul>
-                        <li><a href="path">Courses Offered</a></li>
-                        <li><a href="path">Admission Process</a></li>
-                        <li><a href="path">Eligibility Criteria</a></li>
-                        <li><a href="path">Fee Structure</a></li>
-                        <li><a href="path">Education Loan</a></li>
-                        <li><a href="path">Admission Cell</a></li>
-                        <li><a href="path">Scholorship</a></li>
-                        <li><a href="path">Cut Off List</a></li>
-                        <li><a href="path">FAQ</a></li>
-                        <li><a href="path">Education Fairs</a></li>
+                        <li><Link to="" className="a">Courses Offered</Link></li>
+                        <li><Link to="" className="a">Admission Process</Link></li>
+                        <li><Link to="" className="a">Eligibility Criteria</Link></li>
+                        <li><Link to="" className="a">Fee Structure</Link></li>
+                        <li><Link to="" className="a">Education Loan</Link></li>
+                        <li><Link to="" className="a">Admission Cell</Link></li>
+                        <li><Link to="" className="a">Scholorship</Link></li>
+                        <li><Link to="" className="a">Cut Off List</Link></li>
+                        <li><Link to="" className="a">FAQ</Link></li>
+                        <li><Link to="" className="a">Education Fairs</Link></li>
                     </ul>
                 </li>
     
@@ -188,23 +191,23 @@ const NavBar = () => {
                         setOpenSubmenuIndex(7);
                     }
                 }}
-                ><a href="path">FACILITIES</a>
+                ><Link to="" className="a">FACILITIES</Link>
                     <ul>
-                        <li><a href="path">Hostel</a></li>
-                        <li><a href="path">Laboratories</a></li>
-                        <li><a href="path">Computer Lab</a></li>
-                        <li><a href="path">Drawing Hall</a></li>
-                        <li><a href="path">Reading Hall</a></li>
-                        <li><a href="path">Transportation</a></li>
-                        <li><a href="path">Gymnasium</a></li>
-                        <li><a href="path">Swimming Pool</a></li>
-                        <li><a href="path">Cafeteria</a></li>
-                        <li><a href="path">Health Care</a></li>
-                        <li><a href="path">ATM</a></li>
-                        <li><a href="path">Playing Ground</a></li>
-                        <li><a href="path">Tennis Court</a></li>
-                        <li><a href="path">Photocopy & Stationary</a></li>
-                        <li><a href="path">Parking</a></li>
+                        <li><Link to="" className="a">Hostel</Link></li>
+                        <li><Link to="" className="a">Laboratories</Link></li>
+                        <li><Link to="" className="a">Computer Lab</Link></li>
+                        <li><Link to="" className="a">Drawing Hall</Link></li>
+                        <li><Link to="" className="a">Reading Hall</Link></li>
+                        <li><Link to="" className="a">Transportation</Link></li>
+                        <li><Link to="" className="a">Gymnasium</Link></li>
+                        <li><Link to="" className="a">Swimming Pool</Link></li>
+                        <li><Link to="" className="a">Cafeteria</Link></li>
+                        <li><Link to="" className="a">Health Care</Link></li>
+                        <li><Link to="" className="a">ATM</Link></li>
+                        <li><Link to="" className="a">Playing Ground</Link></li>
+                        <li><Link to="" className="a">Tennis Court</Link></li>
+                        <li><Link to="" className="a">Photocopy & Stationary</Link></li>
+                        <li><Link to="" className="a">Parking</Link></li>
                     </ul>
                 </li>
     
@@ -219,20 +222,20 @@ const NavBar = () => {
                         setOpenSubmenuIndex(8);
                     }
                 }}
-                ><a href="path">CONTACT</a>
+                ><Link to="" className="a">CONTACT</Link>
                     <ul>
-                        <li><a href="path">Location Map</a></li>
-                        <li><a href="path">Principal</a></li>
-                        <li><a href="path">Administrative Department</a></li>
-                        <li><a href="path">Admission Cell</a></li>
-                        <li><a href="path">Head of Departments</a></li>
-                        <li><a href="path">IT Cell</a></li>
-                        <li><a href="path">Transport Department</a></li>
-                        <li><a href="path">Contact Form</a></li>
+                        <li><Link to="" className="a">Location Map</Link></li>
+                        <li><Link to="" className="a">Principal</Link></li>
+                        <li><Link to="" className="a">Administrative Department</Link></li>
+                        <li><Link to="" className="a">Admission Cell</Link></li>
+                        <li><Link to="" className="a">Head of Departments</Link></li>
+                        <li><Link to="" className="a">IT Cell</Link></li>
+                        <li><Link to="" className="a">Transport Department</Link></li>
+                        <li><Link to="" className="a">Contact Form</Link></li>
                     </ul>
                 </li>
     
-                <li><a href="path">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><Link to="" className="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Link></li>
     
                 
             </ul>
