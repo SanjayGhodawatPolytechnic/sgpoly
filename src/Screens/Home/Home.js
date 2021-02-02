@@ -20,7 +20,7 @@ function Home() {
       {/* <Highlights /> */}
        
       {/* <Updates /> */}
-      <div className="container">
+      <div className="">
         <br/>
         <br/>
         <br />
@@ -93,7 +93,7 @@ function Home() {
 
 
       <Counter />
-
+{/* 
       <div className="row">
         <div className="col-4">
           <div className="card">
@@ -128,7 +128,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <br />
       <br />
       <br />

@@ -223,7 +223,7 @@ const NavBar = () => {
                     }
                 }}
                 ><Link to="" className="a">CONTACT</Link>
-                    <ul>
+                    <ul className="contact-links">
                         <li><Link to="" className="a">Location Map</Link></li>
                         <li><Link to="" className="a">Principal</Link></li>
                         <li><Link to="" className="a">Administrative Department</Link></li>

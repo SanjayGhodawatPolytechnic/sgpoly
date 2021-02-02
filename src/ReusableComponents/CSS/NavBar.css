@@ -151,7 +151,7 @@ body{
 }
 
 .contains{
-	 padding: 0 25px; 
+	 padding: 0; 
 
 }
 
@@ -173,12 +173,13 @@ header .logo
 	line-height: 50px;
 	font-size: 24px;
 	float: left;
-	font-weight: bold;
+    font-weight: bold;
+    margin-left: 10px;
 }
 header nav
 {
-	float: right;
-
+    float: right;
+    
 }
 header nav ul
 {
@@ -245,13 +246,14 @@ header nav ul li .a:hover
 	line-height: 50px;
 	font-size: 24px;
 	cursor: pointer;
-	display: none;
+    display: none;
+    margin-right: 10px;
 }
 @media (max-width: 991px)
 {
 	header
 	{
-		padding: 0 20px;
+		padding: 0 0px;
 	}
 	.menu-toggle
 	{
