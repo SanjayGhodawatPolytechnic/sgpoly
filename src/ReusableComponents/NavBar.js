@@ -11,8 +11,9 @@ const NavBar = () => {
     
     return (
         <div>
+            
         <header>
-            <div className="banner"></div>
+            
                 <div className="contains">
                  <div className="logo">LOGO</div>
         <nav className={isOpen ? "active" : ""}>
@@ -206,7 +207,7 @@ const NavBar = () => {
                         
                     </ul>
                 </li>
-    
+                
                 <li 
                 className={openSubmenuIndex === 8 ? "sub-menu active" : "sub-menu"}
                 onClick={(e) => {
@@ -231,7 +232,6 @@ const NavBar = () => {
                     </ul>
                 </li>
     
-                <li><Link to="" className="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Link></li>
     
                 
             </ul>

@@ -85,7 +85,8 @@ function managementBoard(){
 
     return(
         <Main isSlideShow={true}>
-            <div>            
+            <div className="mar">            
+                <br/><br/>
                 <div className="row">                                                            
                     {images.map((d,i) => (
                         <ProfileCard image={d.original} name={d.description} designation={d.designation} />

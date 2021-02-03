@@ -7,7 +7,8 @@ import './CSS/management.css'
 function managementDirectors(){
     return(
         <Main isSlideShow={true}>
-            <div className="row">            
+            <br/><br/>
+            <div className="row mar">            
                 <div className="col-sm-12">
                     <div class="card-group vgr-cards">
                         <div class="card rainbow ">

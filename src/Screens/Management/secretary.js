@@ -4,10 +4,10 @@ import './CSS/management.css'
 const secretary = () => {
     return (
         <Main isSlideShow={true}>
-            <div>            
+            <div >            
             <br/>
             <br/>
-            <div class="card mb-3 border border-dark rounded">
+            <div class="card mb-3 mar">
                 <div className="row">
                     <div className="col-3"></div>
                     <div className="col-6">

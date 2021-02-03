@@ -10,14 +10,14 @@ function managementChairman(){
             <div>            
             <br/>
             <br/>
-            <div class="card mb-3 border border-dark rounded">
+            <div class="card mb-3 mar ">
               <div className="row">
                 <div className="col-3"></div>
                 <div className="col-6">
               <img src="http://www.sgipolytechnic.in/pics/Chairman2.jpg" class="card-img-top trust-image" alt="..." />
               </div>
               </div>
-              <div class="card-body">
+              <div class="card-body ">
                 <h5 class="card-title text-center"><i class="fas fa-user-alt"></i> Chairman</h5>
                 <h4 class="card-title text-center">Sanjay Ghodawat</h4>
                 <p class="card-text">Welcome to the Sanjay Ghodawat Group of Institutions! Education is making students aware of the infinite potential within and bringing it up so that the result is transformation of personalities. Education should bring students out of their comfort zone and challenge them to reach out for their best of abilities. In the era of the 21st Century, where we deal with knowledge workers and have students who are flooded with information from all sides, the role of teacher becomes all the more vital. Teachers in this era have to be by the side of the students help them distinguish between the right and wrong knowledge, motivate them to find their potential, find themselves as they grapple with challenges and connect them with their inner conscience so that they adhere to the right values and principles and emerge not just as success in the world but significant beings who have touched lives around and made the world a better place <br/><br/>

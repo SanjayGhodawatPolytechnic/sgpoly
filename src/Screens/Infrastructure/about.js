@@ -1,12 +1,13 @@
 import React from 'react';
 import Main from '../../ReusableComponents/Main';
+import './CSS/infrastructure.css';
 const infrastructureAbout = () => {
     return (
         <Main isSlideShow={true}>
             <div>            
             <br/>
             <br/>
-            <div class="card mb-3 border border-dark rounded">
+            <div class="card mb-3 mar ">
                 <div className="row">
                     <div className="col-3"></div>
                     <div className="col-6">

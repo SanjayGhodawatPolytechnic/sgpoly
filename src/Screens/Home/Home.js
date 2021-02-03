@@ -10,12 +10,18 @@ import ElectLogo from "./icons/Elect";
 import "./CSS/DeptCard.css"
 import Counter from "./components/Counter";
 
+
 function Home() {
   useEffect(() => {
     // TimelineMax
   }, []);
   return (
+    
     <Main isSlideShow={true}>
+      
+
+
+
       
       {/* <Highlights /> */}
        
