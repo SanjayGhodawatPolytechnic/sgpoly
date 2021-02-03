@@ -66,8 +66,6 @@ import ETCHODDesk from "./Screens/Departments/ETC/ETCHODDesk";
 import ETCVisionMission from "./Screens/Departments/ETC/ETCVisionMission";
 import ETCOutcomes from "./Screens/Departments/ETC/ETCOutcomes";
 
-
-
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",

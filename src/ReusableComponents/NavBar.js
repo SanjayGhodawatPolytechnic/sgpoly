@@ -31,7 +31,7 @@ const NavBar = () => {
                     }
                 }}
                 >
-                    <Link to="" className="a">ABOUT US</Link>
+                    <Link className="a">ABOUT US</Link>
                     <ul>
                         <li><Link to="" className="a">About Our Logo</Link></li>
                         <li><Link to="" className="a">About SG Polytechnic</Link></li>
@@ -60,7 +60,7 @@ const NavBar = () => {
                         setOpenSubmenuIndex(2);
                     }
                 }}
-                ><Link to="" className="a">MANAGEMENT</Link>
+                ><Link className="a">MANAGEMENT</Link>
                     <ul>
                         <li><Link to="/management/trust" className="a">About Trust</Link></li>
                         <li><Link to="/management/board" className="a">Trust Board Of Directors</Link></li>
@@ -85,7 +85,7 @@ const NavBar = () => {
                         setOpenSubmenuIndex(3);
                     }
                 }}
-                ><Link to="" className="a">ACADEMICS</Link>
+                ><Link className="a">ACADEMICS</Link>
                     <ul>
                         <li><Link to="" className="a">Academic Calendar</Link></li>
                         <li><Link to="" className="a">Result</Link></li>
@@ -108,7 +108,7 @@ const NavBar = () => {
                         setOpenSubmenuIndex(4);
                     }
                 }}
-                ><Link to="" className="a">INFRASTRUCTURE</Link>
+                ><Link className="a">INFRASTRUCTURE</Link>
                     <ul>
 
                         <li><Link to="/infrastructure/about" className="a">About Infrastructure</Link></li>
@@ -119,7 +119,7 @@ const NavBar = () => {
                         <li><Link to="/infrastructure/auditorium" className="a">Auditorium</Link></li>
                         <li><Link to="/infrastructure/foodcourt" className="a">Foodcourt</Link></li>
                         <li><Link to="/infrastructure/conference" className="a">Conference Hall</Link></li>
-                        <li><Link to="/amphi" className="a">Amphi Theatre</Link></li>
+                        <li><Link to="/infrastructure/amphi" className="a">Amphi Theatre</Link></li>
                     </ul>
                 </li>
                 
@@ -134,7 +134,7 @@ const NavBar = () => {
                         setOpenSubmenuIndex(5);
                     }
                 }}
-                ><Link to="" className="a">DEPARTMENTS</Link>
+                ><Link className="a">DEPARTMENTS</Link>
                     <ul>
                         <li><Link to="" className="a">Department Information</Link></li>
                         <li><Link to="" className="a">HOD Desk</Link></li>
@@ -166,7 +166,7 @@ const NavBar = () => {
                         setOpenSubmenuIndex(6);
                     }
                 }}
-                ><Link to="" className="a">ADMISSIONS</Link>
+                ><Link className="a">ADMISSIONS</Link>
                     <ul>
                         <li><Link to="" className="a">Courses Offered</Link></li>
                         <li><Link to="" className="a">Admission Process</Link></li>
@@ -192,7 +192,7 @@ const NavBar = () => {
                         setOpenSubmenuIndex(7);
                     }
                 }}
-                ><Link to="" className="a">FACILITIES</Link>
+                ><Link className="a">FACILITIES</Link>
                     <ul>
                         <li><Link to="/facilities/hostel" className="a">Hostel</Link></li>
                         <li><Link to="/facilities/laboratories" className="a">Laboratories</Link></li>
@@ -219,7 +219,7 @@ const NavBar = () => {
                         setOpenSubmenuIndex(8);
                     }
                 }}
-                ><Link to="" className="a">CONTACT</Link>
+                ><Link className="a">CONTACT</Link>
                     <ul className="contact-links">
                         <li><Link to="" className="a">Location Map</Link></li>
                         <li><Link to="" className="a">Principal</Link></li>
