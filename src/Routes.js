@@ -65,7 +65,9 @@ import ElectronicsNTC from "./Screens/Departments/ETC/ElectronicsNTC"
 import ETCHODDesk from "./Screens/Departments/ETC/ETCHODDesk";
 import ETCVisionMission from "./Screens/Departments/ETC/ETCVisionMission";
 import ETCOutcomes from "./Screens/Departments/ETC/ETCOutcomes";
-
+import { useState } from "react";
+import "./Routes.css"
+import img from "./ReusableComponents/CSS/sguni.jpg"
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -81,8 +83,20 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const Routes = () => {
+  const [isModalOpen, setIsModalOpen] = useState(true)
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
+  
   return (
     <BrowserRouter>
+          <div className={isModalOpen ? "modal" : "modal closed-modal"} id="modal">
+            <div class="modal-content">
+            <div className="close-btn" onClick={closeModal}><i aria-hidden="true" className="fas fa-times-circle fa-2x"></i></div>
+              <img src={img} alt="modal" />
+            </div>
+          </div>
       <Switch>
         <Route path="/" exact component={Home} />
 

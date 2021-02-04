@@ -17,7 +17,7 @@ const managementGovern = () => {
 
 
 <br/><br/><br/>
-                <table class="table table-borderless .table-sm  mar">
+                <table class="table .table-sm  mar">
     
                 <tbody>
                 <tr>
