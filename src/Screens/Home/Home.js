@@ -181,6 +181,19 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <div className="updates-container">
+        <div className="row update-row">
+          <div className="col-sm-5 update-card shadow-lg">
+            <img className="card-img" src="https://images.unsplash.com/photo-1611324679967-a7c2bae60638?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="Third slide" />
+            HELLO
+          </div>
+          <div className="col-sm-5 update-card shadow-lg">
+            <img className="card-img" src="https://images.unsplash.com/photo-1611324679967-a7c2bae60638?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="Third slide" />
+            HELLO
+          </div>
+        </div>
+      </div>
     </Main>
   );
 }
