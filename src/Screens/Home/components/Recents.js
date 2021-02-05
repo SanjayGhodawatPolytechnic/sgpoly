@@ -1,11 +1,12 @@
 import React from 'react'
+import "./Recents.css"
 
 
 const Recents = () => {
     return (
         <div>
             <section className="pt-5 pb-5">
-  <div className="container">
+  <div className="givmargin">
     <div className="row">
       <div className="col-6">
         <h3 className="mb-3">Important Reports</h3>

@@ -5,7 +5,7 @@ import React from "react";
 import "react-multi-carousel/lib/styles.css";
 
 import "./carousel.css";
-import "../Home.css";
+
 
 //importing firebase
 import * as firebase from "firebase";
@@ -15,7 +15,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ReactLoading from "react-loading";
 
-const NewsCarousel = () => {
+const Carousel = () => {
   const [data, setData] = useState([]);
   const [isPopUp, setisPopUp] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -56,108 +56,37 @@ const NewsCarousel = () => {
   }, []);
 
   return (
-    <div className="row">
-      <div className="col-sm-12">
-        <div class="container">
-          <div class="card-group vgr-cards">
-            {data.map((d, i) => {
-              if (i % 2 === 0 && i <= 3) {
-                return (
-                  <div class="card rainbow " key={i}>
-                    <div class="view overlay">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                    </div>
-                    <div class="card-img-body">
-                      <img
-                        style={{height: 200}}
-                        className="img-fluid"
-                        src={d.imageDownloadUrl}
-                        alt="Card image cap"
-                      />
-                    </div>
-                    <div class="card-body">
-                      <h4 class="card-title">{d.title}</h4>
-                      <p class="card-text">{d.description}</p>
-                      <span className="text-muted">
-                        Posted On:{" "}
-                        <span className="badge badge-dark">
-                          {d.postedOn[0]}-{d.postedOn[1]}-{d.postedOn[2]}
-                        </span>
-                      </span>
-                      <br />
-                      {d.fileDownloadUrl !== "empty" ? (
-                        <a href={d.fileDownloadUrl} target="blank">
-                          <span className="badge badge-info">More Info</span>
-                        </a>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                  </div>
-                );
-              } else if (i % 2 !== 0 && i <= 3) {
-                return (
-                  <div class="card rainbow" key={i}>
-                    <div class="view overlay">
-                      <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                      </a>
-                    </div>
-                    <div class="card-body">
-                      <h4 class="card-title">{d.title}</h4>
-                      <p class="card-text">{d.description}</p>
-                      <span className="text-muted">
-                        Posted On:{" "}
-                        <span className="badge badge-dark">
-                          {d.postedOn[0]}-{d.postedOn[1]}-{d.postedOn[2]}
-                        </span>
-                      </span>
-                      <br />
-
-                      {d.fileDownloadUrl !== "empty" ? (
-                        <a href={d.fileDownloadUrl} target="blank">
-                          <span className="badge badge-info">More Info</span>
-                        </a>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                    <div class="card-img-body">
-                      <img
-                        class="img-fluid"
-                        src={d.imageDownloadUrl}
-                        style={{height: 200}}
-                        alt="Card image cap"
-                      />
-                    </div>
-                  </div>
-                );
-              }
-            })}
-          </div>
-        </div>
-      </div>
-      <div className="col-12">
-        {isLoading && <ReactLoading type={"bars"} color="#000" />}
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      {/* <div className="col-12">
-        <Link
-          to={{ pathname: "/updates/viewmore", aboutProps: { data: data } }}
-          params={data}
-        >
-          <button type="button" class="btn btn-danger w-100">
-            View More
-          </button>
-        </Link>
-      </div> */}
+    <div className="container css-caro">
+      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+  <ol className="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
+    <li data-target="#carouselExampleIndicators" data-slide-to={1} />
+    <li data-target="#carouselExampleIndicators" data-slide-to={2} />
+  </ol>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img className="d-block w-100" src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="First slide" />
     </div>
-  );
-};
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Second slide" />
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="Third slide" />
+    </div>
+  </div>
+  <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true" />
+    <span className="sr-only">Previous</span>
+  </a>
+  <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true" />
+    <span className="sr-only">Next</span>
+  </a>
+</div>
 
-export default NewsCarousel;
+    </div>
+                
+  )
+}
+
+export default Carousel;
