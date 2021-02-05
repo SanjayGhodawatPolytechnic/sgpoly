@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ReactLoading from "react-loading";
 
+// TODO:Delete This Component 
 const Carousel = () => {
   const [data, setData] = useState([]);
   const [isPopUp, setisPopUp] = useState(false);
