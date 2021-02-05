@@ -102,7 +102,7 @@ const Recents = () => {
                   data[0].map((val, idx) => (
                     <div className="col-md-4 mb-3">
                       <div className="card">
-                          <img className="img-fluid" alt="100%x280" src={val.imageDownloadUrl} />
+                          <img className="" width="100%" height="280px" alt="100%x280" src={val.imageDownloadUrl} />
                         <div className="card-body">
                           <h4 className="card-title">{val.title}</h4>
                           <p className="card-text">{val.description}</p>
