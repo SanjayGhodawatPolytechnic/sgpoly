@@ -68,33 +68,6 @@ function Home() {
         <br/>
     </div>
 
-{/* <div className="container">
-<div className="carousel-container">
-<ul class="slider">
-    <li>
-        <input type="radio" id="slide1" name="slide" checked />
-        <label for="slide1"></label>
-        <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/872485/coldchase.jpg" alt="Panel 1" />
-    </li>
-    <li>
-        <input type="radio" id="slide2" name="slide" />
-        <label for="slide2"></label>
-       <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/980517/icehut_sm.jpg" alt="Panel 2" />
-    </li>
-    <li>
-        <input type="radio" id="slide3" name="slide" />
-        <label for="slide3"></label>
-        <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/943660/hq_sm.jpg" alt="Panel 3" />
-    </li>
-    <li><a href="http://cssslider.com/">
-        <input type="radio" id="slide4" name="slide" />
-        <label for="slide4"></label>
-        <img src="https://dribbble.s3.amazonaws.com/users/322/screenshots/599584/home.jpg" alt="Panel 4" /></a>
-    </li>
-</ul>
-</div> */}
-
-
 
 
 
@@ -194,6 +167,76 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <div class="container my-4 updates-container">      
+<div id="multi-item-example" class="carousel slide carousel-multi-item w-100" data-ride="carousel">
+  <div class="controls-top w-100">
+    <a class="btn-floating switch-btn left-btn" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating switch-btn right-btn" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+  </div>
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active w-100">
+      <div class="col-md-6 w-100" style={{float: "left"}}>
+        <div class="card mb-2 w-100">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="slide 1" />
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 w-100" style={{float: "left"}}>
+        <div class="card mb-2 w-100">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="slide 1" />
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item w-100">
+      <div class="col-md-6 w-100" style={{float: "left"}}>
+        <div class="card mb-2 w-100">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="slide 2" />
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 w-100" style={{float: "left"}}>
+        <div class="card mb-2 w-100">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="slide 2" />
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div className="w-100 view-more-btn-cont">
+  <button className="more-update-btn">VIEW MORE</button>
+</div>
+</div>
     </Main>
   );
 }
