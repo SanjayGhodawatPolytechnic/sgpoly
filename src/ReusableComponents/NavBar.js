@@ -284,82 +284,27 @@ const NavBar = () => {
                 <ul>
                   <li>
                     <Link to="" className="a">
-                      Department Information
+                      Computer Science
                     </Link>
                   </li>
                   <li>
                     <Link to="" className="a">
-                      HOD Desk
+                      Civil Engineering
                     </Link>
                   </li>
                   <li>
                     <Link to="" className="a">
-                      Vision and Mission
+                      Mechanical Engineering
                     </Link>
                   </li>
                   <li>
                     <Link to="" className="a">
-                      PEO PO PSO
+                      Electrical Engineering
                     </Link>
                   </li>
                   <li>
                     <Link to="" className="a">
-                      Faculty Profile
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Technical Staff
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Infrastructure & Laboratories
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Academic Calender
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Activities
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Achievement
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Syllabus
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      MoU
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Consultancy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Newsletter
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Alumni
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Downloads
+                      E & TC
                     </Link>
                   </li>
                 </ul>
