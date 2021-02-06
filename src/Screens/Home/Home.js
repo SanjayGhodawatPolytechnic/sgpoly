@@ -1,7 +1,6 @@
 import React from "react";
 import Main from "../../ReusableComponents/Main";
 import "./Home.css";
-import { useEffect } from "react";
 import CSELogo from "./icons/CSE"
 import MechLogo from "./icons/Mech";
 import CivilLogo from "./icons/Civil";

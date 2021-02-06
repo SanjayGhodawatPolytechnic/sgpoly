@@ -91,10 +91,14 @@ const Routes = () => {
   
   return (
     <BrowserRouter>
-          <div className={isModalOpen ? "modal" : "modal closed-modal"} id="modal">
-            <div class="modal-content">
+          <div className={isModalOpen ? "modal" : "modal closed-modal"} id="modal" onClick={e => {
+            setIsModalOpen(false)
+          }}>
+            <div class="modal-content" onClick={e => {
+              e.stopPropagation();
+            }}>
             <div className="close-btn" onClick={closeModal}><i aria-hidden="true" className="fas fa-times-circle fa-2x"></i></div>
-              <img src={img} alt="modal" />
+              <img src={img} alt="modal" className="modal-img img-fluid" />
             </div>
           </div>
       <Switch>

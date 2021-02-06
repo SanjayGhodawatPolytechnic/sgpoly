@@ -114,7 +114,7 @@ const NavBar = () => {
                         <li><Link to="/infrastructure/about" className="a">About Infrastructure</Link></li>
                         <li><Link to="" className="a">Campus Overview</Link></li>
                         <li><Link to="/infrastructure/overview" className="a">Admin Building</Link></li>
-                        <li><Link to="/infrastructure/classroom" className="a">classNamerooms</Link></li>
+                        <li><Link to="/infrastructure/classroom" className="a">class rooms</Link></li>
                         <li><Link to="/infrastructure/workshop" className="a">Workshop</Link></li>
                         <li><Link to="/infrastructure/auditorium" className="a">Auditorium</Link></li>
                         <li><Link to="/infrastructure/foodcourt" className="a">Foodcourt</Link></li>

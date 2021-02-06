@@ -15,10 +15,10 @@ const classroom = () => {
   return (
     <Main>
       <div className="main">
-        <div class="grid-container">
+        <div class="row my-2">
           {Items.map((d, i) => (
-            <div>
-              <img alt="class" class={`grid-item grid-item-${i}`} src={d.image} />
+            <div className="col-4 border border-dark p-2 mx-2 rounded shadow-lg">
+              <img alt="class" class="img-fluid" src={d.image} />
             </div>
           ))}
         </div>

@@ -20,13 +20,10 @@ const Recents = () => {
         result.forEach((v, i) => {
           let date = new Date(v.postedOn);
           let dateData = [];
-          dateData.push(date.getDate());
-          dateData.push(date.getMonth() + 1);
-          dateData.push(date.getFullYear());
-          dateData.push(date.getHours());
-          dateData.push(date.getMinutes());
-          dateData.push(date.getSeconds());
-          v.postedOn = dateData;
+          dateData.push(date.getDate().toString());
+          dateData.push((date.getMonth() + 1).toString());
+          dateData.push(date.getFullYear().toString());
+          v.postedOn = dateData.join("/");
         });
         result.reverse();
         if(result.length > 3) {
@@ -47,9 +44,6 @@ const Recents = () => {
     getAllUpdates();
   }, [])
 
-  useEffect(() => {
-    console.log(data);
-  }, [data])
     return (
         <div>
             <section className="pt-5 pb-5">
@@ -101,11 +95,13 @@ const Recents = () => {
                 {
                   data[0].map((val, idx) => (
                     <div className="col-md-4 mb-3">
-                      <div className="card">
-                          <img className="" width="100%" height="280px" alt="100%x280" src={val.imageDownloadUrl} />
+                      <div className="card h-100">
+                          <img className="update-img" width="100%" height="280px" alt="100%x280" src={val.imageDownloadUrl} />
                         <div className="card-body">
                           <h4 className="card-title">{val.title}</h4>
                           <p className="card-text">{val.description}</p>
+                          <p className="card-text"><b>POSTED ON:</b> {val.postedOn}</p>
+
                         </div>
                       </div>
                     </div>
@@ -147,10 +143,11 @@ const Recents = () => {
                   data[1].map((val, idx) => (
                     <div className="col-md-4 mb-3">
                       <div className="card">
-                        <img className="update-img" alt="100%x280" src={val.imageDownloadUrl} />
+                        <img className="update-img" width="100%" height="280px" alt="100%x280" src={val.imageDownloadUrl} />
                         <div className="card-body">
                           <h4 className="card-title">{val.title}</h4>
                           <p className="card-text">{val.description}</p>
+                          <p className="card-text"><b>POSTED ON:</b> {val.postedOn}</p>
                         </div>
                       </div>
                     </div>

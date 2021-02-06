@@ -12,9 +12,6 @@ import * as firebase from "firebase";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import { Link } from "react-router-dom";
-import ReactLoading from "react-loading";
-
 // TODO:Delete This Component 
 const Carousel = () => {
   const [data, setData] = useState([]);

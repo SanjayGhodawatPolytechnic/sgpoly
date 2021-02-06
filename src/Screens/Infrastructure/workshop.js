@@ -5,12 +5,9 @@ function workshop() {
   return (
     <Main isSlideShow={true}>
       <div>
-        <br />
-        <br />
-        <div className="card mb-3 " style={{ borderRadius: 10 }}>
-          <div className="row ">
-            <div className="col-lg-3">
-              <br />
+        <div className="card m-4 d-flex" style={{ borderRadius: 10 }}>
+          <div className="row">
+            <div className="col container">
               <img
                 src={
                   "http://www.sgipolytechnic.in/infrastructure/workshop1.jpg"
@@ -19,7 +16,7 @@ function workshop() {
                 alt="..."
               />
             </div>
-            <div className="col-lg-8">
+            <div className="col container">
               <div className="card-body">
                 <h5 className="card-title">
                   Workshop has following sections:-
