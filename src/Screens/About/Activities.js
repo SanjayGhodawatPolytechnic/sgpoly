@@ -2,7 +2,7 @@ import React from 'react';
 import Main from '../../ReusableComponents/Main';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const Activities = () => {
+const AboutActivities = () => {
     return (
         <Main isSlideShow={true}>
             <div>
@@ -45,4 +45,4 @@ const Activities = () => {
     );
 }
 
-export default Activities;
+export default AboutActivities;

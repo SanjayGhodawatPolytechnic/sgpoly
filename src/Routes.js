@@ -68,6 +68,7 @@ import ETCOutcomes from "./Screens/Departments/ETC/ETCOutcomes";
 import { useState } from "react";
 import "./Routes.css"
 import img from "./ReusableComponents/CSS/sguni.jpg"
+import AboutActivities from "./Screens/About/Activities";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -123,7 +124,7 @@ const Routes = () => {
           component={aboutDifferentiator}
         />
         <Route path="/about/achievements" exact component={aboutAchievement} />
-        <Route path="/about/activities" exact component={Activities} />
+        <Route path="/about/activities" exact component={AboutActivities} />
         <Route
           path="/about/socialresponsiblities"
           exact
