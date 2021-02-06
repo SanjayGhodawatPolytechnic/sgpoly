@@ -9,10 +9,7 @@ function aboutVision() {
       <div className="givmar">
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <div className="card ">
+        <div className="card w-100">
           <div className="card-header text-center ">Vision</div>
           <div className="card-body">
             <p className="card-text">
@@ -27,7 +24,7 @@ function aboutVision() {
         <br />
         <br />
 
-        <div className="card ">
+        <div className="card w-100">
           <div className="card-header text-center ">Mission</div>
           <div className="card-body">
             <p className="card-text">
@@ -72,7 +69,7 @@ function aboutVision() {
         <br />
         <br />
 
-        <div className="card ">
+        <div className="card w-100">
           <div className="card-header text-center  ">Goal</div>
           <div className="card-body">
             <p className="card-text">
