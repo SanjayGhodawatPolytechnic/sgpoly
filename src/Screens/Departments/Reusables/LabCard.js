@@ -16,7 +16,7 @@ const LabCard = ({
             <div class="card3">
                 <h2 className="heading2">{labName}</h2>
                 <i class="fas fa-arrow-right rotate-icon itag"></i>
-                <img alt="lab" src={imageurl} class="pic ing-fluid" />
+                <img alt="lab" src={imageurl} class="pic img-fluid" />
                 <ul className="unlist">
                 <li className="listi"></li>
                 <li className="listi"></li>

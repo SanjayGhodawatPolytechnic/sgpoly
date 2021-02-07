@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Main from '../../../ReusableComponents/Main';
 import DeptMenu from '../Reusables/DeptMenu';
@@ -6,7 +7,7 @@ import StaffCard from '../Reusables/StaffCard';
 import CommonLoading from 'react-loadingg/lib/CommonLoading';
 import * as firebase from 'firebase';
 
-const TechnicalStaff = () => {
+const ETCTechStaff = () => {
     const [faculty, setFaculty] = useState([])
     const [isLoading, setIsLoading] = useState(false)
 
@@ -25,7 +26,7 @@ const TechnicalStaff = () => {
                 //console.log(staff)
                 let allStaff = []
                 staff.forEach((v,i) => {
-                    if(v.department === "Computer Science"){
+                    if(v.department === "E & TC"){
                         if(v.designation === 'Lab Assistant'){
                             allStaff.push(v)
                         }
@@ -62,4 +63,4 @@ const TechnicalStaff = () => {
     );
 }
 
-export default TechnicalStaff;
+export default ETCTechStaff;

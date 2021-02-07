@@ -8,7 +8,7 @@ import * as firebase from 'firebase';
 import { CommonLoading } from 'react-loadingg';
 
 
-const StaffProfile = () => {
+const ETCStaffProfile = () => {
 
     const [faculty, setFaculty] = useState([])
     const [Hod, setHod] = useState({})
@@ -30,7 +30,7 @@ const StaffProfile = () => {
                 let hod = {}
                 let allStaff = []
                 staff.forEach((v,i) => {
-                    if(v.department === "Computer Science"){
+                    if(v.department === "E & TC"){
                         if(v.designation === 'HOD'){
                             hod = v
                         }else if(v.designation !== 'Lab Assistant'){
@@ -51,12 +51,6 @@ const StaffProfile = () => {
         getStaff()
     }, [])
 
-    // useEffect(() => {
-    //     console.log(Hod)
-    // }, [Hod])
-    // useEffect(() => {
-    //     console.log(faculty)
-    // }, [faculty])
     return (
         <Main className="container-lg">
             <div class="row">
@@ -77,4 +71,4 @@ const StaffProfile = () => {
     );
 }
 
-export default StaffProfile;
+export default ETCStaffProfile;

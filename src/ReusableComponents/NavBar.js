@@ -283,7 +283,7 @@ const NavBar = () => {
                 <Link className="a">DEPARTMENTS</Link>
                 <ul>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/department/cse" className="a">
                       Computer Science
                     </Link>
                   </li>
@@ -293,7 +293,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/department/mech" className="a">
                       Mechanical Engineering
                     </Link>
                   </li>
@@ -303,7 +303,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/department/entc" className="a">
                       E & TC
                     </Link>
                   </li>

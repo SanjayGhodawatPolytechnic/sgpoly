@@ -12,7 +12,7 @@ const Outcomes = ({
     subMenu = []
 }) => {
     return (
-        <Main>
+        <Main className="container-lg">
             <div class="row">
                 <DeptMenu dept='Computer Science' subMenu={subMenu} />
                 <div class="col-sm-8 col-lg-9">
@@ -23,7 +23,7 @@ const Outcomes = ({
                             <div className="col-12 text-center">
                                 <div class="list-group peos">
                                     {PEO.map((val,idx) => (
-                                        <span class="list-group-item list-group-item-action peos">{val}</span>    
+                                        <span class="list-group-item list-group-item-action">{val}</span>    
                                     ))}
                                 </div>
                             </div>
@@ -31,9 +31,9 @@ const Outcomes = ({
                         <div className="row">
                             <div className="col-12 text-center"><h3>Program Outcome (POs)</h3></div>
                             <div className="col-12 text-center">
-                                <div class="list-group peos">
+                                <div class="list-group">
                                     {PO.map((val,idx) => (
-                                        <span class="list-group-item list-group-item-action peos"><b>{val.heading + ':'}</b>{val.desc}</span>
+                                        <span class="list-group-item list-group-item-action"><b>{val.heading + ':'}</b>{val.desc}</span>
                                     ))}
                                 </div>
                             </div>
@@ -41,9 +41,9 @@ const Outcomes = ({
                         <div className="row">
                             <div className="col-12 text-center"><h3>Program Specific Outcomes (PSOs)</h3></div>
                             <div className="col-12 text-center">
-                                <div class="list-group peos">
+                                <div class="list-group">
                                     {PSO.map((val,idx) => (
-                                        <span class="list-group-item list-group-item-action peos">{val}</span>
+                                        <span class="list-group-item list-group-item-action">{val}</span>
                                     ))}
                                 </div>
                             </div>

@@ -69,6 +69,10 @@ import { useState } from "react";
 import "./Routes.css"
 import img from "./ReusableComponents/CSS/sguni.jpg"
 import AboutActivities from "./Screens/About/Activities";
+import ETCStaffProfile from "./Screens/Departments/ETC/ETCStaffProfile";
+import ETCTechStaff from "./Screens/Departments/ETC/ETCTechStaff";
+import Mechanical from "./Screens/Departments/MECH/Mechanical";
+import MechHODDesk from "./Screens/Departments/MECH/MechHODDesk";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -157,6 +161,7 @@ const Routes = () => {
         {/* --------------------Departments------------------------------------------------*/}
         {/* --------------------CSE------------------------------------------------*/}
 
+
         <Route path="/department/cse" exact component={ComputerScience} />
         <Route path="/department/cse/hoddesk" exact component={HODDesk} />
         <Route
@@ -179,18 +184,19 @@ const Routes = () => {
         <Route path="/department/cse/achivements" exact component={Achivements} />
         <Route path="/department/cse/activities" exact component={Activities} />
 
-        {/* --------------------MECH------------------------------------------------*/}
+        
         {/* --------------------E & TC------------------------------------------------*/}
         <Route path="/department/entc" exact component={ElectronicsNTC} />
         <Route path="/department/entc/hoddesk" exact component={ETCHODDesk} />
         <Route path="/department/entc/vision-mission" exact component={ETCVisionMission} />
         <Route path="/department/entc/outcomes" exact component={ETCOutcomes} />
-
-        {/* --------------------CIVIL------------------------------------------------*/}
-        {/* --------------------ELECTRICAL------------------------------------------------*/}
+        <Route path="/department/entc/teaching-staff" exact component={ETCStaffProfile} />
+        <Route path="/department/entc/teacnical-staff" exact component={ETCTechStaff} />
 
         {/* --------------------MECH------------------------------------------------*/}
-        {/* --------------------E & TC------------------------------------------------*/}
+        <Route path="/department/mech" exact component={Mechanical} />
+        <Route path="/department/mech/hoddesk" exact component={MechHODDesk} />
+        
         {/* --------------------CIVIL------------------------------------------------*/}
         {/* --------------------ELECTRICAL------------------------------------------------*/}
 
