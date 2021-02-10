@@ -73,6 +73,7 @@ import ETCStaffProfile from "./Screens/Departments/ETC/ETCStaffProfile";
 import ETCTechStaff from "./Screens/Departments/ETC/ETCTechStaff";
 import Mechanical from "./Screens/Departments/MECH/Mechanical";
 import MechHODDesk from "./Screens/Departments/MECH/MechHODDesk";
+import AcademicCalender from "./Screens/Departments/CSE/AcademicCalender";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -102,6 +103,7 @@ const Routes = () => {
             <div class="modal-content" onClick={e => {
               e.stopPropagation();
             }}>
+              
             <div className="close-btn" onClick={closeModal}><i aria-hidden="true" className="fas fa-times-circle fa-2x"></i></div>
               <img src={img} alt="modal" className="modal-img img-fluid" />
             </div>
@@ -183,6 +185,7 @@ const Routes = () => {
         <Route path="/department/cse/labs" exact component={Laboratories} />
         <Route path="/department/cse/achivements" exact component={Achivements} />
         <Route path="/department/cse/activities" exact component={Activities} />
+        <Route path="/department/cse/academic-calender" exact component={AcademicCalender} />
 
         
         {/* --------------------E & TC------------------------------------------------*/}

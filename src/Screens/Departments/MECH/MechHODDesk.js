@@ -2,9 +2,10 @@
 import React from 'react';
 import Main from '../../../ReusableComponents/Main';
 
-import DeptMenu from '../Reusables/DeptMenu';
+// import DeptMenu from '../Reusables/DeptMenu';
 import NavLinks from './NavLinks';
 import '../Reusables/CSS/HOD.css';
+const DeptMenu = React.lazy(() => import("../Reusables/DeptMenu"))
 
 
 const MechHODDesk = () => {
