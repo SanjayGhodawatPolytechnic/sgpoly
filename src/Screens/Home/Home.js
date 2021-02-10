@@ -64,7 +64,8 @@ function Home() {
       <br />
       <br />
       <div className="container-sm text-center">
-        <h1 className="text-dark">COURSES</h1>
+        <h1 className="text-dark" style={{fontSize: 40}}>COURSES</h1>
+        
         <div className="row text-center d-flex justify-content-center">
           <div className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2 rounded">
             <div className="rounded py-5 px-4 bg-transparent">

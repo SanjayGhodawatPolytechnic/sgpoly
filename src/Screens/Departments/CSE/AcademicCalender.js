@@ -3,45 +3,33 @@ import Main from '../../../ReusableComponents/Main';
 
 import DeptMenu from '../Reusables/DeptMenu';
 import NavLinks from './NavLinks';
-import PDFViewer from 'pdf-viewer-reactjs'
+// import PDFViewer from 'pdf-viewer-reactjs'
 import { useState } from 'react';
 import "./CSS/academiccalender.css"
+import PDFModal from "../Reusables/PDFModal"
+// const PDFViewer = React.lazy(() => import("pdf-viewer-reactjs"))
+// const PDFModal = React.lazy(() => import("../Reusables/PDFModal"))
 
 const AcademicCalender = () => {
 
     const [isPDFopen, setIsPDFopen] = useState(true)
-    const [currentlyOpenPDFURL, setCurrentlyopenPDFURL] = useState('https://arxiv.org/pdf/quant-ph/0410100.pdf')
+    const [currentlyOpenPDFURL, setCurrentlyopenPDFURL] = useState("https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/files%2F393c1d8c-6dd6-4475-90bd-ef8e3384b9f8?alt=media&token=27da61ac-2325-404d-98a1-df4168366590")
+
 
     const openPDF = (pdfURL) => {
         setCurrentlyopenPDFURL(pdfURL);
         setIsPDFopen(true);
     }
-
+    
     const closePDF = () => {
         setIsPDFopen(false);
     }
 
-    const PDFModal = () => (
-        <div className="pdf-modal" onClick={closePDF}>
-            <div className="close-btn" onClick={closePDF}><i aria-hidden="true" className="fas fa-times-circle fa-2x"></i></div>
-            <div className="container" onClick={e => {
-                e.stopPropagation();
-            }}>
-                <PDFViewer 
-                document={{
-                    url: currentlyOpenPDFURL
-                }}
-                navbarOnTop={true}
-
-                />
-                </div>
-        </div>
-    )
     return (
         <Main className="container-lg">
             <div class="row">
                 <DeptMenu dept='Computer Science' subMenu={NavLinks} />
-                {isPDFopen && (<PDFModal/>)}
+                {isPDFopen && (<PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />)}
             </div>
         </Main>
     );
