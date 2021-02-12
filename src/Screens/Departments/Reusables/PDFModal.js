@@ -59,7 +59,7 @@ return (
                             console.log(err)
                         }}
                     >
-                        <Page pageNumber={pageNumber} />
+                        <Page pageNumber={pageNumber} className="w-100"/>
                     </Document>
                     <p>Page {pageNumber} of {numPages}</p>
                 </div>
