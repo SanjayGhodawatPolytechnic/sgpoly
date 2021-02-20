@@ -36,3 +36,4 @@ const AcademicCalender = () => {
 }
 
 export default AcademicCalender;
+
