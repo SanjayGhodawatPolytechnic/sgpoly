@@ -15,9 +15,9 @@ const PDFModal = ({url = "", closePDF}) => {
     }
 
     const loadPDF = () => {
-
+        // "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/files%2F393c1d8c-6dd6-4475-90bd-ef8e3384b9f8?alt=media&token=27da61ac-2325-404d-98a1-df4168366590"
         let data = {
-            pdfurl: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/files%2F393c1d8c-6dd6-4475-90bd-ef8e3384b9f8?alt=media&token=27da61ac-2325-404d-98a1-df4168366590"
+            pdfurl: url
         }
         
         fetch("http://localhost:3002/api/getPDF", {
@@ -30,7 +30,7 @@ const PDFModal = ({url = "", closePDF}) => {
         .then(async (res) => {
             let blb = await res.blob()
             let pdffile = new File([blb], "testfile.pdf");
-            console.log(pdffile);
+            // console.log(pdffile);
             setFile(pdffile)
         })
         .catch(err => {
@@ -38,9 +38,9 @@ const PDFModal = ({url = "", closePDF}) => {
         })
     }
 
-    useEffect(() => {
-        console.log(numPages)
-    }, [numPages])
+    // useEffect(() => {
+    //     console.log(numPages)
+    // }, [numPages])
     
     useEffect(() => {
         loadPDF();

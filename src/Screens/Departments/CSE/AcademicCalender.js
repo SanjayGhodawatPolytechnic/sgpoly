@@ -7,14 +7,55 @@ import NavLinks from './NavLinks';
 import { useState } from 'react';
 import "./CSS/academiccalender.css"
 import PDFModal from "../Reusables/PDFModal"
+import { useEffect } from 'react';
+import * as firebase from "firebase"
 // const PDFViewer = React.lazy(() => import("pdf-viewer-reactjs"))
 // const PDFModal = React.lazy(() => import("../Reusables/PDFModal"))
 
 const AcademicCalender = () => {
 
-    const [isPDFopen, setIsPDFopen] = useState(true)
-    const [currentlyOpenPDFURL, setCurrentlyopenPDFURL] = useState("https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/files%2F393c1d8c-6dd6-4475-90bd-ef8e3384b9f8?alt=media&token=27da61ac-2325-404d-98a1-df4168366590")
+    const [isPDFopen, setIsPDFopen] = useState(false)
+    const [currentlyOpenPDFURL, setCurrentlyopenPDFURL] = useState("")
+    const [MSBTECalendars, setMSBTECalendars] = useState([]);
+    const [instituteCalendars, setInstituteCalendars] = useState([]);
+    const [departmentCalendars, setDepartmentCalendars] = useState([]);
 
+    const getCalendar = async (dept) => {
+        const dbRef = firebase.database().ref("academic-calendar").child(dept);
+        dbRef.on("value", (datasnapshot) => {
+            if(datasnapshot.val()){
+                let result = Object.values(datasnapshot.val())
+                let msbte = result.filter(val => {
+                    return val.level === "MSBTE";
+                })
+                let institute = result.filter(val => {
+                    return val.level === "Institute";
+                })
+                let department = result.filter(val => {
+                    return val.level === "Department"
+                })
+                setMSBTECalendars(msbte);
+                setInstituteCalendars(institute);
+                setDepartmentCalendars(department);
+            }
+        })
+    
+    
+    }
+
+    useEffect(() => {
+        getCalendar("Computer Science")
+    }, [])
+
+    // useEffect(() => {
+    //     console.log(MSBTECalendars);
+    // }, [MSBTECalendars])
+    // useEffect(() => {
+    //     console.log(instituteCalendars);
+    // }, [instituteCalendars])
+    // useEffect(() => {
+    //     console.log(departmentCalendars);
+    // }, [departmentCalendars])
 
     const openPDF = (pdfURL) => {
         setCurrentlyopenPDFURL(pdfURL);
@@ -29,6 +70,44 @@ const AcademicCalender = () => {
         <Main className="container-lg">
             <div class="row">
                 <DeptMenu dept='Computer Science' subMenu={NavLinks} />
+                <div className="col-sm-8 col-lg-9 text-light">
+                    <div data-spy="scroll" className="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3"
+                    data-offset="0">
+                        <div className="row m-2">
+                        <h4 className="col-12 text-center text-dark"><b>MSBTE Calendars</b></h4>
+                            {MSBTECalendars.map((d,i) => (
+                                <div className="btn btn-info col-4 text-dark" key={i} onClick={e => {
+                                    setCurrentlyopenPDFURL(d.fileDownloadURL)
+                                    setIsPDFopen(true);
+                                }}>
+                                    Year: {d.year} Sem: {d.sem}
+                            </div>
+                            ))}
+                        </div>
+                        <div className="row m-2">
+                        <h4 className="col-12 text-center text-dark"><b>Institute Calendars</b></h4>
+                            {instituteCalendars.map((d,i) => (
+                                <div className="btn btn-info col-4 text-dark" key={i} onClick={e => {
+                                    setCurrentlyopenPDFURL(d.fileDownloadURL)
+                                    setIsPDFopen(true);
+                                }}>
+                                    Year: {d.year} Sem: {d.sem}
+                            </div>
+                            ))}
+                        </div>
+                        <div className="row m-2">
+                        <h4 className="col-12 text-center text-dark"><b>Department Calendars</b></h4>
+                            {departmentCalendars.map((d,i) => (
+                                <div className="btn btn-info col-4 text-dark" key={i} onClick={e => {
+                                    setCurrentlyopenPDFURL(d.fileDownloadURL)
+                                    setIsPDFopen(true);
+                                }}>
+                                    Year: {d.year} Sem: {d.sem}
+                            </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
                 {isPDFopen && (<PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />)}
             </div>
         </Main>
