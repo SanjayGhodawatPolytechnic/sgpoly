@@ -20,7 +20,7 @@ const PDFModal = ({url = "", closePDF}) => {
             pdfurl: url
         }
         
-        fetch("http://localhost:3002/api/getPDF", {
+        fetch("https://sgpbackend.herokuapp.com/api/getPDF", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

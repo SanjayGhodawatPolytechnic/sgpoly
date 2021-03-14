@@ -497,7 +497,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/contact" className="a">
                       Contact Form
                     </Link>
                   </li>

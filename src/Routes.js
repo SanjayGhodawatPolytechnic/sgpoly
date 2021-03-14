@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Screens/Home/Home";
-import Login from "./Admin/login";
 import LocationMap from "./Screens/Contact/Map";
 import aboutLogo from "./Screens/About/logo";
 import aboutSGP from "./Screens/About/sgp";
@@ -33,19 +32,13 @@ import ground from "./Screens/Facilities/ground";
 import tennis from "./Screens/Facilities/tennis";
 import more from "./Screens/Facilities/more";
 import * as firebase from "firebase";
-import Dashboard from "./Admin/Dashboard";
-import AdminRoute from "./Admin/auth/AdminRoutes";
 import Activities from "./Screens/Departments/CSE/Activities";
 import SocialResponsiblities from "./Screens/About/SocialResponsiblities";
 import ImageGal from "./Screens/About/components/ImageGallery";
 import MoreUpdates from "./ReusableComponents/MoreUpdates";
 import secretary from "./Screens/Management/secretary";
 import trustee from "./Screens/Management/trustee";
-import AddStaffMember from "./Admin/screens/AddStaffMember";
-import AddStory from "./Admin/screens/AddStory";
-import AddContact from "./Admin/screens/contact";
 import StudentHome from "./Screens/Student/home";
-import ManageHighlights from "./Admin/screens/ManageHighlights";
 import ComputerScience from "./Screens/Departments/CSE/ComputerScience";
 import HODDesk from "./Screens/Departments/CSE/HODDesk";
 import VisionMission from "./Screens/Departments/CSE/VisionMission";
@@ -54,13 +47,8 @@ import StaffProfile from "./Screens/Departments/CSE/StaffProfile";
 import TechnicalStaff from "./Screens/Departments/CSE/TechnicalStaff";
 import Suggest from "./Screens/Extra/Suggest";
 import Laboratories from "./Screens/Departments/CSE/Laboratories";
-import ManageAchivements from "./Admin/screens/ManageAchivements";
-import SuggestAdmin from "./Admin/screens/suggest";
-import ContactNumber from "./Admin/screens/contactnum";
-import Studpics from "./Admin/screens/Studpics";
 import Uploadimage from "./Screens/Student/uploadimage";
 import Achivements from "./Screens/Departments/CSE/Achivements";
-import ManageActivities from "./Admin/screens/ManageActivities";
 import ElectronicsNTC from "./Screens/Departments/ETC/ElectronicsNTC"
 import ETCHODDesk from "./Screens/Departments/ETC/ETCHODDesk";
 import ETCVisionMission from "./Screens/Departments/ETC/ETCVisionMission";
@@ -74,6 +62,8 @@ import ETCTechStaff from "./Screens/Departments/ETC/ETCTechStaff";
 import Mechanical from "./Screens/Departments/MECH/Mechanical";
 import MechHODDesk from "./Screens/Departments/MECH/MechHODDesk";
 import AcademicCalender from "./Screens/Departments/CSE/AcademicCalender";
+import NotFound from "./ReusableComponents/NotFound";
+import AddContact from "./Screens/Contact/Contact";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -239,8 +229,12 @@ const Routes = () => {
 
         <Route path="/contact" exact component={AddContact} />
 
+
+
+        <Route component={NotFound} />
+
         {/*============================ Admin Routes goes here =====================*/}
-        <AdminRoute path="/admin" exact component={Dashboard} />
+        {/* <AdminRoute path="/admin" exact component={Dashboard} />
         <AdminRoute path="/admin/add/staff" exact component={AddStaffMember} />
         <AdminRoute path="/admin/add/story" exact component={AddStory} />
         <AdminRoute
@@ -259,7 +253,7 @@ const Routes = () => {
         <Route path="/admin/signin" exact component={Login} />
         <AdminRoute path="/admin/suggest" exact component={SuggestAdmin} />
         <AdminRoute path="/admin/contact" exact component={ContactNumber} />
-        <AdminRoute path="/admin/studpics" exact component={Studpics} />
+        <AdminRoute path="/admin/studpics" exact component={Studpics} /> */}
       </Switch>
     </BrowserRouter>
   );

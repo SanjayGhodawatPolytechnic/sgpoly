@@ -3,7 +3,8 @@ import Main from "../../ReusableComponents/Main";
 import * as firebase from "firebase";
 import "./CSS/Contact.css";
 
-const ABCContact = () => {
+
+const AddContact = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -94,4 +95,4 @@ const ABCContact = () => {
   );
 };
 
-export default ABCContact;
+export default AddContact;
