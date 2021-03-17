@@ -2,28 +2,53 @@ import React from "react";
 import Main from "../../ReusableComponents/Main";
 import * as firebase from "firebase";
 import "./CSS/Contact.css";
+import { useState } from "react";
 
 
 const AddContact = () => {
+
+  const [data, setData] = useState({
+    name: "",
+    phone: null,
+    email: ""
+  })
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    var name = document.querySelector("#contactName").value;
-
-    var phno = document.querySelector("#contactNumber").value;
-
     const dbReference = firebase.database().ref("contact");
 
-    var data = {
-      name: name,
-      phno: phno,
-    };
+    // var d = {
+    //   name: data.name,
+    //   phno: data.phone,
+    //   email: data.email
+    // };
 
     await dbReference.push(data, (err) => {
       if (!err) {
-        console.log("LOL");
+        console.log("uploaded");
+        setData({
+          name: "",
+          phone: "",
+          email: ""
+        })
       }
-    });
+    })
+    .then(() => {
+      fetch("https://sgpbackend.herokuapp.com/mail/sendGreetings", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then((res) => {
+          console.log(res);
+
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    })
   };
 
   return (
@@ -54,6 +79,10 @@ const AddContact = () => {
                       id="contactName"
                       placeholder="Name"
                       name="fname"
+                      onChange={e => {
+                        setData({...data, name: e.target.value})
+                      }}
+                      value={data.name}
                     />
                   </div>
                 </div>
@@ -69,6 +98,28 @@ const AddContact = () => {
                       id="contactNumber"
                       placeholder="Phone Number"
                       name="fname"
+                      onChange={e => {
+                        setData({...data, phone: e.target.value})
+                      }}
+                      value={data.phone}
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="control-label col-sm-2" htmlFor="comment">
+                    Email.
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="contactNumber"
+                      placeholder="Phone Number"
+                      name="fname"
+                      onChange={e => {
+                        setData({...data, email: e.target.value})
+                      }}
+                      value={data.email}
                     />
                   </div>
                 </div>
@@ -78,6 +129,7 @@ const AddContact = () => {
                       type="submit"
                       className="btn btn-default"
                       onClick={(e) => {
+                        // console.log(data);
                         onSubmit(e);
                       }}
                     >
