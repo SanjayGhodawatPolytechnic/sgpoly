@@ -1,13 +1,16 @@
-.givmargin{
-    margin: 0 30px;
+.givmargin {
+  margin: 0 30px;
 }
 
-@media (max-width: 991px){
-    .givmargin{
-        margin: 0 10px;
-    }
+@media (max-width: 991px) {
+  .givmargin {
+    margin: 0 10px;
+  }
 }
 
-.update-img{
-    position: relative;
+.update-img {
+  position: relative;
+}
+.folll {
+  overflow: hidden;
 }
