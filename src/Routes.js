@@ -64,6 +64,7 @@ import MechHODDesk from "./Screens/Departments/MECH/MechHODDesk";
 import AcademicCalender from "./Screens/Departments/CSE/AcademicCalender";
 import NotFound from "./ReusableComponents/NotFound";
 import AddContact from "./Screens/Contact/Contact";
+import AcademicCalendars from "./Screens/Academics/Academic Calendar/AcademicCalendars";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -149,6 +150,12 @@ const Routes = () => {
           component={managementDirectors}
         />
         <Route path="/management/govern" exact component={managementGovern} />
+
+        {/* --------------------Academics------------------------------------------------*/}
+        <Route path="/academics/calendars" exact component={AcademicCalendars} />
+        
+
+
 
         {/* --------------------Departments------------------------------------------------*/}
         {/* --------------------CSE------------------------------------------------*/}

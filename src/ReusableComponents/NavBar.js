@@ -167,7 +167,7 @@ const NavBar = () => {
                 <Link className="a">ACADEMICS</Link>
                 <ul>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/academics/calendars" className="a">
                       Academic Calendar
                     </Link>
                   </li>

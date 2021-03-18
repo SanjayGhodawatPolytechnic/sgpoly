@@ -6,7 +6,7 @@ import NavLinks from './NavLinks';
 // import PDFViewer from 'pdf-viewer-reactjs'
 import { useState } from 'react';
 import "./CSS/academiccalender.css"
-import PDFModal from "../Reusables/PDFModal"
+import PDFModal from "../../../ReusableComponents/PDFModal"
 import { useEffect } from 'react';
 import * as firebase from "firebase"
 // const PDFViewer = React.lazy(() => import("pdf-viewer-reactjs"))
