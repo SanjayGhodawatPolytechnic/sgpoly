@@ -11,7 +11,7 @@ import Counter from "./components/Counter";
 import Recents from "./components/Recents";
 import Carousel from "./components/Carousel";
 import Imp from "./components/Imp";
-import Testimo from "./components/Testimo";
+// import Testimo from "./components/Testimo";
 
 function Home() {
   return (
@@ -88,7 +88,7 @@ function Home() {
           ></iframe>
         </div>
 
-        <Testimo />
+        {/* <Testimo /> */}
       </div>
     </Main>
   );
