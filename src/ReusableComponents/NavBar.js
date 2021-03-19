@@ -85,11 +85,6 @@ const NavBar = () => {
                       Social Responsibilities
                     </Link>
                   </li>
-                  <li>
-                    <Link to="" className="a">
-                      Why SGP ?
-                    </Link>
-                  </li>
                 </ul>
               </li>
 

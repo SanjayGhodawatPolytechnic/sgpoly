@@ -14,7 +14,7 @@ function aboutLogo() {
               <br />
               <img
                 src={"http://www.sgipolytechnic.in/pics/Logo1.png"}
-                className="card-img"
+                className="card-img abtlogo"
                 alt="..."
               />
             </div>
