@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+const _ = require("lodash");
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const PDFModal = ({url = "", closePDF}) => {
@@ -9,6 +10,7 @@ const PDFModal = ({url = "", closePDF}) => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [file, setFile] = useState(null)
+    const [pageWidth, setPageWidth] = useState(null)
   
     function onDocumentLoadSuccess({ numPages }) {
       setNumPages(numPages);
@@ -41,17 +43,24 @@ const PDFModal = ({url = "", closePDF}) => {
     // useEffect(() => {
     //     console.log(numPages)
     // }, [numPages])
+
+    const setWidth = () => {
+        let ele = document.getElementById("pdf-container");
+        setPageWidth(ele && ele.getBoundingClientRect().width);
+    }
     
     useEffect(() => {
         loadPDF();
+        setWidth();
     }, [])
 return (
     <div className="pdf-modal" onClick={closePDF}>
-        <div className="close-btn" onClick={closePDF}><i aria-hidden="true" className="fas fa-times-circle fa-2x"></i></div>
+        <div className="close-btn" onClick={(e) => {
+            closePDF();
+            e.stopPropagation();
+        }}><i aria-hidden="true" className="fas fa-times-circle fa-2x"></i></div>
         {file && (
-            <div className="container p-0 d-flex justify-content-center align-items-center" onClick={e => {
-                e.stopPropagation();
-            }}>     
+            <div className="container p-0 d-flex justify-content-center align-items-center" id="pdf-container" >     
                     <Document
                         file={file}
                         onLoadSuccess={onDocumentLoadSuccess}
@@ -59,9 +68,10 @@ return (
                             console.log(err)
                         }}
                     >
-                        <Page pageNumber={pageNumber} className="w-100"/>
+                        {_.times(numPages, i => (
+                            <Page width={pageWidth && pageWidth} pageNumber={i+1} className="w-100 mt-3 mb-3 ml-2 " renderTextLayer={false} renderInteractiveForms={false} />
+                        ))}
                     </Document>
-                    <p>Page {pageNumber} of {numPages}</p>
                 </div>
         )}
     </div>

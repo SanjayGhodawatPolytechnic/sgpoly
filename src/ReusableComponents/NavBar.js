@@ -2,14 +2,29 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CSS/NavBar.css";
+import PDFModal from "./PDFModal";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
 
+  const [isPDFopen, setIsPDFopen] = useState(false)
+  const [currentlyOpenPDFURL, setCurrentlyopenPDFURL] = useState("")
+
+  const closePDF = () => {
+    setIsPDFopen(false);
+    setCurrentlyopenPDFURL("");
+  }
+
+  const openPDF = (url) => {
+    setCurrentlyopenPDFURL(url);
+    setIsPDFopen(true);
+  }
+
   return (
     <div>
       <header>
+        {isPDFopen && (<PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />)}
         <div className="contains">
           <div className="logo">LOGO</div>
           <nav className={isOpen ? "active" : ""}>
@@ -177,12 +192,16 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link onClick={() => {
+                      openPDF("https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FantiraggingAct.pdf?alt=media&token=b60fbc30-3821-4b27-88ec-d665d7aba92c")
+                    }} className="a">
                       Ragging Act 1999
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link onClick={() => {
+                      openPDF("https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2Fanticapitationfee.pdf?alt=media&token=cd64d6f8-c1f4-4f10-ab97-0791e2727677")
+                    }} className="a">
                       Capitation Fee Act 1987
                     </Link>
                   </li>
