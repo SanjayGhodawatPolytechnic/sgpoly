@@ -27,7 +27,7 @@ function Home() {
       <br />
       <br />
       <br />
-      <div className="container-sm text-center">
+      <div className="container-sm text-center ">
         <h1 className="text-dark" style={{ fontSize: 40 }}>
           COURSES
         </h1>
@@ -87,9 +87,9 @@ function Home() {
             src="https://www.youtube.com/embed/tgbNymZ7vqY"
           ></iframe>
         </div>
-
-        <Testimo />
       </div>
+
+      <Testimo />
     </Main>
   );
 }

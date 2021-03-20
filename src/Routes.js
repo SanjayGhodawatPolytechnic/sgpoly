@@ -49,13 +49,13 @@ import Suggest from "./Screens/Extra/Suggest";
 import Laboratories from "./Screens/Departments/CSE/Laboratories";
 import Uploadimage from "./Screens/Student/uploadimage";
 import Achivements from "./Screens/Departments/CSE/Achivements";
-import ElectronicsNTC from "./Screens/Departments/ETC/ElectronicsNTC"
+import ElectronicsNTC from "./Screens/Departments/ETC/ElectronicsNTC";
 import ETCHODDesk from "./Screens/Departments/ETC/ETCHODDesk";
 import ETCVisionMission from "./Screens/Departments/ETC/ETCVisionMission";
 import ETCOutcomes from "./Screens/Departments/ETC/ETCOutcomes";
 import { useState } from "react";
-import "./Routes.css"
-import img from "./ReusableComponents/CSS/sguni.jpg"
+import "./Routes.css";
+import img from "./ReusableComponents/CSS/sguni.jpg";
 import AboutActivities from "./Screens/About/Activities";
 import ETCStaffProfile from "./Screens/Departments/ETC/ETCStaffProfile";
 import ETCTechStaff from "./Screens/Departments/ETC/ETCTechStaff";
@@ -65,6 +65,7 @@ import AcademicCalender from "./Screens/Departments/CSE/AcademicCalender";
 import NotFound from "./ReusableComponents/NotFound";
 import AddContact from "./Screens/Contact/Contact";
 import AcademicCalendars from "./Screens/Academics/Academic Calendar/AcademicCalendars";
+import Comittee from "./Screens/Academics/Comittee";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -80,28 +81,35 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const Routes = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true)
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const closeModal = () => {
     setIsModalOpen(false);
-  }
-  
+  };
+
   return (
     <BrowserRouter>
-          <div className={isModalOpen ? "modal" : "modal closed-modal"} id="modal" onClick={e => {
-            setIsModalOpen(false)
-          }}>
-            <div class="modal-content" onClick={e => {
-              e.stopPropagation();
-            }}>
-              
-            <div className="close-btn" onClick={closeModal}><i aria-hidden="true" className="fas fa-times-circle fa-2x"></i></div>
-              <img src={img} alt="modal" className="modal-img img-fluid" />
-            </div>
+      <div
+        className={isModalOpen ? "modal" : "modal closed-modal"}
+        id="modal"
+        onClick={(e) => {
+          setIsModalOpen(false);
+        }}
+      >
+        <div
+          class="modal-content"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <div className="close-btn" onClick={closeModal}>
+            <i aria-hidden="true" className="fas fa-times-circle fa-2x"></i>
           </div>
+          <img src={img} alt="modal" className="modal-img img-fluid" />
+        </div>
+      </div>
       <Switch>
         <Route path="/" exact component={Home} />
-
 
         {/* =================================Student routes=============================== */}
         <Route path="/students" exact component={StudentHome} />
@@ -152,14 +160,14 @@ const Routes = () => {
         <Route path="/management/govern" exact component={managementGovern} />
 
         {/* --------------------Academics------------------------------------------------*/}
-        <Route path="/academics/calendars" exact component={AcademicCalendars} />
-        
-
-
+        <Route
+          path="/academics/calendars"
+          exact
+          component={AcademicCalendars}
+        />
 
         {/* --------------------Departments------------------------------------------------*/}
         {/* --------------------CSE------------------------------------------------*/}
-
 
         <Route path="/department/cse" exact component={ComputerScience} />
         <Route path="/department/cse/hoddesk" exact component={HODDesk} />
@@ -180,23 +188,42 @@ const Routes = () => {
           component={TechnicalStaff}
         />
         <Route path="/department/cse/labs" exact component={Laboratories} />
-        <Route path="/department/cse/achivements" exact component={Achivements} />
+        <Route
+          path="/department/cse/achivements"
+          exact
+          component={Achivements}
+        />
         <Route path="/department/cse/activities" exact component={Activities} />
-        <Route path="/department/cse/academic-calender" exact component={AcademicCalender} />
+        <Route
+          path="/department/cse/academic-calender"
+          exact
+          component={AcademicCalender}
+        />
 
-        
         {/* --------------------E & TC------------------------------------------------*/}
         <Route path="/department/entc" exact component={ElectronicsNTC} />
         <Route path="/department/entc/hoddesk" exact component={ETCHODDesk} />
-        <Route path="/department/entc/vision-mission" exact component={ETCVisionMission} />
+        <Route
+          path="/department/entc/vision-mission"
+          exact
+          component={ETCVisionMission}
+        />
         <Route path="/department/entc/outcomes" exact component={ETCOutcomes} />
-        <Route path="/department/entc/teaching-staff" exact component={ETCStaffProfile} />
-        <Route path="/department/entc/teacnical-staff" exact component={ETCTechStaff} />
+        <Route
+          path="/department/entc/teaching-staff"
+          exact
+          component={ETCStaffProfile}
+        />
+        <Route
+          path="/department/entc/teacnical-staff"
+          exact
+          component={ETCTechStaff}
+        />
 
         {/* --------------------MECH------------------------------------------------*/}
         <Route path="/department/mech" exact component={Mechanical} />
         <Route path="/department/mech/hoddesk" exact component={MechHODDesk} />
-        
+
         {/* --------------------CIVIL------------------------------------------------*/}
         {/* --------------------ELECTRICAL------------------------------------------------*/}
 
@@ -236,7 +263,7 @@ const Routes = () => {
 
         <Route path="/contact" exact component={AddContact} />
 
-
+        <Route path="/academics/comittee" exact component={Comittee} />
 
         <Route component={NotFound} />
 
