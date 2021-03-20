@@ -8,6 +8,21 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const Testimo = () => {
+  const [data, setData] = useState([]);
+
+  const getalltesti = () => {
+    const dbref = firebase.database().ref("testimonials");
+    dbref.on("value", (datasnapshot) => {
+      if (datasnapshot.val()) {
+        let result = Object.values(datasnapshot.val());
+        setData(result);
+        console.log(result);
+      }
+    });
+  };
+  useEffect(() => {
+    getalltesti();
+  }, []);
   return (
     <div className="container mt-4">
       <div className="training-title">
@@ -16,45 +31,28 @@ const Testimo = () => {
       </div>
       <div id="demo" className="carousel slide" data-ride="carousel">
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <div className="carousel-caption">
-              <p>
-                If Shai Reznik's TDD videos don't convince you to add automated
-                testing your code, I don't know what will.This was the very best
-                explanation of frameworks for brginners that I've ever seen.{" "}
-              </p>{" "}
-              <img src="https://i.imgur.com/lE89Aey.jpg" />
-              <div id="image-caption">Nick Doe</div>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <div className="carousel-caption">
-              <p>
-                If Shai Reznik's TDD videos don't convince you to add automated
-                testing your code, I don't know what will.This was the very best
-                explanation of frameworks for brginners that I've ever seen.
-              </p>{" "}
-              <img
-                src="https://i.imgur.com/QptVdsp.jpg"
-                className="img-fluid"
-              />
-              <div id="image-caption">Cromption Greves</div>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <div className="carousel-caption">
-              <p>
-                If Shai Reznik's TDD videos don't convince you to add automated
-                testing your code, I don't know what will.This was the very best
-                explanation of frameworks for brginners that I've ever seen.
-              </p>{" "}
-              <img
-                src="https://i.imgur.com/jQWThIn.jpg"
-                className="img-fluid"
-              />
-              <div id="image-caption">Harry Mon</div>
-            </div>
-          </div>
+          {data.map((d, i) => {
+            if (i == 0) {
+              return (
+                <div className="carousel-item active">
+                  <div className="carousel-caption">
+                    <p>{data[0] && data[0].message}</p>{" "}
+                    <img src={data[0] && data[0].FileURL} />
+                    <div id="image-caption">{data[0] && data[0].name}</div>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <div className="carousel-item">
+                <div className="carousel-caption">
+                  <p>{d.message}</p>
+                  <img src={d.FileURL} className="img-fluid" />
+                  <div id="image-caption">{d.name}</div>
+                </div>
+              </div>
+            );
+          })}
         </div>{" "}
         <a className="carousel-control-prev" href="#demo" data-slide="prev">
           {" "}
