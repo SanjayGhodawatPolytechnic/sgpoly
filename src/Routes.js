@@ -64,6 +64,8 @@ import MechHODDesk from "./Screens/Departments/MECH/MechHODDesk";
 import AcademicCalender from "./Screens/Departments/CSE/AcademicCalender";
 import NotFound from "./ReusableComponents/NotFound";
 import AddContact from "./Screens/Contact/Contact";
+import Administrative from "./Screens/Contact/Administrative";
+import Admissioncell from "./Screens/Contact/Admissioncell";
 import AcademicCalendars from "./Screens/Academics/Academic Calendar/AcademicCalendars";
 import Comittee from "./Screens/Academics/Comittee";
 var firebaseConfig = {
@@ -260,6 +262,12 @@ const Routes = () => {
         <Route path="/updates/viewmore" exact component={MoreUpdates} />
 
         <Route path="/contact/map" exact component={LocationMap} />
+        <Route path="/contact/admissioncell" exact component={Admissioncell} />
+        <Route
+          path="/contact/administrative"
+          exact
+          component={Administrative}
+        />
 
         <Route path="/contact" exact component={AddContact} />
 

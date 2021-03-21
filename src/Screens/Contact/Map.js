@@ -1,34 +1,42 @@
-import React from 'react';
-import Main from '../../ReusableComponents/Main';
+import React from "react";
 
-import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
-const Map = ReactMapboxGl({
-    accessToken:
-    'pk.eyJ1IjoieWFzaDEwIiwiYSI6ImNrYnRiaXQwMTA4ZzMzNW42ZnpnamVyZnkifQ.3QjWS75fymRHz312BZWWiQ'
-  });
-var DeviceWidth = window.innerWidth;
-var DeviceHeight = window.innerHeight
-    
+import Main from "../../ReusableComponents/Main";
+import "./CSS/Map.css";
+import GoogleMapReact from "google-map-react";
+import { Component } from "react";
 
-function LocationMap() {
-    
-  return (
-      <Main className="">          
-            <Map
-            containerStyle={{
-                height: DeviceHeight-2,
-                width: DeviceWidth-2,
-                marginRight:20
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+class LocationMap extends Component {
+  static defaultProps = {
+    center: {
+      lat: 59.95,
+      lng: 30.33,
+    },
+    zoom: 11,
+  };
+
+  render() {
+    return (
+      <Main className="">
+        <div style={{ height: "100vh", width: "100%" }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: "AIzaSyBDc_OHT3xT5S8s60dwPr6I1hqs_wvVp_E",
             }}
-            center={[74.381733, 16.742249]}
-            zoom={[14]}
-            >                            
-            <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
-                <Feature coordinates={[ 74.381733, 16.742249]} />
-            </Layer>            
-            </Map>        
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}
+          >
+            <AnyReactComponent
+              lat={16.742907}
+              lng={74.38317}
+              text="Sanjay ghodawat polytechnic"
+            />
+          </GoogleMapReact>
+        </div>
       </Main>
-  );
+    );
+  }
 }
 
 export default LocationMap;
