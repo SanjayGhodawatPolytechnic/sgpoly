@@ -3,6 +3,8 @@ import Main from "../../ReusableComponents/Main";
 import * as firebase from "firebase";
 import "./CSS/Contact.css";
 import { useState } from "react";
+import LocationMap from "./Map";
+
 
 
 const AddContact = () => {
@@ -127,7 +129,7 @@ const AddContact = () => {
                   <div className="col-sm-offset-2 col-sm-10">
                     <button
                       type="submit"
-                      className="btn btn-default"
+                      className="btn btn-default w-100"
                       onClick={(e) => {
                         // console.log(data);
                         onSubmit(e);
@@ -141,6 +143,42 @@ const AddContact = () => {
             </div>
           </div>
         </div>
+
+        <div className="row cont">
+          <div className="col-md-6 w-100">
+            <LocationMap />
+          </div>
+          <div className="col-md-6 w-100 address">
+            <div className="data">
+                <div className="address-data">
+                  <div className="add-title">
+                    <i class="fa fa-map-marker mr-4" aria-hidden="true"></i>Address
+                  </div>
+                  <div className="add-desc p-4">
+                  {"    "}Atigre, 416118, Maharatra
+                  </div>
+                </div>
+                <div className="address-data">
+                  <div className="add-title">
+                  <i class="fa fa-phone mr-4" aria-hidden="true"></i>Lets Talk
+                  </div>
+                  <div className="add-desc p-4 text-success">
+                  0230 - 2463800
+                  </div>
+                </div>
+                <div className="address-data">
+                  <div className="add-title">
+                  <i class="fa fa-envelope-o mr-4" aria-hidden="true"></i>General Support
+                  </div>
+                  <div className="add-desc p-4 text-success">
+                  principal@sgipolytechnic.in
+                  </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+
 
       </Main>
     </div>
