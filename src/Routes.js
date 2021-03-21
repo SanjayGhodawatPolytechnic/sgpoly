@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Screens/Home/Home";
-import LocationMap from "./Screens/Contact/Map";
 import aboutLogo from "./Screens/About/logo";
 import aboutSGP from "./Screens/About/sgp";
 import aboutPhilosophy from "./Screens/About/philosophy";
@@ -259,9 +258,9 @@ const Routes = () => {
         {/* --------------------cbbbdbtbc------------------------------------------------*/}
 
         <Route path="/images" exact component={ImageGal} />
-        <Route path="/updates/viewmore" exact component={MoreUpdates} />
 
-        <Route path="/contact/map" exact component={LocationMap} />
+        
+        <Route path="/updates/viewmore" exact component={MoreUpdates} />
         <Route path="/contact/admissioncell" exact component={Admissioncell} />
         <Route
           path="/contact/administrative"
