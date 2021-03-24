@@ -485,49 +485,9 @@ const NavBar = () => {
                   }
                 }}
               >
-                <Link className="a">CONTACT</Link>
-                <ul className="contact-links">
-                  <li>
-                    <Link to="/contact/map" className="a">
-                      Location Map
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Principal
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact/administrative" className="a">
-                      Administrative Department
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact/admissioncell" className="a">
-                      Admission Cell
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Head of Departments
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      IT Cell
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Transport Department
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" className="a">
-                      Contact Form
-                    </Link>
-                  </li>
-                </ul>
+                <Link to="/contact" className="a">
+                  CONTACT
+                </Link>
               </li>
             </ul>
           </nav>

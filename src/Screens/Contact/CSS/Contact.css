@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@300&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
 .contact {
   padding: 4%;
   /* height: 400px; */
@@ -13,12 +16,17 @@
 }
 .contact-info {
   margin-top: 10%;
+  overflow: hidden;
 }
 .contact-info img {
   margin-bottom: 15%;
 }
 .contact-info h2 {
   margin-bottom: 10%;
+  overflow: hidden;
+}
+.contact-info h4 {
+  overflow: hidden;
 }
 .col-md-9 {
   background: #fff;
@@ -41,8 +49,7 @@
 
 /* MAP CSS ********************* */
 
-
-.cont{
+.cont {
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,7 +61,7 @@
 }
 
 .address {
-  background: url('../../../img/contact.jpg');
+  background: url("../../../img/contact.jpg");
   background-size: cover;
   padding: 8% 8%;
   z-index: 2;
@@ -69,7 +76,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 992px) {
@@ -88,13 +95,13 @@
   color: #fff;
   margin-bottom: 8%;
 }
-.add-title{
+.add-title {
   font-size: 150%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 1%;
 }
-.add-desc{
+.add-desc {
   font-size: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #c2c2c2;
 }
