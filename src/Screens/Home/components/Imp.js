@@ -35,7 +35,7 @@ const Imp = () => {
             className="news-card__image"
           />
           <div className="news-card__text-wrapper">
-            <h2 className="news-card__title">Mr. Vinek Bhosale</h2>
+            <h2 className="news-card__title">Mr. Vinayak Bhosale</h2>
             <div className="news-card__post-date">Trustee</div>
             <div className="news-card__details-wrapper">
               <p className="news-card__excerpt">

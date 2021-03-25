@@ -10,18 +10,18 @@ import * as firebase from "firebase";
 import { useState, useEffect } from "react";
 
 const Counter = () => {
-  const [data, setData] = useState({
-    studentThisYear: 0,
-    passedStudents: 0,
-    certifiedTeachers: 0,
-  });
+  const [data, setData] = useState(null);
 
   const getCounter = () => {
     const dbref = firebase.database().ref("counterVal");
     dbref.on("value", (datasnapshot) => {
       if (datasnapshot.val()) {
         let result = datasnapshot.val();
-        setData(result);
+        setData({
+          studentThisYear: parseInt(result.studentThisYear),
+          passedStudents: parseInt(result.passedStudents),
+          certifiedTeachers: parseInt(result.certifiedTeachers),
+        });
         console.log(result);
       }
     });
@@ -42,7 +42,8 @@ const Counter = () => {
                 <span className="icon w-100 h-100">
                   <ThisYear />
                 </span>
-                <CountUp
+                {data && (
+                  <CountUp
                   className="fh5co-counter js-counter"
                   end={data.studentThisYear}
                   redraw={true}
@@ -56,15 +57,17 @@ const Counter = () => {
                     </ReactVisibilitySensor>
                   )}
                 </CountUp>
+                )}
                 <span className="fh5co-counter-label">Students This Year</span>
               </div>
               <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
                 <span className="icon w-100 h-100">
                   <PassedIcon />
                 </span>
-                <CountUp
+                {data && (
+                  <CountUp
                   className="fh5co-counter js-counter"
-                  end={100}
+                  end={data.passedStudents}
                   redraw={true}
                 >
                   {({ countUpRef, start }) => (
@@ -76,15 +79,17 @@ const Counter = () => {
                     </ReactVisibilitySensor>
                   )}
                 </CountUp>
+                )}
                 <span className="fh5co-counter-label">Passed Students</span>
               </div>
               <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
                 <span className="icon w-100 h-100">
                   <TeacherIcon />
                 </span>
-                <CountUp
+                {data && (
+                  <CountUp
                   className="fh5co-counter js-counter"
-                  end={100}
+                  end={data.certifiedTeachers}
                   redraw={true}
                 >
                   {({ countUpRef, start }) => (
@@ -96,6 +101,7 @@ const Counter = () => {
                     </ReactVisibilitySensor>
                   )}
                 </CountUp>
+                )}
                 <span className="fh5co-counter-label">Certified Teachers</span>
               </div>
             </div>
