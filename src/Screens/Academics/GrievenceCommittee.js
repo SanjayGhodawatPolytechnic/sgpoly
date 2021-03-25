@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import CommitteeMenu from "./Menus/CommitteeMenu";
 import NavLinks from "./Menus/CommitteeNavLinks";
 
-const Comittee = () => {
+const Grievence = () => {
   const [data, setData] = useState(null);
 
   const getComittee = () => {
@@ -18,7 +18,7 @@ const Comittee = () => {
         // console.log(result[0].committeeMembers);
         var finalData;
         result.forEach((d, i) => {
-          if (d.committeeName === "Anti Ragging Committee") {
+          if (d.committeeName === "Grievence Redressal") {
             finalData = d;
           }
         });
@@ -54,8 +54,9 @@ const Comittee = () => {
                   </h5>
                   <p class="card-text">
                     The {data && data.committeeName} is constituted for the
-                    academic year {data && data.year}. The members of the
-                    committee are as follows -
+                    academic year
+                    {data && data.year}. The members of the committee are as
+                    follows -
                   </p>
 
                   <table class="table table-bordered m-2">
@@ -77,6 +78,41 @@ const Comittee = () => {
                         ))}
                     </tbody>
                   </table>
+                  <div class="card-footer text-muted">
+                    <p className="font-weight-bold text-dark">
+                      The Student Grievance Redressal Cell functions are :
+                    </p>
+                    <ul style={{ margin: "20px" }}>
+                      <li>
+                        Invite student's suggestions for improving theory and
+                        practical teaching performances.
+                      </li>
+                      <li>
+                        Take cognizance of the request made by students about
+                        the various facilities and implement solutions.
+                      </li>
+                      <li>
+                        To resolve any conflicts among the students and to
+                        maintain a conducive environment.
+                      </li>
+                      <li>
+                        Coordinates Counseling sessions to newly admitted
+                        students to deal with Stress and other problems faced.
+                      </li>
+                      <li>
+                        Monitor Student activities to prevent untoward
+                        incidents.
+                      </li>
+                      <li>
+                        Disobedient students are being identified and are
+                        counseled to be punctual
+                      </li>
+                      <li>
+                        To deal with any incidences involving students from time
+                        to time and report to the Principal for further action
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,4 +123,4 @@ const Comittee = () => {
   );
 };
 
-export default Comittee;
+export default Grievence;

@@ -68,6 +68,8 @@ import Admissioncell from "./Screens/Contact/Admissioncell";
 import AcademicCalendars from "./Screens/Academics/Academic Calendar/AcademicCalendars";
 import Comittee from "./Screens/Academics/Comittee";
 import VishakhaCell from "./Screens/Academics/VishakhaCell";
+import Atrocity from "./Screens/Academics/AtrocityCommittee";
+import Grievence from "./Screens/Academics/GrievenceCommittee";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -260,7 +262,6 @@ const Routes = () => {
 
         <Route path="/images" exact component={ImageGal} />
 
-        
         <Route path="/updates/viewmore" exact component={MoreUpdates} />
         <Route path="/contact/admissioncell" exact component={Admissioncell} />
         <Route
@@ -274,7 +275,21 @@ const Routes = () => {
         {/* =============Committee================ */}
 
         <Route path="/academics/committee" exact component={Comittee} />
-        <Route path="/academics/committee/vishakhacell" exact component={VishakhaCell} />
+        <Route
+          path="/academics/committee/grievence"
+          exact
+          component={Grievence}
+        />
+        <Route
+          path="/academics/committee/vishakhacell"
+          exact
+          component={VishakhaCell}
+        />
+        <Route
+          path="/academics/committee/atrocity"
+          exact
+          component={Atrocity}
+        />
 
         <Route component={NotFound} />
 

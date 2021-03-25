@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import CommitteeMenu from "./Menus/CommitteeMenu";
 import NavLinks from "./Menus/CommitteeNavLinks";
 
-const Comittee = () => {
+const Atrocity = () => {
   const [data, setData] = useState(null);
 
   const getComittee = () => {
@@ -18,7 +18,7 @@ const Comittee = () => {
         // console.log(result[0].committeeMembers);
         var finalData;
         result.forEach((d, i) => {
-          if (d.committeeName === "Anti Ragging Committee") {
+          if (d.committeeName === "Atrocity Committee") {
             finalData = d;
           }
         });
@@ -54,8 +54,18 @@ const Comittee = () => {
                   </h5>
                   <p class="card-text">
                     The {data && data.committeeName} is constituted for the
-                    academic year {data && data.year}. The members of the
-                    committee are as follows -
+                    academic year{data && data.year}. <br />
+                    <br />
+                    This is to inform you that as per AICTE directives, SC/ST
+                    (Prevention Of Atrocities) Cell has been formed in our
+                    college in the GB meeting of Academic year 2014-15. The
+                    staff members listed below are hereby appointed in the SC /
+                    ST (Prevention Of Atrocities) Cell for the academic year
+                    2018-19. They shall strictly follow the duties and
+                    responsibilities assigned to them as per AICTE norms with
+                    clear transparency.
+                    <br />
+                    <br /> The members of the committee are as follows -
                   </p>
 
                   <table class="table table-bordered m-2">
@@ -87,4 +97,4 @@ const Comittee = () => {
   );
 };
 
-export default Comittee;
+export default Atrocity;
