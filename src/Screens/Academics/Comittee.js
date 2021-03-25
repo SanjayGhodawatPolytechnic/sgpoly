@@ -4,20 +4,18 @@ import Main from "../../ReusableComponents/Main";
 import * as firebase from "firebase";
 import { useState } from "react";
 import { useEffect } from "react";
+import { result } from "lodash";
 
 const Comittee = () => {
   const [data, setData] = useState([]);
 
   const getComittee = () => {
-    const dbref = firebase.database().ref("committee");
+    const dbref = firebase.database().ref("committees");
     dbref.on("value", (datasnapshot) => {
       if (datasnapshot.val()) {
-        console.log(datasnapshot.val());
         let result = Object.values(datasnapshot.val());
-        console.log(result[0]);
-        setData(result[0]);
-      } else {
-        console.log("lol");
+        console.log(result[0].committeeMembers);
+        setData(result);
       }
     });
   };
@@ -25,64 +23,6 @@ const Comittee = () => {
     getComittee();
   }, []);
 
-  let ragging = [
-    {
-      name: "Mr. Giri Virat",
-      post: "Principal",
-    },
-    {
-      name: "Mr. Sitaram Dubal",
-      post: "Police Inspector",
-    },
-    {
-      name: "Mr. Babar Bal",
-      post: "Press Reporter",
-    },
-    {
-      name: "Mrs. R. S. Pujari",
-      post: "N.G.O.",
-    },
-    {
-      name: "Mr. M.B. Patil",
-      post: "Teaching Faculty",
-    },
-    {
-      name: "Mr. A. R. Paymal",
-      post: "Teaching Faculty",
-    },
-    {
-      name: "Mr. S.V. Chavan",
-      post: "Teaching Faculty",
-    },
-    {
-      name: "Mr. N. S. Jadhav",
-      post: "Teaching Faculty",
-    },
-    {
-      name: "Mr.T. M. Hingamire",
-      post: "Teaching Faculty",
-    },
-    {
-      name: "Mrs. A.A. Pawar",
-      post: "Rector - Girls Hostel",
-    },
-    {
-      name: "Mr. M.K. Sawant",
-      post: "Rector - Boys Hostel",
-    },
-    {
-      name: "Mr. Manik Kolavale",
-      post: "Parent",
-    },
-    {
-      name: "Mr. Manik Kolavale",
-      post: "Student",
-    },
-    {
-      name: "Miss. Amruta Desai",
-      post: "Student",
-    },
-  ];
   return (
     <Main isSlideShow={true}>
       <br />
@@ -107,11 +47,11 @@ const Comittee = () => {
                 </tr>
               </thead>
               <tbody>
-                {ragging.map((d, i) => (
+                {data[0].committeeMembers.map((d, i) => (
                   <tr>
                     <th scope="row">{i + 1}</th>
                     <td>{d.name}</td>
-                    <td>{d.post}</td>
+                    <td>{d.designation}</td>
                   </tr>
                 ))}
               </tbody>
