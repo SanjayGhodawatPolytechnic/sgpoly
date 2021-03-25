@@ -15,7 +15,7 @@ const Comittee = () => {
       if (datasnapshot.val()) {
         let result = Object.values(datasnapshot.val());
         console.log(result[0].committeeMembers);
-        setData(result);
+        setData(result[0].committeeMembers);
       }
     });
   };
@@ -47,7 +47,7 @@ const Comittee = () => {
                 </tr>
               </thead>
               <tbody>
-                {data[0].committeeMembers.map((d, i) => (
+                {data.map((d, i) => (
                   <tr>
                     <th scope="row">{i + 1}</th>
                     <td>{d.name}</td>
