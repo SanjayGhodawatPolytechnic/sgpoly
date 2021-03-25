@@ -1,7 +1,30 @@
 import React from "react";
 import Main from "../../ReusableComponents/Main";
 
+import * as firebase from "firebase";
+import { useState } from "react";
+import { useEffect } from "react";
+
 const Comittee = () => {
+  const [data, setData] = useState([]);
+
+  const getComittee = () => {
+    const dbref = firebase.database().ref("committee");
+    dbref.on("value", (datasnapshot) => {
+      if (datasnapshot.val()) {
+        console.log(datasnapshot.val());
+        let result = Object.values(datasnapshot.val());
+        console.log(result[0]);
+        setData(result[0]);
+      } else {
+        console.log("lol");
+      }
+    });
+  };
+  useEffect(() => {
+    getComittee();
+  }, []);
+
   let ragging = [
     {
       name: "Mr. Giri Virat",

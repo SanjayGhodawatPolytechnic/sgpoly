@@ -1,65 +1,66 @@
-
-
 /* ===============================Modal CSS==================================== */
 @keyframes modalo {
-    from {width: 0; height: 0;}
-    to {width: 100%; height: 100%;}
+  from {
+    width: 0;
+    height: 0;
   }
-  
-  
-  .modal{
-    
-    position: fixed; 
-    z-index: 20000; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.541);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation-name: modalo;
-    animation-duration: 0.2s;
-    animation-direction: alternate;
-    padding: 0;
+  to {
+    width: 100%;
+    height: 100%;
   }
-  
-  .closed-modal{
-    display: none;
-  }
-  
-  
-  .modal-content{
-    width: 80%;
-    height: 80%;
-    background: transparent;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
+}
 
-  .modal-img {
-    /* width: 80%;
+.modal {
+  position: fixed;
+  z-index: 20000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.541);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: modalo;
+  animation-duration: 0.2s;
+  animation-direction: alternate;
+  padding: 0;
+}
+
+.closed-modal {
+  display: none;
+}
+
+.modal-content {
+  width: 80%;
+  height: 80%;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  /* width: 80%;
     height: 100%;
     display: block; */
-  }
+}
 
-  @media only screen and (max-width: 700){
-    .modal-content {
-      top: 30%;
-      width: 80%;
-      height: 80%;
-    }
+@media only screen and (max-width: 700) {
+  .modal-content {
+    top: 30%;
+    width: 80%;
+    height: 80%;
   }
-  
-  .close-btn {
-    margin-right: 6px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    color: #fff;
-  }
+}
+
+.close-btn {
+  margin-top: 10px;
+  margin-right: 6px;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  color: #fff;
+}

@@ -16,7 +16,6 @@ const Testimo = () => {
       if (datasnapshot.val()) {
         let result = Object.values(datasnapshot.val());
         setData(result);
-        console.log(result);
       }
     });
   };
