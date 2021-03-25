@@ -6,7 +6,31 @@ import PassedIcon from "./icons/PassedIcon";
 import TeacherIcon from "./icons/TeacherIcon";
 import ThisYear from "./icons/ThisYear";
 
+import * as firebase from "firebase";
+import { useState, useEffect } from "react";
+
 const Counter = () => {
+  const [data, setData] = useState({
+    studentThisYear: 0,
+    passedStudents: 0,
+    certifiedTeachers: 0,
+  });
+
+  const getCounter = () => {
+    const dbref = firebase.database().ref("counterVal");
+    dbref.on("value", (datasnapshot) => {
+      if (datasnapshot.val()) {
+        let result = datasnapshot.val();
+        setData(result);
+        console.log(result);
+      }
+    });
+  };
+
+  useEffect(() => {
+    getCounter();
+  }, []);
+
   return (
     <div className="fh5co-counters" data-stellar-background-ratio="0.5">
       {/* <div className="overlay"></div> */}
@@ -20,7 +44,7 @@ const Counter = () => {
                 </span>
                 <CountUp
                   className="fh5co-counter js-counter"
-                  end={100}
+                  end={data.studentThisYear}
                   redraw={true}
                 >
                   {({ countUpRef, start }) => (
