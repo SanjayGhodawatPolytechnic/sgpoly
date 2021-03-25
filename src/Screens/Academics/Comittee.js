@@ -4,7 +4,6 @@ import Main from "../../ReusableComponents/Main";
 import * as firebase from "firebase";
 import { useState } from "react";
 import { useEffect } from "react";
-import { result } from "lodash";
 
 const Comittee = () => {
   const [data, setData] = useState([]);
@@ -15,7 +14,7 @@ const Comittee = () => {
       if (datasnapshot.val()) {
         let result = Object.values(datasnapshot.val());
         console.log(result[0].committeeMembers);
-        setData(result[0].committeeMembers);
+        setData(result);
       }
     });
   };
@@ -47,7 +46,7 @@ const Comittee = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.map((d, i) => (
+                {data[0] && data[0].committeeMembers.map((d, i) => (
                   <tr>
                     <th scope="row">{i + 1}</th>
                     <td>{d.name}</td>
