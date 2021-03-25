@@ -189,7 +189,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/academics/comittee" className="a">
+                    <Link to="/academics/committee" className="a">
                       Committees
                     </Link>
                   </li>

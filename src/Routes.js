@@ -67,6 +67,7 @@ import Administrative from "./Screens/Contact/Administrative";
 import Admissioncell from "./Screens/Contact/Admissioncell";
 import AcademicCalendars from "./Screens/Academics/Academic Calendar/AcademicCalendars";
 import Comittee from "./Screens/Academics/Comittee";
+import VishakhaCell from "./Screens/Academics/VishakhaCell";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -270,7 +271,10 @@ const Routes = () => {
 
         <Route path="/contact" exact component={AddContact} />
 
-        <Route path="/academics/comittee" exact component={Comittee} />
+        {/* =============Committee================ */}
+
+        <Route path="/academics/committee" exact component={Comittee} />
+        <Route path="/academics/committee/vishakhacell" exact component={VishakhaCell} />
 
         <Route component={NotFound} />
 

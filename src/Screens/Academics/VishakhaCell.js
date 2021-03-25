@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import CommitteeMenu from "./Menus/CommitteeMenu";
 import NavLinks from "./Menus/CommitteeNavLinks";
 
-const Comittee = () => {
+const VishakhaCell = () => {
   const [data, setData] = useState(null);
 
   const getComittee = () => {
@@ -48,7 +48,7 @@ const Comittee = () => {
           <div class="card-body">
             <h5 class="card-title">{data && data.committeeName}</h5>
             <p class="card-text">
-              The {data && data.committeeName} is constituted for the academic year{" "}
+              The {data && data.committeeName} is constituted for the academic year
               {data && data.year}. The members of the committee are as follows -
             </p>
 
@@ -80,4 +80,4 @@ const Comittee = () => {
   );
 };
 
-export default Comittee;
+export default VishakhaCell;
