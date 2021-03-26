@@ -68,6 +68,16 @@
   border-radius: 40px;
 }
 
+@media (max-width: 991px) {
+  .bgccc {
+    margin: 0;
+    padding: 0;
+    border-radius: 40px;
+  }
+}
+
+
+
 .customSelect:placeholder,
 .form .select:placeholder,
 .form .textarea:placeholder,
@@ -130,6 +140,7 @@
 .form .option-input:checked + label,
 .form .checkbox-input:checked + label {
   color: white;
+  background-color: #ff3c38;
 }
 
 .form .button {
@@ -157,9 +168,6 @@
   left: 1px;
 }
 
-body {
-  padding: 2em;
-}
 
 .form {
   max-width: 40em;
