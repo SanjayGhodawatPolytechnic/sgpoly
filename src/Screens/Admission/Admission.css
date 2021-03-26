@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .form .button,
 .form .message,
 .customSelect,
@@ -50,7 +55,7 @@
   width: 100%;
   box-sizing: border-box;
   background: #fff;
-  color: white;
+  color: #000;
   position: relative;
 }
 
@@ -70,13 +75,11 @@
 
 @media (max-width: 991px) {
   .bgccc {
-    margin: 0;
-    padding: 0;
-    border-radius: 40px;
+    margin: 15px 0px;
+    border-radius: 10px;
+    padding: 30px 10px;
   }
 }
-
-
 
 .customSelect:placeholder,
 .form .select:placeholder,
@@ -147,14 +150,15 @@
   font: inherit;
   line-height: normal;
   cursor: pointer;
-  background: #e8474c;
+  background: #ff3c38;
   color: white;
   font-weight: bold;
   width: auto;
   margin-left: auto;
   font-weight: bold;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+  border-radius: 10px;
 }
 .form .button:hover,
 .form .button:focus,
@@ -167,7 +171,6 @@
   top: 1px;
   left: 1px;
 }
-
 
 .form {
   max-width: 40em;
