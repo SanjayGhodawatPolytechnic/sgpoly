@@ -71,6 +71,7 @@ import VishakhaCell from "./Screens/Academics/VishakhaCell";
 import Atrocity from "./Screens/Academics/AtrocityCommittee";
 import Grievence from "./Screens/Academics/GrievenceCommittee";
 import Admission from "./Screens/Admission/Admission";
+import Publications from "./Screens/Departments/CSE/Publications";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -203,6 +204,11 @@ const Routes = () => {
           path="/department/cse/academic-calender"
           exact
           component={AcademicCalender}
+        />
+        <Route
+          path="/department/cse/publications"
+          exact
+          component={Publications}
         />
 
         {/* --------------------E & TC------------------------------------------------*/}

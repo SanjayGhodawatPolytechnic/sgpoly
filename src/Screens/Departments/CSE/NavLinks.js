@@ -9,6 +9,7 @@ const NavLinks = [
     {title: 'Achivements', path: '/department/cse/achivements'},
     {title: 'Activities', path: '/department/cse/activities'},
     {title: 'Academic Calender ', path: '/department/cse/academic-calender'},
+    {title: 'Publications', path: '/department/cse/publications'},
 ]
 
 export default NavLinks;
