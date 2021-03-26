@@ -70,6 +70,7 @@ import Comittee from "./Screens/Academics/Comittee";
 import VishakhaCell from "./Screens/Academics/VishakhaCell";
 import Atrocity from "./Screens/Academics/AtrocityCommittee";
 import Grievence from "./Screens/Academics/GrievenceCommittee";
+import Admission from "./Screens/Admission/Admission";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -271,6 +272,9 @@ const Routes = () => {
         />
 
         <Route path="/contact" exact component={AddContact} />
+
+        {/* ====================Admissions=========== */}
+        <Route path="/admissions" exact component={Admission} />
 
         {/* =============Committee================ */}
 

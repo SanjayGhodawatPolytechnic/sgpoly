@@ -349,59 +349,9 @@ const NavBar = () => {
                   }
                 }}
               >
-                <Link className="a">ADMISSIONS</Link>
-                <ul>
-                  <li>
-                    <Link to="" className="a">
-                      Courses Offered
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Admission Process
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Eligibility Criteria
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Fee Structure
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Education Loan
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Admission Cell
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Scholorship
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Cut Off List
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      FAQ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="" className="a">
-                      Education Fairs
-                    </Link>
-                  </li>
-                </ul>
+                <Link to="/admissions" className="a">
+                  ADMISSIONS
+                </Link>
               </li>
 
               <li
