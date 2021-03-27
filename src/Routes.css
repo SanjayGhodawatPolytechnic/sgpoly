@@ -64,3 +64,6 @@
   right: 0;
   color: #fff;
 }
+.noti {
+  z-index: 60000;
+}

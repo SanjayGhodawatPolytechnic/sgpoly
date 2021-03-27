@@ -74,6 +74,9 @@ import Admission from "./Screens/Admission/Admission";
 import Publications from "./Screens/Departments/CSE/Publications";
 import Civil from "./Screens/Departments/Civil/Civil";
 import CivilHODDesk from "./Screens/Departments/Civil/HODDesk";
+
+//notification component
+
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -116,6 +119,7 @@ const Routes = () => {
           <img src={img} alt="modal" className="modal-img img-fluid" />
         </div>
       </div>
+
       <Switch>
         <Route path="/" exact component={Home} />
 

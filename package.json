@@ -32,6 +32,7 @@
     "react-mapbox-gl": "^4.8.6",
     "react-multi-carousel": "^2.5.5",
     "react-native-uuid": "^1.4.9",
+    "react-notifications": "^1.7.2",
     "react-pdf": "^4.1.0",
     "react-push-menu": "^3.1.2",
     "react-render-html": "^0.6.0",
