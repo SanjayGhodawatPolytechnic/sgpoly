@@ -74,6 +74,19 @@ import Admission from "./Screens/Admission/Admission";
 import Publications from "./Screens/Departments/CSE/Publications";
 import Civil from "./Screens/Departments/Civil/Civil";
 import CivilHODDesk from "./Screens/Departments/Civil/HODDesk";
+import CivilVisionMission from "./Screens/Departments/Civil/VisionMission";
+import CivilOutcomes from "./Screens/Departments/Civil/Outcomes";
+import CivilStaffProfile from "./Screens/Departments/Civil/StaffProfile";
+import CivilTechnicalStaff from "./Screens/Departments/Civil/TechnicalStaff";
+import CivilLaboratories from "./Screens/Departments/Civil/Laboratories";
+import CivilAcademicCalender from "./Screens/Departments/Civil/AcademicCalender";
+import CivilAchivements from "./Screens/Departments/Civil/Achivements";
+import CivilActivities from "./Screens/Departments/Civil/Activities";
+import CivilPublications from "./Screens/Departments/Civil/Publications";
+import EntcAchivements from "./Screens/Departments/ETC/Achivements";
+import EntcActivities from "./Screens/Departments/ETC/Activities";
+import EntcAcademicCalender from "./Screens/Departments/ETC/AcademicCalender";
+import EntcPublications from "./Screens/Departments/ETC/Publications";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -217,6 +230,26 @@ const Routes = () => {
         <Route path="/department/entc" exact component={ElectronicsNTC} />
         <Route path="/department/entc/hoddesk" exact component={ETCHODDesk} />
         <Route
+          path="/department/entc/publications"
+          exact
+          component={EntcPublications}
+        />
+        <Route
+          path="/department/entc/academic-calender"
+          exact
+          component={EntcAcademicCalender}
+        />
+        <Route
+          path="/department/entc/activities"
+          exact
+          component={EntcActivities}
+        />
+        <Route
+          path="/department/entc/achivements"
+          exact
+          component={EntcAchivements}
+        />
+        <Route
           path="/department/entc/vision-mission"
           exact
           component={ETCVisionMission}
@@ -240,6 +273,51 @@ const Routes = () => {
         {/* --------------------CIVIL------------------------------------------------*/}
         <Route path="/department/civil" exact component={Civil} />
         <Route path="/department/civil/hod" exact component={CivilHODDesk} />
+        <Route
+          path="/department/civil/publications"
+          exact
+          component={CivilPublications}
+        />
+        <Route
+          path="/department/civil/activities"
+          exact
+          component={CivilActivities}
+        />
+        <Route
+          path="/department/civil/achivements"
+          exact
+          component={CivilAchivements}
+        />
+        <Route
+          path="/department/civil/academic-calender"
+          exact
+          component={CivilAcademicCalender}
+        />
+        <Route
+          path="/department/civil/labs"
+          exact
+          component={CivilLaboratories}
+        />
+        <Route
+          path="/department/civil/technical-staff"
+          exact
+          component={CivilTechnicalStaff}
+        />
+        <Route
+          path="/department/civil/teaching-staff"
+          exact
+          component={CivilStaffProfile}
+        />
+        <Route
+          path="/department/civil/outcomes"
+          exact
+          component={CivilOutcomes}
+        />
+        <Route
+          path="/department/civil/vision-mission"
+          exact
+          component={CivilVisionMission}
+        />
         {/* --------------------ELECTRICAL------------------------------------------------*/}
 
         {/* --------------------Infrastructre------------------------------------------------*/}

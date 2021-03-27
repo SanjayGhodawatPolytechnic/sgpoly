@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
-import NavLinks from "./NavLinks";
+import NavLinks from "./Navlinks";
 import StaffCard from "../Reusables/StaffCard";
 import { useEffect } from "react";
 import * as firebase from "firebase";
 import { CommonLoading } from "react-loadingg";
 
-const ETCStaffProfile = () => {
+const CivilStaffProfile = () => {
   const [faculty, setFaculty] = useState([]);
   const [Hod, setHod] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +28,7 @@ const ETCStaffProfile = () => {
         let hod = {};
         let allStaff = [];
         staff.forEach((v, i) => {
-          if (v.department === "E & TC") {
+          if (v.department === "Civil") {
             if (v.designation === "HOD") {
               hod = v;
             } else if (v.designation !== "Lab Assistant") {
@@ -49,10 +49,16 @@ const ETCStaffProfile = () => {
     getStaff();
   }, []);
 
+  // useEffect(() => {
+  //     console.log(Hod)
+  // }, [Hod])
+  // useEffect(() => {
+  //     console.log(faculty)
+  // }, [faculty])
   return (
     <Main className="container-lg">
       <div class="row">
-        <DeptMenu dept="E&TC" subMenu={NavLinks} />
+        <DeptMenu dept="Civil" subMenu={NavLinks} />
         <div class="col-sm-8 col-lg-9">
           <div
             data-spy="scroll"
@@ -95,4 +101,4 @@ const ETCStaffProfile = () => {
   );
 };
 
-export default ETCStaffProfile;
+export default CivilStaffProfile;

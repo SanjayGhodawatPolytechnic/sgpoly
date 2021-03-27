@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
-import NavLinks from "./NavLinks";
+import NavLinks from "./Navlinks";
 import StaffCard from "../Reusables/StaffCard";
-import { useEffect } from "react";
+import CommonLoading from "react-loadingg/lib/CommonLoading";
 import * as firebase from "firebase";
-import { CommonLoading } from "react-loadingg";
 
-const ETCStaffProfile = () => {
+const CivilTechnicalStaff = () => {
   const [faculty, setFaculty] = useState([]);
-  const [Hod, setHod] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
   const getStaff = async () => {
@@ -25,13 +23,10 @@ const ETCStaffProfile = () => {
         });
 
         //console.log(staff)
-        let hod = {};
         let allStaff = [];
         staff.forEach((v, i) => {
-          if (v.department === "E & TC") {
-            if (v.designation === "HOD") {
-              hod = v;
-            } else if (v.designation !== "Lab Assistant") {
+          if (v.department === "Civil") {
+            if (v.designation === "Lab Assistant") {
               allStaff.push(v);
             }
           }
@@ -39,7 +34,6 @@ const ETCStaffProfile = () => {
         // console.log(allStaff)
         // console.log(hod)
         setFaculty(allStaff);
-        setHod(hod);
         setIsLoading(false);
       }
     });
@@ -52,7 +46,7 @@ const ETCStaffProfile = () => {
   return (
     <Main className="container-lg">
       <div class="row">
-        <DeptMenu dept="E&TC" subMenu={NavLinks} />
+        <DeptMenu dept="Civil" subMenu={NavLinks} />
         <div class="col-sm-8 col-lg-9">
           <div
             data-spy="scroll"
@@ -61,20 +55,6 @@ const ETCStaffProfile = () => {
             data-offset="0"
           >
             {isLoading && <CommonLoading />}
-            {Hod.designation ? (
-              <StaffCard
-                name={Hod.fullName}
-                resumeURL={Hod.resumeDownloadUrl}
-                experience={Hod.experience}
-                designation={Hod.designation}
-                areaOfEpertise={Hod.expertise}
-                emailId={Hod.email}
-                imageURL={Hod.imageDownloadUrl}
-                qualification={Hod.qualification}
-              />
-            ) : (
-              ""
-            )}
             {faculty.map((v, i) => (
               <StaffCard
                 key={i}
@@ -95,4 +75,4 @@ const ETCStaffProfile = () => {
   );
 };
 
-export default ETCStaffProfile;
+export default CivilTechnicalStaff;

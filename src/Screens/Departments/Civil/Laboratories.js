@@ -2,13 +2,13 @@ import React from "react";
 import LabCard from "../Reusables/LabCard";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
-import NavLinks from "./NavLinks";
+import NavLinks from "./Navlinks";
 
-const Laboratories = () => {
+const CivilLaboratories = () => {
   return (
     <Main className="container-lg">
       <div class="row">
-        <DeptMenu dept="Computer Science" subMenu={NavLinks} />
+        <DeptMenu dept="Civil" subMenu={NavLinks} />
         <div class="col-sm-8 col-lg-9 text-dark">
           <div
             data-spy="scroll"
@@ -127,4 +127,4 @@ const Laboratories = () => {
   );
 };
 
-export default Laboratories;
+export default CivilLaboratories;
