@@ -314,7 +314,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/department/civil" className="a">
                       Civil Engineering
                     </Link>
                   </li>

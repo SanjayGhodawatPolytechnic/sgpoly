@@ -72,6 +72,8 @@ import Atrocity from "./Screens/Academics/AtrocityCommittee";
 import Grievence from "./Screens/Academics/GrievenceCommittee";
 import Admission from "./Screens/Admission/Admission";
 import Publications from "./Screens/Departments/CSE/Publications";
+import Civil from "./Screens/Departments/Civil/Civil";
+import CivilHODDesk from "./Screens/Departments/Civil/HODDesk";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -236,6 +238,8 @@ const Routes = () => {
         <Route path="/department/mech/hoddesk" exact component={MechHODDesk} />
 
         {/* --------------------CIVIL------------------------------------------------*/}
+        <Route path="/department/civil" exact component={Civil} />
+        <Route path="/department/civil/hod" exact component={CivilHODDesk} />
         {/* --------------------ELECTRICAL------------------------------------------------*/}
 
         {/* --------------------Infrastructre------------------------------------------------*/}
