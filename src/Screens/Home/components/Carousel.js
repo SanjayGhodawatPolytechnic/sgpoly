@@ -38,13 +38,20 @@ const Carousel = () => {
         data-ride="carousel"
       >
         <ol className="carousel-indicators">
-          <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to={0}
-            className="active"
-          />
-          <li data-target="#carouselExampleIndicators" data-slide-to={1} />
-          <li data-target="#carouselExampleIndicators" data-slide-to={2} />
+          {data.map((d, i) => {
+            if (i == 0) {
+              return (
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to={i}
+                  className="active"
+                />
+              );
+            }
+            return (
+              <li data-target="#carouselExampleIndicators" data-slide-to={i} />
+            );
+          })}
         </ol>
         <div className="carousel-inner">
           {data.map((d, i) => {

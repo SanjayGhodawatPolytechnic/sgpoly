@@ -1,12 +1,69 @@
 import React from "react";
+import { useState } from "react";
 import Main from "../../ReusableComponents/Main";
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+import * as firebase from "firebase";
+import "react-notifications/lib/notifications.css";
 import "./Admission.css";
 
 const Admission = () => {
+  const [data, setData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    address: "",
+    interestedBranches: [],
+    caste: "",
+    SSCMarks: "",
+    hscMarks: "",
+  });
+
+  const delElementFromInterestedBranches = (list, idx) => {
+    list.splice(idx, 1);
+    return list;
+  };
+
+  const handleChangeInterest = (e) => {
+    let list = data.interestedBranches;
+    if (e.target.checked) {
+      list.push(e.target.value);
+    } else {
+      var idx;
+      list.forEach((v, i) => {
+        if (v === e.target.value) {
+          idx = i;
+        }
+      });
+      list = delElementFromInterestedBranches(list, idx);
+    }
+    console.log(list);
+    setData({ ...data, interestedBranches: list });
+  };
+
+  const handleCasteChange = (e) => {
+    if (e.target.checked) {
+      setData({ ...data, caste: e.target.value });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const dbRef = firebase.database().ref("admission-req");
+    dbRef.push(data, (err) => {
+      if (!err) {
+        NotificationManager.success("We will reach you soon", "Data submitted");
+      }
+    });
+
+    console.log(data);
+  };
   return (
     <Main>
       <div className="bgccc">
-        <form action className="form ">
+        <form action className="form " onSubmit={handleSubmit}>
           <p className="field required">
             <label className="label required" htmlFor="name">
               Full name
@@ -17,7 +74,10 @@ const Admission = () => {
               name="name"
               required
               type="text"
-              defaultValue=""
+              value={data.fullName}
+              onChange={(e) => {
+                setData({ ...data, fullName: e.target.value });
+              }}
             />
           </p>
           <p className="field required half">
@@ -30,6 +90,10 @@ const Admission = () => {
               name="email"
               required
               type="email"
+              value={data.email}
+              onChange={(e) => {
+                setData({ ...data, email: e.target.value });
+              }}
             />
           </p>
           <p className="field required half">
@@ -42,6 +106,10 @@ const Admission = () => {
               name="phone"
               type="phone"
               required
+              value={data.phone}
+              onChange={(e) => {
+                setData({ ...data, phone: e.target.value });
+              }}
             />
           </p>
           <p className="field">
@@ -54,8 +122,11 @@ const Admission = () => {
               id="about"
               name="about"
               rows={4}
-              defaultValue={""}
+              value={data.address}
               required
+              onChange={(e) => {
+                setData({ ...data, address: e.target.value });
+              }}
             />
           </p>
 
@@ -68,7 +139,8 @@ const Admission = () => {
                   id="choice-0"
                   name="choice"
                   type="checkbox"
-                  defaultValue={0}
+                  value="Civil"
+                  onChange={handleChangeInterest}
                 />
                 <label className="checkbox-label" htmlFor="choice-0">
                   Civil
@@ -80,7 +152,8 @@ const Admission = () => {
                   id="choice-1"
                   name="choice"
                   type="checkbox"
-                  defaultValue={1}
+                  value="Mechanical"
+                  onChange={handleChangeInterest}
                 />
                 <label className="checkbox-label" htmlFor="choice-1">
                   Mechanical
@@ -92,7 +165,8 @@ const Admission = () => {
                   id="choice-2"
                   name="choice"
                   type="checkbox"
-                  defaultValue={2}
+                  value="Computer Science"
+                  onChange={handleChangeInterest}
                 />
                 <label className="checkbox-label" htmlFor="choice-2">
                   Computer Science
@@ -104,7 +178,8 @@ const Admission = () => {
                   id="choice-3"
                   name="choice"
                   type="checkbox"
-                  defaultValue={3}
+                  value="E & TC"
+                  onChange={handleChangeInterest}
                 />
                 <label className="checkbox-label" htmlFor="choice-3">
                   Electronics and Tele.
@@ -116,7 +191,8 @@ const Admission = () => {
                   id="choice-4"
                   name="choice"
                   type="checkbox"
-                  defaultValue={4}
+                  value="Electrical"
+                  onChange={handleChangeInterest}
                 />
                 <label className="checkbox-label" htmlFor="choice-4">
                   Electrical
@@ -133,7 +209,8 @@ const Admission = () => {
                   id="option-0"
                   name="option"
                   type="radio"
-                  defaultValue={0}
+                  value="SC"
+                  onChange={handleCasteChange}
                 />
                 <label className="option-label" htmlFor="option-0">
                   SC
@@ -145,7 +222,8 @@ const Admission = () => {
                   id="option-1"
                   name="option"
                   type="radio"
-                  defaultValue={1}
+                  value="ST"
+                  onChange={handleCasteChange}
                 />
                 <label className="option-label" htmlFor="option-1">
                   ST
@@ -157,7 +235,8 @@ const Admission = () => {
                   id="option-2"
                   name="option"
                   type="radio"
-                  defaultValue={2}
+                  value="OBC"
+                  onChange={handleCasteChange}
                 />
                 <label className="option-label" htmlFor="option-2">
                   OBC
@@ -169,7 +248,8 @@ const Admission = () => {
                   id="option-3"
                   name="option"
                   type="radio"
-                  defaultValue={3}
+                  value="SBC"
+                  onChange={handleCasteChange}
                 />
                 <label className="option-label" htmlFor="option-3">
                   SBC
@@ -181,7 +261,8 @@ const Admission = () => {
                   id="option-4"
                   name="option"
                   type="radio"
-                  defaultValue={4}
+                  value="Open"
+                  onChange={handleCasteChange}
                 />
                 <label className="option-label" htmlFor="option-4">
                   Open
@@ -193,7 +274,8 @@ const Admission = () => {
                   id="option-5"
                   name="option"
                   type="radio"
-                  defaultValue={5}
+                  value="Other"
+                  onChange={handleCasteChange}
                 />
                 <label className="option-label" htmlFor="option-5">
                   Other
@@ -210,6 +292,10 @@ const Admission = () => {
               id="marks10"
               name="marks10"
               type="number"
+              value={data.SSCMarks}
+              onChange={(e) => {
+                setData({ ...data, SSCMarks: e.target.value });
+              }}
             />
           </p>
           <p className="field half">
@@ -221,6 +307,10 @@ const Admission = () => {
               id="marks12"
               name="marks12"
               type="number"
+              value={data.hscMarks}
+              onChange={(e) => {
+                setData({ ...data, hscMarks: e.target.value });
+              }}
             />
           </p>
 
@@ -229,6 +319,7 @@ const Admission = () => {
           </p>
         </form>
       </div>
+      <NotificationContainer />
     </Main>
   );
 };

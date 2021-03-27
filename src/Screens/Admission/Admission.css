@@ -37,8 +37,8 @@
 }
 .required .form .label:after,
 .form .required .label:after {
-  content: " *";
-  color: #e8474c;
+  content: "*";
+  color: #000000;
   font-weight: normal;
   font-size: 0.75em;
   vertical-align: top;

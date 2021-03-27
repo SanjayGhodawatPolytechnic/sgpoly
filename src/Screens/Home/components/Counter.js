@@ -44,19 +44,19 @@ const Counter = () => {
                 </span>
                 {data && (
                   <CountUp
-                  className="fh5co-counter js-counter"
-                  end={data.studentThisYear}
-                  redraw={true}
-                >
-                  {({ countUpRef, start }) => (
-                    <ReactVisibilitySensor onChange={start} delayedCall>
-                      <span
-                        ref={countUpRef}
-                        className="fh5co-counter js-counter"
-                      />
-                    </ReactVisibilitySensor>
-                  )}
-                </CountUp>
+                    className="fh5co-counter js-counter"
+                    end={data.studentThisYear}
+                    redraw={true}
+                  >
+                    {({ countUpRef, start }) => (
+                      <ReactVisibilitySensor onChange={start} delayedCall>
+                        <span
+                          ref={countUpRef}
+                          className="fh5co-counter js-counter"
+                        />
+                      </ReactVisibilitySensor>
+                    )}
+                  </CountUp>
                 )}
                 <span className="fh5co-counter-label">Students This Year</span>
               </div>
@@ -66,19 +66,19 @@ const Counter = () => {
                 </span>
                 {data && (
                   <CountUp
-                  className="fh5co-counter js-counter"
-                  end={data.passedStudents}
-                  redraw={true}
-                >
-                  {({ countUpRef, start }) => (
-                    <ReactVisibilitySensor onChange={start} delayedCall>
-                      <span
-                        ref={countUpRef}
-                        className="fh5co-counter js-counter"
-                      />
-                    </ReactVisibilitySensor>
-                  )}
-                </CountUp>
+                    className="fh5co-counter js-counter"
+                    end={data.passedStudents}
+                    redraw={true}
+                  >
+                    {({ countUpRef, start }) => (
+                      <ReactVisibilitySensor onChange={start} delayedCall>
+                        <span
+                          ref={countUpRef}
+                          className="fh5co-counter js-counter"
+                        />
+                      </ReactVisibilitySensor>
+                    )}
+                  </CountUp>
                 )}
                 <span className="fh5co-counter-label">Passed Students</span>
               </div>
@@ -88,19 +88,19 @@ const Counter = () => {
                 </span>
                 {data && (
                   <CountUp
-                  className="fh5co-counter js-counter"
-                  end={data.certifiedTeachers}
-                  redraw={true}
-                >
-                  {({ countUpRef, start }) => (
-                    <ReactVisibilitySensor onChange={start} delayedCall>
-                      <span
-                        ref={countUpRef}
-                        className="fh5co-counter js-counter"
-                      />
-                    </ReactVisibilitySensor>
-                  )}
-                </CountUp>
+                    className="fh5co-counter js-counter"
+                    end={data.certifiedTeachers}
+                    redraw={true}
+                  >
+                    {({ countUpRef, start }) => (
+                      <ReactVisibilitySensor onChange={start} delayedCall>
+                        <span
+                          ref={countUpRef}
+                          className="fh5co-counter js-counter"
+                        />
+                      </ReactVisibilitySensor>
+                    )}
+                  </CountUp>
                 )}
                 <span className="fh5co-counter-label">Certified Teachers</span>
               </div>

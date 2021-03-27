@@ -74,7 +74,7 @@ import Admission from "./Screens/Admission/Admission";
 import Publications from "./Screens/Departments/CSE/Publications";
 import Civil from "./Screens/Departments/Civil/Civil";
 import CivilHODDesk from "./Screens/Departments/Civil/HODDesk";
-import CivilVisionMission from "./Screens/Departments/Civil/VisionMission";
+import VisionMission from "./Screens/Departments/Civil/VisionMission";
 import CivilOutcomes from "./Screens/Departments/Civil/Outcomes";
 import CivilStaffProfile from "./Screens/Departments/Civil/StaffProfile";
 import CivilTechnicalStaff from "./Screens/Departments/Civil/TechnicalStaff";
@@ -129,6 +129,7 @@ const Routes = () => {
           <img src={img} alt="modal" className="modal-img img-fluid" />
         </div>
       </div>
+
       <Switch>
         <Route path="/" exact component={Home} />
 
