@@ -1,0 +1,50 @@
+import React from "react";
+import Main from "../../../ReusableComponents/Main";
+
+import DeptMenu from "../Reusables/DeptMenu";
+import NavLinks from "./NavLinks";
+import "../Reusables/CSS/HOD.css";
+
+const ElectricalHODDesk = () => {
+  return (
+    <Main className="container-lg hod">
+      <div class="row">
+        <DeptMenu dept="Electrical" subMenu={NavLinks} />
+        <div class="col-sm-8 col-lg-9 text-light">
+          <div
+            data-spy="scroll"
+            class="scrollspy-example z-depth-1 mt-4"
+            data-target="#navbar-example3"
+            data-offset="0"
+          >
+            <div className="row">
+              <div className="col text-center">
+                <img
+                  alt="etc hod"
+                  className="img-fluid rounded"
+                  src="http://sgipolytechnic.in/Images/HOD_ETC.jpg"
+                />
+              </div>
+              <div className="col-12 text-center">
+                <b>Mr. Patil Nitin Surgonda</b>
+              </div>
+              <div className="col-12 text-center">
+                <b>Head of Department</b>
+              </div>
+            </div>
+            <p className="m-1 words">
+              The department empowers the students with the proficiency and
+              knowledge required to excel in the dynamic field of Electrical to
+              pursue higher education. It also imparts technical knowledge and
+              skills to students towards continuous improvement in education and
+              placement and prepares the students to meet the challenges in the
+              technical advancement to serve the community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Main>
+  );
+};
+
+export default ElectricalHODDesk;

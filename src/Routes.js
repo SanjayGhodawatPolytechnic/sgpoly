@@ -74,7 +74,7 @@ import Admission from "./Screens/Admission/Admission";
 import Publications from "./Screens/Departments/CSE/Publications";
 import Civil from "./Screens/Departments/Civil/Civil";
 import CivilHODDesk from "./Screens/Departments/Civil/HODDesk";
-import VisionMission from "./Screens/Departments/Civil/VisionMission";
+import CivilVisionMission from "./Screens/Departments/Civil/VisionMission";
 import CivilOutcomes from "./Screens/Departments/Civil/Outcomes";
 import CivilStaffProfile from "./Screens/Departments/Civil/StaffProfile";
 import CivilTechnicalStaff from "./Screens/Departments/Civil/TechnicalStaff";
@@ -87,6 +87,16 @@ import EntcAchivements from "./Screens/Departments/ETC/Achivements";
 import EntcActivities from "./Screens/Departments/ETC/Activities";
 import EntcAcademicCalender from "./Screens/Departments/ETC/AcademicCalender";
 import EntcPublications from "./Screens/Departments/ETC/Publications";
+import ElecticalAcademicCalender from "./Screens/Departments/Electical/AcademicCalender";
+import ElecticalAchivements from "./Screens/Departments/Electical/Achivements";
+import ElecticalActivities from "./Screens/Departments/Electical/Activities";
+import Electrical from "./Screens/Departments/Electical/Electrical";
+import ElectricalHODDesk from "./Screens/Departments/Electical/HODDesk";
+import ElectricalOutcomes from "./Screens/Departments/Electical/Outcomes";
+import ElectricalStaffProfile from "./Screens/Departments/Electical/StaffProfile";
+import ElectricalTechstaff from "./Screens/Departments/Electical/TechStaff";
+import ElectricalPublications from "./Screens/Departments/Electical/Publications";
+import ElectricalVisionMission from "./Screens/Departments/Electical/VisionMission";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -225,6 +235,54 @@ const Routes = () => {
           path="/department/cse/publications"
           exact
           component={Publications}
+        />
+
+        {/* --------------------Electical------------------------------------------------*/}
+        <Route path="/department/electrical" exact component={Electrical} />
+        <Route
+          path="/department/electrical/academic-calender"
+          exact
+          component={ElecticalAcademicCalender}
+        />
+        <Route
+          path="/department/electrical/achivements"
+          exact
+          component={ElecticalAchivements}
+        />
+        <Route
+          path="/department/electrical/activities"
+          exact
+          component={ElecticalActivities}
+        />
+        <Route
+          path="/department/electrical/hoddesk"
+          exact
+          component={ElectricalHODDesk}
+        />
+        <Route
+          path="/department/electrical/outcomes"
+          exact
+          component={ElectricalOutcomes}
+        />
+        <Route
+          path="/department/electrical/teaching-staff"
+          exact
+          component={ElectricalStaffProfile}
+        />
+        <Route
+          path="/department/electrical/technical-staff"
+          exact
+          component={ElectricalTechstaff}
+        />
+        <Route
+          path="/department/electrical/publications"
+          exact
+          component={ElectricalPublications}
+        />
+        <Route
+          path="/department/electrical/vision-mission"
+          exact
+          component={ElectricalVisionMission}
         />
 
         {/* --------------------E & TC------------------------------------------------*/}
