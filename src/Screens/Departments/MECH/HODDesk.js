@@ -1,5 +1,5 @@
 import React from "react";
-import NavLinks from "./Navlinks";
+import NavLinks from "./NavLinks";
 import "../Reusables/CSS/HOD.css";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";

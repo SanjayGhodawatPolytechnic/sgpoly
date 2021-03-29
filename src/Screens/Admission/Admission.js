@@ -51,7 +51,10 @@ const Admission = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const dbRef = firebase.database().ref("admission-req");
+    const dbRef = firebase
+      .database()
+      .ref("admission-req")
+      .child("notResponded");
     dbRef.push(data, (err) => {
       if (!err) {
         NotificationManager.success("We will reach you soon", "Data submitted");

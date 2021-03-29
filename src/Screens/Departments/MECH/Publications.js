@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
-import NavLinks from "./Navlinks";
+import NavLinks from "./NavLinks";
 import * as firebase from "firebase";
 
 const MechanicalPublications = () => {

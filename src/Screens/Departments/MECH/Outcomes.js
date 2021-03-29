@@ -2,7 +2,7 @@ import React from "react";
 import Main from "../../../ReusableComponents/Main";
 
 import DeptMenu from "../Reusables/DeptMenu";
-import NavLinks from "./Navlinks";
+import NavLinks from "./NavLinks";
 
 const MechanicalOutcomes = () => {
   return (

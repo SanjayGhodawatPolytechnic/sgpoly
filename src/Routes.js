@@ -96,16 +96,17 @@ import ElectricalStaffProfile from "./Screens/Departments/Electical/StaffProfile
 import ElectricalTechstaff from "./Screens/Departments/Electical/TechStaff";
 import ElectricalPublications from "./Screens/Departments/Electical/Publications";
 import ElectricalVisionMission from "./Screens/Departments/Electical/VisionMission";
-import Mech from "./Screens/Departments/Mech/Mech";
-import MechanicalHODDesk from "./Screens/Departments/Mech/HODDesk";
-import MechanicalVisionMission from "./Screens/Departments/Mech/VisionMission";
-import MechanicalOutcomes from "./Screens/Departments/Mech/Outcomes";
-import MechanicalStaffProfile from "./Screens/Departments/Mech/StaffProfile";
-import MechanicalTechnicalStaff from "./Screens/Departments/Mech/TechnicalStaff";
-import MechanicalAchivements from "./Screens/Departments/Mech/Achivements";
-import MechanicalActivities from "./Screens/Departments/Mech/Activities";
-import MechAcademicCalender from "./Screens/Departments/Mech/AcademicCalender";
-import MechanicalPublications from "./Screens/Departments/Mech/Publications";
+import Mech from "./Screens/Departments/MECH/Mech";
+import MechanicalHODDesk from "./Screens/Departments/MECH/HODDesk";
+import MechanicalVisionMission from "./Screens/Departments/MECH/VisionMission";
+import MechanicalOutcomes from "./Screens/Departments/MECH/Outcomes";
+import MechanicalStaffProfile from "./Screens/Departments/MECH/StaffProfile";
+import MechanicalTechnicalStaff from "./Screens/Departments/MECH/TechnicalStaff";
+import MechanicalAchivements from "./Screens/Departments/MECH/Achivements";
+import MechanicalActivities from "./Screens/Departments/MECH/Activities";
+
+import MechanicalPublications from "./Screens/Departments/MECH/Publications";
+import MechAcademicCalender from "./Screens/Departments/MECH/AcademicCalender";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",

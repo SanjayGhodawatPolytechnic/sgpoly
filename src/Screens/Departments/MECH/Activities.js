@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Main from "../../../ReusableComponents/Main";
 import ActivityCard from "../Reusables/ActivityCard";
 import DeptMenu from "../Reusables/DeptMenu";
-import NavLinks from "./Navlinks";
+import NavLinks from "./NavLinks";
 import * as firebase from "firebase";
 import { useEffect } from "react";
 

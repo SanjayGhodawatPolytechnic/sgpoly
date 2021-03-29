@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
-import NavLinks from "./Navlinks";
+import NavLinks from "./NavLinks";
 import StaffCard from "../Reusables/StaffCard";
 import { useEffect } from "react";
 import * as firebase from "firebase";
