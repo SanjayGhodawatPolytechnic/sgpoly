@@ -58,8 +58,7 @@ import img from "./ReusableComponents/CSS/sguni.jpg";
 import AboutActivities from "./Screens/About/Activities";
 import ETCStaffProfile from "./Screens/Departments/ETC/ETCStaffProfile";
 import ETCTechStaff from "./Screens/Departments/ETC/ETCTechStaff";
-import Mechanical from "./Screens/Departments/MECH/Mechanical";
-import MechHODDesk from "./Screens/Departments/MECH/MechHODDesk";
+
 import AcademicCalender from "./Screens/Departments/CSE/AcademicCalender";
 import NotFound from "./ReusableComponents/NotFound";
 import AddContact from "./Screens/Contact/Contact";
@@ -97,6 +96,16 @@ import ElectricalStaffProfile from "./Screens/Departments/Electical/StaffProfile
 import ElectricalTechstaff from "./Screens/Departments/Electical/TechStaff";
 import ElectricalPublications from "./Screens/Departments/Electical/Publications";
 import ElectricalVisionMission from "./Screens/Departments/Electical/VisionMission";
+import Mech from "./Screens/Departments/Mech/Mech";
+import MechanicalHODDesk from "./Screens/Departments/Mech/HODDesk";
+import MechanicalVisionMission from "./Screens/Departments/Mech/VisionMission";
+import MechanicalOutcomes from "./Screens/Departments/Mech/Outcomes";
+import MechanicalStaffProfile from "./Screens/Departments/Mech/StaffProfile";
+import MechanicalTechnicalStaff from "./Screens/Departments/Mech/TechnicalStaff";
+import MechanicalAchivements from "./Screens/Departments/Mech/Achivements";
+import MechanicalActivities from "./Screens/Departments/Mech/Activities";
+import MechAcademicCalender from "./Screens/Departments/Mech/AcademicCalender";
+import MechanicalPublications from "./Screens/Departments/Mech/Publications";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
@@ -326,8 +335,52 @@ const Routes = () => {
         />
 
         {/* --------------------MECH------------------------------------------------*/}
-        <Route path="/department/mech" exact component={Mechanical} />
-        <Route path="/department/mech/hoddesk" exact component={MechHODDesk} />
+        <Route path="/department/mech" exact component={Mech} />
+        <Route
+          path="/department/mech/hod"
+          exact
+          component={MechanicalHODDesk}
+        />
+        <Route
+          path="/department/mech/vision-mission"
+          exact
+          component={MechanicalVisionMission}
+        />
+        <Route
+          path="/department/mech/outcomes"
+          exact
+          component={MechanicalOutcomes}
+        />
+        <Route
+          path="/department/mech/teaching-staff"
+          exact
+          component={MechanicalStaffProfile}
+        />
+        <Route
+          path="/department/mech/technical-staff"
+          exact
+          component={MechanicalTechnicalStaff}
+        />
+        <Route
+          path="/department/mech/achivements"
+          exact
+          component={MechanicalAchivements}
+        />
+        <Route
+          path="/department/mech/activities"
+          exact
+          component={MechanicalActivities}
+        />
+        <Route
+          path="/department/mech/academic-calender"
+          exact
+          component={MechAcademicCalender}
+        />
+        <Route
+          path="/department/mech/publications"
+          exact
+          component={MechanicalPublications}
+        />
 
         {/* --------------------CIVIL------------------------------------------------*/}
         <Route path="/department/civil" exact component={Civil} />
