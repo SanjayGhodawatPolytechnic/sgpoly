@@ -22,17 +22,16 @@ function Home() {
       <Recents />
       <Counter />
       <Imp />
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <div className="container-sm text-center ">
-        <h1 className="text-dark" style={{ fontSize: 40 }}>
+      <div className="text-center p-5 w-100 mb-3" id="skew4">
+        {/* <h1 className="text-dark" style={{ fontSize: 40 }}>
           COURSES
-        </h1>
+        </h1> */}
+        <div className="training-title">
+          <h4 className="course-title">COURSES</h4>
+          <div className="courses-line" />
+        </div>
 
-        <div className="row text-center d-flex justify-content-center cardsss">
+        <div className="row w-100 text-center d-flex justify-content-center cardsss">
           <div className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2 rounded">
             <div className="rounded py-5 px-4 bg-transparent">
               <CSELogo className="mb-3 cse-logo" width="100px" />
@@ -76,11 +75,13 @@ function Home() {
             </div>
           </div>
         </div>
-        <h1 className="text-dark" style={{ fontSize: 40 }}>
+      </div>
+      <div className="text-center">
+        {/* <h1 className="text-dark" style={{ fontSize: 40 }}>
           ABOUT SGP
-        </h1>
-        <br />
-
+        </h1> */}
+        <h4 className="about-title">ABOUT SGP</h4>
+        <div className="about-line" />
         <div className="video-container">
           <iframe
             className="fram"
@@ -88,7 +89,6 @@ function Home() {
           ></iframe>
         </div>
       </div>
-
       <Testimo />
     </Main>
   );

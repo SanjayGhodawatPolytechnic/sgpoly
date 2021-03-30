@@ -7,13 +7,15 @@
   flex-flow: row wrap;
   justify-content: center;
   padding: 0.5rem;
+  height: 110%;
+  padding-bottom: 4%;
 }
 
 .news-card {
   border: 0px solid aqua;
   margin: 0.5rem;
   position: relative;
-  height: 12rem;
+  height: 11rem;
   overflow: hidden;
   border-radius: 0.5rem;
   flex: 1;
@@ -142,4 +144,47 @@
 .news-card__read-more:hover i {
   left: 0.5rem;
   color: #ff3c38;
+}
+
+.cus-div {
+  width: 100%;
+  position: relative;
+}
+#skew3 {
+  background: rgb(255, 255, 255);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  z-index: 10;
+  height: 100%;
+}
+.cus-div:after {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  content: "";
+}
+.cus-div::before {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  content: "";
+}
+#skew3:after {
+  transform-origin: left bottom;
+  transform: skewY(-4deg);
+  background: #ffffff;
+  height: 110%;
+}
+#skew3::before {
+  transform-origin: left bottom;
+  transform: skewY(4deg);
+  background: #ffffff;
+  height: 110%;
 }

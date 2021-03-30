@@ -48,10 +48,14 @@ const Recents = () => {
         <section className="pt-5 pb-5">
           <div className="givmargin">
             <div className="row">
-              <div className="col-6">
+              {/* <div className="col-6">
                 <h3 className="mb-3">Important Reports</h3>
+              </div> */}
+              <div className="training-title col-3 text-right">
+                <h4 className="reports-title">Important Reports</h4>
+                <div className="reports-line" />
               </div>
-              <div className="col-6 text-right">
+              <div className="col align-self-end text-right">
                 <a
                   className="btn btn-primary mb-3 mr-1"
                   href="#carouselExampleIndicators2"

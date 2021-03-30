@@ -4,6 +4,9 @@
   position: relative;
 
   background-color: #ff3c38;
+  height: 100%;
+  text-align: center;
+  padding: 3% 1%;
 }
 .fh5co-counters .row {
   display: flex;
@@ -43,13 +46,13 @@
   color: #fff;
 }
 
-/* #skew2 {
+#skew2 {
   background: #ff3c38;
 
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
-  
+
   z-index: 9;
 }
 .cus-div:after {
@@ -62,7 +65,7 @@
   content: "";
 }
 #skew2:after {
-  transform-origin: left bottom;
-  transform: skewY(3deg);
+  transform-origin: right bottom;
+  transform: skewY(-3deg);
   background: #ff3c38;
-} */
+}

@@ -1,5 +1,7 @@
 .cardsss {
   overflow: hidden;
+  display: block;
+  height: auto;
 }
 
 .btn-circle {
@@ -24,68 +26,7 @@
   padding: 2rem;
 }
 
-/* ****************************************************************** */
-
-.headingFont {
-  font-family: "Open Sans", sans-serif;
-}
-
-.updates-container {
-  margin-top: 8%;
-  margin-right: 10%;
-  margin-left: 10%;
-}
-
-.update-row {
-  justify-content: space-between;
-  padding: 0;
-}
-.update-card {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-right: 20px;
-}
-.card-img {
-  width: 60%;
-  height: 100%;
-  margin: 0;
-}
-
 /* =====================Updates==================== */
-
-.view-more-btn-cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5px;
-  height: auto;
-}
-
-.more-update-btn {
-  border: 1px solid #000;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 100%;
-  background-color: #fff;
-  transition: 0.3s ease-in-out;
-}
-
-.controls-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.more-update-btn:hover {
-  border: 1px solid #fff;
-  color: #fff;
-  background-color: #000;
-}
 
 .switch-btn {
   font-size: 30px;
@@ -115,3 +56,67 @@
 }
 
 /* IMP CARDS********************************************************************************** */
+.cus-div {
+  width: 100%;
+  position: relative;
+}
+
+#skew4 {
+  background: url("../../img/coursebg.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  z-index: 9;
+}
+/* .cus-div:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  content: "";
+}
+#skew4:after {
+  transform-origin: right bottom;
+  transform: skewY(4deg);
+} */
+/* .vidcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+} */
+
+.course-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 5px;
+}
+.courses-line {
+  width: 75px;
+  height: 5px;
+  background-color: #000000;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.about-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  color: #000000;
+}
+.about-line {
+  width: 150px;
+  height: 5px;
+  background-color: #ff0040;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}

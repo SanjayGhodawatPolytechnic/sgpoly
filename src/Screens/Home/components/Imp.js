@@ -7,7 +7,7 @@ import "./Imp.css";
 // src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 const Imp = () => {
   return (
-    <div>
+    <div id="skew3" className="cus-div">
       <div className="content-wrapper">
         <div className="news-card">
           <img
@@ -20,7 +20,9 @@ const Imp = () => {
             <div className="news-card__post-date">Chaiman</div>
             <div className="news-card__details-wrapper">
               <p className="news-card__excerpt">
-              Education is making students aware of the infinite potential within and bringing it up so that the result is transformation of personalities.
+                Education is making students aware of the infinite potential
+                within and bringing it up so that the result is transformation
+                of personalities.
               </p>
               <Link to="/management/chairman" className="news-card__read-more">
                 Read more <i className="fas fa-long-arrow-alt-right" />
@@ -39,7 +41,9 @@ const Imp = () => {
             <div className="news-card__post-date">Trustee</div>
             <div className="news-card__details-wrapper">
               <p className="news-card__excerpt">
-              If you treat an individual as he is, he will remain how he is. But if you treat him as if he were what he ought to be and could be, he will become what he ought to be and could be.
+                If you treat an individual as he is, he will remain how he is.
+                But if you treat him as if he were what he ought to be and could
+                be, he will become what he ought to be and could be.
               </p>
               <Link to="/management/trustee" className="news-card__read-more">
                 Read more <i className="fas fa-long-arrow-alt-right" />
@@ -58,7 +62,8 @@ const Imp = () => {
             <div className="news-card__post-date">Principal</div>
             <div className="news-card__details-wrapper">
               <p className="news-card__excerpt">
-              All the flowers of all the tomorrows are in the in seeds of today.
+                All the flowers of all the tomorrows are in the in seeds of
+                today.
               </p>
               <Link to="/management/principal" className="news-card__read-more">
                 Read more <i className="fas fa-long-arrow-alt-right" />
