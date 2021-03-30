@@ -7,8 +7,8 @@ import NavLinks from "./NavLinks";
 import * as firebase from "firebase";
 
 const ElectricalPublications = () => {
-  const [studentData, setStudentData] = useState(null);
-  const [facultyData, setFacultyData] = useState(null);
+  const [studentData, setStudentData] = useState([]);
+  const [facultyData, setFacultyData] = useState([]);
 
   const getPublication = async (dept) => {
     const dbRef = firebase.database().ref("publications").child(dept);
