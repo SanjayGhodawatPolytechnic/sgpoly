@@ -12,6 +12,7 @@ import Recents from "./components/Recents";
 import Carousel from "./components/Carousel";
 import Imp from "./components/Imp";
 import Testimo from "./components/Testimo";
+import VidCarousel from "./components/vidcarousel";
 
 function Home() {
   return (
@@ -76,19 +77,9 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="text-center">
-        {/* <h1 className="text-dark" style={{ fontSize: 40 }}>
-          ABOUT SGP
-        </h1> */}
-        <h4 className="about-title">ABOUT SGP</h4>
-        <div className="about-line" />
-        <div className="video-container">
-          <iframe
-            className="fram"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-          ></iframe>
-        </div>
-      </div>
+
+      <VidCarousel />
+
       <Testimo />
     </Main>
   );
