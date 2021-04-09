@@ -106,7 +106,8 @@ import MechanicalAchivements from "./Screens/Departments/MECH/Achivements";
 import MechanicalActivities from "./Screens/Departments/MECH/Activities";
 
 import MechanicalPublications from "./Screens/Departments/MECH/Publications";
-import MechAcademicCalender from "./Screens/Departments/MECH/AcademicCalender";
+// import MechAcademicCalender from "./Screens/Departments/MECH/AcademicCalender";
+import MechAcademicCalender from "./Screens/Departments/Mech/AcademicCalender";
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
   authDomain: "sgpoly-86d3b.firebaseapp.com",
