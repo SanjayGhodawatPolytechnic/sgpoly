@@ -4,10 +4,11 @@ import * as firebase from "firebase";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const Recents = () => {
+const Recents = ({ setIsRecentsLoading }) => {
   const [data, setData] = useState([[]]);
 
   const getAllUpdates = async () => {
+    setIsRecentsLoading(true);
     let dataRef = firebase.database().ref("updates");
     dataRef.on("value", (dataSnapshot) => {
       if (dataSnapshot.val()) {
@@ -34,6 +35,7 @@ const Recents = () => {
           let ar = [result];
           setData(ar);
         }
+        setIsRecentsLoading(false);
       }
     });
   };

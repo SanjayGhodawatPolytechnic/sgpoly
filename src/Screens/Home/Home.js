@@ -13,15 +13,44 @@ import Carousel from "./components/Carousel";
 import Imp from "./components/Imp";
 import Testimo from "./components/Testimo";
 import VidCarousel from "./components/vidcarousel";
+import Lottie from "react-lottie";
+import lottiedata from "./components/lf30_editor_m4oownfl.json";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function Home() {
+  const [loadingData, setLoadingData] = useState(0);
+  const [isCarouselLoading, setIsCarouselLoading] = useState(false);
+  const [isRecentsLoading, setIsRecentsLoading] = useState(false);
+  const [isCounterLoading, setIsCounterLoading] = useState(false);
+
+  useEffect(() => {
+    console.log(loadingData);
+  }, [loadingData]);
   return (
     <Main isSlideShow={true}>
-      <div className=""></div>
-
-      <Carousel />
-      <Recents />
-      <Counter />
+      {isCarouselLoading && isRecentsLoading && isCounterLoading && (
+        <Lottie
+          height="400px"
+          width="400px"
+          options={{
+            autoplay: true,
+            loop: true,
+            animationData: lottiedata,
+            rendererSettings: {
+              preserveAspectRatio: "xMidYMid slice",
+            },
+          }}
+          isClickToPauseDisabled={true}
+        />
+      )}
+      {!isCarouselLoading && !isRecentsLoading && !isCounterLoading && (
+        <>
+          <Carousel setIsCarouselLoading={setIsCarouselLoading} />
+          <Recents setIsRecentsLoading={setIsRecentsLoading} />
+          <Counter setIsCounterLoading={setIsCounterLoading} />
+        </>
+      )}
       <Imp />
       <div className="text-center p-5 w-100 mb-3" id="skew4">
         {/* <h1 className="text-dark" style={{ fontSize: 40 }}>

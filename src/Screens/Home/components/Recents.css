@@ -14,7 +14,7 @@
 .folll {
   overflow: hidden;
 }
-.cus-div {
+/* .cus-div {
   width: 100%;
   position: relative;
 }
@@ -23,14 +23,14 @@
   background-size: cover;
   background-position: center center;
   z-index: 10;
-}
+} */
 /* @media (max-width: 991px) {
   #skew1 {
     margin-top: 30%;
     padding: 0;
   }
 } */
-.cus-div:after {
+/* .cus-div:after {
   position: absolute;
   width: 100%;
   height: 80%;
@@ -45,7 +45,7 @@
   transform: skewY(3deg);
   background: #ffffff;
   height: 50%;
-}
+} */
 
 .reports-title {
   text-transform: uppercase;

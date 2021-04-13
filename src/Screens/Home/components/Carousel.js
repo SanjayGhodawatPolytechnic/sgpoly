@@ -12,16 +12,18 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 // TODO:Delete This Component
-const Carousel = () => {
+const Carousel = ({ setIsCarouselLoading }) => {
   const [data, setData] = useState([]);
 
   const getCaro = async () => {
+    setIsCarouselLoading(true);
     let dataRef = firebase.database().ref("carousel");
     dataRef.on("value", (dataSnapshot) => {
       if (dataSnapshot.val()) {
         let result = Object.values(dataSnapshot.val());
         console.log(result);
         setData(result);
+        setIsCarouselLoading(false);
       }
     });
   };

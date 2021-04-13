@@ -9,10 +9,11 @@ import ThisYear from "./icons/ThisYear";
 import * as firebase from "firebase";
 import { useState, useEffect } from "react";
 
-const Counter = () => {
+const Counter = ({ setIsCounterLoading }) => {
   const [data, setData] = useState(null);
 
-  const getCounter = () => {
+  const getCounter = async () => {
+    setIsCounterLoading(true);
     const dbref = firebase.database().ref("counterVal");
     dbref.on("value", (datasnapshot) => {
       if (datasnapshot.val()) {
@@ -22,7 +23,8 @@ const Counter = () => {
           passedStudents: parseInt(result.passedStudents),
           certifiedTeachers: parseInt(result.certifiedTeachers),
         });
-        console.log(result);
+        // console.log(result);
+        setIsCounterLoading(false);
       }
     });
   };
