@@ -47,7 +47,7 @@ const Recents = ({ setIsRecentsLoading }) => {
   return (
     <div id="skew1" className="cus-div">
       <div className="folll">
-        <section className="pt-5 pb-5">
+        <section className="pt-1 pb-1">
           <div className="givmargin">
             <div className="row">
               {/* <div className="col-6">

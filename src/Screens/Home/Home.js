@@ -16,7 +16,6 @@ import VidCarousel from "./components/vidcarousel";
 import Lottie from "react-lottie";
 import lottiedata from "./components/lf30_editor_m4oownfl.json";
 import { useState } from "react";
-import { useEffect } from "react";
 import GetNews from "./components/News";
 
 function Home() {
@@ -25,15 +24,12 @@ function Home() {
   const [isRecentsLoading, setIsRecentsLoading] = useState(false);
   const [isCounterLoading, setIsCounterLoading] = useState(false);
 
-  useEffect(() => {
-    console.log(loadingData);
-  }, [loadingData]);
   return (
     <Main isSlideShow={true}>
       {isCarouselLoading && isRecentsLoading && isCounterLoading && (
         <Lottie
-          height="400px"
-          width="400px"
+          height="100%"
+          width="100%"
           options={{
             autoplay: true,
             loop: true,
