@@ -17,6 +17,7 @@ import Lottie from "react-lottie";
 import lottiedata from "./components/lf30_editor_m4oownfl.json";
 import { useState } from "react";
 import { useEffect } from "react";
+import GetNews from "./components/News";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -47,10 +48,13 @@ function Home() {
       {!isCarouselLoading && !isRecentsLoading && !isCounterLoading && (
         <>
           <Carousel setIsCarouselLoading={setIsCarouselLoading} />
+
           <Recents setIsRecentsLoading={setIsRecentsLoading} />
+          <GetNews />
           <Counter setIsCounterLoading={setIsCounterLoading} />
         </>
       )}
+
       <Imp />
       <div className="text-center p-5 w-100 mb-3" id="skew4">
         {/* <h1 className="text-dark" style={{ fontSize: 40 }}>
