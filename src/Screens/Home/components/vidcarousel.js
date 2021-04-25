@@ -1,6 +1,27 @@
 import React from "react";
 import "./vidcarousel.css";
+
+import * as firebase from "firebase";
+import { useState } from "react";
+import { useEffect } from "react";
+
 const VidCarousel = () => {
+  const [data, setdata] = useState([]);
+
+  const getvid = async () => {
+    let dataref = firebase.database().ref("videoCarousel");
+    dataref.on("value", (datasnapshot) => {
+      if (datasnapshot.val()) {
+        let result = Object.values(datasnapshot.val());
+        console.log(result);
+        setdata(result);
+      }
+    });
+  };
+  useEffect(() => {
+    getvid();
+  }, []);
+
   return (
     <div>
       {/* Top content */}
@@ -29,33 +50,32 @@ const VidCarousel = () => {
                   <li data-target="#carousel-example" data-slide-to={2} />
                 </ol>
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div className="embed-responsive embed-responsive-16by9">
-                      <iframe
-                        className="embed-responsive-item"
-                        src="https://www.youtube.com/embed/6hgVihWjK2c?rel=0"
-                        allowFullScreen
-                      />
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="embed-responsive embed-responsive-16by9">
-                      <iframe
-                        className="embed-responsive-item"
-                        src="https://player.vimeo.com/video/84910153?title=0&byline=0&portrait=0&badge=0&color=ffffff"
-                        allowFullScreen
-                      />
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="embed-responsive embed-responsive-16by9">
-                      <iframe
-                        className="embed-responsive-item"
-                        src="https://www.youtube.com/embed/oiKj0Z_Xnjc"
-                        allowFullScreen
-                      />
-                    </div>
-                  </div>
+                  {data.map((d, i) => {
+                    if (i == 0) {
+                      return (
+                        <div className="carousel-item active">
+                          <div className="embed-responsive embed-responsive-16by9">
+                            <iframe
+                              className="embed-responsive-item"
+                              src={d.url}
+                              allowFullScreen
+                            />
+                          </div>
+                        </div>
+                      );
+                    }
+                    return (
+                      <div className="carousel-item">
+                        <div className="embed-responsive embed-responsive-16by9">
+                          <iframe
+                            className="embed-responsive-item"
+                            src={d.url}
+                            allowFullScreen
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
                 <a
                   className="carousel-control-prev"
