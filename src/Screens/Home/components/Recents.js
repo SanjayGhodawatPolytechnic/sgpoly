@@ -3,7 +3,7 @@ import "./Recents.css";
 import * as firebase from "firebase";
 import { useEffect } from "react";
 import { useState } from "react";
-
+import SwiperEg from "./Swiper";
 const Recents = ({ setIsRecentsLoading }) => {
   const [data, setData] = useState([[]]);
 
@@ -194,6 +194,7 @@ const Recents = ({ setIsRecentsLoading }) => {
           </div>
         </section>
       </div>
+      <SwiperEg />
     </div>
   );
 };
