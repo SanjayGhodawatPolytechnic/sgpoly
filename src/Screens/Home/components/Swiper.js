@@ -1,20 +1,18 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Mousewheel } from "swiper";
 import "./swiper.css";
 const SwiperEg = () => {
   const [activeIndex, setActiveIndex] = useState(1);
-  Swiper.use([Navigation, Pagination]);
+  Swiper.use([Navigation, Pagination, Mousewheel]);
 
   useEffect(() => {
     var swiper = new Swiper(".blog-slider", {
       spaceBetween: 30,
       effect: "fade",
       loop: true,
-      mousewheel: {
-        invert: false,
-      },
+      mousewheel: true,
       // autoHeight: true,
       pagination: {
         el: ".blog-slider__pagination",
