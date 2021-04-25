@@ -41,13 +41,27 @@ const VidCarousel = () => {
               {/* Carousel */}
               <div id="carousel-example" className="carousel slide">
                 <ol className="carousel-indicators">
-                  <li
+                  {data.map((d, i) => {
+                    if (i == 0) {
+                      return (
+                        <li
+                          data-target="#carousel-example"
+                          data-slide-to={0}
+                          className="active"
+                        />
+                      );
+                    }
+                    return (
+                      <li data-target="#carousel-example" data-slide-to={i} />
+                    );
+                  })}
+                  {/* <li
                     data-target="#carousel-example"
                     data-slide-to={0}
                     className="active"
                   />
                   <li data-target="#carousel-example" data-slide-to={1} />
-                  <li data-target="#carousel-example" data-slide-to={2} />
+                  <li data-target="#carousel-example" data-slide-to={2} /> */}
                 </ol>
                 <div className="carousel-inner">
                   {data.map((d, i) => {

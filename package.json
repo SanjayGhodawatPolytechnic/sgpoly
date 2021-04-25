@@ -41,7 +41,8 @@
     "react-scripts": "3.4.1",
     "react-visibility-sensor": "^5.1.1",
     "reactjs-popup": "^2.0.4",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "swiper": "^6.5.8"
   },
   "scripts": {
     "start": "react-scripts start",
