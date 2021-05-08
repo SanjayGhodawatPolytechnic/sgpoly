@@ -6,6 +6,7 @@ import "./swiper.css";
 const SwiperEg = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   Swiper.use([Navigation, Pagination, Mousewheel]);
+  console.log(data);
 
   useEffect(() => {
     var swiper = new Swiper(".blog-slider", {
@@ -22,7 +23,6 @@ const SwiperEg = ({ data }) => {
       slidesPerView: 1,
       slideActiveClass: "swiper-slide-active",
     });
-    console.log(data);
   }, []);
   return (
     <div className="swiper-cont">
