@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Swiper, { Navigation, Pagination, Mousewheel } from "swiper";
 import "./swiper.css";
-const SwiperEg = () => {
+const SwiperEg = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   Swiper.use([Navigation, Pagination, Mousewheel]);
 
@@ -22,6 +22,7 @@ const SwiperEg = () => {
       slidesPerView: 1,
       slideActiveClass: "swiper-slide-active",
     });
+    console.log(data);
   }, []);
   return (
     <div className="swiper-cont">
