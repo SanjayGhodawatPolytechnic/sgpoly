@@ -28,7 +28,22 @@ const SwiperEg = ({ data }) => {
     <div className="swiper-cont">
       <div class="blog-slider">
         <div class="blog-slider__wrp swiper-wrapper">
-          <div class="blog-slider__item swiper-slide">
+          {data[0].map((val, idx) => (
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src={val.imageDownloadUrl} alt="" />
+              </div>
+              <div class="blog-slider__content">
+                <span class="blog-slider__code">{val.postedOn}</span>
+                <div class="blog-slider__title">{val.title}</div>
+                <div class="blog-slider__text">{val.description} </div>
+                <a href="#" class="blog-slider__button">
+                  READ MORE
+                </a>
+              </div>
+            </div>
+          ))}
+          {/* <div class="blog-slider__item swiper-slide">
             <div class="blog-slider__img">
               <img
                 src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg"
@@ -85,7 +100,7 @@ const SwiperEg = ({ data }) => {
                 READ MORE
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
         <div class="blog-slider__pagination"></div>
       </div>
