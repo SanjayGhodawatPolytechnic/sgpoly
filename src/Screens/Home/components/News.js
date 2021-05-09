@@ -1,8 +1,63 @@
 import React from "react";
 
 import "./News.css";
+import * as firebase from "firebase";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const GetNews = () => {
+  const [newsData, newsSetData] = useState([]);
+
+  const getallNews = () => {
+    const dbref = firebase.database().ref("news");
+    dbref.on("value", (datasnapshot) => {
+      if (datasnapshot.val()) {
+        let result = Object.values(datasnapshot.val());
+        result.forEach((v, i) => {
+          let date = new Date(v.postedOn);
+          let dateData = [];
+          dateData.push(date.getDate());
+          dateData.push(date.getMonth());
+          dateData.push(date.getFullYear());
+          dateData.push(date.getHours());
+          dateData.push(date.getMinutes());
+          dateData.push(date.getSeconds());
+          v.postedOn = dateData;
+        });
+        result.reverse();
+        newsSetData(result);
+      }
+    });
+  };
+
+  const [circularData, circularSetData] = useState([]);
+
+  const getallCircular = () => {
+    const dbref = firebase.database().ref("circular");
+    dbref.on("value", (datasnapshot) => {
+      if (datasnapshot.val()) {
+        let result = Object.values(datasnapshot.val());
+        result.forEach((v, i) => {
+          let date = new Date(v.postedOn);
+          let dateData = [];
+          dateData.push(date.getDate());
+          dateData.push(date.getMonth());
+          dateData.push(date.getFullYear());
+          dateData.push(date.getHours());
+          dateData.push(date.getMinutes());
+          dateData.push(date.getSeconds());
+          v.postedOn = dateData;
+        });
+        result.reverse();
+        circularSetData(result);
+      }
+    });
+  };
+  useEffect(() => {
+    getallNews();
+    getallCircular();
+  }, []);
+
   return (
     <div>
       <div className="new_row">
@@ -14,7 +69,32 @@ const GetNews = () => {
               <div className="news-line" />
             </div>
             <div className="news-cont-scrollable">
-              <div
+              {newsData.map((d, i) => {
+                return (
+                  <div
+                    className="fullbar-item w-100 cursor-pointer"
+                    onclick="location.href='#'"
+                  >
+                    <div className="container">
+                      <div className="row py-1 py-md-4 align-items-center border-top">
+                        <div className="col-md-10">
+                          <h3 className="feed-item-heading m-0 font-weight-800">
+                            <a className="text-black" href={d.FileURL}>
+                              {d.title}
+                            </a>
+                          </h3>
+                        </div>
+                        <div className="col-md-2">
+                          <p className="m-0 text-pink text-uppercase">
+                            {d.postedOn}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+              {/* <div
                 className="fullbar-item w-100 cursor-pointer"
                 onclick="location.href='#'"
               >
@@ -211,7 +291,7 @@ const GetNews = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </div>
@@ -223,7 +303,32 @@ const GetNews = () => {
               <div className="circular-line" />
             </div>
             <div className="circular-cont-scrollable">
-              <div
+              {circularData.map((d, i) => {
+                return (
+                  <div
+                    className="fullbar-item w-100 cursor-pointer"
+                    onclick="location.href='#'"
+                  >
+                    <div className="container">
+                      <div className="row py-1 py-md-4 align-items-center border-top">
+                        <div className="col-md-10">
+                          <h3 className="feed-item-heading m-0 font-weight-800">
+                            <a className="text-black" href="d.FileURL">
+                              {d.title}
+                            </a>
+                          </h3>
+                        </div>
+                        <div className="col-md-2">
+                          <p className="m-0 text-pink text-uppercase">
+                            {d.postedOn}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+              {/* <div
                 className="fullbar-item w-100 cursor-pointer"
                 onclick="location.href='#'"
               >
@@ -376,7 +481,7 @@ const GetNews = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </div>
