@@ -9,7 +9,7 @@ const SwiperEg = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   Swiper.use([Navigation, Pagination, Mousewheel]);
 
-  const [data, setData] = useState([[]]);
+  const [data, setData] = useState([]);
 
   const getAllUpdates = async () => {
     let dataRef = firebase.database().ref("updates");
@@ -29,15 +29,16 @@ const SwiperEg = () => {
           v.postedOn = dateData.join("/");
         });
         result.reverse();
-        if (result.length > 3) {
-          let first3 = result.slice(0, 3);
-          let last3 = result.slice(3, 6);
-          let combined = [first3, last3];
-          setData(combined);
-        } else {
-          let ar = [result];
-          setData(ar);
-        }
+        // if (result.length > 3) {
+        //   let first3 = result.slice(0, 3);
+        //   let last3 = result.slice(3, 6);
+        //   let combined = [first3, last3];
+        //   setData(combined);
+        // } else {
+        //   let ar = [result];
+        //   setData(ar);
+        // }
+        setData(result);
       }
     });
   };
@@ -46,10 +47,13 @@ const SwiperEg = () => {
     getAllUpdates();
 
     var swiper = new Swiper(".blog-slider", {
+      observer: true,
+      observeParents: true,
       spaceBetween: 30,
       effect: "fade",
       loop: true,
-      mousewheel: true,
+      autoHeight: true,
+
       // autoHeight: true,
       pagination: {
         el: ".blog-slider__pagination",
@@ -58,23 +62,28 @@ const SwiperEg = () => {
       direction: "vertical",
       slidesPerView: 1,
       slideActiveClass: "swiper-slide-active",
+      allowTouchMove: false,
     });
   }, []);
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   return (
     <div>
       <div className="swiper-cont">
         <div class="blog-slider">
           <div class="blog-slider__wrp swiper-wrapper">
-            {data[0].map((val, idx) => (
-              <div class="blog-slider__item swiper-slide">
+            {data.map((val, idx) => (
+              <div class="blog-slider__item swiper-slide" key={idx}>
                 <div class="blog-slider__img">
                   <img src={val.imageDownloadUrl} alt="" />
                 </div>
                 <div class="blog-slider__content">
                   <span class="blog-slider__code">{val.postedOn}</span>
                   <div class="blog-slider__title">{val.title}</div>
-                  <div class="blog-slider__text">{val.description} </div>
+                  <div class="blog-slider__text">{val.description}</div>
                   <a href="#" class="blog-slider__button">
                     READ MORE
                   </a>
