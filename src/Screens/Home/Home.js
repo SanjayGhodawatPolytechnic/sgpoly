@@ -17,6 +17,7 @@ import Lottie from "react-lottie";
 import lottiedata from "./components/lf30_editor_m4oownfl.json";
 import { useState } from "react";
 import GetNews from "./components/News";
+import Newsletter from "./components/newsletter";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -110,6 +111,7 @@ function Home() {
       <VidCarousel />
 
       <Testimo />
+      <Newsletter />
     </Main>
   );
 }
