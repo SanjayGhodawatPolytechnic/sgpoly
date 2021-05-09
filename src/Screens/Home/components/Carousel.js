@@ -33,7 +33,7 @@ const Carousel = ({ setIsCarouselLoading }) => {
   }, []);
 
   return (
-    <div className="container css-caro">
+    <div className=" css-caro">
       <div
         id="carouselExampleIndicators"
         className="carousel slide"

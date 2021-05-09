@@ -140,7 +140,7 @@ const Recents = ({ setIsRecentsLoading }) => {
           </div>
         </section>
       </div>
-      <SwiperEg data={data} />
+      <SwiperEg />
     </div>
   );
 };
