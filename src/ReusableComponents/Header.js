@@ -1,12 +1,8 @@
-import React from 'react';
-import "./CSS/header.css"
+import React from "react";
+import "./CSS/header.css";
 
 const Header = () => {
-    return (
-        <div>
-            <div className="banner"></div>
-        </div>
-    )
-}
+  return <div className="banner"></div>;
+};
 
 export default Header;
