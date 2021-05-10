@@ -72,7 +72,7 @@ const SwiperEg = () => {
 
   return (
     <div>
-      <div className="training-title col-3 text-right swiper-title">
+      <div className="training-title col-3 text-center swiper-title">
         <h4 className="reports-title">Important Reports</h4>
         <div className="reports-line" />
       </div>

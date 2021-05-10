@@ -65,7 +65,7 @@ const GetNews = () => {
           <section className="blog-cat mt-5 pb-5">
             {/* <h1 class="in-news h3 text-red font-italic">News</h1> */}
             <div className="m-0 p-0">
-              <h4 className="news-title">News</h4>
+              <h4 className="news-title"> latest News</h4>
               <div className="news-line" />
             </div>
             <div className="news-cont-scrollable">
@@ -299,7 +299,7 @@ const GetNews = () => {
           <section className="blog-cat mt-5 pb-5">
             {/* <h1 class="in-news h3 text-red font-italic">Circular</h1> */}
             <div>
-              <h4 className="circular-title">Circular</h4>
+              <h4 className="circular-title">Circulars/Downloads</h4>
               <div className="circular-line" />
             </div>
             <div className="circular-cont-scrollable">
