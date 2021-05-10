@@ -10,8 +10,8 @@
 .swiper-cont {
   background-color: #ffe53b;
   background-image: linear-gradient(147deg, #ffe53b 0%, #fd3838 74%);
-  max-height: 50vh;
-  min-height: 50vh;
+  max-height: 70vh;
+  min-height: 70vh;
   font-family: "Fira Sans", sans-serif;
   display: flex;
   flex-direction: column;
