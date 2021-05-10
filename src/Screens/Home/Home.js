@@ -18,6 +18,7 @@ import lottiedata from "./components/lf30_editor_m4oownfl.json";
 import { useState } from "react";
 import GetNews from "./components/News";
 import Newsletter from "./components/newsletter";
+import SwiperEg from "./components/Swiper";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -46,7 +47,8 @@ function Home() {
         <>
           <Carousel setIsCarouselLoading={setIsCarouselLoading} />
 
-          <Recents setIsRecentsLoading={setIsRecentsLoading} />
+          {/* <Recents setIsRecentsLoading={setIsRecentsLoading} /> */}
+          <SwiperEg />
           <GetNews />
           <Counter setIsCounterLoading={setIsCounterLoading} />
         </>

@@ -72,6 +72,10 @@ const SwiperEg = () => {
 
   return (
     <div>
+      <div className="training-title col-3 text-right swiper-title">
+        <h4 className="reports-title">Important Reports</h4>
+        <div className="reports-line" />
+      </div>
       <div className="swiper-cont">
         <div class="blog-slider">
           <div class="blog-slider__wrp swiper-wrapper">

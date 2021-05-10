@@ -28,7 +28,7 @@ const NavBar = () => {
           <PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />
         )}
         <div className="contains">
-          <div className="logo">LOGO</div>
+          <div className="logo"></div>
           <nav className={isOpen ? "active" : ""}>
             <ul>
               <li>

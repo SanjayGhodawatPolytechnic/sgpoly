@@ -35,7 +35,7 @@ header nav ul li {
   position: relative;
 }
 header nav ul li.sub-menu:before {
-  content: "\f0d7";
+  content: "";
   font-family: fontAwesome;
   position: absolute;
   line-height: 50px;
@@ -43,7 +43,7 @@ header nav ul li.sub-menu:before {
   right: 5px;
 }
 header nav ul li.active.sub-menu:before {
-  content: "\f0d8";
+  content: "";
 }
 header nav ul li ul {
   position: absolute;
