@@ -8,7 +8,6 @@ import ENTCLogo from "./icons/ENTC";
 import ElectLogo from "./icons/Elect";
 import "./CSS/DeptCard.css";
 import Counter from "./components/Counter";
-import Recents from "./components/Recents";
 import Carousel from "./components/Carousel";
 import Imp from "./components/Imp";
 import Testimo from "./components/Testimo";
