@@ -15,7 +15,7 @@ const Imp = () => {
       <div className="content-wrapper">
         <div className="news-card">
           <img
-            src="http://www.sgipolytechnic.in/pics/Chairman2.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FHome%2Fsanjayghodawat.jpg?alt=media&token=6ec511d4-45d9-4d4a-a3fb-e650c8f7243c"
             alt=""
             className="news-card__image"
           />
@@ -36,7 +36,7 @@ const Imp = () => {
         </div>
         <div className="news-card">
           <img
-            src="http://www.sgipolytechnic.in/pics/Trustee.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FHome%2FVB.jpg?alt=media&token=c7759f33-2f56-44fb-bfcf-65fbc15dc116"
             alt=""
             className="news-card__image"
           />
@@ -57,7 +57,7 @@ const Imp = () => {
         </div>
         <div className="news-card">
           <img
-            src="http://www.sgipolytechnic.in/pics/Principal.jpg"
+            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FHome%2Fvirat%20giri.jpg?alt=media&token=4cb4c7d0-c263-43b5-90cf-be9995b08e72"
             alt=""
             className="news-card__image"
           />
