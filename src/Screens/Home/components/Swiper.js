@@ -67,7 +67,7 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
     <div>
       <div className="swiper-cont">
         <div className=" col-3 text-center swiper-title">
-          <h4 className="">Important Reports</h4>
+          <h4 className="title">Important Reports</h4>
           <div className="reports-line swiper-line" />
         </div>
         <div class="blog-slider">

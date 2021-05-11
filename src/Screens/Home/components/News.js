@@ -53,7 +53,7 @@ const GetNews = () => {
   }, []);
 
   return (
-    <div>
+    <div className="section-news">
       <div className="new_row">
         <div className="new_col">
           <section className="blog-cat mt-5 pb-5">

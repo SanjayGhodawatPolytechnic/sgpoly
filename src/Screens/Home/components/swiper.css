@@ -7,11 +7,16 @@ body {
 }
 .swiper-title {
   margin-top: 50px;
+  font-weight: 700;
+}
+.title {
   color: #f0ede7;
+
+  font-weight: 700;
 }
 
 .swiper-line {
-  color: #a1989e;
+  background-color: #a1989e;
 }
 
 .swiper-cont {

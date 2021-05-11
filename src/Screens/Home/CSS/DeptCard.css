@@ -1,9 +1,14 @@
 .courses-title {
   color: #f0ede7;
+  text-align: center;
+  text-transform: uppercase;
+}
+.courses-line {
+  background-color: #a1989e;
 }
 
 .cse-card {
-  background-color: #a1989e;
+  background-color: #eab0b8;
   /* color: #f0ede7; */
   transition: all 0.2s ease-in;
 }
@@ -22,7 +27,7 @@
 }
 
 .mech-card {
-  background-color: #a1989e;
+  background-color: #eab0b8;
 
   transition: all 0.2s ease-in;
 }
@@ -42,7 +47,7 @@
 }
 
 .civil-card {
-  background-color: #a1989e;
+  background-color: #eab0b8;
 
   transition: all 0.2s ease-in;
 }
@@ -62,7 +67,7 @@
 }
 
 .etc-card {
-  background-color: #a1989e;
+  background-color: #eab0b8;
 
   transition: all 0.2s ease-in;
 }
@@ -82,7 +87,7 @@
 }
 
 .ele-card {
-  background-color: #a1989e;
+  background-color: #eab0b8;
 
   transition: all 0.2s ease-in;
 }

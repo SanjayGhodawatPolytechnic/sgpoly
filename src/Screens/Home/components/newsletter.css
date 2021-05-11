@@ -1,3 +1,9 @@
+.section-newsletter {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
 .newsletter-subscribe {
   color: #313437;
   background-color: #ffffff;

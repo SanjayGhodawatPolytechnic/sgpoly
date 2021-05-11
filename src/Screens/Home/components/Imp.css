@@ -1,8 +1,15 @@
 .cus-div {
   padding: 50px 0;
 }
+.imp-section {
+  height: 70vh;
+}
 .imp-title {
   color: #ec5867;
+  font-weight: 700;
+}
+.imp-line {
+  background-color: #a1989e;
 }
 
 .content-wrapper {

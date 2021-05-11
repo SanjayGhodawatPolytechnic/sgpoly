@@ -7,10 +7,10 @@ import "./Imp.css";
 // src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 const Imp = () => {
   return (
-    <div id="skew3" className="cus-div">
+    <div id="skew3" className="cus-div imp-section">
       <div className="courses-title">
-        <h4 className="course-title imp-title">Board Members</h4>
-        <div className="courses-line" />
+        <h4 className=" imp-title">Board Members</h4>
+        <div className="courses-line imp-line" />
       </div>
       <div className="content-wrapper">
         <div className="news-card">
