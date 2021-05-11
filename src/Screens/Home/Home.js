@@ -60,7 +60,7 @@ function Home() {
         {/* <h1 className="text-dark" style={{ fontSize: 40 }}>
           COURSES
         </h1> */}
-        <div className="training-title">
+        <div className="courses-title">
           <h4 className="course-title">COURSES</h4>
           <div className="courses-line" />
         </div>

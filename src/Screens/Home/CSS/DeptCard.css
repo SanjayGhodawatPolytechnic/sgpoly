@@ -1,89 +1,102 @@
+.courses-title {
+  color: #f0ede7;
+}
+
 .cse-card {
-  background-color: #fff;
+  background-color: #a1989e;
+  /* color: #f0ede7; */
   transition: all 0.2s ease-in;
 }
 
 .cse-logo {
-  fill: #000;
+  fill: #f0ede7;
   transition: all 0.2s ease-in;
 }
 .cse-card:hover {
-  background: #f72a26;
-  color: #fff;
+  background: #f0ede7;
+  color: #ec5867;
   cursor: pointer;
 }
 .cse-card:hover .cse-logo {
-  fill: white;
+  fill: #ec5867;
 }
 
 .mech-card {
-  background-color: #fff;
+  background-color: #a1989e;
+
   transition: all 0.2s ease-in;
 }
 
 .mech-logo {
-  fill: #000;
+  fill: #f0ede7;
+
   transition: all 0.2s ease-in;
 }
 .mech-card:hover {
-  background: #f72a26;
-  color: #fff;
+  background: #f0ede7;
+  color: #ec5867;
   cursor: pointer;
 }
 .mech-card:hover .mech-logo {
-  fill: white;
+  fill: #ec5867;
 }
 
 .civil-card {
-  background-color: #fff;
+  background-color: #a1989e;
+
   transition: all 0.2s ease-in;
 }
 
 .civil-logo {
-  fill: #000;
+  fill: #f0ede7;
+
   transition: all 0.2s ease-in;
 }
 .civil-card:hover {
-  background: #f72a26;
-  color: #fff;
+  background: #f0ede7;
+  color: #ec5867;
   cursor: pointer;
 }
 .civil-card:hover .civil-logo {
-  fill: white;
+  fill: #ec5867;
 }
 
 .etc-card {
-  background-color: #fff;
+  background-color: #a1989e;
+
   transition: all 0.2s ease-in;
 }
 
 .etc-logo {
-  fill: #000;
+  fill: #f0ede7;
+
   transition: all 0.2s ease-in;
 }
 .etc-card:hover {
-  background: #f72a26;
-  color: #fff;
+  background: #f0ede7;
+  color: #ec5867;
   cursor: pointer;
 }
 .etc-card:hover .etc-logo {
-  fill: white;
+  fill: #ec5867;
 }
 
 .ele-card {
-  background-color: #fff;
+  background-color: #a1989e;
+
   transition: all 0.2s ease-in;
 }
 
 .ele-logo {
-  fill: #000;
+  fill: #f0ede7;
+
   transition: all 0.2s ease-in;
 }
 .ele-card:hover {
-  background: #f72a26;
-  color: #fff;
+  background: #f0ede7;
+  color: #ec5867;
   cursor: pointer;
 }
 .ele-card:hover .ele-logo {
-  fill: white;
+  fill: #ec5867;
 }

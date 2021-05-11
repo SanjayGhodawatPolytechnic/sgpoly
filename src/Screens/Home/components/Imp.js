@@ -8,6 +8,10 @@ import "./Imp.css";
 const Imp = () => {
   return (
     <div id="skew3" className="cus-div">
+      <div className="courses-title">
+        <h4 className="course-title imp-title">Board Members</h4>
+        <div className="courses-line" />
+      </div>
       <div className="content-wrapper">
         <div className="news-card">
           <img

@@ -65,11 +65,11 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
 
   return (
     <div>
-      <div className="training-title col-3 text-center swiper-title">
-        <h4 className="reports-title">Important Reports</h4>
-        <div className="reports-line" />
-      </div>
       <div className="swiper-cont">
+        <div className=" col-3 text-center swiper-title">
+          <h4 className="">Important Reports</h4>
+          <div className="reports-line swiper-line" />
+        </div>
         <div class="blog-slider">
           <div class="blog-slider__wrp swiper-wrapper">
             {data.map((val, idx) => (

@@ -62,7 +62,8 @@
 }
 
 #skew4 {
-  background: url("../../img/coursebg.jpg");
+  background-color: #ec5867;
+  /* background: url("../../img/coursebg.jpg"); */
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;

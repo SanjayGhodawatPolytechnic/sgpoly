@@ -61,7 +61,7 @@ const Carousel = ({ setIsCarouselLoading }) => {
               return (
                 <div className="carousel-item active">
                   <img
-                    className="d-block w-100"
+                    className="d-block w-100 bgset"
                     src={data[0].URL}
                     alt={data[0].ImageName}
                   />
