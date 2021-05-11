@@ -36,7 +36,7 @@ const Carousel = ({ setIsCarouselLoading }) => {
     <div className=" css-caro">
       <div
         id="carouselExampleIndicators"
-        className="carousel slide"
+        className="carousel slide p-0 m-0"
         data-ride="carousel"
       >
         <ol className="carousel-indicators">
@@ -59,7 +59,7 @@ const Carousel = ({ setIsCarouselLoading }) => {
           {data.map((d, i) => {
             if (i == 0) {
               return (
-                <div className="carousel-item active">
+                <div className="carousel-item active w-100">
                   <img
                     className="d-block w-100 bgset"
                     src={data[0].URL}
@@ -69,14 +69,14 @@ const Carousel = ({ setIsCarouselLoading }) => {
               );
             }
             return (
-              <div className="carousel-item">
+              <div className="carousel-item w-100">
                 <img className="d-block w-100" src={d.URL} alt={d.ImageName} />
               </div>
             );
           })}
         </div>
         <a
-          className="carousel-control-prev"
+          className="carousel-control-prev carou-control"
           href="#carouselExampleIndicators"
           role="button"
           data-slide="prev"

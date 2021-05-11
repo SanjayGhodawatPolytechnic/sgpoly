@@ -17,8 +17,12 @@
 .back-set {
   background-color: #ec5867;
   padding-top: 30px;
-  height: 70vh;
+  height: auto;
   padding-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .carousel-caption {
@@ -84,7 +88,6 @@
   /* background-color: rgb(223, 56, 89); */
   padding: 1.4rem;
 }
-
 @media (max-width: 767px) {
   .i {
     padding: 0.8rem;

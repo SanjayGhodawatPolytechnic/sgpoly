@@ -1,5 +1,5 @@
 .section-newsletter {
-  height: 30vh;
+  height: auto;
   display: flex;
   align-items: center;
 }
@@ -8,6 +8,8 @@
   color: #313437;
   background-color: #eff1f4;
   padding: 55px 74px;
+  margin: 0;
+  min-width: 100vw;
 }
 
 .newsletter-subscribe p {
@@ -82,4 +84,8 @@
 
 .newsletter {
   color: #0062cc !important;
+}
+.email-inp {
+  border-bottom: 3px solid #0062cc;
+  border-width: 3px;
 }

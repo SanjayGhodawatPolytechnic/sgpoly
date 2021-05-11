@@ -9,7 +9,6 @@ import {
   NotificationManager,
 } from "react-notifications";
 import "react-notifications/lib/notifications.css";
-
 const Newsletter = ({ setIsRecentsLoading }) => {
   const [data, setData] = useState({
     email: "",
@@ -44,10 +43,10 @@ const Newsletter = ({ setIsRecentsLoading }) => {
               Be the first one to know the updates related to the university{" "}
             </p>
           </div>
-          <form className="form-inline" method="post">
+          <form className="form-inline">
             <div className="form-group">
               <input
-                className="form-control"
+                className="form-control border-botton-2 border-bottom-primary"
                 type="email"
                 name="email"
                 placeholder="Your Email"

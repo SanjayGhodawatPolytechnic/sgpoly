@@ -1,13 +1,14 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import Swiper, { Navigation, Pagination, Mousewheel } from "swiper";
+import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
 import "./swiper.css";
 import * as firebase from "firebase";
 
+// TODO: ====================Lot to work to make it responsive================================
 const SwiperEg = ({ setIsRecentsLoading }) => {
   // const [activeIndex, setActiveIndex] = useState(1);
-  Swiper.use([Navigation, Pagination, Mousewheel]);
+  Swiper.use([Navigation, Pagination, Mousewheel, Autoplay]);
 
   const [data, setData] = useState([]);
 
@@ -41,13 +42,15 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
 
     var swiper = new Swiper(".blog-slider", {
       observer: true,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        stopOnLastSlide: false,
+      },
       observeParents: true,
       spaceBetween: 30,
       effect: "fade",
-      loop: true,
       autoHeight: true,
-
-      // autoHeight: true,
       pagination: {
         el: ".blog-slider__pagination",
         clickable: true,
@@ -64,13 +67,13 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
   }, [data]);
 
   return (
-    <div>
-      <div className="swiper-cont">
-        <div className=" col-3 text-center swiper-title">
+    <div className="container m-0 p-0">
+      <div className="swiper-cont container m-0 p-0 row">
+        <div className=" col-12 text-center swiper-title m-0">
           <h4 className="title">Important Reports</h4>
           <div className="reports-line swiper-line" />
         </div>
-        <div class="blog-slider">
+        <div class="blog-slider col-12">
           <div class="blog-slider__wrp swiper-wrapper">
             {data.map((val, idx) => (
               <div class="blog-slider__item swiper-slide" key={idx}>
