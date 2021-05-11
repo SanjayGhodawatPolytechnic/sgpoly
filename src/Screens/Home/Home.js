@@ -19,6 +19,7 @@ import { useState } from "react";
 import GetNews from "./components/News";
 import Newsletter from "./components/newsletter";
 import SwiperEg from "./components/Swiper";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -48,7 +49,7 @@ function Home() {
           <Carousel setIsCarouselLoading={setIsCarouselLoading} />
 
           {/* <Recents setIsRecentsLoading={setIsRecentsLoading} /> */}
-          <SwiperEg />
+          <SwiperEg setIsRecentsLoading={setIsRecentsLoading} />
           <GetNews />
           <Counter setIsCounterLoading={setIsCounterLoading} />
         </>
@@ -65,48 +66,63 @@ function Home() {
         </div>
 
         <div className="row w-100 text-center d-flex justify-content-center cardsss">
-          <div className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2 rounded">
+          <Link
+            className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2 rounded"
+            to="/department/cse"
+          >
             <div className="rounded py-5 px-4 bg-transparent">
               <CSELogo className="mb-3 cse-logo" width="100px" />
-              <h5 className="mb-0">Computer Science</h5>
+              <h5 className="mb-0 text-dark">Computer Science</h5>
             </div>
-          </div>
-          <div className="col-xl-3 col-sm-6 mb-5 mech-card shadow-lg m-2">
+          </Link>
+          <Link
+            className="col-xl-3 col-sm-6 mb-5 mech-card shadow-lg m-2"
+            to="/department/mech"
+          >
             <div className="rounded py-5 px-4 bg-transparent">
               <MechLogo
                 className="mb-3 mech-logo"
                 width="100px"
                 height="80px"
               />
-              <h5 className="mb-0">Mechanical</h5>
+              <h5 className="mb-0 text-dark">Mechanical</h5>
             </div>
-          </div>
-          <div className="col-xl-3 col-sm-6 mb-5 civil-card shadow-lg m-2">
+          </Link>
+          <Link
+            className="col-xl-3 col-sm-6 mb-5 civil-card shadow-lg m-2"
+            to="/department/civil"
+          >
             <div className="rounded py-5 px-4 bg-transparent">
               <CivilLogo
                 className="mb-3 civil-logo"
                 width="100px"
                 height="80px"
               />
-              <h5 className="mb-0">Civil</h5>
+              <h5 className="mb-0 text-dark">Civil</h5>
             </div>
-          </div>
-          <div className="col-xl-3 col-sm-6 mb-5 etc-card shadow-lg m-2">
+          </Link>
+          <Link
+            className="col-xl-3 col-sm-6 mb-5 etc-card shadow-lg m-2"
+            to="/department/entc"
+          >
             <div className="rounded py-5 px-4 bg-transparent">
               <ENTCLogo className="mb-3 etc-logo" width="100px" height="80px" />
-              <h5 className="mb-0">E &amp; TC</h5>
+              <h5 className="mb-0 text-dark">E &amp; TC</h5>
             </div>
-          </div>
-          <div className="col-xl-3 col-sm-6 mb-5 ele-card shadow-lg m-2">
+          </Link>
+          <Link
+            className="col-xl-3 col-sm-6 mb-5 ele-card shadow-lg m-2"
+            to="/department/electrical"
+          >
             <div className="rounded py-5 px-4 bg-transparent">
               <ElectLogo
                 className="mb-3 ele-logo"
                 width="100px"
                 height="80px"
               />
-              <h5 className="mb-0">Electrical</h5>
+              <h5 className="mb-0 text-dark">Electrical</h5>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 

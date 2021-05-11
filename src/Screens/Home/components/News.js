@@ -16,13 +16,10 @@ const GetNews = () => {
         result.forEach((v, i) => {
           let date = new Date(v.postedOn);
           let dateData = [];
-          dateData.push(date.getDate());
-          dateData.push(date.getMonth());
-          dateData.push(date.getFullYear());
-          dateData.push(date.getHours());
-          dateData.push(date.getMinutes());
-          dateData.push(date.getSeconds());
-          v.postedOn = dateData;
+          dateData.push(date.getDate().toString());
+          dateData.push((date.getMonth() + 1).toString());
+          dateData.push(date.getFullYear().toString());
+          v.postedOn = dateData.join("/");
         });
         result.reverse();
         newsSetData(result);
@@ -40,13 +37,10 @@ const GetNews = () => {
         result.forEach((v, i) => {
           let date = new Date(v.postedOn);
           let dateData = [];
-          dateData.push(date.getDate());
-          dateData.push(date.getMonth());
-          dateData.push(date.getFullYear());
-          dateData.push(date.getHours());
-          dateData.push(date.getMinutes());
-          dateData.push(date.getSeconds());
-          v.postedOn = dateData;
+          dateData.push(date.getDate().toString());
+          dateData.push((date.getMonth() + 1).toString());
+          dateData.push(date.getFullYear().toString());
+          v.postedOn = dateData.join("/");
         });
         result.reverse();
         circularSetData(result);

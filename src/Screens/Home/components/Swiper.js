@@ -5,13 +5,14 @@ import Swiper, { Navigation, Pagination, Mousewheel } from "swiper";
 import "./swiper.css";
 import * as firebase from "firebase";
 
-const SwiperEg = () => {
-  const [activeIndex, setActiveIndex] = useState(1);
+const SwiperEg = ({ setIsRecentsLoading }) => {
+  // const [activeIndex, setActiveIndex] = useState(1);
   Swiper.use([Navigation, Pagination, Mousewheel]);
 
   const [data, setData] = useState([]);
 
   const getAllUpdates = async () => {
+    setIsRecentsLoading(true);
     let dataRef = firebase.database().ref("updates");
     dataRef.on("value", (dataSnapshot) => {
       if (dataSnapshot.val()) {
@@ -29,16 +30,8 @@ const SwiperEg = () => {
           v.postedOn = dateData.join("/");
         });
         result.reverse();
-        // if (result.length > 3) {
-        //   let first3 = result.slice(0, 3);
-        //   let last3 = result.slice(3, 6);
-        //   let combined = [first3, last3];
-        //   setData(combined);
-        // } else {
-        //   let ar = [result];
-        //   setData(ar);
-        // }
         setData(result);
+        setIsRecentsLoading(false);
       }
     });
   };
@@ -94,64 +87,6 @@ const SwiperEg = () => {
                 </div>
               </div>
             ))}
-            {/* <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img
-                src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">26 December 2019</span>
-              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-              <div class="blog-slider__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Recusandae voluptate repellendus magni illo ea animi?{" "}
-              </div>
-              <a href="#" class="blog-slider__button">
-                READ MORE
-              </a>
-            </div>
-          </div>
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img
-                src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/jason-leung-798979-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">26 December 2019</span>
-              <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
-              <div class="blog-slider__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Recusandae voluptate repellendus magni illo ea animi?
-              </div>
-              <a href="#" class="blog-slider__button">
-                READ MORE
-              </a>
-            </div>
-          </div>
-
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img
-                src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="blog-slider__content">
-              <span class="blog-slider__code">26 December 2019</span>
-              <div class="blog-slider__title">Lorem Ipsum Dolor</div>
-              <div class="blog-slider__text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Recusandae voluptate repellendus magni illo ea animi?
-              </div>
-              <a href="#" class="blog-slider__button">
-                READ MORE
-              </a>
-            </div>
-          </div> */}
           </div>
           <div class="blog-slider__pagination"></div>
         </div>
