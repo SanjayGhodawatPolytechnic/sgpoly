@@ -25,15 +25,14 @@ const VidCarousel = () => {
   return (
     <div>
       {/* Top content */}
-      <div className="top-content">
-        <div className="container">
+      <div className="top-content ">
+        <div className="">
           {/* Title and description row */}
-          <div className="row">
-            <div className="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-              <h3 className="about-title">About SGP</h3>
-              <div className="about-line" />
-            </div>
+          <div className="courses-title">
+            <h4 className=" imp-title">About SGP</h4>
+            <div className="courses-line imp-line" />
           </div>
+
           {/* End title and description row */}
           {/* Carousel row */}
           <div className="row">

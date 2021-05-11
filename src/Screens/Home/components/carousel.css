@@ -1,4 +1,7 @@
 .css-caro {
+  display: flex;
+  align-items: center;
+  margin: 70px;
   overflow: hidden;
 
   /* max-height: 70vh; */
