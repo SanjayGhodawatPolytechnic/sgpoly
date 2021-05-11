@@ -1,12 +1,12 @@
 .section-newsletter {
-  height: 60vh;
+  height: 30vh;
   display: flex;
   align-items: center;
 }
 
 .newsletter-subscribe {
   color: #313437;
-  background-color: #ffffff;
+  background-color: #eff1f4;
   padding: 55px 74px;
 }
 

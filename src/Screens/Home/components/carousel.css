@@ -1,10 +1,5 @@
 .css-caro {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 0;
+  overflow: auto;
   width: 100%;
-  min-width: 100vw;
-
   /* max-height: 70vh; */
 }

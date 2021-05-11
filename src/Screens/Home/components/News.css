@@ -3,13 +3,13 @@
 
   width: 100%;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   border-bottom: #c1c1c1;
   border-left: none;
   border-width: 10px;
 }
 .section-news {
-  padding: 50px;
+  padding: 0px 0px;
 }
 .new_col {
   padding: 0;
