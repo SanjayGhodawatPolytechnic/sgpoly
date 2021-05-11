@@ -5,22 +5,22 @@ import Main from "../../ReusableComponents/Main";
 const hostel = () => {
     const Items = [
         {
-            image: "http://www.sgipolytechnic.in/Infrastructure/hostel1.jpg",
+            image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fhostel1.jpg?alt=media&token=cd08096b-ad89-4105-8951-544a596fa58c",
         },
         {
-            image: "http://www.sgipolytechnic.in/Infrastructure/hostel2.jpg",
+            image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fhostel2.jpg?alt=media&token=c5d67009-9fb5-4b9e-a531-e657e9fadd76",
         },
         {
-            image: "http://www.sgipolytechnic.in/Infrastructure/hostel3.jpg",
+            image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fhostel3.jpg?alt=media&token=2c37eebd-f1c8-419b-92c6-d7a6577d6bc2",
         },
         {
-            image: "http://www.sgipolytechnic.in/Infrastructure/hostel4.jpg",
+            image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fhostel4.jpg?alt=media&token=fef171a9-2e93-4c68-9376-33324100c960",
         },
         {
-            image: "http://www.sgipolytechnic.in/Infrastructure/hostel5.jpg",
+            image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fhostel5.jpg?alt=media&token=9ec89ef7-461c-4afb-ab7f-1ad058e93430",
         },
         {
-            image: "http://www.sgipolytechnic.in/Infrastructure/hostel6.jpg",
+            image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fhostel6.jpg?alt=media&token=e761ff14-6f8c-4890-bdde-98ea43f3bb39",
         },
         
 
