@@ -1,7 +1,9 @@
 .contains {
   padding: 0;
 }
-
+.navbar-cont {
+  height: 50px;
+}
 header {
   position: absolute;
   margin-bottom: 30px;
@@ -23,7 +25,8 @@ header .logo {
 }
 header nav {
   float: right;
-  padding-right: 100px;
+  padding-right: 0;
+  /* padding-right: 100px; */
 }
 header nav ul {
   margin: 0;
@@ -84,7 +87,7 @@ header nav ul li .a:hover {
 .last {
   margin-right: 20px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   header {
     padding: 0 0px;
   }

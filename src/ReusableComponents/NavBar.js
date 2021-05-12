@@ -22,7 +22,7 @@ const NavBar = () => {
   };
 
   return (
-    <div>
+    <div className="navbar-cont container p-0 w-100">
       <header>
         {isPDFopen && (
           <PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />
