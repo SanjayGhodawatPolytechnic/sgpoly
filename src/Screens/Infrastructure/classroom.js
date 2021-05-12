@@ -5,10 +5,10 @@ import Main from "../../ReusableComponents/Main";
 const classroom = () => {
   const Items = [
     {
-      image: "http://www.sgipolytechnic.in/infrastructure/classrooms1.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fclassrooms1.jpg?alt=media&token=2ecb124f-cd69-4153-8bdf-4703ac99bf3e",
     },
     {
-      image: "http://www.sgipolytechnic.in/infrastructure/classrooms2.jpg",
+      image: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fclassrooms2.jpg?alt=media&token=20a7cc77-172e-46e6-b115-6d587a802323",
     },
   ];
 
