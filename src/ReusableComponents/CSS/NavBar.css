@@ -8,7 +8,8 @@ header {
   position: absolute;
   margin-bottom: 30px;
   left: 0;
-  background: #f4ecd6; /*header colour*/
+  background: #5da3fa; /*header colour*/
+  /* background: #f4ecd6; */
   width: 100%;
   box-sizing: border-box;
   z-index: 10000;

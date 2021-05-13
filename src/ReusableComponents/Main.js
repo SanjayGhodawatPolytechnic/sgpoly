@@ -12,7 +12,7 @@ const Main = ({
   isSlideShow = false,
 }) => {
   return (
-    <div className="">
+    <div className="" style={{ overflowX: "hidden" }}>
       <df-messenger
         intent="WELCOME"
         chat-title="SGPbot"

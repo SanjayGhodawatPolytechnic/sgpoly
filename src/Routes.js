@@ -136,6 +136,7 @@ const Routes = () => {
         id="modal"
         onClick={(e) => {
           setIsModalOpen(false);
+          e.stopPropagation();
         }}
       >
         <div
@@ -146,6 +147,9 @@ const Routes = () => {
         >
           <div className="close-btn" onClick={closeModal}>
             <i aria-hidden="true" className="fas fa-times-circle fa-2x"></i>
+          </div>
+          <div className="more-info">
+            <button className="btn btn-info rounded-circle">More Info</button>
           </div>
           <img src={img} alt="modal" className="modal-img img-fluid" />
         </div>

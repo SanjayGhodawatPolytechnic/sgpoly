@@ -20,7 +20,7 @@ const Imp = () => {
             alt=""
             className="news-card__image"
           />
-          <div className="news-card__text-wrapper">
+          <div className="news-card__text-wrapper w-100">
             <h2 className="news-card__title">Mr. Sanjay Ghodawat</h2>
             <div className="news-card__post-date">Chaiman</div>
             <div className="news-card__details-wrapper">
@@ -41,7 +41,7 @@ const Imp = () => {
             alt=""
             className="news-card__image"
           />
-          <div className="news-card__text-wrapper">
+          <div className="news-card__text-wrapper w-100">
             <h2 className="news-card__title">Mr. Vinayak Bhosale</h2>
             <div className="news-card__post-date">Trustee</div>
             <div className="news-card__details-wrapper">
@@ -62,7 +62,7 @@ const Imp = () => {
             alt=""
             className="news-card__image"
           />
-          <div className="news-card__text-wrapper">
+          <div className="news-card__text-wrapper w-100">
             <h2 className="news-card__title">Mr. Virat Giri</h2>
             <div className="news-card__post-date">Principal</div>
             <div className="news-card__details-wrapper">

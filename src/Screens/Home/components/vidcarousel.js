@@ -35,7 +35,7 @@ const VidCarousel = () => {
 
           {/* End title and description row */}
           {/* Carousel row */}
-          <div className="row">
+          <div className="row p-0 m-0 w-100">
             <div className="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
               {/* Carousel */}
               <div id="carousel-example" className="carousel slide">

@@ -67,13 +67,13 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
   }, [data]);
 
   return (
-    <div className="container m-0 p-0">
+    <div className="container m-0 p-0 w-100">
       <div className="swiper-cont container m-0 p-0 row">
-        <div className=" col-12 text-center swiper-title m-0">
+        <div className="w-100 text-center swiper-title m-0 p-0">
           <h4 className="title">Important Reports</h4>
           <div className="reports-line swiper-line" />
         </div>
-        <div class="blog-slider col-12">
+        <div class="blog-slider col-12 m-0 p-0">
           <div class="blog-slider__wrp swiper-wrapper">
             {data.map((val, idx) => (
               <div class="blog-slider__item swiper-slide" key={idx}>
