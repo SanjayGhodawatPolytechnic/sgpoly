@@ -12,7 +12,7 @@ const infrastructureAbout = () => {
                     <div className="col-3"></div>
                     <div className="col-6">
                     <br/>
-            <img src="http://www.sgipolytechnic.in/Pics/institute_building.jpg" class="card-img-top border rounded trust-image" alt="..." />
+            <img src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2Finstitute_building.jpg?alt=media&token=6deb1a65-646a-4832-907d-fa3cf034d5d7" class="card-img-top border rounded trust-image" alt="..." />
             </div>
             </div>
             <div class="card-body">
