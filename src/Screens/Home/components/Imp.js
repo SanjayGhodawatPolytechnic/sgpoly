@@ -35,6 +35,27 @@ const Imp = () => {
             </div>
           </div>
         </div>
+
+        <div className="news-card col p-0">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FHome%2Fsanjayghodawat.jpg?alt=media&token=6ec511d4-45d9-4d4a-a3fb-e650c8f7243c"
+            alt=""
+            className="news-card__image"
+          />
+          <div className="news-card__text-wrapper w-100">
+            <h2 className="news-card__title">Mr. Shrenik Ghodawat</h2>
+            <div className="news-card__post-date">Secretary</div>
+            <div className="news-card__details-wrapper">
+              <p className="news-card__excerpt">
+                There is one thing that I am sure of and that is - nothing
+                worthwhile can be achieved in solitude.
+              </p>
+              <Link to="/management/chairman" className="news-card__read-more">
+                Read more <i className="fas fa-long-arrow-alt-right" />
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className="news-card col p-0">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FHome%2FVB.jpg?alt=media&token=c7759f33-2f56-44fb-bfcf-65fbc15dc116"
