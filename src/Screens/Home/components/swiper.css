@@ -2,9 +2,7 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: #f0ede7;
-}
+
 .swiper-title {
   margin-top: 50px;
   font-weight: 700;
@@ -21,7 +19,7 @@ body {
 
 .swiper-cont {
   /* background-color: #ffe53b; */
-  background-color: #ec5867;
+  background-color: #202b37;
   /* background-image: linear-gradient(147deg, #ffe53b 0%, #fd3838 74%); */
   max-height: 80vh;
   min-height: 80vh;
