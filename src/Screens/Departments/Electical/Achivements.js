@@ -13,24 +13,26 @@ const ElecticalAchivements = () => {
   const getAllAchivements = () => {
     const dbRef = firebase.database().ref("achivements");
     dbRef.on("value", (snapshot) => {
-      let result = Object.values(snapshot.val());
-      let keys = Object.keys(snapshot.val());
-      keys.forEach((v, i) => {
-        result[i]["key"] = v;
-      });
+      if (snapshot.val()) {
+        let result = Object.values(snapshot.val());
+        let keys = Object.keys(snapshot.val());
+        keys.forEach((v, i) => {
+          result[i]["key"] = v;
+        });
 
-      let college = [];
-      let student = [];
+        let college = [];
+        let student = [];
 
-      result.forEach((d, i) => {
-        if (d.category === "student") {
-          student.push(d);
-        } else {
-          college.push(d);
-        }
-      });
-      setStudentData(student);
-      setCollegeData(college);
+        result.forEach((d, i) => {
+          if (d.category === "student") {
+            student.push(d);
+          } else {
+            college.push(d);
+          }
+        });
+        setStudentData(student);
+        setCollegeData(college);
+      }
     });
   };
 
@@ -38,10 +40,10 @@ const ElecticalAchivements = () => {
     getAllAchivements();
   }, []);
   return (
-    <Main className="container-lg">
-      <div className="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div className="row deptcont">
         <DeptMenu dept="Electrical" subMenu={NavLinks} />
-        <div className="col-sm-8 col-lg-9 text-light">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
             className="scrollspy-example z-depth-1 mt-4"

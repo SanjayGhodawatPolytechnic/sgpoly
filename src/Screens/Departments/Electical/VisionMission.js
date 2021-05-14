@@ -2,47 +2,19 @@ import React from "react";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
 import NavLinks from "./NavLinks";
-import "../Reusables/CSS/VisionMission.css";
 
 const ElectricalVisionMission = () => {
   return (
-    <Main className="container-lg vm">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Electrical" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9 main-container text-dark">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
             class="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >
-            <div class="rocket">
-              <div class="rocket-body">
-                <div class="body"></div>
-                <div class="fin fin-left"></div>
-                <div class="fin fin-right"></div>
-                <div class="window"></div>
-              </div>
-              <div class="exhaust-flame"></div>
-              <ul class="exhaust-fumes">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <ul class="star">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
             <div className="row">
               <div className="col-12 text-center">
                 <h3>Vision &amp; Mission</h3>
@@ -58,20 +30,20 @@ const ElectricalVisionMission = () => {
               <div className="col-12 text-center">
                 <h4>Mission</h4>
                 <div class="list-group">
-                  <span class="list-group-item list-group-item-action list-group-item-primary">
+                  <span class="list-group-item list-group-item-action">
                     {" "}
                     To impart necessary technical and professional skills of the
                     discipline among the students that will make them industry
                     ready
                   </span>
-                  <span class="list-group-item list-group-item-action list-group-item-secondary">
+                  <span class="list-group-item list-group-item-action">
                     To create awareness among students for societal and
                     environmental concerns
                   </span>
-                  <span class="list-group-item list-group-item-action list-group-item-success">
+                  <span class="list-group-item list-group-item-action">
                     To establish effective institute-industry interaction
                   </span>
-                  <span class="list-group-item list-group-item-action list-group-item-danger">
+                  <span class="list-group-item list-group-item-action">
                     To inculcate the spirit of lifelong learning among students
                     for career enhancement
                   </span>

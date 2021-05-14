@@ -5,13 +5,13 @@ import NavLinks from "./Nav";
 
 const Mech = () => {
   return (
-    <Main className="container-lg cse">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Mechanical" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9 text-light">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            class="scrollspy-example z-depth-1 mt-4 w-100"
             data-target="#navbar-example3"
             data-offset="0"
           >

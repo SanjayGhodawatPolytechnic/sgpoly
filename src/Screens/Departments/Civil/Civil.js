@@ -5,10 +5,10 @@ import NavLinks from "./Navlinks";
 
 const Civil = () => {
   return (
-    <Main className="container-lg cse">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Civil" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9 text-light">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
             class="scrollspy-example z-depth-1 mt-4"

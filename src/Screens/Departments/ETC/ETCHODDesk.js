@@ -7,10 +7,10 @@ import "../Reusables/CSS/HOD.css";
 
 const ETCHODDesk = () => {
   return (
-    <Main className="container-lg hod">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="E &amp; TC" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9 text-light">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
             class="scrollspy-example z-depth-1 mt-4"

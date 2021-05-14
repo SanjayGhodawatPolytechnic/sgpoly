@@ -3,7 +3,6 @@ import Main from "../../../ReusableComponents/Main";
 
 import DeptMenu from "../Reusables/DeptMenu";
 import NavLinks from "./Navlinks";
-// import PDFViewer from 'pdf-viewer-reactjs'
 import { useState } from "react";
 import "../CSE/CSS/academiccalender.css";
 import PDFModal from "../../../ReusableComponents/PDFModal";
@@ -44,16 +43,6 @@ const CivilAcademicCalender = () => {
     getCalendar("Civil");
   }, []);
 
-  // useEffect(() => {
-  //     console.log(MSBTECalendars);
-  // }, [MSBTECalendars])
-  // useEffect(() => {
-  //     console.log(instituteCalendars);
-  // }, [instituteCalendars])
-  // useEffect(() => {
-  //     console.log(departmentCalendars);
-  // }, [departmentCalendars])
-
   const openPDF = (pdfURL) => {
     setCurrentlyopenPDFURL(pdfURL);
     setIsPDFopen(true);
@@ -64,10 +53,10 @@ const CivilAcademicCalender = () => {
   };
 
   return (
-    <Main className="container-lg">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Civil" subMenu={NavLinks} />
-        <div className="col-sm-8 col-lg-9 text-light">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
             className="scrollspy-example z-depth-1 mt-4"

@@ -15,28 +15,32 @@ const CivilActivities = () => {
 
     //vanila data
     dbRef.child("withoutfiles").on("value", (snapshot) => {
-      let resultWithoutFiles = Object.values(snapshot.val());
-      let keys = Object.keys(snapshot.val());
-      keys.forEach((v, i) => {
-        resultWithoutFiles[i]["key"] = v;
-      });
-      resultWithoutFiles = resultWithoutFiles.filter(
-        (val) => val.dept === "CSE"
-      );
-      console.log(resultWithoutFiles);
-      setDataWithoutFiles(resultWithoutFiles);
+      if (snapshot.val()) {
+        let resultWithoutFiles = Object.values(snapshot.val());
+        let keys = Object.keys(snapshot.val());
+        keys.forEach((v, i) => {
+          resultWithoutFiles[i]["key"] = v;
+        });
+        resultWithoutFiles = resultWithoutFiles.filter(
+          (val) => val.dept === "CSE"
+        );
+        console.log(resultWithoutFiles);
+        setDataWithoutFiles(resultWithoutFiles);
+      }
     });
 
     //complex data
     dbRef.child("withFiles").on("value", (snapshot) => {
-      let resultWithFiles = Object.values(snapshot.val());
-      let keys = Object.keys(snapshot.val());
-      keys.forEach((v, i) => {
-        resultWithFiles[i]["key"] = v;
-      });
-      resultWithFiles = resultWithFiles.filter((val) => val.dept === "CSE");
-      console.log(resultWithFiles);
-      setDataWithFiles(resultWithFiles);
+      if (snapshot.val()) {
+        let resultWithFiles = Object.values(snapshot.val());
+        let keys = Object.keys(snapshot.val());
+        keys.forEach((v, i) => {
+          resultWithFiles[i]["key"] = v;
+        });
+        resultWithFiles = resultWithFiles.filter((val) => val.dept === "CSE");
+        console.log(resultWithFiles);
+        setDataWithFiles(resultWithFiles);
+      }
     });
   };
 
@@ -45,10 +49,10 @@ const CivilActivities = () => {
   }, []);
 
   return (
-    <Main className="container-lg">
-      <div className="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div className="row deptcont">
         <DeptMenu dept="Civil" subMenu={NavLinks} />
-        <div className="col-sm-8 col-lg-9 text-light">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
             className="scrollspy-example z-depth-1 mt-4"

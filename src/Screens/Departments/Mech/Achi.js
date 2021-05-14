@@ -38,10 +38,10 @@ const MechanicalAchivements = () => {
     getAllAchivements();
   }, []);
   return (
-    <Main className="container-lg">
-      <div className="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Mechanical" subMenu={NavLinks} />
-        <div className="col-sm-8 col-lg-9 text-light">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
             className="scrollspy-example z-depth-1 mt-4"

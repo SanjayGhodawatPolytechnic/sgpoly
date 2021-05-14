@@ -6,43 +6,16 @@ import "../Reusables/CSS/VisionMission.css";
 
 const MechanicalVisionMission = () => {
   return (
-    <Main className="container-lg vm">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Mechanical" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9 main-container text-dark">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
             class="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >
-            <div class="rocket">
-              <div class="rocket-body">
-                <div class="body"></div>
-                <div class="fin fin-left"></div>
-                <div class="fin fin-right"></div>
-                <div class="window"></div>
-              </div>
-              <div class="exhaust-flame"></div>
-              <ul class="exhaust-fumes">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <ul class="star">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
             <div className="row">
               <div className="col-12 text-center">
                 <h3>Vision &amp; Mission -MSBTE</h3>

@@ -5,13 +5,13 @@ import NavLinks from "./NavLinks";
 import "../Reusables/CSS/DeptHome.css";
 const Electrical = () => {
   return (
-    <Main className="container-lg cse">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Electrical" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9 text-light">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            class="scrollspy-example z-depth-1 mt-4 w-100"
             data-target="#navbar-example3"
             data-offset="0"
           >
@@ -49,8 +49,6 @@ const Electrical = () => {
               competent electrical engineers and worthy citizens of the country.{" "}
               <br />
             </p>
-
-            <div className="row"></div>
           </div>
         </div>
       </div>

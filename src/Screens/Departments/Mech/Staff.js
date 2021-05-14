@@ -48,18 +48,11 @@ const MechanicalStaffProfile = () => {
   useEffect(() => {
     getStaff();
   }, []);
-
-  // useEffect(() => {
-  //     console.log(Hod)
-  // }, [Hod])
-  // useEffect(() => {
-  //     console.log(faculty)
-  // }, [faculty])
   return (
-    <Main className="container-lg">
-      <div class="row">
+    <Main className="container-lg cse w-100 m-2 p-0">
+      <div class="row deptcont">
         <DeptMenu dept="Mechanical" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9">
+        <div class="col text-dark w-100">
           <div
             data-spy="scroll"
             class="scrollspy-example z-depth-1 mt-4"
