@@ -14,7 +14,7 @@ function managementTrust(){
                             <br/>
                             <div className="row">
                             <div className="col-lg-0 col-md-0 col-sm-0 col-2"></div>
-                            <img src={"http://www.sgipolytechnic.in/pics/sushila-ghodawat.jpg"} className="card-img col-8" alt="..." />
+                            <img src={"https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2Fsushila-ghodawat.jpg?alt=media&token=9170d346-c7ec-41b0-a2d9-a179203549d9"} className="card-img col-8" alt="..." />
                             <div className="col-lg-0 col-md-0 col-sm-0 col-2"></div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@ const secretary = () => {
                 <div className="row">
                     <div className="col-3"></div>
                     <div className="col-6">
-              <img src="http://www.sgipolytechnic.in/pics/Secretary.jpg" class="card-img-top border rounded trust-image" alt="..." />
+              <img src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2FSecretary.jpg?alt=media&token=696995b4-c240-4cb5-8bb6-ea8abcca193d" class="card-img-top border rounded trust-image" alt="..." />
               </div>
               </div>
               <div class="card-body">

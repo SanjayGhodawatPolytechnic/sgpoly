@@ -11,7 +11,7 @@ const trustee = () => {
                 <div className="row">
                     <div className="col-3"></div>
                     <div className="col-6">
-              <img src="http://www.sgipolytechnic.in/pics/Trustee.jpg" class="card-img-top border rounded trust-image" alt="..." />
+              <img src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2FTrustee.jpg?alt=media&token=0d30d647-944f-40e8-99c2-0377ce523b70" class="card-img-top border rounded trust-image" alt="..." />
               </div>
               </div>
               <div class="card-body">

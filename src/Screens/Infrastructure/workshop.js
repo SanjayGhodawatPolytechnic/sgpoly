@@ -10,7 +10,7 @@ function workshop() {
             <div className="col container">
               <img
                 src={
-                  "http://www.sgipolytechnic.in/infrastructure/workshop1.jpg"
+                  "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FInfrastructure%2Fworkshop1.jpg?alt=media&token=e0a0a692-b0fb-463e-853f-f3447778fcd3"
                 }
                 className="card-img"
                 alt="..."

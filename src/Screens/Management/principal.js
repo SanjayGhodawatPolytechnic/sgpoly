@@ -11,7 +11,7 @@ const managementPrincipal = () => {
                 <div className="row">
                     <div className="col-3"></div>
                     <div className="col-6">
-              <img src="http://www.sgipolytechnic.in/pics/Principal.jpg" class="card-img-top border rounded trust-image" alt="..." />
+              <img src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2FPrincipal.jpg?alt=media&token=f1139a10-e088-4a8b-817a-6863a2b62cf2" class="card-img-top border rounded trust-image" alt="..." />
               </div>
               </div>
               <div class="card-body">
