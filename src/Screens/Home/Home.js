@@ -19,6 +19,7 @@ import GetNews from "./components/News";
 import Newsletter from "./components/newsletter";
 import SwiperEg from "./components/Swiper";
 import { Link } from "react-router-dom";
+import AboutHome from "./components/About";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -124,8 +125,9 @@ function Home() {
           </Link>
         </div>
       </div>
+      <AboutHome />
 
-      <VidCarousel />
+      {/* <VidCarousel /> */}
 
       <Testimo />
       <Newsletter />

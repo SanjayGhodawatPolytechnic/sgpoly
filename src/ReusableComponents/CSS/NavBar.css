@@ -8,7 +8,7 @@ header {
   position: absolute;
   margin-bottom: 30px;
   left: 0;
-  background: #5da3fa; /*header colour*/
+  background: #202b37; /*header colour*/
   /* background: #f4ecd6; */
   width: 100%;
   box-sizing: border-box;
@@ -16,7 +16,7 @@ header {
   margin: 0;
 }
 header .logo {
-  color: #39393a; /*logo colour*/
+  color: #fff; /*logo colour*/
   height: 50px;
   line-height: 50px;
   font-size: 24px;
@@ -43,7 +43,7 @@ header nav ul li.sub-menu:before {
   font-family: fontAwesome;
   position: absolute;
   line-height: 50px;
-  color: #39393a; /*arrow colour*/
+  color: #fff; /*arrow colour*/
   right: 5px;
 }
 header nav ul li.active.sub-menu:before {
@@ -67,7 +67,7 @@ header nav ul li .a {
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
-  color: #39393a; /*header text colour*/
+  color: #fff; /*header text colour*/
   text-decoration: none;
   display: block;
 }
@@ -76,7 +76,7 @@ header nav ul li .a:hover {
   background: #ff3c38;
 }
 .menu-toggle {
-  color: #39393a;
+  color: #fff;
   float: right;
   line-height: 50px;
   font-size: 24px;

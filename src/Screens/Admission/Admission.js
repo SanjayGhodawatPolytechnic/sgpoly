@@ -66,6 +66,10 @@ const Admission = () => {
   return (
     <Main>
       <div className="bgccc">
+        <div className="w-100 text-center swiper-title m-0 p-0">
+          <h4 className="title">Admission Form</h4>
+          <div className="reports-line swiper-line" />
+        </div>
         <form action className="form " onSubmit={handleSubmit}>
           <p className="field required">
             <label className="label required" htmlFor="name">

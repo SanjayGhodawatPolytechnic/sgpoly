@@ -26,7 +26,7 @@
 
 .form .label {
   font-weight: bold;
-  color: #000;
+  color: #fff;
   padding-top: 0;
   padding-left: 0;
   letter-spacing: 0.025em;
@@ -60,15 +60,16 @@
 }
 
 .bgccc {
+  background-color: #202b37;
   /* background-color: #484349; */
-  background: rgb(255, 60, 56);
+  /* background: rgb(255, 60, 56);
   background: linear-gradient(
     180deg,
     rgba(255, 60, 56, 1) 0%,
     rgba(255, 151, 148, 1) 40%,
     rgba(255, 255, 255, 1) 100%
-  );
-  margin: 50px 200px;
+  ); */
+  margin: 50px 400px;
   padding: 30px;
   border-radius: 40px;
 }
