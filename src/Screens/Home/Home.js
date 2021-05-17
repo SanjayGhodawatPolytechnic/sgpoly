@@ -21,6 +21,7 @@ import SwiperEg from "./components/Swiper";
 import { Link } from "react-router-dom";
 import AboutHome from "./components/About";
 import Vidnewcarousel from "./components/vidnewcarousel";
+import ImgCarousel from "./components/ImgCarousel";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -126,6 +127,7 @@ function Home() {
           </Link>
         </div>
       </div>
+      <ImgCarousel />
       <AboutHome />
 
       {/* <VidCarousel /> */}
