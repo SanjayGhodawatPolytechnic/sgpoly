@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+.checkbox {
+  border-radius: 10%;
+}
 .form .button,
 .form .message,
 .customSelect,
@@ -23,7 +25,9 @@
   background: none;
   display: block;
 }
-
+.form .checkbox-input + label {
+  border-radius: 50%;
+}
 .form .label {
   font-weight: bold;
   color: #fff;

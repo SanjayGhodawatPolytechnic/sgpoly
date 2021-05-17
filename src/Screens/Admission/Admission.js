@@ -176,7 +176,7 @@ const Admission = () => {
                   onChange={handleChangeInterest}
                 />
                 <label className="checkbox-label" htmlFor="choice-2">
-                  Computer Science
+                  CSE
                 </label>
               </li>
               <li className="checkbox">
@@ -189,7 +189,7 @@ const Admission = () => {
                   onChange={handleChangeInterest}
                 />
                 <label className="checkbox-label" htmlFor="choice-3">
-                  Electronics and Tele.
+                  E &amp; TC
                 </label>
               </li>
               <li className="checkbox">
@@ -281,10 +281,49 @@ const Admission = () => {
                   id="option-5"
                   name="option"
                   type="radio"
-                  value="Other"
+                  value="EWS"
                   onChange={handleCasteChange}
                 />
                 <label className="option-label" htmlFor="option-5">
+                  EWS
+                </label>
+              </li>
+              <li className="option">
+                <input
+                  className="option-input"
+                  id="option-6"
+                  name="option"
+                  type="radio"
+                  value="NT-C,D"
+                  onChange={handleCasteChange}
+                />
+                <label className="option-label" htmlFor="option-6">
+                  NT-C,D
+                </label>
+              </li>
+              <li className="option">
+                <input
+                  className="option-input"
+                  id="option-7"
+                  name="option"
+                  type="radio"
+                  value="VJ/DT"
+                  onChange={handleCasteChange}
+                />
+                <label className="option-label" htmlFor="option-7">
+                  VJ/DT
+                </label>
+              </li>
+              <li className="option">
+                <input
+                  className="option-input"
+                  id="option-8"
+                  name="option"
+                  type="radio"
+                  value="Other"
+                  onChange={handleCasteChange}
+                />
+                <label className="option-label" htmlFor="option-8">
                   Other
                 </label>
               </li>
