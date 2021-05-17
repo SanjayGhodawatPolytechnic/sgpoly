@@ -20,6 +20,7 @@ import Newsletter from "./components/newsletter";
 import SwiperEg from "./components/Swiper";
 import { Link } from "react-router-dom";
 import AboutHome from "./components/About";
+import Vidnewcarousel from "./components/vidnewcarousel";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -128,6 +129,7 @@ function Home() {
       <AboutHome />
 
       {/* <VidCarousel /> */}
+      <Vidnewcarousel />
 
       <Testimo />
       <Newsletter />
