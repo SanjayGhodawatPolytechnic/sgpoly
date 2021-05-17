@@ -130,7 +130,7 @@ const Routes = () => {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/sgpoly">
       <div
         className={isModalOpen ? "modal" : "modal closed-modal"}
         id="modal"

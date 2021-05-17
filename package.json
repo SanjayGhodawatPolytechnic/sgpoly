@@ -67,5 +67,6 @@
   },
   "devDependencies": {
     "@types/scrollmagic": "^2.0.1"
-  }
+  },
+  "homepage": "http://localhost/sgpoly"
 }
