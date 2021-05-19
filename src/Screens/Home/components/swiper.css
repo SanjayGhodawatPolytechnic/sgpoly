@@ -52,24 +52,26 @@
 
 @media screen and (max-width: 992px) {
   .swiper-cont {
-    max-height: 100vh;
-    min-height: 100vh;
+    max-height: 150vh;
+    min-height: 150vh;
   }
   .blog-slider {
     max-width: 98vw;
-    height: 100%;
+    height: 100vh;
+    margin-top: 200px;
   }
 }
 @media screen and (max-width: 768px) {
   .blog-slider {
     min-height: 500px;
     height: auto;
-    margin: 5% auto;
+    margin: 1% auto;
+    /* margin-top: 5px; */
   }
   .swiper-cont {
     margin-bottom: 10%;
-    min-height: 120vh;
-    max-height: 120vh;
+    max-height: 150vh;
+    min-height: 150vh;
   }
 }
 @media screen and (max-height: 500px) and (min-width: 992px) {

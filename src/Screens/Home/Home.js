@@ -22,6 +22,8 @@ import { Link } from "react-router-dom";
 import AboutHome from "./components/About";
 import Vidnewcarousel from "./components/vidnewcarousel";
 import ImgCarousel from "./components/ImgCarousel";
+import SlidingNews from "./components/SlidingNews";
+import Recruters from "./components/Recruters";
 
 function Home() {
   const [loadingData, setLoadingData] = useState(0);
@@ -48,6 +50,7 @@ function Home() {
       )}
       {!isCarouselLoading && !isRecentsLoading && !isCounterLoading && (
         <>
+          <SlidingNews />
           <Carousel setIsCarouselLoading={setIsCarouselLoading} />
 
           {/* <Recents setIsRecentsLoading={setIsRecentsLoading} /> */}
@@ -133,6 +136,7 @@ function Home() {
       {/* <VidCarousel /> */}
       <Vidnewcarousel />
 
+      <Recruters />
       <Testimo />
       <Newsletter />
     </Main>

@@ -49,7 +49,6 @@ const Counter = ({ setIsCounterLoading }) => {
                     <CountUp
                       className="fh5co-counter js-counter"
                       end={data.studentThisYear}
-                      redraw={true}
                     >
                       {({ countUpRef, start }) => (
                         <ReactVisibilitySensor onChange={start} delayedCall>
