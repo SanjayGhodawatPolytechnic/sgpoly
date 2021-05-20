@@ -9,13 +9,13 @@
 #demo {
   background: linear-gradient(112deg, #ffffff 50%, antiquewhite 50%);
   max-width: 1400px;
-  /* padding: 30px; */
+  margin-bottom: 30px;
   /* margin: auto; */
   /* transition: all 0.5s; */
   max-height: 400px;
 }
 .back-set {
-  background-color: #ec5867;
+  background-color: #202b37;
   padding-top: 30px;
   height: auto;
   padding-bottom: auto;
@@ -84,7 +84,7 @@
 }
 
 .i {
-  background-color: rgb(255, 0, 51);
+  background-color: #202b37;
   /* background-color: rgb(223, 56, 89); */
   padding: 1.4rem;
 }

@@ -28,31 +28,29 @@ const Footer = () => {
               <ul className="list-unstyled">
                 <li>
                   <p>
-                    <span href="#!" >
+                    <span href="#!">
                       <p className="txt-color">SGP</p>
                     </span>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <span href="#!" >
+                    <span href="#!">
                       <p className="txt-color">Staff</p>
-                      
                     </span>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <span href="#!" >
-                      <p className="txt-color">Facilities</p> 
+                    <span href="#!">
+                      <p className="txt-color">Facilities</p>
                     </span>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <span href="#!" >
+                    <span href="#!">
                       <p className="txt-color">AWARDS</p>
-                      
                     </span>
                   </p>
                 </li>
@@ -64,7 +62,8 @@ const Footer = () => {
               <ul className="list-unstyled">
                 <li>
                   <p>
-                    <i className="fas fa-home mr-3" /> Atigre, 416118, Maharatra
+                    <i className="fas fa-home mr-3" /> Atigre, 416118,
+                    Maharashtra
                   </p>
                 </li>
                 <li>
@@ -94,11 +93,21 @@ const Footer = () => {
               <span className="btn-floating btn-tw">
                 <i className="fab fa-twitter" />
               </span>
+              <br />
+              <br />
+              <span className="btn-floating btn-tw">
+                <i className="fab fa-instagram" />
+              </span>
+              <br />
+              <br />
+              <span className="btn-floating btn-tw">
+                <i className="fab fa-youtube" />
+              </span>
             </div>
           </div>
         </div>
         <div className="footer-copyright text-center py-3">
-          © 2020 Copyright:
+          © 2021 Copyright:
           <h4>Sanjay Godawat Polytechnic</h4>
         </div>
       </footer>
