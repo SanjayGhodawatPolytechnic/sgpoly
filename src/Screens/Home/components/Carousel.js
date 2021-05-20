@@ -21,7 +21,6 @@ const Carousel = ({ setIsCarouselLoading }) => {
     dataRef.on("value", (dataSnapshot) => {
       if (dataSnapshot.val()) {
         let result = Object.values(dataSnapshot.val());
-        console.log(result);
         setData(result);
         setIsCarouselLoading(false);
       }
