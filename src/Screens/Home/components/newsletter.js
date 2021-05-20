@@ -1,7 +1,6 @@
 import React from "react";
 import "./Recents.css";
 import * as firebase from "firebase";
-import { useEffect } from "react";
 import { useState } from "react";
 import "./newsletter.css";
 import {

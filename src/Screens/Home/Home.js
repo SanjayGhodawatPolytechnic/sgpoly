@@ -11,7 +11,6 @@ import Counter from "./components/Counter";
 import Carousel from "./components/Carousel";
 import Imp from "./components/Imp";
 import Testimo from "./components/Testimo";
-import VidCarousel from "./components/vidcarousel";
 import Lottie from "react-lottie";
 import lottiedata from "./components/lf30_editor_m4oownfl.json";
 import { useState } from "react";
@@ -26,7 +25,6 @@ import SlidingNews from "./components/SlidingNews";
 import Recruters from "./components/Recruters";
 
 function Home() {
-  const [loadingData, setLoadingData] = useState(0);
   const [isCarouselLoading, setIsCarouselLoading] = useState(false);
   const [isRecentsLoading, setIsRecentsLoading] = useState(false);
   const [isCounterLoading, setIsCounterLoading] = useState(false);

@@ -3,6 +3,7 @@ import "./ImgCarousel.css";
 import * as firebase from "firebase";
 import { useState } from "react";
 import { useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 function ImgCarousel() {
   const [data, setData] = useState([]);
@@ -28,46 +29,22 @@ function ImgCarousel() {
         <div className="courses-line imp-line" />
       </div>
       <div class="Marquee">
-        <div class="Marquee-content">
-          {data.map((d, i) => {
-            return (
-              <div class="Marquee-tag">
-                <img src={d.URL} alt="" />
-              </div>
-            );
-          })}
-
-          {/* <div class="Marquee-tag">
-            <img
-              src="https://images.unsplash.com/photo-1621467092735-823551499c31?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-              alt=""
-            />
+        <Marquee
+          speed={100}
+          gradient={false}
+          pauseOnHover={true}
+          pauseOnClick={true}
+        >
+          <div class="">
+            {data.map((d, i) => {
+              return (
+                <div class="Marquee-tag">
+                  <img src={d.URL} alt="" />
+                </div>
+              );
+            })}
           </div>
-          <div class="Marquee-tag">
-            <img
-              src="https://images.unsplash.com/photo-1611095968462-3dc56b14454a?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-              alt=""
-            />
-          </div>
-          <div class="Marquee-tag">
-            <img
-              src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-              alt=""
-            />
-          </div>
-          <div class="Marquee-tag">
-            <img
-              src="https://images.unsplash.com/photo-1621467092735-823551499c31?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-              alt=""
-            />
-          </div>
-          <div class="Marquee-tag">
-            <img
-              src="https://images.unsplash.com/photo-1611095968462-3dc56b14454a?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-              alt=""
-            />
-          </div> */}
-        </div>
+        </Marquee>
       </div>
     </div>
   );

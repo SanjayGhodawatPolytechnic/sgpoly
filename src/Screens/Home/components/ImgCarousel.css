@@ -37,18 +37,18 @@
   display: -ms-flexbox;
   display: box;
   display: flex;
-  -webkit-animation: marquee 10s linear infinite running;
+  /* -webkit-animation: marquee 10s linear infinite running;
   -moz-animation: marquee 10s linear infinite running;
   -o-animation: marquee 10s linear infinite running;
   -ms-animation: marquee 10s linear infinite running;
-  animation: marquee 10s linear infinite running;
+  animation: marquee 10s linear infinite running; */
 }
 .Marquee-content:hover {
-  -webkit-animation-play-state: paused;
+  /* -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   -o-animation-play-state: paused;
   -ms-animation-play-state: paused;
-  animation-play-state: paused;
+  animation-play-state: paused; */
 }
 .Marquee-tag {
   width: auto;
