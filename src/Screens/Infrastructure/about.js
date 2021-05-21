@@ -22,7 +22,7 @@ const infrastructureAbout = () => {
                 <li>Land Use Certificate Issued by - Tahsildar - Taluka : Hatkanangale</li>
                 <li>Details of Building Plan Approved by- Gram Vikas Adhikari - A/P. Atigre, Taluka - Hatkanangale, Sarpanch A/P. Atigre Taluka - Hatkanangale</li>
                 <br/><br/><br/>
-                <h5>Campus Facilities</h5> 
+                {/*<h5>Campus Facilities</h5> */}
                    <br/><br/><br/>
                    
                    <table class="table table-borderless .table-sm ">
