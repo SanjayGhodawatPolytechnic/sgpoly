@@ -9,25 +9,20 @@ body {
 }
 
 .banner {
-  top: 0;
-  width: 100vw;
-  /* background-image: url("https://images.unsplash.com/photo-1598124147095-16d7e62b8d01?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fHdlYnNpdGUlMjBiYW5uZXJ8ZW58MHwwfDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"); */
-  /* background-image: url("../../assets/banner.jpg"); */
-  /* background-color: #a1989e; */
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
-
-  padding: 0;
-  margin: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 }
-.bannerimg {
-  height: 130px;
-  width: 100vw;
+.bannner-img {
 }
-
 @media (max-width: 991px) {
   .banner {
-    display: none;
+    height: auto;
+  }
+  .bannner-img {
+    width: 100%;
   }
 }

@@ -38,7 +38,7 @@ const Imp = () => {
 
         <div className="news-card col p-0">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2F03.jpg?alt=media&token=8e6d1f36-22d0-4bab-a332-d2c5c56a9bc6"
+            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FHome%2Fsecretary.jpg?alt=media&token=b229dc38-9d1f-40df-9ca7-7c88fe867589"
             alt=""
             className="news-card__image"
           />

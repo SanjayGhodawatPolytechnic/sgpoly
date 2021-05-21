@@ -2,6 +2,7 @@ import React from "react";
 import * as firebase from "firebase";
 import { useState } from "react";
 import { useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 import "./Recruters.css";
 const Recruters = () => {
@@ -28,15 +29,22 @@ const Recruters = () => {
         <div className="courses-line imp-line" />
       </div>
       <div class="Marquee">
-        <div class="Marquee-content">
-          {data.map((d, i) => {
-            return (
-              <div class="Marquee-tag">
-                <img src={d.URL} alt="" />
-              </div>
-            );
-          })}
-        </div>
+        <Marquee
+          speed={100}
+          gradient={false}
+          pauseOnHover={true}
+          pauseOnClick={true}
+        >
+          <div className="">
+            {data.map((d, i) => {
+              return (
+                <div class="Marquee-tag">
+                  <img src={d.URL} alt="" />
+                </div>
+              );
+            })}
+          </div>
+        </Marquee>
       </div>
     </div>
   );
