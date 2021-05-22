@@ -230,7 +230,7 @@ const NavBar = () => {
                 </ul>
               </li>
 
-              <li
+              {/* <li
                 className={
                   openSubmenuIndex === 4 ? "sub-menu active" : "sub-menu"
                 }
@@ -260,11 +260,7 @@ const NavBar = () => {
                       Admin Building
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/infrastructure/classroom" className="a">
-                      class rooms
-                    </Link>
-                  </li>
+
                   <li>
                     <Link to="/infrastructure/workshop" className="a">
                       Workshop
@@ -275,11 +271,7 @@ const NavBar = () => {
                       Auditorium
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/infrastructure/foodcourt" className="a">
-                      Foodcourt
-                    </Link>
-                  </li>
+
                   <li>
                     <Link to="/infrastructure/conference" className="a">
                       Conference Hall
@@ -291,7 +283,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
 
               <li
                 className={
@@ -375,6 +367,11 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/infrastructure/classroom" className="a">
+                      class rooms
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/facilities/laboratories" className="a">
                       Laboratories
                     </Link>
@@ -390,11 +387,16 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/infrastructure/conference" className="a">
+                      Conference Hall
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/infrastructure/foodcourt" className="a">
                       Cafeteria
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="" className="a">
                       Health Care
                     </Link>
@@ -403,7 +405,7 @@ const NavBar = () => {
                     <Link to="" className="a">
                       ATM
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/facilities/ground" className="a">
                       Playing Ground
