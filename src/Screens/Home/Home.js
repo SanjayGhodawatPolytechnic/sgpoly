@@ -12,7 +12,8 @@ import Carousel from "./components/Carousel";
 import Imp from "./components/Imp";
 import Testimo from "./components/Testimo";
 import Lottie from "react-lottie";
-import lottiedata from "./components/lf30_editor_m4oownfl.json";
+// import lottiedata from "./components/lf30_editor_m4oownfl.json";
+import lottiedata from "./icons/loader.json";
 import { useState } from "react";
 import GetNews from "./components/News";
 import Newsletter from "./components/newsletter";
@@ -33,8 +34,8 @@ function Home() {
     <Main isSlideShow={true}>
       {isCarouselLoading && isRecentsLoading && isCounterLoading && (
         <Lottie
-          height="100%"
-          width="100%"
+          height="200px"
+          width="200px"
           options={{
             autoplay: true,
             loop: true,

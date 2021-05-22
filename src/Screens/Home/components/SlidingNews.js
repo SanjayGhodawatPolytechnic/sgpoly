@@ -1,7 +1,26 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import Marquee from "react-fast-marquee";
+import * as firebase from "firebase";
 
 const SlidingNews = () => {
+  const [headline, setHeadline] = useState("");
+
+  const getHeadline = () => {
+    firebase
+      .database()
+      .ref("marquee")
+      .on("value", (snapshot) => {
+        if (snapshot.val()) {
+          setHeadline(snapshot.val().headline);
+        }
+      });
+  };
+
+  useEffect(() => {
+    getHeadline();
+  }, []);
   return (
     <div>
       <Marquee
@@ -10,9 +29,7 @@ const SlidingNews = () => {
         pauseOnHover={true}
         pauseOnClick={true}
       >
-        I can be a React component, multiple React components, or just some
-        text.
-        <h3>Stay Home, Stay Safe</h3>
+        <div dangerouslySetInnerHTML={{ __html: headline }}></div>
       </Marquee>
     </div>
   );

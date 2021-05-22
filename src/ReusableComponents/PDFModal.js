@@ -1,7 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
+import { useRef } from "react";
 import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import throttle from "lodash/throttle";
 import Loader from "./Loader";
 const _ = require("lodash");
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -11,12 +13,15 @@ const PDFModal = ({ url = "", closePDF }) => {
   const [pageNumber, setPageNumber] = useState(1);
   const [file, setFile] = useState(null);
   const [pageWidth, setPageWidth] = useState(null);
+  const pdfWrapper = useRef();
+  const [isLoading, setIsLoading] = useState(false);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
 
   const loadPDF = () => {
+    setIsLoading(true);
     // "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/files%2F393c1d8c-6dd6-4475-90bd-ef8e3384b9f8?alt=media&token=27da61ac-2325-404d-98a1-df4168366590"
     let data = {
       pdfurl: url,
@@ -34,27 +39,32 @@ const PDFModal = ({ url = "", closePDF }) => {
         let pdffile = new File([blb], "testfile.pdf");
         // console.log(pdffile);
         setFile(pdffile);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  // useEffect(() => {
-  //     console.log(numPages)
-  // }, [numPages])
-
   const setWidth = () => {
-    let ele = document.getElementById("pdf-container");
-    setPageWidth(ele && ele.getBoundingClientRect().width);
+    // let ele = document.getElementById("pdf-container");
+    // setPageWidth(ele && ele.getBoundingClientRect().width);
+    if (pdfWrapper.current) {
+      setPageWidth(pdfWrapper.current.getBoundingClientRect().width);
+    }
   };
 
   useEffect(() => {
+    // setWidth();
     loadPDF();
+    window.addEventListener("resize", throttle(setWidth, 3000));
     setWidth();
+    return () => {
+      window.removeEventListener("resize", throttle(setWidth, 3000));
+    };
   }, []);
   return (
-    <div className="pdf-modal" onClick={closePDF}>
+    <div className="pdf-modal">
       <div
         className="close-btn"
         onClick={(e) => {
@@ -62,13 +72,22 @@ const PDFModal = ({ url = "", closePDF }) => {
           e.stopPropagation();
         }}
       >
-        <i aria-hidden="true" className="fas fa-times-circle fa-2x"></i>
+        <button className="btn btn-danger p-2">
+          <i aria-hidden="true" className="fas fa-times-circle fa-2x"></i>
+        </button>
+      </div>
+      <div
+        className="download-btn"
+        onClick={(e) => {
+          window.open(url);
+        }}
+      >
+        <button className="btn btn-info p-2">
+          <i class="fas fa-download fa-2x"></i>
+        </button>
       </div>
       {file && (
-        <div
-          className="container p-0 d-flex justify-content-center align-items-center"
-          id="pdf-container"
-        >
+        <div id="pdf-container" ref={pdfWrapper}>
           <Document
             file={file}
             onLoadSuccess={onDocumentLoadSuccess}
@@ -79,16 +98,18 @@ const PDFModal = ({ url = "", closePDF }) => {
           >
             {_.times(numPages, (i) => (
               <Page
-                width={pageWidth && pageWidth}
+                width={pageWidth}
                 pageNumber={i + 1}
-                className="w-100 mt-3 mb-3 ml-2 "
+                className="mb-2"
                 renderTextLayer={false}
                 renderInteractiveForms={false}
+                scale={1}
               />
             ))}
           </Document>
         </div>
       )}
+      {isLoading && <Loader />}
     </div>
   );
 };

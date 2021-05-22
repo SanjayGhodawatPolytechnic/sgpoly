@@ -4,6 +4,7 @@ import { useState } from "react";
 import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
 import "./swiper.css";
 import * as firebase from "firebase";
+import PDFModal from "../../../ReusableComponents/PDFModal";
 
 // TODO: ====================Lot to work to make it responsive================================
 const SwiperEg = ({ setIsRecentsLoading }) => {
@@ -11,6 +12,8 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
   Swiper.use([Navigation, Pagination, Mousewheel, Autoplay]);
 
   const [data, setData] = useState([]);
+  const [isPDFopen, setIsPDFopen] = useState(false);
+  const [currentlyOpenPDFURL, setCurrentlyopenPDFURL] = useState("");
 
   const getAllUpdates = async () => {
     setIsRecentsLoading(true);
@@ -62,9 +65,14 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
     });
   }, []);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  const openPDF = (pdfURL) => {
+    setCurrentlyopenPDFURL(pdfURL);
+    setIsPDFopen(true);
+  };
+
+  const closePDF = () => {
+    setIsPDFopen(false);
+  };
 
   return (
     <div className="container m-0 p-0 w-100">
@@ -84,9 +92,14 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
                   <span class="blog-slider__code">{val.postedOn}</span>
                   <div class="blog-slider__title">{val.title}</div>
                   <div class="blog-slider__text">{val.description}</div>
-                  <a href="#" class="blog-slider__button">
+                  <button
+                    onClick={() => {
+                      openPDF(val.fileDownloadUrl);
+                    }}
+                    class="blog-slider__button"
+                  >
                     READ MORE
-                  </a>
+                  </button>
                 </div>
               </div>
             ))}
@@ -94,6 +107,7 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
           <div class="blog-slider__pagination"></div>
         </div>
       </div>
+      {isPDFopen && <PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />}
     </div>
   );
 };

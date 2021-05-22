@@ -63,6 +63,15 @@
   right: 0;
   color: #fff;
 }
+.download-btn {
+  margin-top: 70px;
+  margin-right: 6px;
+  right: 0;
+  top: 0;
+  position: fixed;
+  color: #fff;
+  z-index: 10000;
+}
 .more-info {
   position: fixed;
   bottom: 10px;

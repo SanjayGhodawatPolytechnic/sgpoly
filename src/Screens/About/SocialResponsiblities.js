@@ -4,6 +4,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import "./css/Popup.css";
 import ImageGal from "./components/ImageGallery";
 import "./css/about.css";
+import CharitySVG from "../../assets/svgComponents/CharitySVG";
 
 const SocialResponsiblities = () => {
   const [isPopup, setIsPopup] = useState(false);
@@ -95,129 +96,110 @@ const SocialResponsiblities = () => {
   return (
     <Main isSlideShow={true}>
       <div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <ScrollAnimation animateIn="fadeIn">
-          <div className="card ">
+          <div className="card p-0">
             <div className="card-header text-center ">
               Social Responsiblities
             </div>
             <div className="card-body">
               <div className="row">
-                <div className="col-lg-2 col-md-2 col-sm-1 col-0"></div>
-                <img
-                  src={"http://www.sgipolytechnic.in/Images/SocialResp.jpg"}
-                  className="setWidth col-lg-8 col-md-8 col-sm-10 col-0 rounded"
-                  alt="..."
-                />
-                <div className="col-lg-2 col-md-2 col-sm-1 col-0"></div>
+                <div className="col-sm-12 text-center">
+                  <CharitySVG height="200" />
+                </div>
               </div>
-              <br />
-              <p className="card-text">
+              <li className="card-text">
                 Mr. Sanjay Ghodawat, as a responsible citizen, strongly believes
                 in reciprocation to the society. In 1996, he founded a
                 charitable Trust in the name of his mother 'Sou. Sushila
                 Danchand Ghodawat Charitable Trust'.
-              </p>
-              <p className="card-text">
+              </li>
+              <li className="card-text">
                 Besides he has contributed to a number of social initiatives
                 including building for blind school in Miraj, operation hall at
                 Siddhivinayak Hospital, Miraj, plastic surgery camps sponsored
                 by Ichalkaranji Rotary Club at Ichalkaranji, Where over 500
                 surgeries are done every year and setting-up of an eye hospital
                 amongst others.
-              </p>
-              <p className="card-text">
+              </li>
+              <li className="card-text">
                 In 2001, he started a Blood Bank by the name 'Acharya Shree
                 Tulsi Blood Bank' at Udgaon(Jaysingpur) equipped with
                 sophisticated laboratory equipment and has been rated as one of
                 the best three blood banks in India.
-              </p>
-              <p className="card-text">
+              </li>
+              <li className="card-text">
                 Mr. Ghodawat also started a Junior Girls College in 2007,
                 educating over 1700 girls and is now planning to start a Dental
                 and Nursing College, Diploma courses and Pharmacy college.
-              </p>
-              <div className="card-header text-center">
-                Sou. Sushila Danchand Ghodawat Charitable Trust's
-              </div>
-              <div className="card-body">
-                <ul class="list-group rounded">
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sanjay Ghodawat Institutes (Faculty of Engineering), Atigre
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sanjay Ghodawat Institutes (Faculty of Management), Atigre
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sanjay Ghodawat Polytechnic, Atigre
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sanjay Ghodawat International School
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sanjay Ghodawat IIT &amp; Medical Academy
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sanjay Ghodawat Junior College
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Acharya Shree Tulsi Blood Bank &amp; Blood Component Center,
-                    Udgaon (Jaysingpur)
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Acharya Shree Mahapradnya Eye Hospital, Udgaon (Jaysingpur)
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Vandemataram Healthy Mother Healthy Baby, Udgaon
-                    (Jaysingpur)
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Computer Academy - Free Computer Education for poor &amp;
-                    Handicapped, Udgaon (Jaysingpur)
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sick Bed Service - Medical Equipments on Deposit basis,
-                    Udgaon (Jaysingpur)
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    School Health Checkup, Atigre
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    Sou. Sushila Danchand Ghodawat Medical &amp; Technical
-                    Institute, Udgaon (Jaysingpur)
-                  </li>
-                  <li class="list-group-item list-group-item-primary rounded">
-                    PGDMLT &amp; BSc MLT College, Udgaon (Jaysingpur)
-                  </li>
-                </ul>
-              </div>
-              <div className="card-header text-center">
-                Contribution of SGI to social initiatives
-              </div>
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <button
-                      className="btn btn-info rounded-pill w-100 m-2"
-                      onClick={() => setIsPopup(true)}
-                    >
-                      SGI and Sanjay Ghodawat Group commenced giving the
-                      donation of Rs. 1.25 Crores to help drought affected
-                      farmers
-                    </button>
-                  </div>
+              </li>
+            </div>
+          </div>
+          <div className="card w-100 p-0">
+            <div className="card-header text-center w-100">
+              Sou. Sushila Danchand Ghodawat Charitable Trust's
+            </div>
+            <div className="card-body" style={{ padding: "40px" }}>
+              <ul class="list-group rounded">
+                <li class="card-text">
+                  Sanjay Ghodawat Institutes (Faculty of Engineering), Atigre
+                </li>
+                <li class="card-text">
+                  Sanjay Ghodawat Institutes (Faculty of Management), Atigre
+                </li>
+                <li class="card-text">Sanjay Ghodawat Polytechnic, Atigre</li>
+                <li class="card-text">Sanjay Ghodawat International School</li>
+                <li class="card-text">
+                  Sanjay Ghodawat IIT &amp; Medical Academy
+                </li>
+                <li class="card-text">Sanjay Ghodawat Junior College</li>
+                <li class="card-text">
+                  Acharya Shree Tulsi Blood Bank &amp; Blood Component Center,
+                  Udgaon (Jaysingpur)
+                </li>
+                <li class="card-text">
+                  Acharya Shree Mahapradnya Eye Hospital, Udgaon (Jaysingpur)
+                </li>
+                <li class="card-text">
+                  Vandemataram Healthy Mother Healthy Baby, Udgaon (Jaysingpur)
+                </li>
+                <li class="card-text">
+                  Computer Academy - Free Computer Education for poor &amp;
+                  Handicapped, Udgaon (Jaysingpur)
+                </li>
+                <li class="card-text">
+                  Sick Bed Service - Medical Equipments on Deposit basis, Udgaon
+                  (Jaysingpur)
+                </li>
+                <li class="card-text">School Health Checkup, Atigre</li>
+                <li class="card-text">
+                  Sou. Sushila Danchand Ghodawat Medical &amp; Technical
+                  Institute, Udgaon (Jaysingpur)
+                </li>
+                <li class="card-text">
+                  PGDMLT &amp; BSc MLT College, Udgaon (Jaysingpur)
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* <div className="card w-100 p-0">
+            <div className="card-header text-center">
+              Contribution of SGI to social initiatives
+            </div>
+            <div className="card-body">
+              <div className="row">
+                <div className="col-lg-12 text-center">
+                  <button
+                    className="btn btn-info rounded-pill"
+                    onClick={() => setIsPopup(true)}
+                  >
+                    SGI and Sanjay Ghodawat Group commenced giving the donation
+                    of Rs. 1.25 Crores to help drought affected farmers
+                  </button>
                 </div>
               </div>
             </div>
-            <br />
-          </div>
+          </div> */}
         </ScrollAnimation>
-        <br />
-        <br />
         <div className="container">{isPopup && PopUpScreen()}</div>
       </div>
     </Main>
