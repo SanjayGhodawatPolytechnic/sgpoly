@@ -93,7 +93,6 @@
   animation-play-state: paused;
 }
 .Marquee-tag {
-  width: 400px;
   margin: 0 0.5em;
   padding: 0.5em;
   background: rgba(255, 255, 255, 0.1);
@@ -121,9 +120,12 @@
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+.recruit {
+  width: 250px;
+}
 
-.Marquee-tag img {
-  width: 400px;
+.Marquee-tag .recruit-img {
+  width: 200px;
 }
 .Marquee-tag:hover {
   background: rgba(255, 255, 255, 0.5);

@@ -38,8 +38,8 @@ const Recruters = () => {
           <div className="">
             {data.map((d, i) => {
               return (
-                <div class="Marquee-tag">
-                  <img src={d.URL} alt="" />
+                <div class="Marquee-tag recruit">
+                  <img className="recruit-img" src={d.URL} alt="" />
                 </div>
               );
             })}
