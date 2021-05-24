@@ -1,15 +1,26 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import Swiper, { Navigation, Pagination, Mousewheel, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Autoplay,
+} from "swiper/core";
+// import Swiper, {
+//   Navigation,
+//   Pagination,
+//   Mousewheel,
+//   Autoplay,
+// } from "swiper";
 import "./swiper.css";
 import * as firebase from "firebase";
 import PDFModal from "../../../ReusableComponents/PDFModal";
 
 // TODO: ====================Lot to work to make it responsive================================
 const SwiperEg = ({ setIsRecentsLoading }) => {
-  // const [activeIndex, setActiveIndex] = useState(1);
-  Swiper.use([Navigation, Pagination, Mousewheel, Autoplay]);
+  SwiperCore.use([Navigation, Pagination, Mousewheel, Autoplay]);
 
   const [data, setData] = useState([]);
   const [isPDFopen, setIsPDFopen] = useState(false);
@@ -43,26 +54,27 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
   useEffect(() => {
     getAllUpdates();
 
-    var swiper = new Swiper(".blog-slider", {
-      observer: true,
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        stopOnLastSlide: false,
-      },
-      observeParents: true,
-      spaceBetween: 30,
-      effect: "fade",
-      autoHeight: true,
-      pagination: {
-        el: ".blog-slider__pagination",
-        clickable: true,
-      },
-      direction: "vertical",
-      slidesPerView: 1,
-      slideActiveClass: "swiper-slide-active",
-      allowTouchMove: false,
-    });
+    // var swiper = new Swiper(".blog-slider", {
+    //   observer: true,
+    //   loop: true,
+    //   centeredSlides: true,
+    //   autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    //   },
+
+    //   spaceBetween: 30,
+    //   effect: "fade",
+    //   autoHeight: true,
+    //   pagination: {
+    //     el: ".blog-slider__pagination",
+    //     clickable: true,
+    //   },
+    //   direction: "vertical",
+    //   slidesPerView: 1,
+    //   slideActiveClass: "swiper-slide-active",
+    //   allowTouchMove: false,
+    // });
   }, []);
 
   const openPDF = (pdfURL) => {
@@ -81,7 +93,7 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
           <h4 className="title">Important Reports</h4>
           <div className="reports-line swiper-line" />
         </div>
-        <div class="blog-slider col-12 p-0">
+        {/* <div class="blog-slider col-12 p-0">
           <div class="blog-slider__wrp swiper-wrapper mt-3">
             {data.map((val, idx) => (
               <div class="blog-slider__item swiper-slide" key={idx}>
@@ -105,7 +117,49 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
             ))}
           </div>
           <div class="blog-slider__pagination"></div>
-        </div>
+        </div> */}
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            el: ".blog-slider__pagination",
+            clickable: true,
+          }}
+          slidesPerView={1}
+          slideActiveClass="swiper-slide-active"
+          direction="vertical"
+          navigation={true}
+          allowTouchMove={false}
+          className="blog-slider col-12 p-0"
+        >
+          <div class="blog-slider__wrp swiper-wrapper mt-3">
+            {data.map((val, idx) => (
+              <SwiperSlide className="blog-slider__item swiper-slide" key={idx}>
+                <div class="blog-slider__img">
+                  <img src={val.imageDownloadUrl} alt="" />
+                </div>
+                <div class="blog-slider__content">
+                  <span class="blog-slider__code">{val.postedOn}</span>
+                  <div class="blog-slider__title">{val.title}</div>
+                  <div class="blog-slider__text">{val.description}</div>
+                  <button
+                    onClick={() => {
+                      openPDF(val.fileDownloadUrl);
+                    }}
+                    class="blog-slider__button"
+                  >
+                    READ MORE
+                  </button>
+                </div>
+              </SwiperSlide>
+            ))}
+          </div>
+          <div class="blog-slider__pagination"></div>
+        </Swiper>
       </div>
       {isPDFopen && <PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />}
     </div>

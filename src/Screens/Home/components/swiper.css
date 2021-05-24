@@ -52,26 +52,34 @@
 
 @media screen and (max-width: 992px) {
   .swiper-cont {
-    max-height: 150vh;
-    min-height: 150vh;
+    /* max-height: 120vh;
+    min-height: 120vh; */
+
+    min-height: 135vh;
+    max-height: 135vh;
+    /* height: 120vh; */
+    padding-bottom: 5%;
   }
   .blog-slider {
     max-width: 98vw;
     height: 100vh;
-    margin-top: 200px;
+    margin-top: 30%;
   }
 }
 @media screen and (max-width: 768px) {
   .blog-slider {
-    min-height: 500px;
-    height: auto;
-    margin: 1% auto;
+    /* min-height: 500px; */
+    height: 80vh;
+    /* margin: 1% auto; */
     /* margin-top: 5px; */
   }
   .swiper-cont {
-    margin-bottom: 10%;
-    max-height: 150vh;
-    min-height: 150vh;
+    /* margin-bottom: 10%; */
+    /* max-height: 100vh;
+    min-height: 100vh; */
+    /* max-height: 70vh; */
+    height: auto;
+    overflow: hidden;
   }
 }
 @media screen and (max-height: 500px) and (min-width: 992px) {

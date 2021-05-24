@@ -109,7 +109,7 @@ const GetNews = () => {
                       <div className="row py-1 py-md-4 align-items-center border-top">
                         <div className="col-md-10">
                           <h3 className="feed-item-heading m-0 font-weight-800">
-                            <a className="text-black" href="d.FileURL">
+                            <a className="text-black" href={d.FileURL}>
                               {d.title}
                             </a>
                           </h3>

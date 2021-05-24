@@ -41,7 +41,7 @@ const Counter = ({ setIsCounterLoading }) => {
           <div className="row skew">
             <div className="col-md-10 col-md-offset-1">
               <div className="row">
-                <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
+                <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent p-2 m-0">
                   <span className="icon w-100 h-100">
                     <ThisYear />
                   </span>
@@ -64,7 +64,7 @@ const Counter = ({ setIsCounterLoading }) => {
                     Students This Year
                   </span>
                 </div>
-                <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
+                <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent p-0 m-0">
                   <span className="icon w-100 h-100">
                     <PassedIcon />
                   </span>
@@ -86,7 +86,7 @@ const Counter = ({ setIsCounterLoading }) => {
                   )}
                   <span className="fh5co-counter-label">Passed Students</span>
                 </div>
-                <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent">
+                <div className="col-md-3 col-sm-6 text-center animate-box bg-transparent p-0 m-0">
                   <span className="icon w-100 h-100">
                     <TeacherIcon />
                   </span>
