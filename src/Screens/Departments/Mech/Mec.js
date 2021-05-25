@@ -1,6 +1,7 @@
 import React from "react";
 import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
+import MechSVG from "../Reusables/SVGIllustrations/MechSVG";
 import NavLinks from "./Nav";
 
 const Mech = () => {
@@ -11,19 +12,12 @@ const Mech = () => {
         <div class="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4 w-100"
+            class="scrollspy-example z-depth-1 mt-4 w-100 p-3"
             data-target="#navbar-example3"
             data-offset="0"
           >
-            <div className="row">
-              <div className="col-2"></div>
-              <div className="col-lg-6">
-                <img
-                  alt="cse"
-                  className="img-fluid rounded"
-                  src="https://wallpaperplay.com/walls/full/e/3/c/28158.jpg"
-                />
-              </div>
+            <div className="illustration-cont">
+              <MechSVG width="300" height="300" />
             </div>
             <p className="m-1">
               Mechanical engineering is one of the basic engineering branches.

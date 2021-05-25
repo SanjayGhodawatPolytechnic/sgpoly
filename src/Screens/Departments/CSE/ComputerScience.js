@@ -3,6 +3,7 @@ import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
 import NavLinks from "./NavLinks";
 import "../Reusables/CSS/DeptHome.css";
+import CSESVG from "../Reusables/SVGIllustrations/CSESVG";
 const ComputerScience = () => {
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
@@ -11,19 +12,12 @@ const ComputerScience = () => {
         <div class="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4 w-100"
+            class="scrollspy-example z-depth-1 mt-4 w-100 p-3"
             data-target="#navbar-example3"
             data-offset="0"
           >
-            <div className="row">
-              <div className="col-2"></div>
-              <div className="col-lg-6">
-                <img
-                  alt="cse"
-                  className="img-fluid rounded"
-                  src="https://wallpaperplay.com/walls/full/e/3/c/28158.jpg"
-                />
-              </div>
+            <div className="illustration-cont">
+              <CSESVG width="300" height="300" />
             </div>
             <p className="m-1">
               The Computer Science and Engineering (CSE) program was started in
@@ -43,21 +37,21 @@ const ComputerScience = () => {
                 <h4>Check Us out on..</h4>
               </div>
             </div>
-            <div className="row m-0 p-0 w-100">
-              <div className="col">
+            <div className="outsource">
+              <div className="">
                 <a
                   href="http://www.dtemaharashtra.gov.in/StaticPages/frmSearchInstitute.aspx"
                   target="blank"
-                  className="btn btn-danger rounded-pill w-100"
+                  className="btn btn-info rounded"
                 >
                   DTE
                 </a>
               </div>
-              <div className="col">
+              <div className="">
                 <a
                   href="https://www.facilities.aicte-india.org/dashboard/pages/dashboardaicte.php"
                   target="blank"
-                  className="btn btn-danger rounded-pill w-100"
+                  className="btn btn-info rounded"
                 >
                   AICTE
                 </a>

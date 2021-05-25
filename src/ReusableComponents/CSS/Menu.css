@@ -122,3 +122,10 @@
   z-index: 1000;
   cursor: pointer;
 }
+
+.about-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

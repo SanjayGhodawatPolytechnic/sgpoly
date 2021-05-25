@@ -23,9 +23,9 @@ const Footer = () => {
               {/*<p>Innovativeness and Creativity are the hallmarks of a genius enterprise and SGI stands to be a stage where these qualities would be nurtured, encouraged and blossomed.</p>*/}
             </div>
             <hr className="clearfix w-100 d-md-none" />
-            <div className="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1 txt-color">
+            <div className="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1 txt-color text-center">
               <h5 className="font-weight-bold text-uppercase mb-4">About</h5>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled about-sec">
                 <li>
                   <p>
                     <span href="#!">
@@ -50,7 +50,7 @@ const Footer = () => {
                 <li>
                   <p>
                     <span href="#!">
-                      <p className="txt-color">AWARDS</p>
+                      <p className="txt-color">Awards</p>
                     </span>
                   </p>
                 </li>

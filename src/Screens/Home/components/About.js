@@ -19,7 +19,7 @@ const AboutHome = () => {
         </div>
         <div className=" solid-sec">
           <img
-            src="https://images.unsplash.com/photo-1620983379290-71e02d8ca563?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FD%20block%20(1).jpg?alt=media&token=c6108113-d285-431d-be79-293d40ebc356"
             alt=""
             className="img-about"
           />

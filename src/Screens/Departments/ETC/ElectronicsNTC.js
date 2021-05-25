@@ -3,6 +3,7 @@ import Main from "../../../ReusableComponents/Main";
 import DeptMenu from "../Reusables/DeptMenu";
 import NavLinks from "./NavLinks";
 import "../Reusables/CSS/DeptHome.css";
+import ETCSVG from "../Reusables/SVGIllustrations/ETCSVG";
 const ElectronicsNTC = () => {
   return (
     <Main className="container-lg w-100 m-2 p-0 cse">
@@ -11,19 +12,12 @@ const ElectronicsNTC = () => {
         <div class="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            class="scrollspy-example z-depth-1 mt-4 p-3"
             data-target="#navbar-example3"
             data-offset="0"
           >
-            <div className="row">
-              <div className="col-2"></div>
-              <div className="col-lg-6">
-                <img
-                  alt="etc"
-                  className="img-fluid rounded"
-                  src="https://wallpaperplay.com/walls/full/e/3/c/28158.jpg"
-                />
-              </div>
+            <div className="illustration-cont">
+              <ETCSVG width="300" height="300" />
             </div>
             <p className="m-1">
               Greetings!!. The department E&amp;TC is established in the year
@@ -44,7 +38,7 @@ const ElectronicsNTC = () => {
               faculty members. Workshops &amp; seminars are regularly takento
               bridge the gap between curriculum &amp; industries.
             </p>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-4"></div>
               <div className="col-4">
                 <h4>Check Us out on..</h4>
@@ -69,7 +63,7 @@ const ElectronicsNTC = () => {
                   AICTE
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

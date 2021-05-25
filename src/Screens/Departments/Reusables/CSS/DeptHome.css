@@ -59,3 +59,14 @@
     background-position: 26% 0%;
   }
 }
+.illustration-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outsource {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
