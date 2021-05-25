@@ -34,8 +34,9 @@ function ImgCarousel() {
           gradient={false}
           pauseOnHover={true}
           pauseOnClick={true}
+          className="mq-cont"
         >
-          <div class="">
+          <div>
             {data.map((d, i) => {
               return (
                 <div class="Marquee-tag">
