@@ -92,11 +92,7 @@ const NavBar = () => {
                       Achievements
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/about/activities" className="a">
-                      Activities
-                    </Link>
-                  </li>
+
                   <li>
                     <Link to="/about/socialresponsiblities" className="a">
                       Social Responsibilities
@@ -223,9 +219,9 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <a href="/#news-letter" className="a">
                       Institute News Letters
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </li>
