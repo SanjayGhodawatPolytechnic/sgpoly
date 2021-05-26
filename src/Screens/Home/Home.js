@@ -74,9 +74,9 @@ function Home() {
             className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2 rounded"
             to="/department/cse"
           >
-            <div className="rounded py-5 px-4 bg-transparent">
+            <div className="rounded py-5 px-4 bg-transparent course-title">
               <CSELogo className="mb-3 cse-logo" width="100px" />
-              <h5 className="mb-0 text-dark">Computer Science</h5>
+              <h5 className="mb-0 ">Computer Science</h5>
             </div>
           </Link>
           <Link
@@ -89,7 +89,7 @@ function Home() {
                 width="100px"
                 height="80px"
               />
-              <h5 className="mb-0 text-dark">Mechanical</h5>
+              <h5 className="mb-0 course-title">Mechanical</h5>
             </div>
           </Link>
           <Link
@@ -102,7 +102,7 @@ function Home() {
                 width="100px"
                 height="80px"
               />
-              <h5 className="mb-0 text-dark">Civil</h5>
+              <h5 className="mb-0 course-title">Civil</h5>
             </div>
           </Link>
           <Link
@@ -124,7 +124,7 @@ function Home() {
                 width="100px"
                 height="80px"
               />
-              <h5 className="mb-0 text-dark">Electrical</h5>
+              <h5 className="mb-0 course-title">Electrical</h5>
             </div>
           </Link>
         </div>
