@@ -31,7 +31,7 @@ const Newsletter = ({ setIsRecentsLoading }) => {
     });
   };
   return (
-    <div className="section-newsletter">
+    <div id="news-letter" className="section-newsletter">
       <div className="newsletter-subscribe mt-5 container">
         <div className="container">
           <div className="intro">

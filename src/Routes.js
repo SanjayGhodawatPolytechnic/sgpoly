@@ -55,7 +55,6 @@ import ETCOutcomes from "./Screens/Departments/ETC/ETCOutcomes";
 import { useState } from "react";
 import "./Routes.css";
 import img from "./ReusableComponents/CSS/sguni.jpg";
-import AboutActivities from "./Screens/About/Activities";
 import ETCStaffProfile from "./Screens/Departments/ETC/ETCStaffProfile";
 import ETCTechStaff from "./Screens/Departments/ETC/ETCTechStaff";
 
@@ -176,7 +175,6 @@ const Routes = () => {
           component={aboutDifferentiator}
         />
         <Route path="/about/achievements" exact component={aboutAchievement} />
-        <Route path="/about/activities" exact component={AboutActivities} />
         <Route
           path="/about/socialresponsiblities"
           exact
