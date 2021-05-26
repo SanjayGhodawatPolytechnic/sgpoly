@@ -12,12 +12,12 @@ const Outcomes = ({
 }) => {
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept={deptName} subMenu={subMenu} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            className="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >
@@ -26,9 +26,9 @@ const Outcomes = ({
                 <h3>Program Educational Objectives (PEOs)</h3>
               </div>
               <div className="col-12 text-center">
-                <div class="list-group peos">
+                <div className="list-group peos">
                   {PEO.map((val, idx) => (
-                    <span class="list-group-item list-group-item-action">
+                    <span className="list-group-item list-group-item-action">
                       {val}
                     </span>
                   ))}
@@ -40,9 +40,9 @@ const Outcomes = ({
                 <h3>Program Outcome (POs)</h3>
               </div>
               <div className="col-12 text-center">
-                <div class="list-group">
+                <div className="list-group">
                   {PO.map((val, idx) => (
-                    <span class="list-group-item list-group-item-action">
+                    <span className="list-group-item list-group-item-action">
                       <b>{val.heading + ":"}</b>
                       {val.desc}
                     </span>
@@ -55,9 +55,9 @@ const Outcomes = ({
                 <h3>Program Specific Outcomes (PSOs)</h3>
               </div>
               <div className="col-12 text-center">
-                <div class="list-group">
+                <div className="list-group">
                   {PSO.map((val, idx) => (
-                    <span class="list-group-item list-group-item-action">
+                    <span className="list-group-item list-group-item-action">
                       {val}
                     </span>
                   ))}

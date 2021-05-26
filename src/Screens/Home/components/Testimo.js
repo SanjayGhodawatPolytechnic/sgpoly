@@ -34,7 +34,7 @@ const Testimo = () => {
             {data.map((d, i) => {
               if (i == 0) {
                 return (
-                  <div className="carousel-item active">
+                  <div className="carousel-item active" key={i}>
                     <div className="carousel-caption">
                       <p>{data[0] && data[0].message}</p>{" "}
                       <img src={data[0] && data[0].FileURL} />
@@ -44,7 +44,7 @@ const Testimo = () => {
                 );
               }
               return (
-                <div className="carousel-item">
+                <div className="carousel-item" key={i}>
                   <div className="carousel-caption">
                     <p>{d.message}</p>
                     <img src={d.FileURL} className="img-fluid" />

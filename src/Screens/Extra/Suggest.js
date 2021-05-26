@@ -20,7 +20,7 @@ const Suggest = () => {
 
     await dbReference.push(data, (err) => {
       if (!err) {
-        console.log('SUCCESS')
+        console.log("SUCCESS");
       }
     });
   };

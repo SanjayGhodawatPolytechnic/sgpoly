@@ -44,7 +44,7 @@ function aboutPhilosophy() {
                 development of an attitude of gratitude that freely gives back
                 without expectations.
               </p>
-              <div class="card-footer text-center text-bold">
+              <div className="card-footer text-center text-bold">
                 "For the true measure of giving is giving without measure."
               </div>
             </div>

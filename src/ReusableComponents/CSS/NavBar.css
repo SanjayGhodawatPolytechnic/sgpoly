@@ -100,7 +100,7 @@ header nav ul li .a:hover {
     position: absolute;
     width: 100%;
     height: calc(170vh - 20px);
-    background: #f4ecd6;
+    background: #202b37;
     top: 50px;
     left: -100%;
     transition: 0.5s;
@@ -115,11 +115,18 @@ header nav ul li .a:hover {
   }
   header nav ul li .a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    /* color: #202b37; */
   }
 
   header nav ul li.active ul {
     position: relative;
     background: #b7b7a4; /*submenu colour in mobile view*/
+    color: #202b37;
+  }
+  header nav ul li.active ul li {
+    /* position: relative;
+    background: #b7b7a4;  */
+    color: #202b37;
   }
   header nav ul li ul li {
     width: 100%;

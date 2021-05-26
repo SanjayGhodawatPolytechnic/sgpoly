@@ -72,7 +72,7 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
     //   },
     //   direction: "vertical",
     //   slidesPerView: 1,
-    //   slideActiveClass: "swiper-slide-active",
+    //   slideActiveclassName: "swiper-slide-active",
     //   allowTouchMove: false,
     // });
   }, []);
@@ -93,22 +93,22 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
           <h4 className="title">Important Reports</h4>
           <div className="reports-line swiper-line" />
         </div>
-        {/* <div class="blog-slider col-12 p-0">
-          <div class="blog-slider__wrp swiper-wrapper mt-3">
+        {/* <div className="blog-slider col-12 p-0">
+          <div className="blog-slider__wrp swiper-wrapper mt-3">
             {data.map((val, idx) => (
-              <div class="blog-slider__item swiper-slide" key={idx}>
-                <div class="blog-slider__img">
+              <div className="blog-slider__item swiper-slide" key={idx}>
+                <div className="blog-slider__img">
                   <img src={val.imageDownloadUrl} alt="" />
                 </div>
-                <div class="blog-slider__content">
-                  <span class="blog-slider__code">{val.postedOn}</span>
-                  <div class="blog-slider__title">{val.title}</div>
-                  <div class="blog-slider__text">{val.description}</div>
+                <div className="blog-slider__content">
+                  <span className="blog-slider__code">{val.postedOn}</span>
+                  <div className="blog-slider__title">{val.title}</div>
+                  <div className="blog-slider__text">{val.description}</div>
                   <button
                     onClick={() => {
                       openPDF(val.fileDownloadUrl);
                     }}
-                    class="blog-slider__button"
+                    className="blog-slider__button"
                   >
                     READ MORE
                   </button>
@@ -116,13 +116,13 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
               </div>
             ))}
           </div>
-          <div class="blog-slider__pagination"></div>
+          <div className="blog-slider__pagination"></div>
         </div> */}
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -130,27 +130,27 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
             clickable: true,
           }}
           slidesPerView={1}
-          slideActiveClass="swiper-slide-active"
+          slideActiveclassName="swiper-slide-active"
           direction="vertical"
           navigation={true}
           allowTouchMove={false}
           className="blog-slider col-12 p-0"
         >
-          <div class="blog-slider__wrp swiper-wrapper mt-3">
+          <div className="blog-slider__wrp swiper-wrapper mt-3">
             {data.map((val, idx) => (
               <SwiperSlide className="blog-slider__item swiper-slide" key={idx}>
-                <div class="blog-slider__img">
+                <div className="blog-slider__img">
                   <img src={val.imageDownloadUrl} alt="" />
                 </div>
-                <div class="blog-slider__content">
-                  <span class="blog-slider__code">{val.postedOn}</span>
-                  <div class="blog-slider__title">{val.title}</div>
-                  <div class="blog-slider__text">{val.description}</div>
+                <div className="blog-slider__content">
+                  <span className="blog-slider__code">{val.postedOn}</span>
+                  <div className="blog-slider__title">{val.title}</div>
+                  <div className="blog-slider__text">{val.description}</div>
                   <button
                     onClick={() => {
                       openPDF(val.fileDownloadUrl);
                     }}
-                    class="blog-slider__button"
+                    className="blog-slider__button"
                   >
                     READ MORE
                   </button>
@@ -158,7 +158,7 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
               </SwiperSlide>
             ))}
           </div>
-          <div class="blog-slider__pagination"></div>
+          <div className="blog-slider__pagination"></div>
         </Swiper>
       </div>
       {isPDFopen && <PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />}

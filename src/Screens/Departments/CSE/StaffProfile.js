@@ -51,12 +51,12 @@ const StaffProfile = () => {
 
   return (
     <Main className="container-lg w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="Computer Science" subMenu={NavLinks} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4 p-0"
+            className="scrollspy-example z-depth-1 mt-4 p-0"
             data-target="#navbar-example3"
             data-offset="0"
           >

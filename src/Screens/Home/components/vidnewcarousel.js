@@ -22,7 +22,6 @@ const Vidnewcarousel = () => {
     dataref.on("value", (datasnapshot) => {
       if (datasnapshot.val()) {
         let result = Object.values(datasnapshot.val());
-        console.log(result);
         setdata(result);
       }
     });

@@ -33,11 +33,11 @@ const hostel = () => {
   return (
     <Main>
       <div className="main container p-4">
-        {/* <div class="grid-container">
+        {/* <div className="grid-container">
           {Items.map((d, i) => (
             <div>
               <img
-                class={`grid-item grid-item-${i}`}
+                className={`grid-item grid-item-${i}`}
                 src={d.image}
                 alt="hostel"
               />
@@ -70,7 +70,7 @@ const hostel = () => {
         <h5>HOSTEL FEE STRUCTURE</h5>
         <br />
         <br />
-        <table class="table  table-borderless  ">
+        <table className="table  table-borderless  ">
           <tbody>
             <tr>
               <th>Hostel Fees</th>

@@ -7,12 +7,12 @@ import EleSVG from "../Reusables/SVGIllustrations/EleSVG";
 const Electrical = () => {
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="Electrical" subMenu={NavLinks} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4 w-100 p-3"
+            className="scrollspy-example z-depth-1 mt-4 w-100 p-3"
             data-target="#navbar-example3"
             data-offset="0"
           >

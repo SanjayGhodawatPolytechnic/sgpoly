@@ -30,7 +30,7 @@ function aboutQuality() {
           <div className="card-header text-center ">Quality Objectives</div>
           <div className="card-body">
             <li className="card-text">
-              To develop SGP into a world class Institute of learning and
+              To develop SGP into a world className Institute of learning and
               research in Engineering and Management with a high standard of
               academic excellence.
             </li>

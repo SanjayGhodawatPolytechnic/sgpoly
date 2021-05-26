@@ -80,8 +80,8 @@ function aboutVision() {
               To be one of the most progressive and innovative Knowledge cities.
             </li>
             <li className="card-text">
-              Establish a knowledge city that will impart world class education
-              in engineering, management and research.
+              Establish a knowledge city that will impart world className
+              education in engineering, management and research.
             </li>
             <li className="card-text">
               Confer technical knowledge, in pace with the latest trends in the

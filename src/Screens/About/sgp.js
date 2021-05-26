@@ -14,7 +14,7 @@ function aboutSGP() {
           <img
             src={"http://www.sgipolytechnic.in/pics/institute_building.jpg"}
             className="setWidth col-lg-8 col-md-8 col-sm-10 col-0"
-            alt="..."
+            alt="institute building"
           />
           <div className="col-lg-2 col-md-2 col-sm-1 col-0"></div>
         </div>

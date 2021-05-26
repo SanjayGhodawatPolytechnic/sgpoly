@@ -33,12 +33,12 @@ const Grievence = () => {
 
   return (
     <Main isSlideShow={true}>
-      <div class="row">
+      <div className="row">
         <CommitteeMenu title="Committees" subMenu={NavLinks} />
-        <div class="col-sm-8 col-lg-9 text-light">
+        <div className="col-sm-8 col-lg-9 text-light">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            className="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >
@@ -46,20 +46,20 @@ const Grievence = () => {
             <br />
 
             <div>
-              <div class="card m-2">
-                {/* <div class="card-header">Anti Ragging Committee</div> */}
-                <div class="card-body">
-                  <h5 class="card-title font-weight-bold text-dark">
+              <div className="card m-2">
+                {/* <div className="card-header">Anti Ragging Committee</div> */}
+                <div className="card-body">
+                  <h5 className="card-title font-weight-bold text-dark">
                     {data && data.committeeName}
                   </h5>
-                  <p class="card-text">
+                  <p className="card-text">
                     The {data && data.committeeName} is constituted for the
                     academic year
                     {data && data.year}. The members of the committee are as
                     follows -
                   </p>
 
-                  <table class="table table-bordered m-2">
+                  <table className="table table-bordered m-2">
                     <thead>
                       <tr>
                         <th scope="col">Sr no.</th>
@@ -78,7 +78,7 @@ const Grievence = () => {
                         ))}
                     </tbody>
                   </table>
-                  <div class="card-footer text-muted">
+                  <div className="card-footer text-muted">
                     <p className="font-weight-bold text-dark">
                       The Student Grievance Redressal Cell functions are :
                     </p>

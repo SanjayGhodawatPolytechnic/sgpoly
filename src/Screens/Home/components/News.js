@@ -57,7 +57,7 @@ const GetNews = () => {
       <div className="new_row">
         <div className="new_col">
           <section className="blog-cat mt-5 pb-5">
-            {/* <h1 class="in-news h3 text-red font-italic">News</h1> */}
+            {/* <h1 className="in-news h3 text-red font-italic">News</h1> */}
             <div className="m-0 p-0">
               <h4 className="news-title"> latest News</h4>
               <div className="news-line" />
@@ -65,10 +65,7 @@ const GetNews = () => {
             <div className="news-cont-scrollable">
               {newsData.map((d, i) => {
                 return (
-                  <div
-                    className="fullbar-item w-100 cursor-pointer"
-                    onclick="location.href='#'"
-                  >
+                  <div className="fullbar-item w-100 cursor-pointer" key={i}>
                     <div className="container">
                       <div className="row py-1 py-md-4 align-items-center border-top">
                         <div className="col-md-10">
@@ -93,7 +90,7 @@ const GetNews = () => {
         </div>
         <div className="new_col">
           <section className="blog-cat mt-5 pb-5">
-            {/* <h1 class="in-news h3 text-red font-italic">Circular</h1> */}
+            {/* <h1 className="in-news h3 text-red font-italic">Circular</h1> */}
             <div>
               <h4 className="circular-title">Circulars/Downloads</h4>
               <div className="circular-line" />
@@ -101,10 +98,7 @@ const GetNews = () => {
             <div className="circular-cont-scrollable">
               {circularData.map((d, i) => {
                 return (
-                  <div
-                    className="fullbar-item w-100 cursor-pointer"
-                    onclick="location.href='#'"
-                  >
+                  <div className="fullbar-item w-100 cursor-pointer" key={i}>
                     <div className="container">
                       <div className="row py-1 py-md-4 align-items-center border-top">
                         <div className="col-md-10">

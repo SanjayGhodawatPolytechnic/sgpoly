@@ -7,12 +7,12 @@ import "../Reusables/CSS/VisionMission.css";
 const VisionMission = () => {
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="Computer Science" subMenu={NavLinks} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            className="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >
@@ -54,19 +54,19 @@ const VisionMission = () => {
               </div>
               <div className="col-12 text-center">
                 <h4>Mission</h4>
-                <div class="list-group">
-                  <span class="list-group-item list-group-item-action">
+                <div className="list-group">
+                  <span className="list-group-item list-group-item-action">
                     To impart necessary technical and professional skills among
                     students to make them employable
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To produce competent technocrats to meet industrial
                     challenges with societal and environmental concerns
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To establish effective institute-industry interaction
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To motivate students for lifelong learning that will enable
                     them to choose better career opportunities
                   </span>
@@ -74,19 +74,19 @@ const VisionMission = () => {
               </div>
               <div className="col-12 text-center">
                 <h5>Mission Objectives</h5>
-                <div class="list-group">
-                  <span class="list-group-item list-group-item-action">
+                <div className="list-group">
+                  <span className="list-group-item list-group-item-action">
                     M-1 : Make Students industry ready by imparting necessary
                     technical and professional skills
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     M-2 : Create awareness among students for societal and
                     environmental concerns
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     M-3 : Establish institute-industry interaction
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     M-4 : Inculcate the spirit of lifelong learning among
                     students for career enhancement
                   </span>
@@ -108,22 +108,22 @@ const VisionMission = () => {
               </div>
               <div className="col-12 text-center">
                 <h4>Mission</h4>
-                <div class="list-group">
-                  <span class="list-group-item list-group-item-action">
+                <div className="list-group">
+                  <span className="list-group-item list-group-item-action">
                     To impart technical knowledge and skills by using modern
                     engineering tools with supportive facilities.
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To facilitate industry-institute interaction to expose
                     students to current industrial practices that will help them
                     to solve industrial challenges.
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To inculcate ethical and professional values among students
                     that will make them socially and environmentally
                     responsible.
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To motivate students towards lifelong learning and helping
                     them to find right career opportunities.
                   </span>
@@ -131,19 +131,19 @@ const VisionMission = () => {
               </div>
               <div className="col-12 text-center">
                 <h5>Mission Objectives</h5>
-                <div class="list-group">
-                  <span class="list-group-item list-group-item-action">
+                <div className="list-group">
+                  <span className="list-group-item list-group-item-action">
                     M-1 : Impart technical knowledge and skills by using modern
                     engineering tools
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     M-2 : Facilitate industry-institute interaction
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     {" "}
                     M-3 : Inculcate ethical and professional values
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     M-4 : Motivate students towards lifelong learning and
                     helping them to find right career opportunities.
                   </span>

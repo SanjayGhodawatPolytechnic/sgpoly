@@ -9,7 +9,7 @@
   /* height: 400px; */
 }
 .col-md-3 {
-  background: #ff9b00;
+  background: #202b37;
   padding: 4%;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -46,7 +46,13 @@
 .contact-form button:focus {
   box-shadow: none;
 }
-
+.contact-submit {
+  background: #202b37;
+  color: #fff;
+}
+.contact-submit:hover {
+  color: #fff;
+}
 /* MAP CSS ********************* */
 
 .cont {

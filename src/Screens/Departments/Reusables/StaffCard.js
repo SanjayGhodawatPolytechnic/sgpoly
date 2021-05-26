@@ -147,20 +147,20 @@ const StaffCard = ({
 export default StaffCard;
 
 {
-  /* <div class="card-container m-2">
+  /* <div className="card-container m-2">
 <div className="row">
     <div className="col-sm-4">
-        <img class="round" src={imageURL} alt="user" width="200" height="200" />
+        <img className="round" src={imageURL} alt="user" width="200" height="200" />
     </div>
     <div className="col-sm-8">
     <h3>{name}</h3>
     <h6 className="des">{designation}</h6>
-    <p><span class="pro">Qualification</span> {qualification}</p>
-    <p><span class="pro">Area of Expertise</span> {areaOfEpertise}</p>
-    <p><span class="pro">Experience</span> {experience}</p>
-    <p><span class="pro">Email ID</span> {emailId}</p>
-    <div class="buttons">
-        <a href={resumeURL} target="blank"><button class="primary ghost">
+    <p><span className="pro">Qualification</span> {qualification}</p>
+    <p><span className="pro">Area of Expertise</span> {areaOfEpertise}</p>
+    <p><span className="pro">Experience</span> {experience}</p>
+    <p><span className="pro">Email ID</span> {emailId}</p>
+    <div className="buttons">
+        <a href={resumeURL} target="blank"><button className="primary ghost">
             Profile
         </button>
         </a>

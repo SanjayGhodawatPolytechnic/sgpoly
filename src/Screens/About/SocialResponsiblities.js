@@ -26,7 +26,7 @@ const SocialResponsiblities = () => {
                     width="1em"
                     height="1em"
                     viewBox="0 0 16 16"
-                    class="bi bi-eject-fill"
+                    className="bi bi-eject-fill"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -139,43 +139,47 @@ const SocialResponsiblities = () => {
               Sou. Sushila Danchand Ghodawat Charitable Trust's
             </div>
             <div className="card-body" style={{ padding: "40px" }}>
-              <ul class="list-group rounded">
-                <li class="card-text">
+              <ul className="list-group rounded">
+                <li className="card-text">
                   Sanjay Ghodawat Institutes (Faculty of Engineering), Atigre
                 </li>
-                <li class="card-text">
+                <li className="card-text">
                   Sanjay Ghodawat Institutes (Faculty of Management), Atigre
                 </li>
-                <li class="card-text">Sanjay Ghodawat Polytechnic, Atigre</li>
-                <li class="card-text">Sanjay Ghodawat International School</li>
-                <li class="card-text">
+                <li className="card-text">
+                  Sanjay Ghodawat Polytechnic, Atigre
+                </li>
+                <li className="card-text">
+                  Sanjay Ghodawat International School
+                </li>
+                <li className="card-text">
                   Sanjay Ghodawat IIT &amp; Medical Academy
                 </li>
-                <li class="card-text">Sanjay Ghodawat Junior College</li>
-                <li class="card-text">
+                <li className="card-text">Sanjay Ghodawat Junior College</li>
+                <li className="card-text">
                   Acharya Shree Tulsi Blood Bank &amp; Blood Component Center,
                   Udgaon (Jaysingpur)
                 </li>
-                <li class="card-text">
+                <li className="card-text">
                   Acharya Shree Mahapradnya Eye Hospital, Udgaon (Jaysingpur)
                 </li>
-                <li class="card-text">
+                <li className="card-text">
                   Vandemataram Healthy Mother Healthy Baby, Udgaon (Jaysingpur)
                 </li>
-                <li class="card-text">
+                <li className="card-text">
                   Computer Academy - Free Computer Education for poor &amp;
                   Handicapped, Udgaon (Jaysingpur)
                 </li>
-                <li class="card-text">
+                <li className="card-text">
                   Sick Bed Service - Medical Equipments on Deposit basis, Udgaon
                   (Jaysingpur)
                 </li>
-                <li class="card-text">School Health Checkup, Atigre</li>
-                <li class="card-text">
+                <li className="card-text">School Health Checkup, Atigre</li>
+                <li className="card-text">
                   Sou. Sushila Danchand Ghodawat Medical &amp; Technical
                   Institute, Udgaon (Jaysingpur)
                 </li>
-                <li class="card-text">
+                <li className="card-text">
                   PGDMLT &amp; BSc MLT College, Udgaon (Jaysingpur)
                 </li>
               </ul>

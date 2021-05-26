@@ -33,12 +33,12 @@ const EntcPublications = () => {
   }, []);
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="E & TC" subMenu={NavLinks} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            className="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >
@@ -48,11 +48,11 @@ const EntcPublications = () => {
                   <h3>Faculty Paper Publications / Presentations</h3>
                 </div>
                 <div className="col-12 text-center">
-                  <div class="list-group">
+                  <div className="list-group">
                     {facultyData &&
                       facultyData.map((val, idx) => (
                         <span
-                          class="list-group-item list-group-item-action"
+                          className="list-group-item list-group-item-action"
                           key={idx}
                         >
                           {val.name} published {val.category} on {val.title} at{" "}
@@ -69,11 +69,11 @@ const EntcPublications = () => {
                   <h3>Student Paper Publications / Presentations</h3>
                 </div>
                 <div className="col-12 text-center">
-                  <div class="list-group">
+                  <div className="list-group">
                     {studentData &&
                       studentData.map((val, idx) => (
                         <span
-                          class="list-group-item list-group-item-action"
+                          className="list-group-item list-group-item-action"
                           key={idx}
                         >
                           {val.name} published {val.category} on {val.title} at{" "}

@@ -7,12 +7,12 @@ import "../Reusables/CSS/VisionMission.css";
 const MechanicalVisionMission = () => {
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="Mechanical" subMenu={NavLinks} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            className="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >

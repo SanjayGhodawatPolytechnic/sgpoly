@@ -32,7 +32,7 @@ const NavBar = () => {
           <nav className={isOpen ? "active" : ""}>
             <ul>
               <li>
-                <Link to="" className="a">
+                <Link to="/" className="a">
                   HOME
                 </Link>
               </li>
@@ -363,8 +363,8 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/infrastructure/classroom" className="a">
-                      class rooms
+                    <Link to="/infrastructure/classNameroom" className="a">
+                      className rooms
                     </Link>
                   </li>
                   <li>

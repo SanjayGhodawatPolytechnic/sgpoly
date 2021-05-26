@@ -6,12 +6,12 @@ import NavLinks from "./NavLinks";
 const ETCVisionMission = () => {
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="E &amp; TC" subMenu={NavLinks} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4"
+            className="scrollspy-example z-depth-1 mt-4"
             data-target="#navbar-example3"
             data-offset="0"
           >
@@ -29,21 +29,21 @@ const ETCVisionMission = () => {
               </div>
               <div className="col-12 text-center">
                 <h4>Mission</h4>
-                <div class="list-group">
-                  <span class="list-group-item list-group-item-action">
+                <div className="list-group">
+                  <span className="list-group-item list-group-item-action">
                     {" "}
                     To impart professional and technical skills to make students
                     employable
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To inculcate ethical values to make responsible engineers
                     with concern for societal and environmental issues
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To help students to identify and solve industry related
                     problems
                   </span>
-                  <span class="list-group-item list-group-item-action">
+                  <span className="list-group-item list-group-item-action">
                     To develop a spirit of lifelong learning for their personal
                     and career enhancement
                   </span>

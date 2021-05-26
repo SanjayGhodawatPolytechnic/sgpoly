@@ -28,7 +28,7 @@ const Recruters = () => {
         <h4 className="rec">Recruiters</h4>
         <div className="courses-line imp-line" />
       </div>
-      <div class="Marquee">
+      <div className="Marquee">
         <Marquee
           speed={100}
           gradient={false}
@@ -38,7 +38,7 @@ const Recruters = () => {
           <div className="">
             {data.map((d, i) => {
               return (
-                <div class="Marquee-tag recruit">
+                <div className="Marquee-tag recruit" key={i}>
                   <img className="recruit-img" src={d.URL} alt="" />
                 </div>
               );

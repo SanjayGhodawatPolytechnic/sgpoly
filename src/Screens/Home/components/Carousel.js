@@ -46,11 +46,16 @@ const Carousel = ({ setIsCarouselLoading }) => {
                   data-target="#carouselExampleIndicators"
                   data-slide-to={i}
                   className="active"
+                  key={i}
                 />
               );
             }
             return (
-              <li data-target="#carouselExampleIndicators" data-slide-to={i} />
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to={i}
+                key={i}
+              />
             );
           })}
         </ol>
@@ -58,7 +63,7 @@ const Carousel = ({ setIsCarouselLoading }) => {
           {data.map((d, i) => {
             if (i == 0) {
               return (
-                <div className="carousel-item active w-100">
+                <div className="carousel-item active w-100" key={i}>
                   <img
                     className="d-block w-100 bgset"
                     src={data[0].URL}
@@ -68,7 +73,7 @@ const Carousel = ({ setIsCarouselLoading }) => {
               );
             }
             return (
-              <div className="carousel-item w-100">
+              <div className="carousel-item w-100" key={i}>
                 <img className="d-block w-100" src={d.URL} alt={d.ImageName} />
               </div>
             );

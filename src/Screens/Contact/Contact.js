@@ -5,15 +5,12 @@ import "./CSS/Contact.css";
 import { useState } from "react";
 import LocationMap from "./Map";
 
-
-
 const AddContact = () => {
-
   const [data, setData] = useState({
     name: "",
     phone: null,
-    email: ""
-  })
+    email: "",
+  });
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,32 +22,32 @@ const AddContact = () => {
     //   email: data.email
     // };
 
-    await dbReference.push(data, (err) => {
-      if (!err) {
-        console.log("uploaded");
-        setData({
-          name: "",
-          phone: "",
-          email: ""
+    await dbReference
+      .push(data, (err) => {
+        if (!err) {
+          console.log("uploaded");
+          setData({
+            name: "",
+            phone: "",
+            email: "",
+          });
+        }
+      })
+      .then(() => {
+        fetch("https://sgpbackend.herokuapp.com/mail/sendGreetings", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
         })
-      }
-    })
-    .then(() => {
-      fetch("https://sgpbackend.herokuapp.com/mail/sendGreetings", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-        .then((res) => {
-          console.log(res);
-
-        })
-        .catch(err => {
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
             console.log(err);
-        })
-    })
+          });
+      });
   };
 
   return (
@@ -64,8 +61,10 @@ const AddContact = () => {
                   src="https://image.ibb.co/kUASdV/contact-image.png"
                   alt="contact"
                 />
-                <h2>Contact Us</h2>
-                <h4>We will reach you as soon as possible</h4>
+                <h2 className="text-light">Contact Us</h2>
+                <h4 className="text-light">
+                  We will reach you as soon as possible
+                </h4>
               </div>
             </div>
             <div className="col-md-9">
@@ -81,8 +80,8 @@ const AddContact = () => {
                       id="contactName"
                       placeholder="Name"
                       name="fname"
-                      onChange={e => {
-                        setData({...data, name: e.target.value})
+                      onChange={(e) => {
+                        setData({ ...data, name: e.target.value });
                       }}
                       value={data.name}
                     />
@@ -100,8 +99,8 @@ const AddContact = () => {
                       id="contactNumber"
                       placeholder="Phone Number"
                       name="fname"
-                      onChange={e => {
-                        setData({...data, phone: e.target.value})
+                      onChange={(e) => {
+                        setData({ ...data, phone: e.target.value });
                       }}
                       value={data.phone}
                     />
@@ -118,8 +117,8 @@ const AddContact = () => {
                       id="contactNumber"
                       placeholder="Phone Number"
                       name="fname"
-                      onChange={e => {
-                        setData({...data, email: e.target.value})
+                      onChange={(e) => {
+                        setData({ ...data, email: e.target.value });
                       }}
                       value={data.email}
                     />
@@ -129,7 +128,7 @@ const AddContact = () => {
                   <div className="col-sm-offset-2 col-sm-10">
                     <button
                       type="submit"
-                      className="btn btn-default w-100"
+                      className="btn w-100 contact-submit"
                       onClick={(e) => {
                         // console.log(data);
                         onSubmit(e);
@@ -150,36 +149,34 @@ const AddContact = () => {
           </div>
           <div className="col-md-6 w-100 address">
             <div className="data">
-                <div className="address-data">
-                  <div className="add-title">
-                    <i class="fa fa-map-marker mr-4" aria-hidden="true"></i>Address
-                  </div>
-                  <div className="add-desc p-4">
+              <div className="address-data">
+                <div className="add-title">
+                  <i className="fa fa-map-marker mr-4" aria-hidden="true"></i>
+                  Address
+                </div>
+                <div className="add-desc p-4">
                   {"    "}Atigre, 416118, Maharatra
-                  </div>
                 </div>
-                <div className="address-data">
-                  <div className="add-title">
-                  <i class="fa fa-phone mr-4" aria-hidden="true"></i>Lets Talk
-                  </div>
-                  <div className="add-desc p-4 text-success">
-                  0230 - 2463800
-                  </div>
+              </div>
+              <div className="address-data">
+                <div className="add-title">
+                  <i className="fa fa-phone mr-4" aria-hidden="true"></i>Lets
+                  Talk
                 </div>
-                <div className="address-data">
-                  <div className="add-title">
-                  <i class="fa fa-envelope-o mr-4" aria-hidden="true"></i>General Support
-                  </div>
-                  <div className="add-desc p-4 text-success">
+                <div className="add-desc p-4 text-success">0230 - 2463800</div>
+              </div>
+              <div className="address-data">
+                <div className="add-title">
+                  <i className="fa fa-envelope-o mr-4" aria-hidden="true"></i>
+                  General Support
+                </div>
+                <div className="add-desc p-4 text-success">
                   principal@sgipolytechnic.in
-                  </div>
                 </div>
+              </div>
             </div>
-
           </div>
         </div>
-
-
       </Main>
     </div>
   );

@@ -30,6 +30,9 @@
 .cse-card:hover .cse-logo {
   fill: #f0ede7;
 }
+.cse-card:hover .course-title {
+  color: #f0ede7;
+}
 
 .mech-card {
   background-color: #f0ede7;

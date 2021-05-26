@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-mapboxgl.workerClass = MapboxWorker;
+mapboxgl.workerclassName = MapboxWorker;
 mapboxgl.accessToken =
   "pk.eyJ1IjoieWFzaDEwIiwiYSI6ImNrYnRiaXQwMTA4ZzMzNW42ZnpnamVyZnkifQ.3QjWS75fymRHz312BZWWiQ";
 

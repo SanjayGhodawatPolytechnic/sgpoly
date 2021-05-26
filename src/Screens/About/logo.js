@@ -13,7 +13,9 @@ function aboutLogo() {
             <div className="col-lg-3">
               <br />
               <img
-                src={"https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2FLogo1.png?alt=media&token=46962a0f-f60a-4a72-8990-098a302fa2af"}
+                src={
+                  "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2FLogo1.png?alt=media&token=46962a0f-f60a-4a72-8990-098a302fa2af"
+                }
                 className="card-img abtlogo"
                 alt="..."
               />

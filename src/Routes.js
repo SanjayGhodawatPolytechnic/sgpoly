@@ -16,7 +16,7 @@ import managementChairman from "./Screens/Management/chairman";
 import managementDirectors from "./Screens/Management/directors";
 import managementGovern from "./Screens/Management/govern";
 import infrastructureAbout from "./Screens/Infrastructure/about";
-import classroom from "./Screens/Infrastructure/classroom";
+import ClassRoom from "./Screens/Infrastructure/classroom";
 import Overview from "./Screens/Infrastructure/Overview";
 import workshop from "./Screens/Infrastructure/workshop";
 import auditorium from "./Screens/Infrastructure/auditorium";
@@ -139,7 +139,7 @@ const Routes = () => {
         }}
       >
         <div
-          class="modal-content"
+          className="modal-content"
           onClick={(e) => {
             e.stopPropagation();
           }}
@@ -444,7 +444,7 @@ const Routes = () => {
           component={infrastructureAbout}
         />
         <Route path="/infrastructure/overview" exact component={Overview} />
-        <Route path="/infrastructure/classroom" exact component={classroom} />
+        <Route path="/infrastructure/classroom" exact component={ClassRoom} />
         <Route path="/infrastructure/workshop" exact component={workshop} />
         <Route path="/infrastructure/auditorium" exact component={auditorium} />
         <Route path="/infrastructure/foodcourt" exact component={foodcourt} />

@@ -5,7 +5,6 @@ import uuid from "react-native-uuid";
 import ReactLoading from "react-loading";
 
 const Uploadimage = () => {
-
   const [isLoading, setIsLoading] = useState(false);
   let mediaName;
 
@@ -13,12 +12,14 @@ const Uploadimage = () => {
     e.preventDefault();
     setIsLoading(true);
     var nm = document.getElementById("name").value;
-    var dept = document.getElementById("deptSelector").options[
-      document.getElementById("deptSelector").selectedIndex
-    ].text;
-    var yr = document.getElementById("yrSelector").options[
-      document.getElementById("yrSelector").selectedIndex
-    ].text;
+    var dept =
+      document.getElementById("deptSelector").options[
+        document.getElementById("deptSelector").selectedIndex
+      ].text;
+    var yr =
+      document.getElementById("yrSelector").options[
+        document.getElementById("yrSelector").selectedIndex
+      ].text;
     var image = document.getElementById("imageSelector").files[0];
     console.log(nm, dept, yr);
     console.log(image);
@@ -46,7 +47,6 @@ const Uploadimage = () => {
         document.getElementById("deptSelector").selectedIndex = 0;
         document.getElementById("yrSelector").selectedIndex = 0;
         document.getElementById("imageSelector").value = null;
-
       }
     });
   };
@@ -74,7 +74,7 @@ const Uploadimage = () => {
 
             <label>Department</label>
             <select
-              class="browser-default custom-select mb-4"
+              className="browser-default custom-select mb-4"
               id="deptSelector"
             >
               <option value="0" disabled>
@@ -90,7 +90,10 @@ const Uploadimage = () => {
             </select>
 
             <label>Year</label>
-            <select class="browser-default custom-select mb-4" id="yrSelector">
+            <select
+              className="browser-default custom-select mb-4"
+              id="yrSelector"
+            >
               <option value="0" disabled>
                 Year
               </option>
@@ -108,9 +111,21 @@ const Uploadimage = () => {
               className="btn btn-info btn-block text-center"
               type="submit"
               onClick={(e) => onSubmit(e)}
-              style={{display:'flex', justifyContent:'center', alignItems:'center'}}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
-              {isLoading ? (<ReactLoading className="text-center" type="balls" color="#FFF" />) : "Add"}
+              {isLoading ? (
+                <ReactLoading
+                  className="text-center"
+                  type="balls"
+                  color="#FFF"
+                />
+              ) : (
+                "Add"
+              )}
             </button>
           </form>
         </div>

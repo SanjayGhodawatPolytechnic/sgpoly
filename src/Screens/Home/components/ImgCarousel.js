@@ -13,7 +13,6 @@ function ImgCarousel() {
     dataRef.on("value", (dataSnapshot) => {
       if (dataSnapshot.val()) {
         let result = Object.values(dataSnapshot.val());
-        console.log("hii" + result);
         setData(result);
       }
     });
@@ -28,7 +27,7 @@ function ImgCarousel() {
         <h4 className=" imp-title">Image-Gallery</h4>
         <div className="courses-line imp-line" />
       </div>
-      <div class="Marquee">
+      <div className="Marquee">
         <Marquee
           speed={100}
           gradient={false}
@@ -39,7 +38,7 @@ function ImgCarousel() {
           <div>
             {data.map((d, i) => {
               return (
-                <div class="Marquee-tag">
+                <div className="Marquee-tag" key={i}>
                   <img src={d.URL} alt="" />
                 </div>
               );

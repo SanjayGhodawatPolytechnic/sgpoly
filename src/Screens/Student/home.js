@@ -33,13 +33,19 @@ const StudentHome = () => {
         <div id="mdb-lightbox-ui" />
         <div className="mdb-lightbox">
           <figure className="col-md-12" key={i}>
-            <img src={c.imageDownloadUrl} className="img-fluid rounded" alt="abc" />
-            <div class="mask flex-center waves-effect waves-light rgba-teal">
-              <h4 class="white-text">{c.fullName}</h4>
+            <img
+              src={c.imageDownloadUrl}
+              className="img-fluid rounded"
+              alt="abc"
+            />
+            <div className="mask flex-center waves-effect waves-light rgba-teal">
+              <h4 className="white-text">{c.fullName}</h4>
             </div>
             <br />
-            <div class="mask align-content-stretch waves-effect waves-light rgba-teal">
-              <p class="white-text ">&nbsp;&nbsp;&nbsp;&nbsp;{c.department}</p>
+            <div className="mask align-content-stretch waves-effect waves-light rgba-teal">
+              <p className="white-text ">
+                &nbsp;&nbsp;&nbsp;&nbsp;{c.department}
+              </p>
             </div>
           </figure>
         </div>
@@ -56,7 +62,7 @@ const StudentHome = () => {
         </a>
         <br />
         <br />
-        <h2 class="text-monospace">Top 10 Clicks By Students</h2>
+        <h2 className="text-monospace">Top 10 Clicks By Students</h2>
         {/*Carousel Wrapper*/}
         <div
           id="carousel-example-2"
@@ -259,7 +265,7 @@ const StudentHome = () => {
         <br />
         <br />
         <br />
-        <h4 class="text-monospace">Clicks By Students</h4>
+        <h4 className="text-monospace">Clicks By Students</h4>
         {/* First row */}
         <div className="view">
           <div className="row">{xyz()}</div>

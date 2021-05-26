@@ -7,12 +7,12 @@ import ETCSVG from "../Reusables/SVGIllustrations/ETCSVG";
 const ElectronicsNTC = () => {
   return (
     <Main className="container-lg w-100 m-2 p-0 cse">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="E &amp; TC" subMenu={NavLinks} />
-        <div class="col text-dark w-100">
+        <div className="col text-dark w-100">
           <div
             data-spy="scroll"
-            class="scrollspy-example z-depth-1 mt-4 p-3"
+            className="scrollspy-example z-depth-1 mt-4 p-3"
             data-target="#navbar-example3"
             data-offset="0"
           >
@@ -34,7 +34,7 @@ const ElectronicsNTC = () => {
               adapt to a new dynamic environment and react positively to new
               challenges and opportunities. Students are taught to be
               independent thinkers, create independent types of work, write
-              technical reports and present their work before classmates and
+              technical reports and present their work before classNamemates and
               faculty members. Workshops &amp; seminars are regularly takento
               bridge the gap between curriculum &amp; industries.
             </p>

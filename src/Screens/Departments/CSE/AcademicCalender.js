@@ -54,7 +54,7 @@ const AcademicCalender = () => {
 
   return (
     <Main className="container-lg w-100 m-2 p-0">
-      <div class="row deptcont">
+      <div className="row deptcont">
         <DeptMenu dept="Computer Science" subMenu={NavLinks} />
         <div className="col text-dark w-100">
           <div

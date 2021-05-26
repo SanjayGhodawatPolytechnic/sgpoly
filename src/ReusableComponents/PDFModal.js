@@ -10,7 +10,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const PDFModal = ({ url = "", closePDF }) => {
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
   const [file, setFile] = useState(null);
   const [pageWidth, setPageWidth] = useState(null);
   const pdfWrapper = useRef();
@@ -83,7 +82,7 @@ const PDFModal = ({ url = "", closePDF }) => {
         }}
       >
         <button className="btn btn-info p-2">
-          <i class="fas fa-download fa-2x"></i>
+          <i className="fas fa-download fa-2x"></i>
         </button>
       </div>
       {file && (

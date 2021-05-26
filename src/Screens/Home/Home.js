@@ -74,31 +74,27 @@ function Home() {
             className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2 rounded"
             to="/department/cse"
           >
-            <div className="rounded py-5 px-4 bg-transparent course-title">
+            <div className="rounded py-5 px-4 bg-transparent">
               <CSELogo className="mb-3 cse-logo" width="100px" />
-              <h5 className="mb-0 ">Computer Science</h5>
+              <h5 className="mb-0 course-title">Computer Science</h5>
             </div>
           </Link>
           <Link
-            className="col-xl-3 col-sm-6 mb-5 mech-card shadow-lg m-2"
+            className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2"
             to="/department/mech"
           >
             <div className="rounded py-5 px-4 bg-transparent">
-              <MechLogo
-                className="mb-3 mech-logo"
-                width="100px"
-                height="80px"
-              />
+              <MechLogo className="mb-3 cse-logo" width="100px" height="80px" />
               <h5 className="mb-0 course-title">Mechanical</h5>
             </div>
           </Link>
           <Link
-            className="col-xl-3 col-sm-6 mb-5 civil-card shadow-lg m-2"
+            className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2"
             to="/department/civil"
           >
             <div className="rounded py-5 px-4 bg-transparent">
               <CivilLogo
-                className="mb-3 civil-logo"
+                className="mb-3 cse-logo"
                 width="100px"
                 height="80px"
               />
@@ -106,21 +102,21 @@ function Home() {
             </div>
           </Link>
           <Link
-            className="col-xl-3 col-sm-6 mb-5 etc-card shadow-lg m-2"
+            className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2"
             to="/department/entc"
           >
             <div className="rounded py-5 px-4 bg-transparent">
-              <ENTCLogo className="mb-3 etc-logo" width="100px" height="80px" />
-              <h5 className="mb-0 text-dark">E &amp; TC</h5>
+              <ENTCLogo className="mb-3 cse-logo" width="100px" height="80px" />
+              <h5 className="mb-0 course-title">E &amp; TC</h5>
             </div>
           </Link>
           <Link
-            className="col-xl-3 col-sm-6 mb-5 ele-card shadow-lg m-2"
+            className="col-xl-3 col-sm-6 mb-5 cse-card shadow-lg m-2"
             to="/department/electrical"
           >
             <div className="rounded py-5 px-4 bg-transparent">
               <ElectLogo
-                className="mb-3 ele-logo"
+                className="mb-3 cse-logo"
                 width="100px"
                 height="80px"
               />
