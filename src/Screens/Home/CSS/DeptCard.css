@@ -8,22 +8,23 @@
 }
 
 .cse-card {
-  background-color: #8f949b;
+  background-color: #f0ede7;
   /* color: #f0ede7; */
   transition: all 0.2s ease-in;
 }
 
 .cse-logo {
-  fill: #f0ede7;
+  fill: #ec5867;
   transition: all 0.2s ease-in;
 }
 .cse-card:hover {
-  background: #f0ede7;
+  background: #8f949b;
+  /* background: #f0ede7; */
   color: #ec5867;
   cursor: pointer;
 }
 .cse-card:hover .cse-logo {
-  fill: #ec5867;
+  fill: #f0ede7;
 }
 
 .mech-card {

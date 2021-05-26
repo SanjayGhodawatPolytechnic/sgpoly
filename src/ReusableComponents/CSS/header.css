@@ -13,7 +13,7 @@ html {
 }
 
 .banner {
-  width: 100%;
+  width: auto;
   height: auto;
   background-color: #fff;
   display: flex;
@@ -29,8 +29,8 @@ html {
 .bannner-img {
   /* width: auto;
   height: 200px; */
-  /* margin-right: 20px;
-  margin-left: 20px; */
+  margin-right: 20px;
+  margin-left: 20px;
 }
 .contact-info-cont {
   margin: 0;
