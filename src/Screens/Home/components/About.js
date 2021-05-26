@@ -8,13 +8,18 @@ const AboutHome = () => {
         <div className=" info">
           <h2 className="title">About SGP</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, fuga
-            laboriosam pariatur, blanditiis officiis consequuntur minus culpa
-            ullam provident recusandae quam impedit, amet nisi ducimus voluptate
-            ex voluptatem vitae dignissimos beatae. Quibusdam repellat mollitia
-            reiciendis iure? Qui laudantium esse vitae mollitia dolores aperiam
-            quia nobis minus tenetur. Dolores accusamus totam velit! Quam
-            quisquam reprehenderit fugit quasi ad et accusantium quae.
+            In the world where it is commonplace to see mediocrity as the order
+            of the day, SGI always stands as the guiding star of brilliance,
+            quality and deliverance beyond expectations. Innovativeness and
+            Creativity are the hallmarks of a genius enterprise and SGI stands
+            to be a stage where these qualities would be nurtured, encouraged
+            and blossomed. Inner re-engineering towards a proactive outlook,
+            courage to convert challenges into opportunities and an unyielding
+            spirit with never-say-die attitude is expected from students, staff
+            and management who are present in the grand precincts of the
+            Institution. The genius is incomplete without the sense of social
+            responsibility and SGI's ultimate goal remains the development of an
+            attitude of gratitude that freely gives back without expectations.
           </p>
         </div>
         <div className=" solid-sec">

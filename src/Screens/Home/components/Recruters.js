@@ -25,7 +25,7 @@ const Recruters = () => {
   return (
     <div className="img-gallery-container">
       <div className="courses-title">
-        <h4 className=" imp-title">Recruiters</h4>
+        <h4 className="  rec">Recruiters</h4>
         <div className="courses-line imp-line" />
       </div>
       <div class="Marquee">

@@ -25,8 +25,8 @@ body {
 .bannner-img {
   /* width: auto;
   height: 200px; */
-  margin-right: 20px;
-  margin-left: 20px;
+  /* margin-right: 20px;
+  margin-left: 20px; */
 }
 .contact-info-cont {
   margin: 0;
@@ -36,6 +36,7 @@ body {
   padding: 5px;
   display: flex;
   flex-direction: row;
+  font-size: 12px;
 }
 .phone {
   /* border-left: 1px solid #fff; */
