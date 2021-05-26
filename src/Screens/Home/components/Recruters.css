@@ -47,6 +47,10 @@
   justify-content: center;
   flex-direction: column;
 }
+.rec {
+  color: #ec5867;
+  font-weight: 700;
+}
 
 .Marquee {
   /* background-color: #202b37; */

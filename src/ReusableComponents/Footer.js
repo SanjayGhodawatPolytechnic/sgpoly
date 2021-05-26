@@ -84,25 +84,41 @@ const Footer = () => {
               <h5 className="font-weight-bold text-uppercase mb-4">
                 Follow Us
               </h5>
-              <span className="btn-floating btn-fb">
+              <a
+                className="btn-floating btn-fb"
+                href="https://www.facebook.com/108251421053367/photos/a.234587121753129/249380686940439"
+                target="blank"
+              >
                 <i className="fab fa-facebook-f" />
-              </span>
+              </a>
 
               <br />
               <br />
-              <span className="btn-floating btn-tw">
+              <a
+                className="btn-floating btn-tw"
+                href="https://twitter.com/SGIPolytechnic"
+                target="blank"
+              >
                 <i className="fab fa-twitter" />
-              </span>
+              </a>
               <br />
               <br />
-              <span className="btn-floating btn-tw">
+              <a
+                className="btn-floating btn-tw"
+                href="https://www.instagram.com/p/COiC3DaHTI2/?igshid=j0gr9gvnl0pa"
+                target="blank"
+              >
                 <i className="fab fa-instagram" />
-              </span>
+              </a>
               <br />
               <br />
-              <span className="btn-floating btn-tw">
+              <a
+                className="btn-floating btn-tw"
+                href="https://www.youtube.com/channel/UCshIhOCPN0Pqa25cVPomI0g"
+                target="blank"
+              >
                 <i className="fab fa-youtube" />
-              </span>
+              </a>
             </div>
           </div>
         </div>

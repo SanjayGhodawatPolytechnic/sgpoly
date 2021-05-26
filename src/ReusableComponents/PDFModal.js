@@ -95,6 +95,7 @@ const PDFModal = ({ url = "", closePDF }) => {
               console.log(err);
             }}
             loading={Loader}
+            className="d-flex justify-content-center align-items-center"
           >
             {_.times(numPages, (i) => (
               <Page
