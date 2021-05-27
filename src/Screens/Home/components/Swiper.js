@@ -125,6 +125,7 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
             delay: 3000,
             disableOnInteraction: false,
           }}
+          speed={2000}
           pagination={{
             el: ".blog-slider__pagination",
             clickable: true,

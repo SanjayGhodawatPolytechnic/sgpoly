@@ -13,7 +13,7 @@ const Header = () => {
         </div>
       </div>
       <img
-        src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FSgp2.jpg?alt=media&token=e8a73779-e847-4fcd-b99e-7798ad304b10"
+        src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FSGP%20Web%20Logo%201.jpg?alt=media&token=2ede271a-0d9f-4c9c-b4c6-93a7be10b4f4"
         className="bannner-img"
       />
     </div>

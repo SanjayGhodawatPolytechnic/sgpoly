@@ -18,6 +18,15 @@ function aboutVision() {
           <div className="col-sm-8 card w-100 p-0">
             <div className="card-header text-center ">Vision</div>
             <div className="card-body">
+              <h4 className="card-text text-dark">MSBTE</h4>
+              <p className="card-text">
+                To ensure that the Diploma level Technical Education constantly
+                matches the latest requirements of Technology and industry and
+                includes the all-round personal development of students
+                including social concerns and to become globally competitive,
+                technology led organization.
+              </p>
+              <h4 className="card-text text-dark">Institute</h4>
               <p className="card-text">
                 Become a leader in providing quality and value based education
                 in the field of Diploma Engineering that will produce competent
@@ -31,6 +40,15 @@ function aboutVision() {
           <div className="col-sm-9 card w-100 p-0">
             <div className="card-header text-center">Mission</div>
             <div className="card-body">
+              <h4 className="card-text text-dark">MSBTE</h4>
+              <li className="card-text">
+                To provide high quality technical and managerial manpower,
+                information and consultancy services to the industry and
+                community to enable the industry and co
+              </li>
+            </div>
+            <div className="card-body">
+              <h4 className="card-text text-dark">Institute</h4>
               <li className="card-text">
                 To impart technical knowledge and skills by using modern
                 engineering tools with supportive facilities.
