@@ -20,6 +20,7 @@ const Achivements = () => {
           result[i]["key"] = v;
         });
 
+        result = result.filter((val) => val.dept === "Computer Science");
         let college = [];
         let student = [];
 
@@ -56,10 +57,10 @@ const Achivements = () => {
               </h4>
               {collegeData.map((d, i) => (
                 <div className="col-lg-4 m-2" key={i}>
-                  <div className="card card-cascade wider">
-                    <div className="view view-cascade overlay">
+                  <div className="card card-cascade">
+                    <div className="view view-cascade overlay row">
                       <img
-                        className="card-img-top"
+                        className="img img-fluid"
                         src={d.imageURL}
                         alt="Card cap"
                       />

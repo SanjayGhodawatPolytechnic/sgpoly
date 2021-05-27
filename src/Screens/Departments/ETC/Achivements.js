@@ -20,6 +20,8 @@ const EntcAchivements = () => {
           result[i]["key"] = v;
         });
 
+        result = result.filter((val) => val.dept === "E & TC");
+
         let college = [];
         let student = [];
 

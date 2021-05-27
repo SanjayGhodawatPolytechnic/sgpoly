@@ -19,6 +19,7 @@ const CivilAchivements = () => {
         keys.forEach((v, i) => {
           result[i]["key"] = v;
         });
+        result = result.filter((val) => val.dept === "Civil");
 
         let college = [];
         let student = [];

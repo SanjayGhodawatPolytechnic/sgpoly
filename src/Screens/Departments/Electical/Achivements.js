@@ -20,6 +20,8 @@ const ElecticalAchivements = () => {
           result[i]["key"] = v;
         });
 
+        result = result.filter((val) => val.dept === "Electrical");
+
         let college = [];
         let student = [];
 

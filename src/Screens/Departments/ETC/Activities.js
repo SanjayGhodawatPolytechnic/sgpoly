@@ -22,7 +22,7 @@ const EntcActivities = () => {
           resultWithoutFiles[i]["key"] = v;
         });
         resultWithoutFiles = resultWithoutFiles.filter(
-          (val) => val.dept === "CSE"
+          (val) => val.dept === "E & TC"
         );
         console.log(resultWithoutFiles);
         setDataWithoutFiles(resultWithoutFiles);
@@ -37,7 +37,9 @@ const EntcActivities = () => {
         keys.forEach((v, i) => {
           resultWithFiles[i]["key"] = v;
         });
-        resultWithFiles = resultWithFiles.filter((val) => val.dept === "CSE");
+        resultWithFiles = resultWithFiles.filter(
+          (val) => val.dept === "E & TC"
+        );
         console.log(resultWithFiles);
         setDataWithFiles(resultWithFiles);
       }

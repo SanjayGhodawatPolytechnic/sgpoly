@@ -22,7 +22,7 @@ const ElecticalActivities = () => {
           resultWithoutFiles[i]["key"] = v;
         });
         resultWithoutFiles = resultWithoutFiles.filter(
-          (val) => val.dept === "CSE"
+          (val) => val.dept === "Electrical"
         );
         console.log(resultWithoutFiles);
         setDataWithoutFiles(resultWithoutFiles);
@@ -37,7 +37,9 @@ const ElecticalActivities = () => {
         keys.forEach((v, i) => {
           resultWithFiles[i]["key"] = v;
         });
-        resultWithFiles = resultWithFiles.filter((val) => val.dept === "CSE");
+        resultWithFiles = resultWithFiles.filter(
+          (val) => val.dept === "Electrical"
+        );
         console.log(resultWithFiles);
         setDataWithFiles(resultWithFiles);
       }

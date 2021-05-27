@@ -34,7 +34,7 @@ const ActivityCard = ({
           );
         })}
       </ol>
-      <div className="carousel-inner">
+      <div className="carousel-inner text-center">
         {/* <div className={`carousel-item active`}>
                                             <img className="d-block w-100 img-responsive cr-img" src={imageURLS[0]} />
                                         </div> */}
@@ -46,11 +46,7 @@ const ActivityCard = ({
               }`}
               key={idx}
             >
-              <img
-                alt="activity"
-                className="d-block w-100 img-responsive cr-img"
-                src={val}
-              />
+              <img alt="activity" className="img-responsive cr-img" src={val} />
             </div>
           );
         })}

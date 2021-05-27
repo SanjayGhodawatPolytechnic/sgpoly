@@ -22,7 +22,7 @@ const CivilActivities = () => {
           resultWithoutFiles[i]["key"] = v;
         });
         resultWithoutFiles = resultWithoutFiles.filter(
-          (val) => val.dept === "CSE"
+          (val) => val.dept === "Civil"
         );
         console.log(resultWithoutFiles);
         setDataWithoutFiles(resultWithoutFiles);
@@ -37,7 +37,7 @@ const CivilActivities = () => {
         keys.forEach((v, i) => {
           resultWithFiles[i]["key"] = v;
         });
-        resultWithFiles = resultWithFiles.filter((val) => val.dept === "CSE");
+        resultWithFiles = resultWithFiles.filter((val) => val.dept === "Civil");
         console.log(resultWithFiles);
         setDataWithFiles(resultWithFiles);
       }
