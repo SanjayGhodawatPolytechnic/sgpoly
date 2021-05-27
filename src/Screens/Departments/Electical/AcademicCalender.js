@@ -41,7 +41,7 @@ const ElecticalAcademicCalender = () => {
   };
 
   useEffect(() => {
-    getCalendar("Computer Science");
+    getCalendar("Electrical");
   }, []);
 
   const closePDF = () => {

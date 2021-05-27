@@ -148,9 +148,19 @@ const Routes = () => {
             <i aria-hidden="true" className="fas fa-times-circle fa-2x"></i>
           </div>
           <div className="more-info">
-            <button className="btn btn-info rounded-circle">More Info</button>
+            <a
+              target="blank"
+              href="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FD%20block%20(1).jpg?alt=media&token=c6108113-d285-431d-be79-293d40ebc356"
+              className="btn btn-info rounded"
+            >
+              More Info
+            </a>
           </div>
-          <img src={img} alt="modal" className="modal-img img-fluid" />
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FD%20block%20(1).jpg?alt=media&token=c6108113-d285-431d-be79-293d40ebc356"
+            alt="modal"
+            className="modal-img img-fluid"
+          />
         </div>
       </div>
 

@@ -18,6 +18,7 @@ const Main = ({
         chat-title="SGPbot"
         agent-id="72516b63-a1de-4d6a-8c02-ae0514d59410"
         language-code="en"
+        chat-icon="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FdialogflowIcon.png?alt=media&token=2f94e296-28bd-43fc-8c5f-cdb2780ca126"
       ></df-messenger>
 
       <Header />

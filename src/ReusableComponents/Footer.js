@@ -125,6 +125,31 @@ const Footer = () => {
         <div className="footer-copyright text-center py-3">
           © 2021 Copyright:
           <h4>Sanjay Godawat Polytechnic</h4>
+          <h6>
+            Designed and Developed By:{" "}
+            <a
+              href="https://www.instagram.com/yashkalavadiya1010/"
+              target="blank"
+            >
+              Yash Kalavadiya
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/chintan0539/" target="blank">
+              Chintan Patel
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/potterhead_rj/" target="blank">
+              Rupam Jadhav
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/aditya_7447/" target="blank">
+              Aditya Wakarekar
+            </a>{" "}
+            Under guidance of{" "}
+            <a href="#" target="blank">
+              Sagar Chavan(CSE HOD)
+            </a>{" "}
+          </h6>
         </div>
       </footer>
     </div>

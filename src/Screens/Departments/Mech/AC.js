@@ -41,7 +41,7 @@ const MechAcademicCalender = () => {
   };
 
   useEffect(() => {
-    getCalendar("Civil");
+    getCalendar("Mechanical");
   }, []);
 
   const closePDF = () => {

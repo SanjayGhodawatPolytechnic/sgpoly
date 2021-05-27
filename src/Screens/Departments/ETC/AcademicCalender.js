@@ -41,7 +41,7 @@ const EntcAcademicCalender = () => {
   };
 
   useEffect(() => {
-    getCalendar("Computer Science");
+    getCalendar("E & TC");
   }, []);
 
   const closePDF = () => {

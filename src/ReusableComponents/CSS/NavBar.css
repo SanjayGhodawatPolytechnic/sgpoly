@@ -12,7 +12,7 @@ header {
   /* background: #f4ecd6; */
   width: 100%;
   box-sizing: border-box;
-  z-index: 10000;
+  z-index: 1;
   margin: 0;
   font-weight: 700;
 }

@@ -1,10 +1,15 @@
 .chatButton {
-  position: fixed;
+  /* position: fixed;
   bottom: 10px;
   right: 10px;
   height: 80px;
-  width: 80px;
-  z-index: 3000;
+  width: 80px; */
+  z-index: 10001;
+}
+
+df-messenger {
+  --df-messenger-button-titlebar-color: #ffffff;
+  --df-messenger-button-titlebar-font-color: #000;
 }
 
 .chatBox {

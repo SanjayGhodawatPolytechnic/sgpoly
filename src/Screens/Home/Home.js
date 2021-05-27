@@ -65,7 +65,7 @@ function Home() {
           COURSES
         </h1> */}
         <div className="courses-title">
-          <h4 className="course-title">COURSES</h4>
+          <h4 className="course-title text-light">COURSES</h4>
           <div className="courses-line" />
         </div>
 
