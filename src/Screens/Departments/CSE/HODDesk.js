@@ -22,7 +22,7 @@ const HODDesk = () => {
                 <img
                   alt="cse hod"
                   className="img-fluid rounded"
-                  src="http://sgipolytechnic.in/Images/HOD_CSE2.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2Floginhead.jpg?alt=media&token=0cbc50b1-c300-4787-a293-3644f91dea58"
                 />
               </div>
               <div className="col-12 text-center">
