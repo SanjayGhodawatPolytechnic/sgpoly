@@ -16,7 +16,7 @@ const CivilVisionMission = () => {
             data-target="#navbar-example3"
             data-offset="0"
           >
-            <div className="row">
+            <div className="row p-4">
               <div className="col-12 text-center">
                 <h3>Vision &amp; Mission -MSBTE</h3>
               </div>
