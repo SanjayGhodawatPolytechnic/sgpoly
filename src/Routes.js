@@ -111,6 +111,7 @@ import FyTechstaff from "./Screens/Departments/First year/TechStaff";
 import FyStaffProfile from "./Screens/Departments/First year/StaffProfile";
 import FyActivities from "./Screens/Departments/First year/Activities";
 import FyLaboratories from "./Screens/Departments/First year/Laboratories";
+import Fy from "./Screens/Departments/First year/Fy";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -229,6 +230,7 @@ const Routes = () => {
         {/* --------------------Departments------------------------------------------------*/}
         {/* --------------------FY------------------------------------------------*/}
 
+        <Route path="/department/fy" exact component={Fy} />
         <Route path="/department/fy/hoddesk" exact component={FyHODDesk} />
         <Route path="/department/fy/labs" exact component={FyLaboratories} />
 
