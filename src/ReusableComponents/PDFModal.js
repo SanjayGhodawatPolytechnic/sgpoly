@@ -63,6 +63,14 @@ const PDFModal = ({ url = "", closePDF }) => {
       window.removeEventListener("resize", throttle(setWidth, 3000));
     };
   }, []);
+
+  const ErrorMessage = () => (
+    <div className="container bg-light">
+      <h4 className="text-danger">
+        Failed To Load PDF, try downloading insted
+      </h4>
+    </div>
+  );
   return (
     <div className="pdf-modal">
       <div
@@ -96,6 +104,7 @@ const PDFModal = ({ url = "", closePDF }) => {
             }}
             loading={Loader}
             className="pdf"
+            error={<ErrorMessage />}
           >
             {_.times(numPages, (i) => (
               <Page

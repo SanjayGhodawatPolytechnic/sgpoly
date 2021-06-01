@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import PDFModal from "../../../ReusableComponents/PDFModal";
-import "./CSS/Activity.css";
+import "../Reusables/CSS/Activity.css";
 
-const ActivityCard = ({
+const PlacementCard = ({
   title = "",
   description = "",
-  date = "",
-  duration = "",
-  dept = "",
-  type = "",
-  organizedFor = "",
-  fileURL = "",
+  eligibleDept = "",
+  organizedBy = "",
+  companyName = "",
+  campusType = "",
+  date = new Date(),
+  fileURL = File,
   imageURLS = [],
+  key = "",
 }) => {
   const [carouselData, setCarouselData] = useState({
     CurrentIndex: 0,
@@ -59,7 +60,11 @@ const ActivityCard = ({
               }`}
               key={idx}
             >
-              <img alt="activity" className="img-responsive cr-img" src={val} />
+              <img
+                alt="activity"
+                className="img img-responsive cr-img"
+                src={val}
+              />
             </div>
           );
         })}
@@ -102,9 +107,8 @@ const ActivityCard = ({
   );
   return (
     <div className="main-card">
-      {isPDFopen && <PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />}
-
       {imageURLS.length > 0 ? <Carousell /> : ""}
+      {isPDFopen && <PDFModal url={currentlyOpenPDFURL} closePDF={closePDF} />}
 
       <div className="col-sm-12">
         <div className="row text-center text-dark">
@@ -121,24 +125,24 @@ const ActivityCard = ({
             <span className="badge badge-info">{date}</span>
           </div>
           <div className="col-6 p-2">
-            <b>Duration</b>
+            <b>Eligible Department</b>
             <br />
-            <span className="badge badge-info">{duration}</span>
+            <span className="badge badge-info">{eligibleDept}</span>
           </div>
           <div className="col-6 p-2">
-            <b>Department</b>
+            <b>Organized By</b>
             <br />
-            <span className="badge badge-info">{dept}</span>
+            <span className="badge badge-info">{organizedBy}</span>
           </div>
           <div className="col-6 p-2">
-            <b>TYPE</b>
+            <b>Company Name</b>
             <br />
-            <span className="badge badge-info">{type}</span>
+            <span className="badge badge-info">{companyName}</span>
           </div>
           <div className="col-6 p-2">
-            <b>Organized for</b>
+            <b>Caomus Type</b>
             <br />
-            <span className="badge badge-info">{organizedFor}</span>
+            <span className="badge badge-info">{campusType}</span>
           </div>
           <div className="col-6 p-2">
             <b>File</b>
@@ -162,4 +166,4 @@ const ActivityCard = ({
   );
 };
 
-export default ActivityCard;
+export default PlacementCard;

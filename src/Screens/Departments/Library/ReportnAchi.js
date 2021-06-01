@@ -81,7 +81,9 @@ const ReportnAchi = () => {
             {isLoading && <CommonLoading />}
             {!isLoading && (
               <div className="card w-100">
-                <div className="card-header text-center ">Achievements</div>
+                <div className="card-header text-center ">
+                  Achievements &amp; Downloads
+                </div>
                 <div className="card-body">
                   {achievements.map((v, i) => (
                     <div className="card">

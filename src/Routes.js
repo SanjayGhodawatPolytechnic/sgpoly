@@ -117,6 +117,9 @@ import EJournals from "./Screens/Departments/Library/EJournals";
 import LibraryTeam from "./Screens/Departments/Library/LibraryTeam";
 import BookBank from "./Screens/Departments/Library/BookBank";
 import ReportnAchi from "./Screens/Departments/Library/ReportnAchi";
+import AdminStaff from "./Screens/Departments/Admin/StaffProfile";
+import PlacementReports from "./Screens/Departments/Placements/PlacementReports";
+import PlacementOfficer from "./Screens/Departments/Placements/PlacementOfficer";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -140,7 +143,7 @@ const Routes = () => {
   };
 
   return (
-    <BrowserRouter basename="/sgpoly">
+    <BrowserRouter basename="/">
       <div
         className={isModalOpen ? "modal" : "modal closed-modal"}
         id="modal"
@@ -495,6 +498,16 @@ const Routes = () => {
           exact
           component={ReportnAchi}
         />
+
+        {/* ---------------------------------------Admin------------------------------------------ */}
+
+        <Route path="/department/admin/profile" exact component={AdminStaff} />
+
+        {/* ---------------------------------------Placement------------------------------------------ */}
+
+        <Route path="/placement/report" exact component={PlacementReports} />
+        <Route path="/placement/officer" exact component={PlacementOfficer} />
+
         {/* --------------------Infrastructre------------------------------------------------*/}
 
         <Route

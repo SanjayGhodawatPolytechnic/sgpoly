@@ -329,6 +329,11 @@ const NavBar = () => {
                       Library
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/department/admin/profile" className="a">
+                      Administration
+                    </Link>
+                  </li>
                 </ul>
               </li>
 
@@ -441,6 +446,21 @@ const NavBar = () => {
                   }
                 }}
               >
+                <Link className="a">PLACEMENT</Link>
+                <ul>
+                  <li>
+                    <Link to="/placement/officer" className="a">
+                      Placement Officer
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/placement/report" className="a">
+                      Placement Report
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li>
                 <Link to="/contact" className="a">
                   CONTACT
                 </Link>

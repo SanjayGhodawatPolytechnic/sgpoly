@@ -9,14 +9,14 @@ function aboutSGP() {
       <div>
         <br />
         <br />
-        <div className="row ">
-          <div className="col-lg-2 col-md-2 col-sm-1 col-0"></div>
+        <div className="d-flex text-center justify-content-center align-items-center">
           <img
-            src={"http://www.sgipolytechnic.in/pics/institute_building.jpg"}
-            className="setWidth col-lg-8 col-md-8 col-sm-10 col-0"
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FD%20block%20(1).jpg?alt=media&token=c6108113-d285-431d-be79-293d40ebc356"
+            }
+            className="setWidth "
             alt="institute building"
           />
-          <div className="col-lg-2 col-md-2 col-sm-1 col-0"></div>
         </div>
 
         <br />

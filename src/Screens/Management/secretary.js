@@ -12,7 +12,7 @@ const secretary = () => {
             <div className="col-3"></div>
             <div className="col-6">
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2FSecretary.jpg?alt=media&token=696995b4-c240-4cb5-8bb6-ea8abcca193d"
+                src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2Fsecretary.jpg?alt=media&token=76bbe63d-facf-4853-9152-dec28de3bc3c"
                 className="card-img-top border rounded trust-image"
                 alt="..."
               />

@@ -8,7 +8,7 @@ const NavLinks = [
     path: "/department/library/bookbank",
   },
   {
-    title: "Annual Reports and achievements",
+    title: "Annual Reports, Achievements & Downloads",
     path: "/department/library/reportnachievement",
   },
 ];

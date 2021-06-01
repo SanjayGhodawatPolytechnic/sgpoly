@@ -13,7 +13,7 @@ function managementChairman() {
             <div className="col-3"></div>
             <div className="col-6">
               <img
-                src="http://www.sgipolytechnic.in/pics/Chairman2.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FHome%2Fsanjayghodawat.jpg?alt=media&token=6ec511d4-45d9-4d4a-a3fb-e650c8f7243c"
                 className="card-img-top trust-image"
                 alt="..."
               />
