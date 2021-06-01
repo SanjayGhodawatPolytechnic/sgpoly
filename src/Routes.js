@@ -106,16 +106,11 @@ import MechanicalActivities from "./Screens/Departments/Mech/Acti";
 
 import MechanicalPublications from "./Screens/Departments/Mech/Pub";
 import MechAcademicCalender from "./Screens/Departments/Mech/AC";
-import Fy from "./Screens/Departments/First year/Fy";
 import FyHODDesk from "./Screens/Departments/First year/HODDesk";
-import FyVisionMission from "./Screens/Departments/First year/VisionMission";
-import FyOutcomes from "./Screens/Departments/First year/Outcomes";
 import FyTechstaff from "./Screens/Departments/First year/TechStaff";
 import FyStaffProfile from "./Screens/Departments/First year/StaffProfile";
-import FyAchivements from "./Screens/Departments/First year/Achivements";
 import FyActivities from "./Screens/Departments/First year/Activities";
-import FyAcademicCalender from "./Screens/Departments/First year/AcademicCalender";
-import FyPublications from "./Screens/Departments/First year/Publications";
+import FyLaboratories from "./Screens/Departments/First year/Laboratories";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -233,14 +228,10 @@ const Routes = () => {
 
         {/* --------------------Departments------------------------------------------------*/}
         {/* --------------------FY------------------------------------------------*/}
-        <Route path="/department/fy" exact component={Fy} />
+
         <Route path="/department/fy/hoddesk" exact component={FyHODDesk} />
-        <Route
-          path="/department/fy/vision-mission"
-          exact
-          component={FyVisionMission}
-        />
-        <Route path="/department/fy/outcomes" exact component={FyOutcomes} />
+        <Route path="/department/fy/labs" exact component={FyLaboratories} />
+
         <Route
           path="/department/fy/teaching-staff"
           exact
@@ -251,25 +242,11 @@ const Routes = () => {
           exact
           component={FyTechstaff}
         />
-        <Route
-          path="/department/fy/achivements"
-          exact
-          component={FyAchivements}
-        />
+
         <Route
           path="/department/fy/activities"
           exact
           component={FyActivities}
-        />
-        <Route
-          path="/department/fy/academic-calender"
-          exact
-          component={FyAcademicCalender}
-        />
-        <Route
-          path="/department/fy/publications"
-          exact
-          component={FyPublications}
         />
 
         {/* --------------------CSE------------------------------------------------*/}

@@ -52,7 +52,7 @@ const FyStaffProfile = () => {
   return (
     <Main className="container-lg cse w-100 m-2 p-0">
       <div className="row deptcont">
-        <DeptMenu dept="First year" subMenu={NavLinks} />
+        <DeptMenu dept="Basic Science and Humanities" subMenu={NavLinks} />
         <div className="col text-dark w-100">
           <div
             data-spy="scroll"

@@ -297,8 +297,8 @@ const NavBar = () => {
                 <Link className="a">DEPARTMENTS</Link>
                 <ul>
                   <li>
-                    <Link to="/department/fy" className="a">
-                      First year
+                    <Link to="/department/fy/hoddesk" className="a">
+                      Basic Science and Humanities
                     </Link>
                     <Link to="/department/cse" className="a">
                       Computer Science
