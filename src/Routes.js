@@ -112,6 +112,11 @@ import FyStaffProfile from "./Screens/Departments/First year/StaffProfile";
 import FyActivities from "./Screens/Departments/First year/Activities";
 import FyLaboratories from "./Screens/Departments/First year/Laboratories";
 import Fy from "./Screens/Departments/First year/Fy";
+import AboutLibrary from "./Screens/Departments/Library/AboutLibrary";
+import EJournals from "./Screens/Departments/Library/EJournals";
+import LibraryTeam from "./Screens/Departments/Library/LibraryTeam";
+import BookBank from "./Screens/Departments/Library/BookBank";
+import ReportnAchi from "./Screens/Departments/Library/ReportnAchi";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -474,8 +479,22 @@ const Routes = () => {
           exact
           component={CivilVisionMission}
         />
-        {/* --------------------ELECTRICAL------------------------------------------------*/}
 
+        {/* ---------------------------------------Library------------------------------------------ */}
+
+        <Route path="/department/library" exact component={AboutLibrary} />
+        <Route
+          path="/department/library/ejournals"
+          exact
+          component={EJournals}
+        />
+        <Route path="/department/library/team" exact component={LibraryTeam} />
+        <Route path="/department/library/bookbank" exact component={BookBank} />
+        <Route
+          path="/department/library/reportnachievement"
+          exact
+          component={ReportnAchi}
+        />
         {/* --------------------Infrastructre------------------------------------------------*/}
 
         <Route

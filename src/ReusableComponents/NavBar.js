@@ -324,6 +324,11 @@ const NavBar = () => {
                       E & TC
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/department/library" className="a">
+                      Library
+                    </Link>
+                  </li>
                 </ul>
               </li>
 

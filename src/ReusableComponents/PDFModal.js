@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import throttle from "lodash/throttle";
 import Loader from "./Loader";
+import "./CSS/PDFModal.css";
 const _ = require("lodash");
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -94,7 +95,7 @@ const PDFModal = ({ url = "", closePDF }) => {
               console.log(err);
             }}
             loading={Loader}
-            className="d-flex justify-content-center align-items-center"
+            className="pdf"
           >
             {_.times(numPages, (i) => (
               <Page
