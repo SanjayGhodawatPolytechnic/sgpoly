@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import * as firebase from "firebase";
+import "./slidingNews.css";
 
 const SlidingNews = () => {
   const [headline, setHeadline] = useState("");
@@ -22,7 +23,7 @@ const SlidingNews = () => {
     getHeadline();
   }, []);
   return (
-    <div>
+    <div className="slide-back">
       <Marquee
         speed={50}
         gradient={false}

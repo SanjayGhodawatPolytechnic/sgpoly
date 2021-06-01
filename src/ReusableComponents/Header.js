@@ -5,7 +5,8 @@ const Header = () => {
     <div className="banner">
       <div className="contact-info-cont">
         <div className="phone">
-          <i className="fas fa-phone mr-3 txt-color" /> 0230 - 2463800
+          <i className="fas fa-phone mr-3 " />
+          0230 - 2463800
         </div>
         <div className="email">
           <i className="fas fa-envelope mr-3" />
