@@ -58,6 +58,19 @@ const Admission = () => {
     dbRef.push(data, (err) => {
       if (!err) {
         NotificationManager.success("We will reach you soon", "Data submitted");
+        fetch("https://sgpbackend.herokuapp.com/mail/sendGreetings", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       }
     });
 

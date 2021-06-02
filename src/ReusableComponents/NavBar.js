@@ -146,11 +146,11 @@ const NavBar = () => {
                       Principals Desk
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/management/directors" className="a">
                       SGI Board Of Directors
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/management/govern" className="a">
                       Governing Body

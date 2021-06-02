@@ -10,6 +10,7 @@ const AddContact = () => {
     name: "",
     phone: null,
     email: "",
+    message: "",
   });
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ const AddContact = () => {
             name: "",
             phone: "",
             email: "",
+            message: "",
           });
         }
       })
@@ -121,6 +123,24 @@ const AddContact = () => {
                         setData({ ...data, email: e.target.value });
                       }}
                       value={data.email}
+                    />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="control-label col-sm-2" htmlFor="comment">
+                    Message.
+                  </label>
+                  <div className="col-sm-10">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="message"
+                      placeholder="Message"
+                      name="msg"
+                      onChange={(e) => {
+                        setData({ ...data, message: e.target.value });
+                      }}
+                      value={data.message}
                     />
                   </div>
                 </div>

@@ -221,11 +221,11 @@ const Routes = () => {
           exact
           component={managementPrincipal}
         />
-        <Route
+        {/* <Route
           path="/management/directors"
           exact
           component={managementDirectors}
-        />
+        /> */}
         <Route path="/management/govern" exact component={managementGovern} />
 
         {/* --------------------Academics------------------------------------------------*/}
