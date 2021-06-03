@@ -22,20 +22,23 @@ const FyHODDesk = () => {
                 <img
                   alt="etc hod"
                   className="img-fluid rounded"
-                  src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2Floginhead.jpg?alt=media&token=0cbc50b1-c300-4787-a293-3644f91dea58"
+                  src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2Fhods%2FMahadikShubhangi.jpg?alt=media&token=49258c31-ac36-41cd-9afc-491699a10308"
                 />
               </div>
               <div className="col-12 text-center">
-                <b>Mr. Patil Nitin Surgonda</b>
+                <b>Mrs. Mahadik Shubhangi Balaso</b>
               </div>
               <div className="col-12 text-center">
                 <b>Head of Department</b>
               </div>
             </div>
             <p className="m-1 words">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur, laudantium hic molestias consequatur placeat
-              repellendus?
+              On behalf of BSH department, I take opportunity to welcome you all
+              to our department. As per our vision our team strive to
+              persistently improve educational environment in our department. We
+              are always engaged in the activities for overall development of
+              our students with various aspects like technical education,
+              self-motivation, ethics and personality.
             </p>
           </div>
         </div>

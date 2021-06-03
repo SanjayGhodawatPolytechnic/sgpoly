@@ -21,11 +21,11 @@ const MechanicalHODDesk = () => {
                 <img
                   alt="cse hod"
                   className="img-fluid rounded"
-                  src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2Floginhead.jpg?alt=media&token=0cbc50b1-c300-4787-a293-3644f91dea58"
+                  src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2Fhods%2FPatilPrashant.jpg?alt=media&token=43a19b65-f799-4895-9f84-d0bfbd686eab"
                 />
               </div>
               <div className="col-12 text-center">
-                <b>Mr. Kumbar Raju Basappa</b>
+                <b>Mr. Patil Prashant Mahavir</b>
               </div>
               <div className="col-12 text-center">
                 <b>Head of Department</b>

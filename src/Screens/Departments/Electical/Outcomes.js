@@ -6,44 +6,33 @@ const ElectricalOutcomes = () => {
   let outcomes = {
     PO: [
       {
-        heading: "Basic Knowledge",
-        desc: "The student will be able to apply the fundamentals of mathematics, science and engineering to come up with solutions for engineering problems encountered",
+        heading: "Basic and Discipline specific knowledge",
+        desc: "Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.",
       },
       {
-        heading: "Discipline knowledge",
-        desc: "The student will be able to bring up his/her discipline knowledge and apply the same to solve core or applied engineering problems.",
+        heading: "Problem analysis",
+        desc: "Identify and analyze well-defined engineering problems using codified standard methods.",
       },
       {
-        heading: "Experiments and practice",
-        desc: "The student will gain the insight to perform experiments and also practically apply the solutions to problems encountered in engineering context.",
+        heading: "Design/ development of solutions",
+        desc: "Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.",
       },
       {
-        heading: "Engineering tools",
-        desc: "The student will be able to apply the learned engineering tools and technologies to the real situational problems and at the same time be aware of the limitations of their uses.",
+        heading: "Engineering Tools, Experimentation and Testing",
+        desc: "Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.",
       },
       {
-        heading: "The Engineer and society",
-        desc: "The student will be competent enough to asses different issues like societal, health, safety, legal and cultural, have an insight into the challenges and use his learning to come up with solutions.",
+        heading:
+          "Engineering practices for society, sustainability and environment",
+        desc: "Apply appropriate technology in context of society, sustainability, environment and ethical practices.",
       },
       {
-        heading: "Environment and sustainability",
-        desc: "The student will have an understanding of the impact of engineering solutions in environmental and societal context and strive for sustainable development.",
-      },
-      {
-        heading: "Ethics",
-        desc: "The student will practice engineering profession with an ethical bent of mind and thus be a responsible engineer in the society.",
-      },
-      {
-        heading: "Individual and team work",
-        desc: "The student will be able to work effectively either individually or as a team member / leader among multidisciplinary teams.",
-      },
-      {
-        heading: "Communication",
-        desc: "The student will have effective oral and written communication skills.",
+        heading: "Project Management",
+        desc: "Use engineering management principles individually, as a team member or a leader to manage projects and effectively communicate about well-defined engineering activities.",
       },
       {
         heading: "Life-long learning",
-        desc: "The student will have an inclination towards life- long learning and engage independently in such life-long learning activities thus keeping himself / herself update with the current practices of technology.",
+        desc: "Ability to analyze individual needs and engage in updating in the context of technological changes",
       },
     ],
     PSO: [

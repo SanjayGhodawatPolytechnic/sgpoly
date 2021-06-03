@@ -18,9 +18,9 @@ const Outcomes = () => {
           >
             <div className="row">
               <div className="col-12 text-center">
-                <h3>Program Educational Objectives ()</h3>
+                <h3>Program Educational Objectives (PEO)</h3>
               </div>
-              <div className="col-12 text-center">
+              <div className="col-12">
                 <div className="list-group">
                   <span className="list-group-item list-group-item-action">
                     PEO-2: Engineer will work as an individual or a team member
@@ -44,61 +44,44 @@ const Outcomes = () => {
               <div className="col-12 text-center">
                 <h3>Program Outcome (POs)</h3>
               </div>
-              <div className="col-12 text-center">
+              <div className="col-12">
                 <div className="list-group">
                   <span className="list-group-item list-group-item-action">
-                    PO-1: Basic Knowledge : The student will be able to apply
-                    the fundamentals of mathematics, science and engineering to
-                    come up with solutions for engineering problems encountered
+                    PO1 - a. Basic and Discipline specific knowledge Apply
+                    knowledge of basic mathematics, science and engineering
+                    fundamentals and engineering specialization to solve the
+                    engineering problems.
                   </span>
                   <span className="list-group-item list-group-item-action ">
-                    PO-2: Discipline knowledge : The student will be able to
-                    bring up his/her discipline knowledge and apply the same to
-                    solve core or applied engineering problems
+                    PO2 - b. Problem analysis Identify and analyze well-defined
+                    engineering problems using codified standard methods.
                   </span>
                   <span className="list-group-item list-group-item-action ">
-                    PO-3: Experiments and practice : The student will gain the
-                    insight to perform experiments and also practically apply
-                    the solutions to problems encountered in engineering context
+                    PO3 - c. Design/ development of solutions: Design solutions
+                    for well-defined technical problems and assist with the
+                    design of systems components or processes to meet specified
+                    needs.
                   </span>
                   <span className="list-group-item list-group-item-action ">
-                    PO-4: Engineering tools : The student will be able to apply
-                    the learned engineering tools and technologies to the real
-                    situational problems and at the same time be aware of the
-                    limitations of their uses.
+                    PO4 - d. Engineering Tools, Experimentation and Testing:
+                    Apply modern engineering tools and appropriate technique to
+                    conduct standard tests and measurements.
                   </span>
                   <span className="list-group-item list-group-item-action ">
-                    PO-5: The engineer and society : The student will be
-                    competent enough to asses different issues like societal,
-                    health, safety, legal and cultural, have an insight into the
-                    challenges and use his learning to come up with solutions.
+                    PO5 - e. Engineering practices for society, sustainability
+                    and environment: Apply appropriate technology in context of
+                    society, sustainability, environment and ethical practices.
                   </span>
                   <span className="list-group-item list-group-item-action ">
-                    PO-6: Environment and sustainability : The student will have
-                    an understanding of the impact of engineering solutions in
-                    environmental and societal context and strive for
-                    sustainable development.
+                    PO6 - f. Project Management: Use engineering management
+                    principles individually, as a team member or a leader to
+                    manage projects and effectively communicate about
+                    well-defined engineering activities.
                   </span>
                   <span className="list-group-item list-group-item-action ">
-                    PO-7: Ethics : The student will practice engineering
-                    profession with an ethical bent of mind and thus be a
-                    responsible engineer in the society.
-                  </span>
-                  <span className="list-group-item list-group-item-action ">
-                    PO-8: Individual and team work : The student will be able to
-                    work effectively either individually or as a team member /
-                    leader among multidisciplinary teams.
-                  </span>
-                  <span className="list-group-item list-group-item-action ">
-                    PO-9: Communication : The student will have effective oral
-                    and written communication skills.
-                  </span>
-                  <span className="list-group-item list-group-item-action ">
-                    PO-10: Life-long learning : The student will have an
-                    inclination towards life- long learning and engage
-                    independently in such life-long learning activities thus
-                    keeping himself / herself update with the current practices
-                    of technology.
+                    PO7 - g. Life-long learning: Ability to analyze individual
+                    needs and engage in updating in the context of technological
+                    changes.
                   </span>
                 </div>
               </div>
@@ -107,7 +90,7 @@ const Outcomes = () => {
               <div className="col-12 text-center">
                 <h3>Program Specific Outcomes (PSOs)</h3>
               </div>
-              <div className="col-12 text-center">
+              <div className="col-12 ">
                 <div className="list-group ">
                   <span className="list-group-item list-group-item-action ">
                     PSO 1: Software Domain : The Computer Engineer will able to

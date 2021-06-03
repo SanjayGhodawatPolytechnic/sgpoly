@@ -5,6 +5,28 @@ import DeptMenu from "../Reusables/DeptMenu";
 import NavLinks from "./NavLinks";
 
 const FyLaboratories = () => {
+  const Items = [
+    {
+      link: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FLabs%2FBasic%20sc%2FBasicSc1.jpg?alt=media&token=7954ee63-253f-4372-866f-2dbec6982c7b",
+      caption: "Language Lab",
+    },
+    {
+      link: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FLabs%2FBasic%20sc%2FBasicSc2.jpg?alt=media&token=5396e34b-4267-43c4-9da3-ed12bed40bfb",
+      caption: "Language Lab",
+    },
+    {
+      link: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FLabs%2FBasic%20sc%2FBasicSc5.jpg?alt=media&token=afab7791-50b2-499f-be0e-9a425741e188",
+      caption: "Physics Lab",
+    },
+    {
+      link: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FLabs%2FBasic%20sc%2FBasicSc3.jpg?alt=media&token=15e353c0-da44-4978-a5db-30c1b584918d",
+      caption: "Chemistry Lab",
+    },
+    {
+      link: "https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FLabs%2FBasic%20sc%2FBasicSc4.jpg?alt=media&token=fad9605d-bfd1-42cb-9615-47615f8c25fd",
+      caption: "Chemistry Lab",
+    },
+  ];
   return (
     <Main className="container-lg w-100 m-2 p-0">
       <div className="row deptcont">
@@ -25,7 +47,21 @@ const FyLaboratories = () => {
               <br />
               CSE department consists of different laboratories listed below.
             </p>
-            <div className="m-2">
+            <div className="row text-center text-lg-left">
+              {Items.map((d, i) => (
+                <div className="col-lg-3 col-md-4 col-6">
+                  <a href="#" className="d-block mb-4 h-100">
+                    <img
+                      className="img-fluid img-thumbnail"
+                      src={d.link}
+                      alt=""
+                    />
+                    <span className="badge badge-secondary">{d.caption}</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+            {/* <div className="m-2">
               <LabCard
                 labName="Computer Center Lab"
                 labcost="15, 48,233"
@@ -119,7 +155,7 @@ const FyLaboratories = () => {
                 imageurl="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FLabs%2FCse%2FCSE8.jpg?alt=media&token=3052090e-72a4-496f-8176-3a7816e822e1"
                 itemno={8}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

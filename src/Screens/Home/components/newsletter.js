@@ -20,9 +20,21 @@ const Newsletter = ({ setIsRecentsLoading }) => {
 
     await dbreference.push(data, (err) => {
       if (!err) {
-        NotificationManager.success(
-          "Successfully! Subscribed to the news letter "
-        );
+        fetch("https://sgpbackend.herokuapp.com/mail/sendGreetings", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => {
+            NotificationManager.success(
+              "Successfully! Subscribed to the news letter "
+            );
+          })
+          .catch((err) => {
+            console.log(err);
+          });
 
         setData({
           email: "",

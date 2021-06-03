@@ -298,7 +298,7 @@ const NavBar = () => {
                 <ul>
                   <li>
                     <Link to="/department/fy" className="a">
-                      Basic Science and Humanities
+                      Basic Sci &amp; Humanities
                     </Link>
                     <Link to="/department/cse" className="a">
                       Computer Science
@@ -377,7 +377,7 @@ const NavBar = () => {
                   </li>
                   <li>
                     <Link to="/infrastructure/classNameroom" className="a">
-                      className rooms
+                      Class rooms
                     </Link>
                   </li>
                   <li>

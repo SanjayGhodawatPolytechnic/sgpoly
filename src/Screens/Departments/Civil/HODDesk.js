@@ -21,11 +21,11 @@ const CivilHODDesk = () => {
                 <img
                   alt="cse hod"
                   className="img-fluid rounded"
-                  src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2FPic%2Floginhead.jpg?alt=media&token=0cbc50b1-c300-4787-a293-3644f91dea58"
+                  src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/srcimg%2Fhods%2FPatilDhiraj.jpg?alt=media&token=b8f2b6df-a9f8-4d8f-a3b4-e9e90e456627"
                 />
               </div>
               <div className="col-12 text-center">
-                <b>Mr. Kumbhar Vikas Sampatrao</b>
+                <b>Mr. Patil Dhiraj Ramchandra</b>
               </div>
               <div className="col-12 text-center">
                 <b>Head of Department</b>

@@ -25,7 +25,7 @@ const Outcomes = ({
               <div className="col-12 text-center">
                 <h3>Program Educational Objectives (PEOs)</h3>
               </div>
-              <div className="col-12 text-center">
+              <div className="col-12 ">
                 <div className="list-group peos">
                   {PEO.map((val, idx) => (
                     <span className="list-group-item list-group-item-action">
@@ -39,7 +39,7 @@ const Outcomes = ({
               <div className="col-12 text-center">
                 <h3>Program Outcome (POs)</h3>
               </div>
-              <div className="col-12 text-center">
+              <div className="col-12 ">
                 <div className="list-group">
                   {PO.map((val, idx) => (
                     <span className="list-group-item list-group-item-action">
@@ -54,7 +54,7 @@ const Outcomes = ({
               <div className="col-12 text-center">
                 <h3>Program Specific Outcomes (PSOs)</h3>
               </div>
-              <div className="col-12 text-center">
+              <div className="col-12 ">
                 <div className="list-group">
                   {PSO.map((val, idx) => (
                     <span className="list-group-item list-group-item-action">
