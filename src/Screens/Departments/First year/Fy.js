@@ -20,28 +20,52 @@ const Fy = () => {
               <Icon width="300" height="300" />
             </div>
             <p className="m-1">
-              The Department of Electrical Engineering was established during
-              the year 2012 with an intake capacity of 60. The department has
-              competent and committed faculties. The faculty members of
-              Electrical Department are from industries and academics to enhance
-              the delivery of academic programs in the department. The key
-              strengths of the department are qualified staff, established labs,
-              Integrity in work, motivation, systematic process approach,
-              Liberal work environment, student and staff feedback system.{" "}
+              The department of Basic Sciences & humanities was established in
+              the year 2012 right from the day of inception of the college. The
+              department includes Physics, Chemistry, Mathematics and
+              Professional communication. Physics is the heart of all
+              engineering branches. It is the study of behavior of real things
+              and natural phenomenon. It provides fundamental understanding of
+              basic principles through theory and practice.
               <br />
-              Electrical engineering is a professional engineering discipline
-              that generally deals with the study and application of
-              electricity, electronics. Today, electrical engineers are much in
-              demand due to the rising demand for electrical power system, the
-              growth of energy and automation in the industry. <br />
-              The Department imparts training with the best of teaching
-              expertise in fields of Electrical Power Systems, Electrical
-              Machines, Electrical Measurement and Instrumentation, Testing and
-              Maintenance of Electrical Equipments, Power Electronics, by
-              excellent laboratory infrastructure and exposure to recent trends
-              in the industry, to ensure that the students are molded into
-              competent electrical engineers and worthy citizens of the country.{" "}
+              Chemistry department aims at unveiling structure and nature of
+              materials in the nature. Mathematics plays a vital role in
+              engineering field developing logical understanding and helping
+              engineers to understand mathematical dimension of engineering.
+              English being lingua franca of the world provides great employment
+              as well as knowledge sharing opportunities to all graduates. This
+              need is fulfilled by Professional Communication through providing
+              ample ground for the students to learn soft skills required.
               <br />
+              <br />
+              <br />
+            </p>
+            <h4 className="m-1">
+              {" "}
+              <b>Salient Features:</b>{" "}
+            </h4>
+            <p className="m-1">
+              The department consists of highly qualified and dedicated
+              faculties. There are thirteen faculties working in this
+              department. This department comprises three spacious, well
+              equipped and sophisticated laboratories. The department focuses on
+              overall development of students including personality development,
+              communication skills, soft skills, etiquettes and manners etc. To
+              develop these skills seminars, group wise debate, group
+              discussion, writing practices are conducted in each semester. In
+              addition to these, Language software is used in professional
+              Communication laboratory to develop language skills of students.
+              The emphasis is given on basic understanding of subject. <br />{" "}
+              Through the training programs by industry personnel, the students
+              are made aware of the importance of soft skills in industrial
+              area. The interactive methods like power point presentation,
+              models, cross tables, question answering games, videos of certain
+              topics are used in the lecture hall to increase interest of
+              students. Parental affection and care is provided to all students
+              by faculty members. Considering new entry of students in to the
+              college, counseling sessions are arranged so as to build
+              confidence in them. The department is striving hard to achieve
+              excellence in academics.
             </p>
           </div>
         </div>
