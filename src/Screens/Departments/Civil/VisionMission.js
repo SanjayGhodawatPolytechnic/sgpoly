@@ -28,8 +28,8 @@ const CivilVisionMission = () => {
                   society with a concern for environment.
                 </p>
               </div>
-              <div className="col-12 text-center">
-                <h4>Mission</h4>
+              <div className="col-12 ">
+                <h4 className="text-center">Mission</h4>
                 <p>
                   <ul>
                     <li>

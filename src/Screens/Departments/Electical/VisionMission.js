@@ -19,16 +19,18 @@ const ElectricalVisionMission = () => {
               <div className="col-12 text-center">
                 <h3>Vision &amp; Mission</h3>
               </div>
-              <div className="col-12 text-center">
-                <h4>Vision</h4>
-                <p>
+              <div className="col-12 ">
+                <h4 className=" text-center">Vision</h4>
+
+                <span className="list-group-item list-group-item-action">
+                  {" "}
                   Achieve excellence in field of Electrical Engineering by
                   providing quality and value based education that will meet the
                   ever changing challenges of the industry and society.
-                </p>
+                </span>
               </div>
-              <div className="col-12 text-center">
-                <h4>Mission</h4>
+              <div className="col-12">
+                <h4 className=" text-center">Mission</h4>
                 <div className="list-group">
                   <span className="list-group-item list-group-item-action">
                     {" "}

@@ -20,16 +20,16 @@ const VisionMission = () => {
               <div className="col-12 text-center">
                 <h3>Vision &amp; Mission -CSE Department</h3>
               </div>
-              <div className="col-12 text-center">
-                <h4>Vision</h4>
-                <p>
+              <div className="col-12 ">
+                <h4 className="text-center">Vision</h4>
+                <span className="list-group-item list-group-item-action">
                   Achieve excellence in Computer Science &amp; Engineering by
                   providing quality education and produce competent technocrats
                   who will meet ever changing industrial and social needs
-                </p>
+                </span>
               </div>
-              <div className="col-12 text-center">
-                <h4>Mission</h4>
+              <div className="col-12 ">
+                <h4 className="text-center">Mission</h4>
                 <div className="list-group">
                   <span className="list-group-item list-group-item-action">
                     To impart necessary technical and professional skills among
@@ -48,8 +48,8 @@ const VisionMission = () => {
                   </span>
                 </div>
               </div>
-              <div className="col-12 text-center">
-                <h5>Mission Objectives</h5>
+              <div className="col-12 ">
+                <h5 className="text-center">Mission Objectives</h5>
                 <div className="list-group">
                   <span className="list-group-item list-group-item-action">
                     M-1 : Make Students industry ready by imparting necessary
