@@ -180,7 +180,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/academics/results" className="a">
                       Result
                     </Link>
                   </li>
@@ -219,9 +219,9 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a href="/#news-letter" className="a">
+                    <Link to="/academics/newsletter" className="a">
                       Institute News Letters
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>

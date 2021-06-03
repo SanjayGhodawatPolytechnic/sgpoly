@@ -120,6 +120,8 @@ import ReportnAchi from "./Screens/Departments/Library/ReportnAchi";
 import AdminStaff from "./Screens/Departments/Admin/StaffProfile";
 import PlacementReports from "./Screens/Departments/Placements/PlacementReports";
 import PlacementOfficer from "./Screens/Departments/Placements/PlacementOfficer";
+import Result from "./Screens/Academics/Result";
+import Letter from "./Screens/Academics/Letter";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -234,6 +236,8 @@ const Routes = () => {
           exact
           component={AcademicCalendars}
         />
+        <Route path="/academics/results" exact component={Result} />
+        <Route path="/academics/newsletter" exact component={Letter} />
 
         {/* --------------------Departments------------------------------------------------*/}
         {/* --------------------FY------------------------------------------------*/}
