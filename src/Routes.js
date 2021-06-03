@@ -122,6 +122,7 @@ import PlacementReports from "./Screens/Departments/Placements/PlacementReports"
 import PlacementOfficer from "./Screens/Departments/Placements/PlacementOfficer";
 import Result from "./Screens/Academics/Result";
 import Letter from "./Screens/Academics/Letter";
+import AuditReports from "./Screens/Academics/AuditReports";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -238,6 +239,7 @@ const Routes = () => {
         />
         <Route path="/academics/results" exact component={Result} />
         <Route path="/academics/newsletter" exact component={Letter} />
+        <Route path="/academics/auditreports" exact component={AuditReports} />
 
         {/* --------------------Departments------------------------------------------------*/}
         {/* --------------------FY------------------------------------------------*/}

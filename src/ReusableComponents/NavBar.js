@@ -214,7 +214,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="" className="a">
+                    <Link to="/academics/auditreports" className="a">
                       Audit Reports
                     </Link>
                   </li>
