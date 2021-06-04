@@ -28,7 +28,7 @@ const MechanicalStaffProfile = () => {
         let hod = {};
         let allStaff = [];
         staff.forEach((v, i) => {
-          if (v.department === "Civil") {
+          if (v.department === "Mechanical") {
             if (v.designation === "HOD") {
               hod = v;
             } else if (v.designation !== "Lab Assistant") {

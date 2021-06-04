@@ -25,7 +25,7 @@ const FyTechstaff = () => {
         //console.log(staff)
         let allStaff = [];
         staff.forEach((v, i) => {
-          if (v.department === "E & TC") {
+          if (v.department === "Basic Science & Humanities") {
             if (v.designation === "Lab Assistant") {
               allStaff.push(v);
             }

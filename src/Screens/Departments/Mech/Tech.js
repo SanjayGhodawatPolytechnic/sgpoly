@@ -25,7 +25,7 @@ const MechanicalTechnicalStaff = () => {
         //console.log(staff)
         let allStaff = [];
         staff.forEach((v, i) => {
-          if (v.department === "Civil") {
+          if (v.department === "Mechanical") {
             if (v.designation === "Lab Assistant") {
               allStaff.push(v);
             }
