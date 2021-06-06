@@ -97,7 +97,7 @@ const AcademicCalendars = () => {
           <div className="card m-3" key={idx}>
             <div className="card-body">
               <h5 className="card-title">{cal.year}</h5>
-              <p className="card-text">{cal.department}</p>
+              {/* <p className="card-text">{cal.department}</p> */}
             </div>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">Level: {cal.level}</li>
