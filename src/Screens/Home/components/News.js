@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 const GetNews = () => {
   const [newsData, newsSetData] = useState([]);
+  const [links, setLinks] = useState([]);
 
   const getallNews = () => {
     const dbref = firebase.database().ref("news");
@@ -29,27 +30,23 @@ const GetNews = () => {
 
   const [circularData, circularSetData] = useState([]);
 
-  const getallCircular = () => {
-    const dbref = firebase.database().ref("circular");
-    dbref.on("value", (datasnapshot) => {
+  const getAllLinks = () => {
+    const dbRef = firebase.database().ref("impLinks");
+    dbRef.on("value", (datasnapshot) => {
       if (datasnapshot.val()) {
+        // console.log(datasnapshot.val());
         let result = Object.values(datasnapshot.val());
-        result.forEach((v, i) => {
-          let date = new Date(v.postedOn);
-          let dateData = [];
-          dateData.push(date.getDate().toString());
-          dateData.push((date.getMonth() + 1).toString());
-          dateData.push(date.getFullYear().toString());
-          v.postedOn = dateData.join("/");
+        let keys = Object.keys(datasnapshot.val());
+        keys.forEach((val, idx) => {
+          result[idx]["key"] = val;
         });
-        result.reverse();
-        circularSetData(result);
+        setLinks(result);
       }
     });
   };
   useEffect(() => {
     getallNews();
-    getallCircular();
+    getAllLinks();
   }, []);
 
   return (
@@ -70,7 +67,11 @@ const GetNews = () => {
                       <div className="row py-1 py-md-4 align-items-center border-top">
                         <div className="col-md-10">
                           <h3 className="feed-item-heading m-0 font-weight-800">
-                            <a className="text-black" href={d.FileURL}>
+                            <a
+                              className="text-black"
+                              href={d.FileURL}
+                              target="blank"
+                            >
                               {d.title}
                             </a>
                           </h3>
@@ -92,31 +93,51 @@ const GetNews = () => {
           <section className="blog-cat mt-5 pb-5">
             {/* <h1 className="in-news h3 text-red font-italic">Circular</h1> */}
             <div>
-              <h4 className="circular-title">Circulars/Downloads</h4>
+              <h4 className="circular-title">Important Links</h4>
               <div className="circular-line" />
             </div>
             <div className="circular-cont-scrollable">
-              {circularData.map((d, i) => {
-                return (
-                  <div className="fullbar-item w-100 cursor-pointer" key={i}>
-                    <div className="container">
-                      <div className="row py-1 py-md-4 align-items-center border-top">
-                        <div className="col-md-10">
-                          <h3 className="feed-item-heading m-0 font-weight-800">
-                            <a className="text-black" href={d.FileURL}>
-                              {d.title}
-                            </a>
-                          </h3>
-                        </div>
-                        <div className="col-md-2">
-                          <p className="m-0 text-pink text-uppercase">
-                            {d.postedOn}
-                          </p>
+              {links.map((d, i) => {
+                if (d.isFiles) {
+                  return (
+                    <div className="fullbar-item w-100 cursor-pointer" key={i}>
+                      <div className="container">
+                        <div className="row py-1 py-md-4 align-items-center border-top">
+                          <div className="col-md-10">
+                            <h3 className="feed-item-heading m-0 font-weight-800">
+                              <a
+                                className="text-black"
+                                target="blank"
+                                href={d.FileURL}
+                                dangerouslySetInnerHTML={{ __html: d.content }}
+                              ></a>
+                            </h3>
+                          </div>
+                          <div className="col-md-2">
+                            <p className="m-0 text-pink text-uppercase">
+                              {d.postedOn}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
+                  );
+                } else {
+                  return (
+                    <div className="fullbar-item w-100 cursor-pointer" key={i}>
+                      <div className="container">
+                        <div className="row py-1 py-md-4 align-items-center border-top">
+                          <div className="col-md-10">
+                            <div
+                              className="feed-item-heading m-0 font-weight-800"
+                              dangerouslySetInnerHTML={{ __html: d.content }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
               })}
             </div>
           </section>
