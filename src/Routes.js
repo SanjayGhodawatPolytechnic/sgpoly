@@ -161,6 +161,7 @@ const Routes = () => {
             imageURL: snapshot.val().imageURL,
             moreInfoURL: snapshot.val().moreInfoURL,
           });
+          console.log(snapshot.val().moreInfoURL);
           setIsModalOpen(true);
         }
       });
