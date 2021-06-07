@@ -59,7 +59,7 @@ const EntcAcademicCalender = () => {
             data-target="#navbar-example3"
             data-offset="0"
           >
-            <div className="row m-2">
+            {/* <div className="row m-2">
               <h4 className="col-12 text-center text-dark">
                 <b>MSBTE Calendars</b>
               </h4>
@@ -75,8 +75,8 @@ const EntcAcademicCalender = () => {
                   Year: {d.year} Sem: {d.sem}
                 </div>
               ))}
-            </div>
-            <div className="row m-2">
+            </div> */}
+            {/* <div className="row m-2">
               <h4 className="col-12 text-center text-dark">
                 <b>Institute Calendars</b>
               </h4>
@@ -92,7 +92,7 @@ const EntcAcademicCalender = () => {
                   Year: {d.year} Sem: {d.sem}
                 </div>
               ))}
-            </div>
+            </div> */}
             <div className="row m-2">
               <h4 className="col-12 text-center text-dark">
                 <b>Department Calendars</b>

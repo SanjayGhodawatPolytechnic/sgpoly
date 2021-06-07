@@ -70,6 +70,13 @@ const AcademicCalendars = () => {
           getFormatedObject(datasnapshot.val()["Basic Science & Humanities"])
         );
         let all = [...cse, ...mech, ...cvl, ...entc, ...ele, ...fy];
+        let msbte = all.filter((val) => {
+          return val.level === "MSBTE";
+        });
+        let institute = all.filter((val) => {
+          return val.level === "Institute";
+        });
+        all = [...msbte, ...institute];
 
         setAllCalendars({
           cse,
@@ -101,7 +108,7 @@ const AcademicCalendars = () => {
             </div>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">Level: {cal.level}</li>
-              <li className="list-group-item">Sem: {cal.sem}</li>
+              {/* <li className="list-group-item">Sem: {cal.sem}</li> */}
             </ul>
             <div className="card-body">
               <button

@@ -123,6 +123,7 @@ import PlacementOfficer from "./Screens/Departments/Placements/PlacementOfficer"
 import Result from "./Screens/Academics/Result";
 import Letter from "./Screens/Academics/Letter";
 import AuditReports from "./Screens/Academics/AuditReports";
+import { useEffect } from "react";
 
 var firebaseConfig = {
   apiKey: "AIzaSyDVeLkjATQjtXIflpTDeiXm_aF1Zhi2JeY",
@@ -139,11 +140,35 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const Routes = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalData, setModalData] = useState({
+    imageURL: "",
+    moreInfoURL: "",
+  });
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  const getModalData = () => {
+    firebase
+      .database()
+      .ref("modal")
+      .on("value", (snapshot) => {
+        if (snapshot.val()) {
+          setModalData({
+            ...modalData,
+            imageURL: snapshot.val().imageURL,
+            moreInfoURL: snapshot.val().moreInfoURL,
+          });
+          setIsModalOpen(true);
+        }
+      });
+  };
+
+  useEffect(() => {
+    getModalData();
+  }, []);
 
   return (
     <BrowserRouter basename="/">
@@ -162,19 +187,21 @@ const Routes = () => {
           }}
         >
           <div className="close-btn" onClick={closeModal}>
-            <i aria-hidden="true" className="fas fa-times-circle fa-2x"></i>
+            <button className="btn btn-danger p-2">
+              <i aria-hidden="true" className="fas fa-times-circle fa-2x"></i>
+            </button>
           </div>
           <div className="more-info">
             <a
               target="blank"
-              href="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FD%20block%20(1).jpg?alt=media&token=c6108113-d285-431d-be79-293d40ebc356"
+              href={modalData.moreInfoURL}
               className="btn btn-info rounded"
             >
               More Info
             </a>
           </div>
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2FD%20block%20(1).jpg?alt=media&token=c6108113-d285-431d-be79-293d40ebc356"
+            src={modalData.imageURL}
             alt="modal"
             className="modal-img img-fluid"
           />
