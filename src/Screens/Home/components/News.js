@@ -71,14 +71,13 @@ const GetNews = () => {
               {newsData.map((d, i) => {
                 return (
                   <div
-                    className={
-                      "fullbar-item w-100 cursor-pointer " + (i % 2) == 0
-                        ? "bg-white"
-                        : "bg-light"
-                    }
+                    className={`fullbar-item w-100 cursor-pointer ${
+                      i % 2 == 0 ? "bg-white" : "bg-light"
+                    }`}
                     key={i}
+                    id={i}
                   >
-                    <div className="container">
+                    <div className="container" id={i}>
                       <div className="row py-1 py-md-4 align-items-center border-top">
                         <div className="col-md-10">
                           <h3 className="feed-item-heading m-0 font-weight-800">
@@ -116,14 +115,15 @@ const GetNews = () => {
                 if (d.isFiles) {
                   return (
                     <div
-                      className={
-                        "fullbar-item w-100 cursor-pointer " + (i % 2) == 0
-                          ? "bg-white"
-                          : "bg-light"
-                      }
+                      className={`fullbar-item w-100 cursor-pointer `}
                       key={i}
                     >
-                      <div className="container">
+                      <div
+                        className={`container ${
+                          i % 2 == 0 ? "bg-white" : "bg-light"
+                        }`}
+                        id={i}
+                      >
                         <div className="row py-1 py-md-4 align-items-center border-top">
                           <div className="col-md-10">
                             <h3 className="feed-item-heading m-0 font-weight-800">
@@ -147,7 +147,12 @@ const GetNews = () => {
                 } else {
                   return (
                     <div className="fullbar-item w-100 cursor-pointer" key={i}>
-                      <div className="container">
+                      <div
+                        className={`container ${
+                          i % 2 == 0 ? "bg-white" : "bg-light"
+                        }`}
+                        id={i}
+                      >
                         <div className="row py-1 py-md-4 align-items-center border-top">
                           <div className="col-md-10">
                             <div
