@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./Screens/Home/Home";
 import aboutLogo from "./Screens/About/logo";
 import aboutSGP from "./Screens/About/sgp";

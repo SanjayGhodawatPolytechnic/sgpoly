@@ -40,6 +40,14 @@ const GetNews = () => {
         keys.forEach((val, idx) => {
           result[idx]["key"] = val;
         });
+        result.forEach((v, i) => {
+          let date = new Date(v.postedOn);
+          let dateData = [];
+          dateData.push(date.getDate().toString());
+          dateData.push((date.getMonth() + 1).toString());
+          dateData.push(date.getFullYear().toString());
+          v.postedOn = dateData.join("/");
+        });
         setLinks(result);
       }
     });
