@@ -23,7 +23,7 @@ const managementGovern = () => {
         <br />
         <br />
         <br />
-        <table className="table .table-sm  mar">
+        <table className="table table-sm  mar  table-striped">
           <tbody>
             <tr>
               <th>Chairman</th>
