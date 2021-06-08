@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="banner">
       <img
-        src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2Ffinal%20banner.jpg?alt=media&token=9399eb99-4e2b-418a-a86f-6301b6e096bc"
+        src="https://firebasestorage.googleapis.com/v0/b/sgpoly-86d3b.appspot.com/o/staticFiles%2Fbanner%20v1.2.jpg?alt=media&token=0bfa5941-9473-41a1-9454-8d9632f1e5c8"
         className="bannner-img"
       />
     </div>

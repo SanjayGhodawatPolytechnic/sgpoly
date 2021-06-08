@@ -90,7 +90,7 @@ const SwiperEg = ({ setIsRecentsLoading }) => {
     <div className="container m-0 p-0 w-100">
       <div className="swiper-cont container m-0 p-0 row">
         <div className="w-100 text-center swiper-title m-0 p-0">
-          <h4 className="title">Important Reports</h4>
+          <h4 className="title">UPDATES</h4>
           <div className="reports-line swiper-line" />
         </div>
         {/* <div className="blog-slider col-12 p-0">
