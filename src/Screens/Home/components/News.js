@@ -70,7 +70,14 @@ const GetNews = () => {
             <div className="news-cont-scrollable">
               {newsData.map((d, i) => {
                 return (
-                  <div className="fullbar-item w-100 cursor-pointer" key={i}>
+                  <div
+                    className={
+                      "fullbar-item w-100 cursor-pointer " + (i % 2) == 0
+                        ? "bg-white"
+                        : "bg-light"
+                    }
+                    key={i}
+                  >
                     <div className="container">
                       <div className="row py-1 py-md-4 align-items-center border-top">
                         <div className="col-md-10">
@@ -108,7 +115,14 @@ const GetNews = () => {
               {links.map((d, i) => {
                 if (d.isFiles) {
                   return (
-                    <div className="fullbar-item w-100 cursor-pointer" key={i}>
+                    <div
+                      className={
+                        "fullbar-item w-100 cursor-pointer " + (i % 2) == 0
+                          ? "bg-white"
+                          : "bg-light"
+                      }
+                      key={i}
+                    >
                       <div className="container">
                         <div className="row py-1 py-md-4 align-items-center border-top">
                           <div className="col-md-10">
